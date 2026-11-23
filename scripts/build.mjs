@@ -554,6 +554,15 @@ function buildAssets() {
   const js = fs.readFileSync(path.join(SRC, "main.js"), "utf8");
   assets.js = writeHashed("assets/js", "main", "js", js);
 
+  const lottie = fs.readFileSync(
+    path.join(ROOT, "node_modules", "lottie-web", "build", "player", "lottie_light.min.js"),
+    "utf8"
+  );
+  assets.lottie = writeHashed("assets/js", "lottie", "js", lottie);
+
+  const orbit = fs.readFileSync(path.join(SRC, "lottie-orbit.json"), "utf8");
+  assets.orbit = writeHashed("assets/data", "orbit", "json", orbit);
+
   writeFile("favicon.svg", fs.readFileSync(path.join(SRC, "favicon.svg")));
 
   writeFile(
@@ -599,7 +608,7 @@ function renderHome() {
     <div class="hero__shade"></div>
     <div class="hero__inner">
       <div class="hero__content">
-        <p class="eyebrow eyebrow--pill">${esc(home.eyebrow)}</p>
+        <p class="eyebrow hero__eyebrow">${esc(home.eyebrow)}</p>
         <h1>${esc(home.title)}</h1>
         <span class="hero__subtitle">${esc(home.subtitle)}</span>
         <p class="hero__tagline">${esc(home.tagline)}</p>
@@ -609,6 +618,10 @@ function renderHome() {
         </div>
         <a class="hero__scroll" href="#archive">Inside the archive</a>
       </div>
+    </div>
+    <div class="hero__aside" aria-hidden="true">
+      <div class="lottie-orbit" data-lottie="${assets.orbit}"></div>
+      <span>EST. 2026 · CHAPTER 01 / 09</span>
     </div>
     <p class="hero__credit">${creditLine(hero, { link: true })}</p>
   </section>
@@ -740,6 +753,7 @@ function renderHome() {
     og: "home",
     content,
     structuredData: structured,
+    extraScripts: `<script src="${assets.lottie}" defer></script>`,
     isHome: true,
   });
 }
@@ -1532,6 +1546,7 @@ function renderNotFound() {
   const content = `<section class="not-found">
     <div class="container">
       <div class="not-found__inner">
+        <div class="not-found__orbit" aria-hidden="true"><div class="lottie-orbit" data-lottie="${assets.orbit}"></div></div>
         <p class="not-found__code" aria-hidden="true">404</p>
         <p class="eyebrow">${esc(page.eyebrow)}</p>
         <h1>${esc(page.title)}</h1>
@@ -1553,6 +1568,7 @@ function renderNotFound() {
     og: "404",
     noindex: true,
     content,
+    extraScripts: `<script src="${assets.lottie}" defer></script>`,
   });
 }
 

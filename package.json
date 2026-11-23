@@ -12,6 +12,7 @@
     "check": "node scripts/check.mjs"
   },
   "devDependencies": {
+    "lottie-web": "^5.12.2",
     "pagefind": "1.6.0"
   }
 }

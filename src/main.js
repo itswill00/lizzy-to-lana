@@ -226,6 +226,25 @@
      Reveal on scroll
      ------------------------------------------------------------------------ */
 
+  const revealSelectors = [
+    ".section-head",
+    ".card-grid > *",
+    ".release-grid > *",
+    ".photo-grid > *",
+    ".journey-item",
+    ".timeline-preview li",
+    ".tracklist li",
+    ".ref-list li",
+    ".note-card",
+    ".credit-card",
+    ".fact-card"
+  ].join(", ");
+
+  doc.querySelectorAll(revealSelectors).forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${(index % 6) * 45}ms`;
+  });
+
   const revealItems = Array.from(doc.querySelectorAll(".reveal"));
 
   if (revealItems.length) {
@@ -280,6 +299,28 @@
   } else if (searchRoot) {
     const fallback = doc.getElementById("search-fallback");
     if (fallback) fallback.hidden = false;
+  }
+
+  /* ------------------------------------------------------------------------
+     Lottie orbit — decorative, local, and disabled for reduced motion
+     ------------------------------------------------------------------------ */
+
+  const lottieNodes = doc.querySelectorAll("[data-lottie]");
+
+  if (lottieNodes.length && typeof window.lottie === "object") {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    lottieNodes.forEach((node) => {
+      const animation = window.lottie.loadAnimation({
+        container: node,
+        renderer: "svg",
+        loop: !reduceMotion,
+        autoplay: !reduceMotion,
+        path: node.dataset.lottie,
+      });
+
+      if (reduceMotion) animation.goToAndStop(0, true);
+    });
   }
 
   /* ------------------------------------------------------------------------
