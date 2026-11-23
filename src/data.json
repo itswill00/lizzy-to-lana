@@ -1,0 +1,1705 @@
+{
+  "site": {
+    "name": "Lizzy to Lana",
+    "tagline": "A Fan Archive",
+    "description": "An independent, source-led fan archive of Lana Del Rey: nine eras, sixteen releases, and a small, carefully credited photo collection.",
+    "url": "https://blog.wldnanatayya.com",
+    "locale": "en",
+    "updated": "2026-11-24",
+    "updatedLabel": "24 November 2026",
+    "author": "[Archive keeper — name to be added]",
+    "contact": "[contact email — to be added]",
+    "disclaimer": "Lizzy to Lana is an unofficial fan archive. It is not affiliated with, endorsed by, sponsored by, or managed by Lana Del Rey, her management, or her record labels. All photographs remain the property of their respective creators and are used under the licences listed on each image.",
+    "shortDisclaimer": "Unofficial fan archive. Not affiliated with Lana Del Rey or her labels.",
+    "photoPolicy": "Every photograph is stored locally, credited, linked to its original file page, and used under a named open licence. No image is hotlinked from a search engine."
+  },
+  "nav": [
+    { "label": "Journey", "href": "/journey" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Discography", "href": "/discography" },
+    { "label": "Fan Notes", "href": "/fan-notes" },
+    { "label": "Sources", "href": "/sources" },
+    { "label": "About", "href": "/about" }
+  ],
+  "home": {
+    "eyebrow": "Unofficial fan archive · Updated 24 November 2026",
+    "title": "Lizzy to Lana",
+    "subtitle": "A Fan Archive",
+    "tagline": "Nine eras, sixteen releases, and a small collection of photographs — a public record of Lana Del Rey's work, told in order.",
+    "intro": "This is not a diary and it is not a news site. It is a fan-made archive: a place to follow the records, the tours, and the visual chapters without gossip, speculation, or uncredited images.",
+    "heroPhoto": "hero-lana-2024",
+    "stats": [
+      { "value": "09", "label": "chapters" },
+      { "value": "16", "label": "releases" },
+      { "value": "18", "label": "credited photographs" },
+      { "value": "01", "label": "source of truth" }
+    ],
+    "highlights": ["early", "nfr", "stove"],
+    "featuredAlbums": ["born-to-die", "norman-fucking-rockwell", "ocean-blvd", "stove"],
+    "galleryStrip": ["early-bowery-2011", "btd-cannes-2012", "ultra-headshot-2014", "stove-wembley-2025"],
+    "sections": {
+      "introTitle": "A public record, not a personal feed",
+      "introBody": [
+        "This is not a diary and it is not a news site. It is a fan-made archive: a place to follow the records, the tours, and the visual chapters without gossip, speculation, or uncredited images.",
+        "Everything here is generated from one data file. A correction made once propagates to every page that uses it — and every photograph carries its creator, its source, and its licence."
+      ],
+      "introAsideTitle": "What you will not find here",
+      "highlightsTitle": "Three ways in",
+      "highlightsNote": "A starting point for each kind of reader: the beginning, the record that changed the scale, and the chapter that is still open.",
+      "timelineTitle": "The whole arc",
+      "galleryTitle": "From the gallery",
+      "galleryNote": "A small selection from the eighteen credited photographs in the collection.",
+      "albumsTitle": "Records to start with",
+      "albumsNote": "Four releases that open different doors into the catalogue."
+    },
+    "closing": {
+      "kicker": "Start anywhere",
+      "title": "The archive is a map, not a monument.",
+      "body": "Follow the eras in order, jump to the record that brought you here, or search the whole collection. Every route is a real page, and every page can be read without JavaScript.",
+      "links": [
+        { "label": "Open the journey", "href": "/journey" },
+        { "label": "Search the archive", "href": "/search" }
+      ]
+    }
+  },
+  "pages": {
+    "journey": {
+      "eyebrow": "The journey",
+      "title": "Nine chapters, in order",
+      "lede": "From a three-song EP made under the name Lizzy Grant to an unreleased country record announced under three titles: the archive follows the work, not the noise around it.",
+      "note": "Each chapter links to its releases and to the photographs that survive with a clear licence. Dates are release dates, not the dates a song was first performed."
+    },
+    "gallery": {
+      "eyebrow": "The gallery",
+      "title": "A small, credited collection",
+      "lede": "Eighteen photographs, stored locally and used under named open licences. No hotlinks, no search-engine grabs, no image without a creator and a source.",
+      "note": "Filter by chapter, open any photograph for its full caption, credit, licence, and original file page. Two periods currently use a clearly marked placeholder instead of an unlicensed image."
+    },
+    "discography": {
+      "eyebrow": "Discography",
+      "title": "Sixteen releases, in order",
+      "lede": "Studio albums, EPs, a short film, a spoken-word record, and two releases that have been announced but not yet heard. Standard editions are listed unless noted otherwise.",
+      "note": "Tracklists follow the standard editions. Deluxe, retailer, and regional bonus tracks are noted in the text rather than mixed into the main list."
+    },
+    "sources": {
+      "eyebrow": "Sources",
+      "title": "Receipts, not rumours",
+      "lede": "Every factual claim in the archive has a reference behind it. Photographs have a separate credit list with the creator, the original file page, and the licence.",
+      "note": "Wikipedia is used as a finding aid, not as a final authority: its citations lead to interviews, announcements, and reviews. Date-sensitive claims are checked against the date shown on the page."
+    }
+  },
+  "footer": {
+    "note": "An independent, source-led fan archive of Lana Del Rey's recorded work. Built to be read, not to harvest attention.",
+    "columns": [
+      {
+        "title": "Explore",
+        "links": [
+          { "label": "Journey", "href": "/journey" },
+          { "label": "Gallery", "href": "/gallery" },
+          { "label": "Discography", "href": "/discography" },
+          { "label": "Search", "href": "/search" }
+        ]
+      },
+      {
+        "title": "Archive",
+        "links": [
+          { "label": "Fan notes", "href": "/fan-notes" },
+          { "label": "Sources", "href": "/sources" },
+          { "label": "About", "href": "/about" }
+        ]
+      },
+      {
+        "title": "Elsewhere",
+        "links": [
+          { "label": "Official site", "href": "https://www.lanadelrey.com/", "external": true },
+          { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey", "external": true },
+          { "label": "Wikimedia Commons", "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year", "external": true }
+        ]
+      }
+    ]
+  },
+  "eras": [
+    {
+      "id": "early",
+      "label": "Lizzy Grant",
+      "title": "Lizzy Grant & the early recordings",
+      "years": "1985–2010",
+      "accent": "#A95663",
+      "summary": "Before the name, the room: church choirs, school bands, Brooklyn clubs, and two records made under the name Lizzy Grant.",
+      "lede": "Elizabeth Woolridge Grant was born in New York City on 21 June 1985 and grew up in Lake Placid. Music came first through church and school, then through small clubs in Brooklyn and New Jersey, where she performed under names including Sparkle Jump Rope Queen and Lizzy Grant.",
+      "sections": [
+        {
+          "heading": "A name before the name",
+          "body": [
+            "After studying philosophy at Fordham University, Grant began working with producer David Kahne. The first public document is the three-song Kill Kill EP, released in October 2008 on 5 Points Records. A debut album, Lana Del Ray, followed in January 2010.",
+            "Both records are small, strange, and unmistakably early: torch songs, trailer-park imagery, and a voice already looking for a cinematic frame. They are not the sound of a finished project, but they are the sound of one beginning."
+          ]
+        },
+        {
+          "heading": "The turn",
+          "body": [
+            "The Lizzy Grant material did not stay in print for long, but it set the terms for what came next. The stage name changed, the production widened, and a homemade video for “Video Games” turned a private-sounding song into a public one.",
+            "The early chapter is short, but it explains the rest. The archive keeps it separate from the major-label era because the records were made under a different name, for a different scale, with a different set of expectations."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Born", "value": "21 June 1985, New York City" },
+        { "label": "Raised", "value": "Lake Placid, New York" },
+        { "label": "Education", "value": "Kent School; Fordham University (philosophy)" },
+        { "label": "Early aliases", "value": "Sparkle Jump Rope Queen; Lizzy Grant; May Jailer" },
+        { "label": "First release", "value": "Kill Kill EP (2008)" },
+        { "label": "Debut album", "value": "Lana Del Ray (2010)" }
+      ],
+      "listening": ["Kill Kill", "Yayo", "Gramma (Blue Ribbon Sparkler Trailer Heaven)", "Video Games"],
+      "albums": ["kill-kill", "lana-del-ray"],
+      "photoIds": ["early-bowery-2011", "early-paradiso-2011", "placeholder-childhood"],
+      "sources": ["wikipedia-lana", "wikipedia-kill-kill", "wikipedia-lana-del-ray", "commons-lana"]
+    },
+    {
+      "id": "born-to-die",
+      "label": "Born to Die / Paradise",
+      "title": "Born to Die, Paradise, and the bright dark",
+      "years": "2011–2013",
+      "accent": "#A86F2A",
+      "summary": "A homemade video becomes a major-label debut, and the baroque-pop frame gets its first full-scale test.",
+      "lede": "The “Video Games” video arrived in 2011 with a homemade Super 8 quality and a chorus that felt older than the internet. By the time Born to Die was released in January 2012, the song had already changed the scale of the project.",
+      "sections": [
+        {
+          "heading": "A major-label debut",
+          "body": [
+            "Born to Die arrived on 27 January 2012 through Stranger, Interscope, and Polydor. Its 12-track standard edition mixed baroque pop, trip hop, and widescreen strings; the deluxe edition added “Without You”, “Lolita”, and “Lucky Ones”. The album peaked at number two on the Billboard 200 and topped charts in Australia, France, Germany, and the UK, among others.",
+            "In December 2025, Billboard reported that Born to Die had become the longest-charting album by a female artist in Billboard 200 history, with 618 weeks on the chart. The record's afterlife is now part of the story."
+          ]
+        },
+        {
+          "heading": "Paradise and the film",
+          "body": [
+            "Paradise followed in November 2012: eight tracks, including “Ride”, “American”, “Cola”, and “Gods & Monsters”, plus the iTunes bonus “Burning Desire”. The following year, the 27-minute short film Tropico threaded “Body Electric”, “Gods & Monsters”, and “Bel Air” into a three-chapter narrative.",
+            "“Young and Beautiful” (2013) and the Cedric Gervais remix of “Summertime Sadness” carried the era into film and radio. The visual language — Americana, motels, wide skies, a camera that lingers — became as recognisable as the songs."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Breakthrough", "value": "“Video Games” (2011)" },
+        { "label": "Major-label debut", "value": "Born to Die (27 January 2012)" },
+        { "label": "Follow-up", "value": "Paradise EP (9 November 2012)" },
+        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
+        { "label": "Film", "value": "Tropico (2013)" },
+        { "label": "Key singles", "value": "Video Games; Born to Die; Blue Jeans; Ride; Young and Beautiful" }
+      ],
+      "listening": ["Video Games", "Born to Die", "Blue Jeans", "Ride", "Young and Beautiful"],
+      "albums": ["born-to-die", "lana-del-rey-ep", "paradise", "tropico"],
+      "photoIds": ["btd-irving-plaza-2012", "btd-cannes-2012", "btd-isle-of-wight-2012"],
+      "sources": ["wikipedia-lana", "wikipedia-born-to-die", "wikipedia-lana-del-rey-ep", "wikipedia-paradise", "wikipedia-tropico", "commons-lana"]
+    },
+    {
+      "id": "ultraviolence",
+      "label": "Ultraviolence",
+      "title": "Ultraviolence and the guitar",
+      "years": "2014",
+      "accent": "#7D2F3A",
+      "summary": "Dan Auerbach, live guitars, and a harder, stranger record than the one before it.",
+      "lede": "Ultraviolence was released on 13 June 2014. After the orchestral scale of Born to Die and Paradise, the third album moved toward live guitar, desert-rock space, and a rawer vocal presence, with Dan Auerbach of the Black Keys as a central collaborator.",
+      "sections": [
+        {
+          "heading": "A different room",
+          "body": [
+            "The album's 11-track standard edition opens with “Cruel World” and runs through “West Coast”, “Brooklyn Baby”, “Money Power Glory”, and “The Other Woman”. The writing is still cinematic, but the frame is dirtier: less string section, more room sound.",
+            "It debuted at number one in eleven countries, including the United States, and reached the top five in more than twenty territories. The deluxe edition added “Black Beauty”, “Guns and Roses”, and “Florida Kilos”; later editions added “Is This Happiness” and “Flipside”."
+          ]
+        },
+        {
+          "heading": "Outside the album",
+          "body": [
+            "The era also produced “Big Eyes” and “I Can Fly” for Tim Burton's film Big Eyes (2014), two songs that sit comfortably beside the album's darker palette. The live shows of 2014 leaned into the same contrast: a small, almost static stage presence against a very large sound.",
+            "Ultraviolence is the chapter where the archive's idea of “era” becomes visual as well as musical. The photographs from Coachella and Rock en Seine show a performer dressed for a different kind of weather than the Born to Die tour."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Released", "value": "13 June 2014" },
+        { "label": "Producers", "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels" },
+        { "label": "Standard tracks", "value": "11" },
+        { "label": "Chart peak", "value": "No. 1 in eleven countries, including the US" },
+        { "label": "Key singles", "value": "West Coast; Ultraviolence; Brooklyn Baby" },
+        { "label": "Film songs", "value": "“Big Eyes”; “I Can Fly” (2014)" }
+      ],
+      "listening": ["West Coast", "Brooklyn Baby", "Ultraviolence", "Money Power Glory", "Old Money"],
+      "albums": ["ultraviolence"],
+      "photoIds": ["ultra-coachella-2014", "ultra-headshot-2014", "ultra-rock-en-seine-2014"],
+      "sources": ["wikipedia-lana", "wikipedia-ultraviolence", "commons-lana"]
+    },
+    {
+      "id": "honeymoon",
+      "label": "Honeymoon",
+      "title": "Honeymoon in slow motion",
+      "years": "2015–2016",
+      "accent": "#3F4F6B",
+      "summary": "A longer, slower record; a tour that widened the stage; a brief detour into someone else's album.",
+      "lede": "Honeymoon arrived on 18 September 2015: fourteen tracks, 65 minutes, and a deliberate step back toward the baroque pop of Born to Die after the guitar-heavy Ultraviolence. It was produced by Del Rey with Rick Nowels and Kieron Menzies.",
+      "sections": [
+        {
+          "heading": "The record",
+          "body": [
+            "The album opens with the title track and moves through “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak”, and “The Blackest Day”. “Burnt Norton” sets a passage of T. S. Eliot over an interlude; “Don't Let Me Be Misunderstood” closes the record.",
+            "It peaked at number two on the Billboard 200 and reached the top five in more than twenty countries. The pace is deliberate: long intros, unhurried choruses, and a production that treats silence as part of the arrangement."
+          ]
+        },
+        {
+          "heading": "The tour",
+          "body": [
+            "The Endless Summer Tour took the album across North America in 2015, with Courtney Love and Grimes on selected dates. In 2016, Del Rey appeared on the Weeknd's “Starboy”, a collaboration that pushed her voice into a different kind of pop production.",
+            "The Honeymoon photographs in this archive come from Sasquatch! 2015. They are wide, stage-lit images rather than close portraits — which suits an album that often keeps its narrator at a distance."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Released", "value": "18 September 2015" },
+        { "label": "Producers", "value": "Lana Del Rey; Rick Nowels; Kieron Menzies" },
+        { "label": "Tracks", "value": "14" },
+        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
+        { "label": "Key singles", "value": "High by the Beach; Music to Watch Boys To" },
+        { "label": "Tour", "value": "The Endless Summer Tour (2015)" }
+      ],
+      "listening": ["Honeymoon", "Music to Watch Boys To", "High by the Beach", "The Blackest Day", "Salvatore"],
+      "albums": ["honeymoon"],
+      "photoIds": ["honeymoon-sasquatch-2015", "honeymoon-sasquatch-2015-2"],
+      "sources": ["wikipedia-lana", "wikipedia-honeymoon", "commons-lana"]
+    },
+    {
+      "id": "lust-for-life",
+      "label": "Lust for Life",
+      "title": "Lust for Life and the open door",
+      "years": "2017–2018",
+      "accent": "#A95663",
+      "summary": "A brighter, collaborative record that put the audience in the room.",
+      "lede": "Lust for Life was released on 21 July 2017. It is the first Del Rey album that sounds like a group conversation: the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, and Sean Ono Lennon all pass through it.",
+      "sections": [
+        {
+          "heading": "A wider cast",
+          "body": [
+            "The 16-track album includes “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love”, and “Get Free”. It topped the charts in twelve countries, including the US and the UK, and was nominated for Best Pop Vocal Album at the 60th Grammy Awards.",
+            "The collaborations are not decorations. They change the temperature of the record: the Weeknd duet is sleek and nocturnal, the Stevie Nicks track is weathered and generous, and the A$AP Rocky features push the album toward a more fragmented, contemporary pop sound."
+          ]
+        },
+        {
+          "heading": "The visual turn",
+          "body": [
+            "The “Love” video, directed by Rich Lee, set the album's promotional tone: wide-screen, retro-futurist, and less confined to the noir interiors of the previous era. The cover art, with Del Rey smiling in front of a truck, was a small but deliberate break from the earlier iconography.",
+            "In the archive, Lust for Life is the hinge between the mid-2010s noir and the warmer, more collaborative records that follow. The 2017 festival photographs catch that shift in daylight."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Released", "value": "21 July 2017" },
+        { "label": "Tracks", "value": "16" },
+        { "label": "Collaborators", "value": "The Weeknd; A$AP Rocky; Playboi Carti; Stevie Nicks; Sean Ono Lennon" },
+        { "label": "Chart peak", "value": "No. 1 in twelve countries, including the US and UK" },
+        { "label": "Grammy", "value": "Best Pop Vocal Album nomination (2018)" },
+        { "label": "Key singles", "value": "Love; Lust for Life; Summer Bummer; Groupie Love" }
+      ],
+      "listening": ["Love", "Lust for Life", "Cherry", "Summer Bummer", "Get Free"],
+      "albums": ["lust-for-life"],
+      "photoIds": ["lfl-flow-2017", "lfl-kroq-2017"],
+      "sources": ["wikipedia-lana", "wikipedia-lust-for-life", "commons-lana"]
+    },
+    {
+      "id": "nfr",
+      "label": "Norman Fucking Rockwell!",
+      "title": "Norman Fucking Rockwell! and the long exhale",
+      "years": "2019",
+      "accent": "#8C6A2F",
+      "summary": "Jack Antonoff, Laurel Canyon light, and the record that many critics treat as her best.",
+      "lede": "Norman Fucking Rockwell! was released on 30 August 2019. The first full album with Jack Antonoff as a central collaborator, it traded some of the earlier maximalism for soft rock, piano, and a slower, more conversational kind of songwriting.",
+      "sections": [
+        {
+          "heading": "The record",
+          "body": [
+            "The 14-track album includes “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin' Time”, “Cinnamon Girl”, “The Greatest”, and “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+            "It reached number one in seven countries, including the UK, and number three in the US. It was nominated for Album of the Year at the 62nd Grammy Awards and later entered Rolling Stone's 500 Greatest Albums of All Time."
+          ]
+        },
+        {
+          "heading": "Why it lasts",
+          "body": [
+            "The album's reputation rests on restraint: long songs that do not rush, lyrics that leave space around the joke, and arrangements that sound like a room rather than a set. It is the chapter where the archive's earlier threads — Hollywood, Americana, self-mythology — become something closer to conversation.",
+            "The only NFR photograph in the collection is from the Grammy Museum in October 2019. It is a close, low-light image, which is appropriate for an album that often feels like it is being sung just out of frame."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Released", "value": "30 August 2019" },
+        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; additional collaborators" },
+        { "label": "Tracks", "value": "14" },
+        { "label": "Chart peak", "value": "No. 1 in seven countries; No. 3 US" },
+        { "label": "Grammy", "value": "Album of the Year nomination (2020)" },
+        { "label": "Key singles", "value": "Mariners Apartment Complex; Venice Bitch; Doin' Time; The Greatest" }
+      ],
+      "listening": ["Venice Bitch", "Mariners Apartment Complex", "The Greatest", "Cinnamon Girl", "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"],
+      "albums": ["norman-fucking-rockwell"],
+      "photoIds": ["nfr-grammy-museum-2019"],
+      "sources": ["wikipedia-lana", "wikipedia-nfr", "rollingstone-nfr", "commons-lana"]
+    },
+    {
+      "id": "chemtrails",
+      "label": "Chemtrails / Blue Banisters",
+      "title": "Chemtrails, Blue Banisters, and the quiet house",
+      "years": "2020–2021",
+      "accent": "#7A5B4A",
+      "summary": "Two albums in seven months, plus a poetry book and a spoken-word record: the most domestic, reflective stretch of the catalogue.",
+      "lede": "In 2020, Del Rey published Violet Bent Backwards over the Grass, a poetry collection with a companion spoken-word album. Chemtrails over the Country Club followed on 19 March 2021; Blue Banisters arrived on 22 October 2021, only seven months later.",
+      "sections": [
+        {
+          "heading": "Violet",
+          "body": [
+            "The spoken-word album, produced with Jack Antonoff, sets 14 poems against sparse piano and strings. It is not a pop record, and it is not meant to be: it is the clearest statement of Del Rey as a writer working in a different register.",
+            "The book and the album are related but separate releases. The book arrived in September 2020; the album had come out in July. The archive lists them together because they share a voice and a moment, not because they are the same object."
+          ]
+        },
+        {
+          "heading": "Two albums",
+          "body": [
+            "Chemtrails is a folk, country-folk, and Americana record with contributions from Nikki Lane, Weyes Blood, and Zella Day. It debuted at number one in eight countries, including the UK, and number two in the US.",
+            "Blue Banisters is looser and more self-referential, with “Text Book”, “Blue Banisters”, “Arcadia”, “Dealer”, and “Wildflower Wildfire”; it reached number eight in the US and number one in Argentina and the Netherlands. The two records are often discussed together because they arrived so close together, but they are different rooms in the same house."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Poetry book", "value": "Violet Bent Backwards over the Grass (29 September 2020)" },
+        { "label": "Spoken-word album", "value": "28 July 2020" },
+        { "label": "Chemtrails", "value": "19 March 2021" },
+        { "label": "Blue Banisters", "value": "22 October 2021" },
+        { "label": "Chemtrails peak", "value": "No. 1 in eight countries, including the UK" },
+        { "label": "Blue Banisters peak", "value": "No. 8, Billboard 200" }
+      ],
+      "listening": ["White Dress", "Chemtrails over the Country Club", "Blue Banisters", "Arcadia", "Wildflower Wildfire"],
+      "albums": ["violet-bent-backwards-over-the-grass", "chemtrails-over-the-country-club", "blue-banisters"],
+      "photoIds": ["placeholder-chemtrails"],
+      "sources": ["wikipedia-lana", "wikipedia-violet", "wikipedia-chemtrails", "wikipedia-blue-banisters", "commons-lana"]
+    },
+    {
+      "id": "ocean-blvd",
+      "label": "Ocean Blvd",
+      "title": "Ocean Blvd and the tunnel",
+      "years": "2022–2023",
+      "accent": "#3F4F6B",
+      "summary": "A long, dense album about family, memory, and the stories we build around both.",
+      "lede": "Did You Know That There's a Tunnel Under Ocean Blvd was released on 24 March 2023. At 16 tracks and nearly 78 minutes, it is one of Del Rey's densest records, with production from Jack Antonoff, Drew Erickson, Zach Dawes, and others.",
+      "sections": [
+        {
+          "heading": "The record",
+          "body": [
+            "The album includes “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In”, and “Taco Truck x VB”. It features Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML, and Riopy.",
+            "It topped charts in eight countries and reached number three in the US. The album received nominations for Album of the Year and Best Alternative Music Album at the 66th Grammy Awards."
+          ]
+        },
+        {
+          "heading": "Before and after",
+          "body": [
+            "In 2022, “Snow on the Beach”, a collaboration with Taylor Swift, became Del Rey's highest-charting entry on the Billboard Hot 100 at the time. In 2023, “Say Yes to Heaven” — a song recorded a decade earlier — was finally released officially.",
+            "Ocean Blvd is the archive's longest chapter by runtime and the one that most rewards a linear listen. The MITA photograph in the collection is a wide, black-and-white crowd shot: a reminder that these songs about memory were also performed in rooms full of people."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Released", "value": "24 March 2023" },
+        { "label": "Tracks", "value": "16" },
+        { "label": "Length", "value": "77:52" },
+        { "label": "Chart peak", "value": "No. 1 in eight countries; No. 3 US" },
+        { "label": "Grammy", "value": "Album of the Year; Best Alternative Music Album nominations (2024)" },
+        { "label": "Key singles", "value": "A&W; The Grants; Candy Necklace" }
+      ],
+      "listening": ["A&W", "The Grants", "Candy Necklace", "Kintsugi", "Let the Light In"],
+      "albums": ["ocean-blvd"],
+      "photoIds": ["ocean-mita-2023"],
+      "sources": ["wikipedia-lana", "wikipedia-ocean-blvd", "commons-lana"]
+    },
+    {
+      "id": "stove",
+      "label": "Stove",
+      "title": "Stove and the next chapter",
+      "years": "2024–2026",
+      "accent": "#7D2F3A",
+      "summary": "A country record announced under three titles, delayed, expanded, and still not out — plus a companion album and a handful of singles.",
+      "lede": "The next chapter has been public for longer than most albums. In January 2024, Del Rey announced a country project called Lasso; by November 2024 it had become The Right Person Will Stay, and in August 2025 she confirmed the title Stove. As of 24 November 2026, the album has not been released.",
+      "sections": [
+        {
+          "heading": "The singles",
+          "body": [
+            "“Henry, Come On” arrived on 11 April 2025, followed by “Bluebird” on 18 April 2025 and “White Feather Hawk Tail Deer Hunter” on 17 February 2026. At Stagecoach in April 2025, she performed three new songs — “Stars Fell on Alabama”, “Quiet in the South”, and “57.5” — that were expected to appear on the album.",
+            "The release has moved more than once. It was first expected in September 2024, then May 2025, then early 2026. Del Rey has said the delay came from adding new material; some of that material eventually became a separate companion album."
+          ]
+        },
+        {
+          "heading": "The wider frame",
+          "body": [
+            "In 2024, “Tough” with Quavo was released. In 2026, Del Rey was announced as the singer of the theme for the James Bond game 007 First Light, and she appeared on Zach Bryan's “Lies” in October.",
+            "On 15 July 2026, she announced that additional material from the Stove sessions had become a separate companion album. The vinyl artwork suggested the title Spyda, but no final title or release date has been confirmed. This chapter is deliberately marked as open: the archive will not pretend that an unreleased record has a finished shape."
+          ]
+        }
+      ],
+      "facts": [
+        { "label": "Status", "value": "Unreleased as of 24 November 2026" },
+        { "label": "Working titles", "value": "Lasso; The Right Person Will Stay; Stove" },
+        { "label": "Singles", "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter" },
+        { "label": "Stagecoach", "value": "April 2025" },
+        { "label": "Companion album", "value": "Announced 15 July 2026; title TBA" },
+        { "label": "2026 collaborations", "value": "007 First Light theme; “Lies” with Zach Bryan" }
+      ],
+      "listening": ["Henry, Come On", "Bluebird", "White Feather Hawk Tail Deer Hunter", "Tough (with Quavo)", "Lies (with Zach Bryan)"],
+      "albums": ["stove", "companion-album"],
+      "photoIds": ["hero-lana-2024", "stove-primavera-2024", "stove-wembley-2025", "stove-wembley-detail-2025"],
+      "sources": ["wikipedia-lana", "wikipedia-stove", "billboard-lasso", "pitchfork-stove", "pitchfork-henry", "rollingstone-companion", "bbc-bond", "commons-lana"]
+    }
+  ],
+  "albums": [
+    {
+      "id": "kill-kill",
+      "title": "Kill Kill",
+      "year": "2008",
+      "released": "21 October 2008",
+      "type": "EP",
+      "era": "early",
+      "label": "5 Points",
+      "producers": "David Kahne",
+      "status": "released",
+      "summary": "The first public record: three songs, 13 minutes, and a name that would not last.",
+      "narrative": [
+        "Kill Kill was released on 21 October 2008 under the name Lizzy Grant. Produced by David Kahne, the three-track EP introduces the torch-song register and the trailer-park imagery that would become more legible later.",
+        "It is a small record, but it is the archive's starting point. The title track, “Yayo”, and “Gramma (Blue Ribbon Sparkler Trailer Heaven)” already contain the ingredients — the cinematic frame, the worn glamour, the slight remove from the present — that the later albums would amplify."
+      ],
+      "tracklist": [
+        { "title": "Kill Kill" },
+        { "title": "Yayo" },
+        { "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)" }
+      ],
+      "tracklistNote": "Three tracks. The EP was later included in full on the 2010 album Lana Del Ray.",
+      "facts": [
+        { "label": "Released", "value": "21 October 2008" },
+        { "label": "Label", "value": "5 Points" },
+        { "label": "Producer", "value": "David Kahne" },
+        { "label": "Tracks", "value": "3" },
+        { "label": "Length", "value": "13:40" },
+        { "label": "Status", "value": "Out of print; not on major streaming services" }
+      ],
+      "sources": ["wikipedia-kill-kill", "wikipedia-lana-del-ray"]
+    },
+    {
+      "id": "lana-del-ray",
+      "title": "Lana Del Ray",
+      "year": "2010",
+      "released": "4 January 2010",
+      "type": "Studio album",
+      "era": "early",
+      "label": "5 Points",
+      "producers": "David Kahne",
+      "status": "released",
+      "summary": "The debut album under the Lizzy Grant name: 13 tracks, a different spelling, and a record that disappeared from sale soon after.",
+      "narrative": [
+        "Lana Del Ray — note the spelling — was released on 4 January 2010 through 5 Points Records. Produced by David Kahne, it collects 13 songs, including new versions of “Kill Kill”, “Gramma”, and “Yayo”.",
+        "The album was withdrawn from digital retail after Del Rey signed with a major label; it remains the clearest document of the pre-“Video Games” project. The title is sometimes written Lana Del Ray and sometimes Lana Del Rey; the album cover uses Ray."
+      ],
+      "tracklist": [
+        { "title": "Kill Kill" },
+        { "title": "Queen of the Gas Station" },
+        { "title": "Oh Say Can You See" },
+        { "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)" },
+        { "title": "For K, Pt. 2" },
+        { "title": "Jump" },
+        { "title": "Mermaid Motel" },
+        { "title": "Raise Me Up (Mississippi South)" },
+        { "title": "Pawn Shop Blues" },
+        { "title": "Brite Lites" },
+        { "title": "Put Me in a Movie" },
+        { "title": "Smarty" },
+        { "title": "Yayo" }
+      ],
+      "tracklistNote": "Standard 13-track edition.",
+      "facts": [
+        { "label": "Released", "value": "4 January 2010" },
+        { "label": "Label", "value": "5 Points" },
+        { "label": "Producer", "value": "David Kahne" },
+        { "label": "Tracks", "value": "13" },
+        { "label": "Length", "value": "47:38" },
+        { "label": "Status", "value": "Out of print" }
+      ],
+      "sources": ["wikipedia-lana-del-ray", "wikipedia-kill-kill"]
+    },
+    {
+      "id": "born-to-die",
+      "title": "Born to Die",
+      "year": "2012",
+      "released": "27 January 2012",
+      "type": "Studio album",
+      "era": "born-to-die",
+      "label": "Stranger / Interscope / Polydor",
+      "producers": "Emile Haynie; Patrik Berger; Justin Parker; Robopop; Rick Nowels; Al Shux",
+      "status": "released",
+      "summary": "The major-label debut: 12 tracks in its standard edition, a deluxe edition with three more, and a cinematic frame that became the template for the next decade.",
+      "narrative": [
+        "Born to Die was released on 27 January 2012. Its standard edition runs 12 tracks, from “Born to Die” and “Off to the Races” to “Summertime Sadness” and “This Is What Makes Us Girls”; the deluxe edition adds “Without You”, “Lolita”, and “Lucky Ones”.",
+        "The album peaked at number two on the Billboard 200 and topped charts in Australia, France, Germany, and the UK, among others. By December 2025, it had spent 618 weeks on the Billboard 200 — the longest run by a female artist in the chart's history, according to Billboard.",
+        "The Paradise Edition reissue, released on 9 November 2012, combines the standard album with the eight-track Paradise EP."
+      ],
+      "tracklist": [
+        { "title": "Born to Die" },
+        { "title": "Off to the Races" },
+        { "title": "Blue Jeans" },
+        { "title": "Video Games" },
+        { "title": "Diet Mountain Dew" },
+        { "title": "National Anthem" },
+        { "title": "Dark Paradise" },
+        { "title": "Radio" },
+        { "title": "Carmen" },
+        { "title": "Million Dollar Man" },
+        { "title": "Summertime Sadness" },
+        { "title": "This Is What Makes Us Girls" }
+      ],
+      "tracklistNote": "Standard edition. The deluxe edition adds “Without You”, “Lolita”, and “Lucky Ones”.",
+      "facts": [
+        { "label": "Released", "value": "27 January 2012" },
+        { "label": "Labels", "value": "Stranger; Interscope; Polydor" },
+        { "label": "Standard tracks", "value": "12" },
+        { "label": "Deluxe tracks", "value": "15" },
+        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
+        { "label": "Reissue", "value": "The Paradise Edition (9 November 2012)" }
+      ],
+      "sources": ["wikipedia-born-to-die", "wikipedia-paradise", "wikipedia-lana"]
+    },
+    {
+      "id": "lana-del-rey-ep",
+      "title": "Lana Del Rey",
+      "year": "2012",
+      "released": "10 January 2012",
+      "type": "EP",
+      "era": "born-to-die",
+      "label": "Stranger",
+      "producers": "Emile Haynie; Justin Parker; Robopop; Patrik Berger",
+      "status": "released",
+      "summary": "A four-track introduction released just before the debut album.",
+      "narrative": [
+        "The Lana Del Rey EP was released on 10 January 2012 through Stranger Records. Its four tracks — “Video Games”, “Born to Die”, “Blue Jeans”, and “Off to the Races” — are the clearest early statement of the project's range: one homemade hit, one widescreen ballad, one noir guitar song, and one rap-adjacent curveball.",
+        "It is not the same release as the 2010 album Lana Del Ray. The shared name is one of the reasons the early discography needs a careful timeline."
+      ],
+      "tracklist": [
+        { "title": "Video Games" },
+        { "title": "Born to Die" },
+        { "title": "Blue Jeans" },
+        { "title": "Off to the Races" }
+      ],
+      "tracklistNote": "Four tracks, 17:19 total.",
+      "facts": [
+        { "label": "Released", "value": "10 January 2012" },
+        { "label": "Label", "value": "Stranger" },
+        { "label": "Tracks", "value": "4" },
+        { "label": "Length", "value": "17:19" },
+        { "label": "Status", "value": "Released" }
+      ],
+      "sources": ["wikipedia-lana-del-rey-ep", "wikipedia-born-to-die"]
+    },
+    {
+      "id": "paradise",
+      "title": "Paradise",
+      "year": "2012",
+      "released": "9 November 2012",
+      "type": "EP",
+      "era": "born-to-die",
+      "label": "Polydor / Interscope",
+      "producers": "Rick Nowels; Justin Parker; Rick Rubin; Emile Haynie",
+      "status": "released",
+      "summary": "Eight tracks of widescreen Americana, plus the iTunes bonus “Burning Desire”.",
+      "narrative": [
+        "Paradise was released on 9 November 2012. Its eight tracks include “Ride”, “American”, “Cola”, “Body Electric”, “Blue Velvet”, “Gods & Monsters”, “Yayo”, and “Bel Air”; the iTunes edition added “Burning Desire”.",
+        "It debuted at number ten on the Billboard 200 and was later packaged with Born to Die as The Paradise Edition. The EP is the most direct bridge between the debut album and the Tropico film."
+      ],
+      "tracklist": [
+        { "title": "Ride" },
+        { "title": "American" },
+        { "title": "Cola" },
+        { "title": "Body Electric" },
+        { "title": "Blue Velvet" },
+        { "title": "Gods & Monsters" },
+        { "title": "Yayo" },
+        { "title": "Bel Air" },
+        { "title": "Burning Desire", "note": "iTunes bonus track" }
+      ],
+      "tracklistNote": "Eight standard tracks plus the iTunes bonus “Burning Desire”.",
+      "facts": [
+        { "label": "Released", "value": "9 November 2012" },
+        { "label": "Labels", "value": "Polydor; Interscope" },
+        { "label": "Tracks", "value": "8 (+1 bonus)" },
+        { "label": "Length", "value": "33:07" },
+        { "label": "Chart peak", "value": "No. 10, Billboard 200" },
+        { "label": "Reissue", "value": "Born to Die: The Paradise Edition" }
+      ],
+      "sources": ["wikipedia-paradise", "wikipedia-born-to-die"]
+    },
+    {
+      "id": "tropico",
+      "title": "Tropico",
+      "year": "2013",
+      "released": "5 December 2013",
+      "type": "Short film / soundtrack",
+      "era": "born-to-die",
+      "label": "Interscope / Polydor",
+      "producers": "Rick Nowels; Dan Heath; Emile Haynie; Tim Larcombe",
+      "status": "released",
+      "summary": "A 27-minute short film built around three Paradise songs.",
+      "narrative": [
+        "Tropico is a 27-minute short film directed by Anthony Mandler, premiered in December 2013. It is structured in three chapters — “Body Electric”, “Gods & Monsters”, and “Bel Air” — and frames the songs as a loose Adam-and-Eve narrative.",
+        "It is not a standalone album, but it belongs in the release chronology because it is the era's most complete visual statement. The film is listed here as a film/soundtrack release, not a studio album."
+      ],
+      "tracklist": [
+        { "title": "Body Electric" },
+        { "title": "Gods & Monsters" },
+        { "title": "Bel Air" },
+        { "title": "Tropico (film)", "note": "27:08" }
+      ],
+      "tracklistNote": "Three songs and the 27-minute film.",
+      "facts": [
+        { "label": "Type", "value": "Short film / soundtrack" },
+        { "label": "Premiere", "value": "December 2013" },
+        { "label": "Director", "value": "Anthony Mandler" },
+        { "label": "Runtime", "value": "27:08" },
+        { "label": "Songs", "value": "Body Electric; Gods & Monsters; Bel Air" },
+        { "label": "Status", "value": "Released" }
+      ],
+      "sources": ["wikipedia-tropico", "wikipedia-paradise"]
+    },
+    {
+      "id": "ultraviolence",
+      "title": "Ultraviolence",
+      "year": "2014",
+      "released": "13 June 2014",
+      "type": "Studio album",
+      "era": "ultraviolence",
+      "label": "Polydor / Interscope",
+      "producers": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels",
+      "status": "released",
+      "summary": "11 tracks of live guitar, desert rock, and a harder vocal edge.",
+      "narrative": [
+        "Ultraviolence was released on 13 June 2014. Produced largely with Dan Auerbach, its 11-track standard edition moves from “Cruel World” to “The Other Woman”, with “West Coast”, “Brooklyn Baby”, and “Shades of Cool” at the centre.",
+        "It debuted at number one in eleven countries, including the US, and reached the top five in more than twenty territories. The deluxe edition adds “Black Beauty”, “Guns and Roses”, and “Florida Kilos”; the iTunes edition adds “Is This Happiness”, and the Japanese/Target edition adds “Flipside”."
+      ],
+      "tracklist": [
+        { "title": "Cruel World" },
+        { "title": "Ultraviolence" },
+        { "title": "Shades of Cool" },
+        { "title": "Brooklyn Baby" },
+        { "title": "West Coast" },
+        { "title": "Sad Girl" },
+        { "title": "Pretty When You Cry" },
+        { "title": "Money Power Glory" },
+        { "title": "Fucked My Way Up to the Top" },
+        { "title": "Old Money" },
+        { "title": "The Other Woman" }
+      ],
+      "tracklistNote": "Standard edition. Deluxe and retailer editions add “Black Beauty”, “Guns and Roses”, “Florida Kilos”, “Is This Happiness”, and “Flipside” in various combinations.",
+      "facts": [
+        { "label": "Released", "value": "13 June 2014" },
+        { "label": "Producers", "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels" },
+        { "label": "Tracks", "value": "11" },
+        { "label": "Length", "value": "51:24" },
+        { "label": "Chart peak", "value": "No. 1 in eleven countries, including the US" },
+        { "label": "Key singles", "value": "West Coast; Ultraviolence; Brooklyn Baby" }
+      ],
+      "sources": ["wikipedia-ultraviolence", "wikipedia-lana"]
+    },
+    {
+      "id": "honeymoon",
+      "title": "Honeymoon",
+      "year": "2015",
+      "released": "18 September 2015",
+      "type": "Studio album",
+      "era": "honeymoon",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Rick Nowels; Kieron Menzies",
+      "status": "released",
+      "summary": "A 14-track, 65-minute return to baroque pop, recorded with Rick Nowels and Kieron Menzies.",
+      "narrative": [
+        "Honeymoon was released on 18 September 2015. Produced by Del Rey with Rick Nowels and Kieron Menzies, it marked a departure from the guitar-driven Ultraviolence and a return to the baroque pop of Born to Die and Paradise.",
+        "The album opens with the title track and moves through “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak”, and “The Blackest Day”. It peaked at number two on the Billboard 200 and reached the top five in more than twenty countries.",
+        "The Endless Summer Tour followed in 2015, with Courtney Love and Grimes on selected dates. In 2016, Del Rey appeared on the Weeknd's “Starboy”."
+      ],
+      "tracklist": [
+        { "title": "Honeymoon" },
+        { "title": "Music to Watch Boys To" },
+        { "title": "Terrence Loves You" },
+        { "title": "God Knows I Tried" },
+        { "title": "High by the Beach" },
+        { "title": "Freak" },
+        { "title": "Art Deco" },
+        { "title": "Burnt Norton", "note": "Interlude" },
+        { "title": "Religion" },
+        { "title": "Salvatore" },
+        { "title": "The Blackest Day" },
+        { "title": "24" },
+        { "title": "Swan Song" },
+        { "title": "Don't Let Me Be Misunderstood" }
+      ],
+      "tracklistNote": "Standard 14-track edition.",
+      "facts": [
+        { "label": "Released", "value": "18 September 2015" },
+        { "label": "Producers", "value": "Lana Del Rey; Rick Nowels; Kieron Menzies" },
+        { "label": "Tracks", "value": "14" },
+        { "label": "Length", "value": "65:06" },
+        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
+        { "label": "Key singles", "value": "High by the Beach; Music to Watch Boys To" }
+      ],
+      "sources": ["wikipedia-honeymoon", "wikipedia-lana"]
+    },
+    {
+      "id": "lust-for-life",
+      "title": "Lust for Life",
+      "year": "2017",
+      "released": "21 July 2017",
+      "type": "Studio album",
+      "era": "lust-for-life",
+      "label": "Polydor / Interscope",
+      "producers": "Lana Del Rey; Rick Nowels; Kieron Menzies; Dean Reid; Benny Blanco; Boi-1da; Emile Haynie; Tim Larcombe; Sean Ono Lennon; Metro Boomin; Jahaan Sweet",
+      "status": "released",
+      "summary": "A 16-track, collaborative record that topped charts in twelve countries and earned a Grammy nomination.",
+      "narrative": [
+        "Lust for Life was released on 21 July 2017. It features the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, and Sean Ono Lennon, and marks a return to the hip-hop-inspired sound of Born to Die alongside the folk and trap-pop textures of the mid-2010s.",
+        "The album topped the charts in twelve countries, including the US and the UK, and was nominated for Best Pop Vocal Album at the 60th Grammy Awards. Its 16 tracks include “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love”, and “Get Free”."
+      ],
+      "tracklist": [
+        { "title": "Love" },
+        { "title": "Lust for Life", "note": "featuring the Weeknd" },
+        { "title": "13 Beaches" },
+        { "title": "Cherry" },
+        { "title": "White Mustang" },
+        { "title": "Summer Bummer", "note": "featuring A$AP Rocky and Playboi Carti" },
+        { "title": "Groupie Love", "note": "featuring A$AP Rocky" },
+        { "title": "In My Feelings" },
+        { "title": "Coachella – Woodstock in My Mind" },
+        { "title": "God Bless America – and All the Beautiful Women in It" },
+        { "title": "When the World Was at War We Kept Dancing" },
+        { "title": "Beautiful People Beautiful Problems", "note": "featuring Stevie Nicks" },
+        { "title": "Tomorrow Never Came", "note": "featuring Sean Ono Lennon" },
+        { "title": "Heroin" },
+        { "title": "Change" },
+        { "title": "Get Free" }
+      ],
+      "tracklistNote": "Standard 16-track edition.",
+      "facts": [
+        { "label": "Released", "value": "21 July 2017" },
+        { "label": "Tracks", "value": "16" },
+        { "label": "Length", "value": "72:08" },
+        { "label": "Chart peak", "value": "No. 1 in twelve countries, including the US and UK" },
+        { "label": "Grammy", "value": "Best Pop Vocal Album nomination (2018)" },
+        { "label": "Key singles", "value": "Love; Lust for Life; Summer Bummer; Groupie Love" }
+      ],
+      "sources": ["wikipedia-lust-for-life", "wikipedia-lana"]
+    },
+    {
+      "id": "norman-fucking-rockwell",
+      "title": "Norman Fucking Rockwell!",
+      "year": "2019",
+      "released": "30 August 2019",
+      "type": "Studio album",
+      "era": "nfr",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Jack Antonoff; Andrew Watt; Dean Reid; Happy Perez; Kieron Menzies; Louis Bell; Rick Nowels; Zachary Dawes",
+      "status": "released",
+      "summary": "Soft rock, piano, and long songs: the record that many critics treat as her best.",
+      "narrative": [
+        "Norman Fucking Rockwell! was released on 30 August 2019. Primarily produced by Del Rey and Jack Antonoff, with additional contributions from Zach Dawes, Andrew Watt, and Rick Nowels, it explored soft rock, psych-rock, and piano balladry.",
+        "The 14-track album includes “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin' Time”, “Cinnamon Girl”, “The Greatest”, and “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+        "It reached number one in seven countries, including the UK, and number three in the US. It was nominated for Album of the Year at the 62nd Grammy Awards and later entered Rolling Stone's 500 Greatest Albums of All Time."
+      ],
+      "tracklist": [
+        { "title": "Norman Fucking Rockwell" },
+        { "title": "Mariners Apartment Complex" },
+        { "title": "Venice Bitch" },
+        { "title": "Fuck It I Love You" },
+        { "title": "Doin' Time" },
+        { "title": "Love Song" },
+        { "title": "Cinnamon Girl" },
+        { "title": "How to Disappear" },
+        { "title": "California" },
+        { "title": "The Next Best American Record" },
+        { "title": "The Greatest" },
+        { "title": "Bartender" },
+        { "title": "Happiness Is a Butterfly" },
+        { "title": "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It" }
+      ],
+      "tracklistNote": "Standard 14-track edition. The title is often abbreviated to NFR!.",
+      "facts": [
+        { "label": "Released", "value": "30 August 2019" },
+        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Andrew Watt; Dean Reid; Happy Perez; Kieron Menzies; Louis Bell; Rick Nowels; Zachary Dawes" },
+        { "label": "Tracks", "value": "14" },
+        { "label": "Length", "value": "67:43" },
+        { "label": "Chart peak", "value": "No. 1 in seven countries; No. 3 US" },
+        { "label": "Grammy", "value": "Album of the Year nomination (2020)" }
+      ],
+      "sources": ["wikipedia-nfr", "rollingstone-nfr", "wikipedia-lana"]
+    },
+    {
+      "id": "violet-bent-backwards-over-the-grass",
+      "title": "Violet Bent Backwards over the Grass",
+      "year": "2020",
+      "released": "28 July 2020",
+      "type": "Spoken-word album",
+      "era": "chemtrails",
+      "label": "Interscope / Polydor",
+      "producers": "Jack Antonoff; Lana Del Rey",
+      "status": "released",
+      "summary": "A poetry collection and a companion spoken-word album: 14 poems, sparse piano, and a different kind of attention.",
+      "narrative": [
+        "Violet Bent Backwards over the Grass began as a poetry collection, published by Simon & Schuster on 29 September 2020. The companion spoken-word album arrived earlier, on 28 July 2020, through Interscope and Polydor, with music by Jack Antonoff.",
+        "Its 14 tracks are poems, not songs; the record is best approached as a reading rather than a pop album. The book and the album are related but separate releases, and the archive lists them together because they share a voice and a moment."
+      ],
+      "tracklist": [
+        { "title": "LA Who Am I to Love You" },
+        { "title": "The Land of 1,000 Fires" },
+        { "title": "Violet Bent Backwards over the Grass" },
+        { "title": "Past the Bushes Cypress Thriving" },
+        { "title": "Salamander" },
+        { "title": "Never to Heaven" },
+        { "title": "SportCruiser" },
+        { "title": "Tessa DiPietro" },
+        { "title": "Quiet Waiter Blue Forever" },
+        { "title": "What Happened When I Left You" },
+        { "title": "Happy" },
+        { "title": "My Bedroom Is a Sacred Place Now – There Are Children at the Foot of My Bed" },
+        { "title": "Paradise Is Very Fragile" },
+        { "title": "Bare Feet on Linoleum" }
+      ],
+      "tracklistNote": "Spoken-word album; the poetry collection was published separately in September 2020.",
+      "facts": [
+        { "label": "Book", "value": "29 September 2020 (Simon & Schuster)" },
+        { "label": "Album", "value": "28 July 2020" },
+        { "label": "Tracks", "value": "14" },
+        { "label": "Producers", "value": "Jack Antonoff; Lana Del Rey" },
+        { "label": "Format", "value": "Spoken word / poetry" },
+        { "label": "Status", "value": "Released" }
+      ],
+      "sources": ["wikipedia-violet", "wikipedia-lana"]
+    },
+    {
+      "id": "chemtrails-over-the-country-club",
+      "title": "Chemtrails over the Country Club",
+      "year": "2021",
+      "released": "19 March 2021",
+      "type": "Studio album",
+      "era": "chemtrails",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Jack Antonoff; Rick Nowels",
+      "status": "released",
+      "summary": "Folk, country-folk, and Americana: a quieter record with Nikki Lane, Weyes Blood, and Zella Day.",
+      "narrative": [
+        "Chemtrails over the Country Club was released on 19 March 2021. Del Rey enlisted Jack Antonoff as her co-producer for most of the album, with Rick Nowels producing one track; the record features Nikki Lane, Weyes Blood, and Zella Day.",
+        "It debuted at number one in eight countries, including the UK, and number two in the US. Its 11 tracks include “White Dress”, “Chemtrails over the Country Club”, “Tulsa Jesus Freak”, “Let Me Love You like a Woman”, “Yosemite”, and “For Free”."
+      ],
+      "tracklist": [
+        { "title": "White Dress" },
+        { "title": "Chemtrails over the Country Club" },
+        { "title": "Tulsa Jesus Freak" },
+        { "title": "Let Me Love You like a Woman" },
+        { "title": "Wild at Heart" },
+        { "title": "Dark but Just a Game" },
+        { "title": "Not All Who Wander Are Lost" },
+        { "title": "Yosemite" },
+        { "title": "Breaking Up Slowly", "note": "featuring Nikki Lane" },
+        { "title": "Dance Till We Die" },
+        { "title": "For Free", "note": "featuring Zella Day and Weyes Blood" }
+      ],
+      "tracklistNote": "Standard 11-track edition.",
+      "facts": [
+        { "label": "Released", "value": "19 March 2021" },
+        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Rick Nowels" },
+        { "label": "Tracks", "value": "11" },
+        { "label": "Length", "value": "45:28" },
+        { "label": "Chart peak", "value": "No. 1 in eight countries, including the UK; No. 2 US" },
+        { "label": "Features", "value": "Nikki Lane; Weyes Blood; Zella Day" }
+      ],
+      "sources": ["wikipedia-chemtrails", "wikipedia-lana"]
+    },
+    {
+      "id": "blue-banisters",
+      "title": "Blue Banisters",
+      "year": "2021",
+      "released": "22 October 2021",
+      "type": "Studio album",
+      "era": "chemtrails",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Gabe Simon; Zachary Dawes; Drew Erickson; Dean Reid; Loren Humphrey; Mike Dean; Barrie-James O'Neill; Rick Nowels",
+      "status": "released",
+      "summary": "A loose, self-referential 15-track album released seven months after Chemtrails.",
+      "narrative": [
+        "Blue Banisters was released on 22 October 2021, seven months after Chemtrails over the Country Club. It was produced by Del Rey with Zachary Dawes, Drew Erickson, Loren Humphrey, Mike Dean, Barrie-James O'Neill, Rick Nowels, and others.",
+        "The 15-track album includes “Text Book”, “Blue Banisters”, “Arcadia”, “Black Bathing Suit”, “Dealer”, and “Wildflower Wildfire”. It peaked at number eight on the Billboard 200 and reached number one in Argentina and the Netherlands."
+      ],
+      "tracklist": [
+        { "title": "Text Book" },
+        { "title": "Blue Banisters" },
+        { "title": "Arcadia" },
+        { "title": "Interlude – The Trio" },
+        { "title": "Black Bathing Suit" },
+        { "title": "If You Lie Down with Me" },
+        { "title": "Beautiful" },
+        { "title": "Violets for Roses" },
+        { "title": "Dealer" },
+        { "title": "Thunder" },
+        { "title": "Wildflower Wildfire" },
+        { "title": "Nectar of the Gods" },
+        { "title": "Living Legend" },
+        { "title": "Cherry Blossom" },
+        { "title": "Sweet Carolina" }
+      ],
+      "tracklistNote": "Standard 15-track edition.",
+      "facts": [
+        { "label": "Released", "value": "22 October 2021" },
+        { "label": "Producers", "value": "Lana Del Rey; Gabe Simon; Zachary Dawes; Drew Erickson; Dean Reid; Loren Humphrey; Mike Dean; Barrie-James O'Neill; Rick Nowels" },
+        { "label": "Tracks", "value": "15" },
+        { "label": "Length", "value": "61:54" },
+        { "label": "Chart peak", "value": "No. 8, Billboard 200; No. 1 in Argentina and the Netherlands" },
+        { "label": "Key singles", "value": "Blue Banisters; Arcadia" }
+      ],
+      "sources": ["wikipedia-blue-banisters", "wikipedia-lana"]
+    },
+    {
+      "id": "ocean-blvd",
+      "title": "Did You Know That There's a Tunnel Under Ocean Blvd",
+      "year": "2023",
+      "released": "24 March 2023",
+      "type": "Studio album",
+      "era": "ocean-blvd",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Mike Hermosa; Jack Antonoff; Drew Erickson; Zach Dawes; Benji Lysaght",
+      "status": "released",
+      "summary": "A 16-track, 78-minute album about family, memory, and the stories we build around both.",
+      "narrative": [
+        "Did You Know That There's a Tunnel Under Ocean Blvd was released on 24 March 2023. It features production by Del Rey, Mike Hermosa, Jack Antonoff, Drew Erickson, Zach Dawes, and Benji Lysaght, and collaborations with Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML, and Riopy.",
+        "The album includes “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In”, and “Taco Truck x VB”. It topped charts in eight countries and reached number three in the US.",
+        "It was nominated for Album of the Year and Best Alternative Music Album at the 66th Grammy Awards. In 2023, “Say Yes to Heaven” — a song recorded a decade earlier — was finally released officially."
+      ],
+      "tracklist": [
+        { "title": "The Grants" },
+        { "title": "Did You Know That There's a Tunnel Under Ocean Blvd" },
+        { "title": "Sweet" },
+        { "title": "A&W" },
+        { "title": "Judah Smith Interlude" },
+        { "title": "Candy Necklace", "note": "featuring Jon Batiste" },
+        { "title": "Jon Batiste Interlude" },
+        { "title": "Kintsugi" },
+        { "title": "Fingertips" },
+        { "title": "Paris, Texas", "note": "featuring SYML" },
+        { "title": "Grandfather Please Stand on the Shoulders of My Father While He's Deep-Sea Fishing" },
+        { "title": "Let the Light In", "note": "featuring Father John Misty" },
+        { "title": "Margaret", "note": "featuring Bleachers" },
+        { "title": "Fishtail" },
+        { "title": "Peppers", "note": "featuring Tommy Genesis" },
+        { "title": "Taco Truck x VB" }
+      ],
+      "tracklistNote": "Standard 16-track edition.",
+      "facts": [
+        { "label": "Released", "value": "24 March 2023" },
+        { "label": "Tracks", "value": "16" },
+        { "label": "Length", "value": "77:52" },
+        { "label": "Chart peak", "value": "No. 1 in eight countries; No. 3 US" },
+        { "label": "Grammy", "value": "Album of the Year; Best Alternative Music Album nominations (2024)" },
+        { "label": "Key singles", "value": "A&W; The Grants; Candy Necklace" }
+      ],
+      "sources": ["wikipedia-ocean-blvd", "wikipedia-lana"]
+    },
+    {
+      "id": "stove",
+      "title": "Stove",
+      "year": "TBA",
+      "released": "Unreleased",
+      "type": "Upcoming studio album",
+      "era": "stove",
+      "label": "Interscope / Polydor",
+      "producers": "Lana Del Rey; Jack Antonoff; Drew Erickson; Luke Laird",
+      "status": "upcoming",
+      "summary": "The tenth studio album: a country project announced under three titles, delayed, and still pending as of 24 November 2026.",
+      "narrative": [
+        "Stove was first announced in January 2024 as Lasso, then renamed The Right Person Will Stay in November 2024, and finally confirmed as Stove in August 2025. It is described as a country record, though Del Rey has said it is not a heavy departure from her previous work.",
+        "Three singles have been released: “Henry, Come On” (11 April 2025), “Bluebird” (18 April 2025), and “White Feather Hawk Tail Deer Hunter” (17 February 2026). At Stagecoach in April 2025, she performed three new songs — “Stars Fell on Alabama”, “Quiet in the South”, and “57.5” — that were expected to appear on the album.",
+        "The album was not released in early 2026 as originally planned. No official tracklist or final release date has been announced. This page will be updated when both are confirmed."
+      ],
+      "tracklist": [],
+      "tracklistNote": "No official tracklist has been released. The confirmed singles are “Henry, Come On”, “Bluebird”, and “White Feather Hawk Tail Deer Hunter”.",
+      "facts": [
+        { "label": "Status", "value": "Unreleased as of 24 November 2026" },
+        { "label": "Working titles", "value": "Lasso; The Right Person Will Stay; Stove" },
+        { "label": "Labels", "value": "Interscope; Polydor" },
+        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Drew Erickson; Luke Laird" },
+        { "label": "Singles", "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter" },
+        { "label": "Companion album", "value": "Announced 15 July 2026; title TBA" }
+      ],
+      "sources": ["wikipedia-stove", "billboard-lasso", "pitchfork-stove", "pitchfork-henry", "rollingstone-companion", "wikipedia-lana"]
+    },
+    {
+      "id": "companion-album",
+      "title": "Untitled companion album",
+      "year": "TBA",
+      "released": "Unreleased",
+      "type": "Upcoming album",
+      "era": "stove",
+      "label": "Interscope / Polydor",
+      "producers": "TBA",
+      "status": "upcoming",
+      "summary": "Additional material from the Stove sessions, announced as a separate album in July 2026.",
+      "narrative": [
+        "On 15 July 2026, Del Rey announced that the extra material from the Stove sessions had grown into a companion album. The announcement included vinyl artwork for Stove and a second cover featuring a boat named “Spyda”, which suggested a possible title.",
+        "No title, tracklist, or release date has been confirmed. This page is a placeholder for that release, not a claim about its final form."
+      ],
+      "tracklist": [],
+      "tracklistNote": "No official title, tracklist, or release date has been announced.",
+      "facts": [
+        { "label": "Announced", "value": "15 July 2026" },
+        { "label": "Status", "value": "Title, tracklist, and release date TBA" },
+        { "label": "Related release", "value": "Stove" },
+        { "label": "Labels", "value": "Interscope; Polydor (expected)" },
+        { "label": "Possible title", "value": "Spyda (suggested by artwork; unconfirmed)" }
+      ],
+      "sources": ["rollingstone-companion", "wikipedia-stove", "wikipedia-lana"]
+    }
+  ],
+  "photos": [
+    {
+      "id": "hero-lana-2024",
+      "src": "assets/img-src/hero-lana-2024.jpg",
+      "era": "stove",
+      "caption": "Primavera Sound, Barcelona, 31 May 2024.",
+      "alt": "Lana Del Rey singing under a stage light at Primavera Sound in 2024.",
+      "credit": "Raph_PH",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%282024%29.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 1,
+      "roles": ["hero", "gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "early-bowery-2011",
+      "src": "assets/img-src/early-bowery-2011.jpg",
+      "era": "early",
+      "caption": "Bowery Ballroom, New York, 2011.",
+      "alt": "Lana Del Rey singing into a microphone at Bowery Ballroom, New York, in 2011.",
+      "credit": "aphrodite-in-nyc",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Bowery_2011_P1150546.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 2,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "early-paradiso-2011",
+      "src": "assets/img-src/early-paradiso-2011.jpg",
+      "era": "early",
+      "caption": "Paradiso, Amsterdam, 10 November 2011.",
+      "alt": "Lana Del Rey performing at Paradiso in Amsterdam, with balloons behind the stage.",
+      "credit": "nvivo.es, 5gig",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%40Paradiso_%28Amsterdam%292.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 3,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "btd-irving-plaza-2012",
+      "src": "assets/img-src/btd-irving-plaza-2012.jpg",
+      "era": "born-to-die",
+      "caption": "Irving Plaza, New York, 7 June 2012.",
+      "alt": "Lana Del Rey standing with a microphone on stage at Irving Plaza, New York, in 2012.",
+      "credit": "petercruise",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Irving_Plaza.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 4,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "btd-cannes-2012",
+      "src": "assets/img-src/btd-cannes-2012.jpg",
+      "era": "born-to-die",
+      "caption": "Cannes Film Festival, May 2012.",
+      "alt": "Portrait of Lana Del Rey at the Cannes Film Festival in 2012.",
+      "credit": "Georges Biard",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Cannes_2012.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "order": 5,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "btd-isle-of-wight-2012",
+      "src": "assets/img-src/btd-isle-of-wight-2012.jpg",
+      "era": "born-to-die",
+      "caption": "Isle of Wight Festival, 22 June 2012.",
+      "alt": "Lana Del Rey singing on stage at the Isle of Wight Festival in 2012.",
+      "credit": "Editor5807",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_performing_at_Isle_of_Wight_Festival_2012.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "order": 6,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "ultra-coachella-2014",
+      "src": "assets/img-src/ultra-coachella-2014.jpg",
+      "era": "ultraviolence",
+      "caption": "Coachella, 20 April 2014.",
+      "alt": "Lana Del Rey singing and playing guitar at Coachella in 2014.",
+      "credit": "Neon Tommy",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_2014_Coachella.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 7,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "ultra-headshot-2014",
+      "src": "assets/img-src/ultra-headshot-2014.jpg",
+      "era": "ultraviolence",
+      "caption": "Coachella, 20 April 2014.",
+      "alt": "Close portrait of Lana Del Rey at Coachella in 2014.",
+      "credit": "Neon Tommy",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_headshot%2C_Coachella_2014.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 8,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "ultra-rock-en-seine-2014",
+      "src": "assets/img-src/ultra-rock-en-seine-2014.jpg",
+      "era": "ultraviolence",
+      "caption": "Rock en Seine, France, 2014.",
+      "alt": "Lana Del Rey performing with a guitar at Rock en Seine in 2014.",
+      "credit": "itstrashdistance",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Rock_en_Seine_2014.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 9,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "honeymoon-sasquatch-2015",
+      "src": "assets/img-src/honeymoon-sasquatch-2015.jpg",
+      "era": "honeymoon",
+      "caption": "Sasquatch! Music Festival, 2015.",
+      "alt": "Lana Del Rey singing in the spotlight at Sasquatch! Music Festival in 2015.",
+      "credit": "David Lee",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_-_Sasquatch_2015.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 10,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "honeymoon-sasquatch-2015-2",
+      "src": "assets/img-src/honeymoon-sasquatch-2015-2.jpg",
+      "era": "honeymoon",
+      "caption": "Sasquatch! Music Festival, 2015.",
+      "alt": "Lana Del Rey on stage at Sasquatch! Music Festival in 2015, with stage lights behind her.",
+      "credit": "David Lee",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_-_Sasquatch_2015_2.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 11,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "lfl-flow-2017",
+      "src": "assets/img-src/lfl-flow-2017.jpg",
+      "era": "lust-for-life",
+      "caption": "Flow Festival, Helsinki, 11 August 2017.",
+      "alt": "Lana Del Rey singing at Flow Festival in Helsinki in 2017.",
+      "credit": "Nick Stroil",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Flow_Festival_2017_%285%29_%28cropped%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "order": 12,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "lfl-kroq-2017",
+      "src": "assets/img-src/lfl-kroq-2017.jpg",
+      "era": "lust-for-life",
+      "caption": "KROQ Weenie Roast, 20 May 2017.",
+      "alt": "Portrait of Lana Del Rey with a microphone at KROQ Weenie Roast in 2017.",
+      "credit": "Harmony Gerber",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_KROQ_Weenie_Roast_2017_%28cropped%29.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 13,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "nfr-grammy-museum-2019",
+      "src": "assets/img-src/nfr-grammy-museum-2019.jpg",
+      "era": "nfr",
+      "caption": "Grammy Museum, Los Angeles, 13 October 2019.",
+      "alt": "Lana Del Rey singing at the Grammy Museum in Los Angeles in 2019.",
+      "credit": "Justin Higuchi",
+      "source": "https://commons.wikimedia.org/wiki/File:LDR2019-cr.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "order": 14,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "ocean-mita-2023",
+      "src": "assets/img-src/ocean-mita-2023.jpg",
+      "era": "ocean-blvd",
+      "caption": "MITA, 2023.",
+      "alt": "Wide view of Lana Del Rey performing at MITA in 2023, with the crowd in the foreground.",
+      "credit": "Raphaelp18",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_del_rey_MITA.jpg_%28cropped%29.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "order": 15,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "stove-primavera-2024",
+      "src": "assets/img-src/stove-primavera-2024.jpg",
+      "era": "stove",
+      "caption": "Primavera Sound, Barcelona, 31 May 2024.",
+      "alt": "Lana Del Rey singing on stage at Primavera Sound in Barcelona in 2024.",
+      "credit": "Raph_PH",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%E2%80%93_Primavera_Sound.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "order": 16,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "stove-wembley-2025",
+      "src": "assets/img-src/stove-wembley-2025.jpg",
+      "era": "stove",
+      "caption": "Wembley Stadium, London, 3 July 2025.",
+      "alt": "Lana Del Rey singing at Wembley Stadium in London in July 2025.",
+      "credit": "Raph_PH",
+      "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Wembley_2025.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "order": 17,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "stove-wembley-detail-2025",
+      "src": "assets/img-src/stove-wembley-detail-2025.jpg",
+      "era": "stove",
+      "caption": "Wembley Stadium, London, 3 July 2025.",
+      "alt": "Close portrait of Lana Del Rey with a microphone at Wembley Stadium in 2025.",
+      "credit": "Raph_PH",
+      "source": "https://commons.wikimedia.org/wiki/File:LanaWembley030725-89_%28cropped%29.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "order": 18,
+      "roles": ["gallery"],
+      "placeholder": false
+    },
+    {
+      "id": "placeholder-childhood",
+      "src": null,
+      "era": "early",
+      "caption": "A photograph from the early Lizzy Grant years (2005–2008) is not yet available under a clear licence.",
+      "alt": "Placeholder for a missing photograph from the early Lizzy Grant years.",
+      "credit": null,
+      "source": null,
+      "license": null,
+      "licenseUrl": null,
+      "order": 90,
+      "roles": ["gallery"],
+      "placeholder": true,
+      "placeholderNote": "Seeking a clearly licensed photograph from the pre-2011 years."
+    },
+    {
+      "id": "placeholder-chemtrails",
+      "src": null,
+      "era": "chemtrails",
+      "caption": "No photograph from the Chemtrails / Blue Banisters period is available under a clear open licence.",
+      "alt": "Placeholder for a missing photograph from the Chemtrails and Blue Banisters period.",
+      "credit": null,
+      "source": null,
+      "license": null,
+      "licenseUrl": null,
+      "order": 91,
+      "roles": ["gallery"],
+      "placeholder": true,
+      "placeholderNote": "Seeking a concert or press photograph from 2020–2022 with a named licence."
+    }
+  ],
+  "references": [
+    {
+      "id": "wikipedia-lana",
+      "category": "Core references",
+      "title": "Lana Del Rey",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
+      "note": "Biography, career overview, and citations to primary interviews and announcements.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-discography",
+      "category": "Core references",
+      "title": "Lana Del Rey discography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lana_Del_Rey_discography",
+      "note": "Release chronology, chart positions, and certification summary.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "official-site",
+      "category": "Core references",
+      "title": "Lana Del Rey — official site",
+      "publisher": "lanadelrey.com",
+      "url": "https://www.lanadelrey.com/",
+      "note": "Official announcements, tour information, and release links.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-kill-kill",
+      "category": "Album and release pages",
+      "title": "Kill Kill",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kill_Kill",
+      "note": "EP credits, release date, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-lana-del-ray",
+      "category": "Album and release pages",
+      "title": "Lana Del Ray (album)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lana_Del_Ray_(album)",
+      "note": "Debut album credits, release date, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-born-to-die",
+      "category": "Album and release pages",
+      "title": "Born to Die",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Born_to_Die",
+      "note": "Album credits, chart history, and editions.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-lana-del-rey-ep",
+      "category": "Album and release pages",
+      "title": "Lana Del Rey (EP)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lana_Del_Rey_(EP)",
+      "note": "EP credits and four-track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-paradise",
+      "category": "Album and release pages",
+      "title": "Paradise (Lana Del Rey EP)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Paradise_(Lana_Del_Rey_EP)",
+      "note": "EP credits, release dates, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-tropico",
+      "category": "Album and release pages",
+      "title": "Tropico (2013 film)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tropico_(2013_film)",
+      "note": "Film credits, runtime, and featured songs.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-ultraviolence",
+      "category": "Album and release pages",
+      "title": "Ultraviolence",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ultraviolence_(album)",
+      "note": "Album credits, chart history, and editions.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-honeymoon",
+      "category": "Album and release pages",
+      "title": "Honeymoon",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honeymoon_(Lana_Del_Rey_album)",
+      "note": "Album credits, chart history, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-lust-for-life",
+      "category": "Album and release pages",
+      "title": "Lust for Life",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lust_for_Life_(Lana_Del_Rey_album)",
+      "note": "Album credits, collaborators, and chart history.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-nfr",
+      "category": "Album and release pages",
+      "title": "Norman Fucking Rockwell!",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Norman_Fucking_Rockwell!",
+      "note": "Album credits, chart history, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-violet",
+      "category": "Album and release pages",
+      "title": "Violet Bent Backwards over the Grass",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Violet_Bent_Backwards_over_the_Grass",
+      "note": "Book and spoken-word album details.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-chemtrails",
+      "category": "Album and release pages",
+      "title": "Chemtrails over the Country Club",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chemtrails_over_the_Country_Club",
+      "note": "Album credits, collaborators, and chart history.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-blue-banisters",
+      "category": "Album and release pages",
+      "title": "Blue Banisters",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Blue_Banisters",
+      "note": "Album credits, chart history, and track listing.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-ocean-blvd",
+      "category": "Album and release pages",
+      "title": "Did You Know That There's a Tunnel Under Ocean Blvd",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Did_You_Know_That_There%27s_a_Tunnel_Under_Ocean_Blvd",
+      "note": "Album credits, collaborators, and chart history.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "wikipedia-stove",
+      "category": "Album and release pages",
+      "title": "Stove (album)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stove_(album)",
+      "note": "Release status, title changes, singles, and companion-album announcement.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "vogue-2011",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey interview",
+      "publisher": "Vogue UK (archived)",
+      "url": "https://web.archive.org/web/20121110201921/http://www.vogue.co.uk/blogs/the-culture-edit/2011/10/20/lana-del-rey-interview",
+      "note": "Origin of the stage name, in Del Rey's own words.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "artistdirect-2015",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey is working on new music",
+      "publisher": "Artistdirect (archived)",
+      "url": "https://web.archive.org/web/20160224065550/http://www.artistdirect.com/entertainment-news/article/lana-del-rey-is-working-on-new-music-and-shared-some-hints-about-it/11313805",
+      "note": "Short interview quote about the 1950s and her writing process.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "rollingstone-nfr",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey's Norman Fucking Rockwell!",
+      "publisher": "Rolling Stone",
+      "url": "https://www.rollingstone.com/music/music-album-reviews/lana-del-reys-norman-fucking-rockwell-878534/",
+      "note": "Contemporary review of the 2019 album.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "billboard-lasso",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey announces album Lasso",
+      "publisher": "Billboard",
+      "url": "https://www.billboard.com/music/pop/lana-del-rey-announces-album-lasso-1235594901/",
+      "note": "January 2024 announcement of the country project.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "pitchfork-stove",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey changes album name to Stove",
+      "publisher": "Pitchfork",
+      "url": "https://pitchfork.com/news/lana-del-rey-changes-album-name-to-stove-aims-for-january-2026-release/",
+      "note": "August 2025 title confirmation and release window.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "pitchfork-henry",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey finally releases new song 'Henry, Come On'",
+      "publisher": "Pitchfork",
+      "url": "https://pitchfork.com/news/lana-del-rey-finally-releases-new-song-henry-come-on-listen/",
+      "note": "April 2025 single release.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "rollingstone-companion",
+      "category": "Interviews and announcements",
+      "title": "Lana Del Rey announces companion album to Stove",
+      "publisher": "Rolling Stone",
+      "url": "https://www.rollingstone.com/music/music-news/lana-del-rey-companion-album-stove-1235594388/",
+      "note": "July 2026 companion-album announcement.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "bbc-bond",
+      "category": "Interviews and announcements",
+      "title": "James Bond game: Lana Del Rey to sing theme on 007 First Light",
+      "publisher": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gx984j49ro",
+      "note": "April 2026 announcement of the game theme.",
+      "accessed": "24 November 2026"
+    },
+    {
+      "id": "commons-lana",
+      "category": "Photography",
+      "title": "Lana Del Rey by year",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
+      "note": "Source category for the archive's photographs. Individual file pages and licences are listed in the photo credits.",
+      "accessed": "24 November 2026"
+    }
+  ],
+  "fanNotes": {
+    "eyebrow": "Fan notes",
+    "title": "Notes from the archive",
+    "lede": "A public-facing notebook about why this archive exists, how it is made, and what it refuses to do. It is written for readers, not kept as a private diary.",
+    "notes": [
+      {
+        "title": "Why this archive exists",
+        "date": "24 November 2026",
+        "status": "placeholder",
+        "tag": "Placeholder",
+        "body": [
+          "[Archive keeper: add a short note about why you started this archive, what you want it to be for other fans, and what you would like to add next.]",
+          "This space is reserved for the person who maintains the site. Write for readers who arrive without context, not for a private diary."
+        ]
+      },
+      {
+        "title": "How a photograph earns its place",
+        "date": "24 November 2026",
+        "status": "published",
+        "tag": "Photo policy",
+        "body": [
+          "Every image in the archive is downloaded and stored locally. Nothing is hotlinked from a search engine. Each photo has a named creator, a link to its original file page, a licence, and a link to the licence terms.",
+          "If a photo's licence cannot be established, it is not used. Two eras currently use a placeholder instead of an uncredited image: the earliest Lizzy Grant years and the Chemtrails / Blue Banisters period. That is a deliberate limit, not an oversight."
+        ]
+      },
+      {
+        "title": "A note on corrections",
+        "date": "24 November 2026",
+        "status": "published",
+        "tag": "Editorial",
+        "body": [
+          "This is a fan archive, not a newsroom. Facts are checked against Wikipedia's cited sources and, where possible, the primary announcement. Date-sensitive claims — especially anything about Stove — are marked with the date they were checked.",
+          "If something is wrong, the fix is to correct it in the data source and rebuild, not to quietly patch the HTML. The archive is generated from one JSON file, so a correction propagates to every page that uses it."
+        ]
+      }
+    ],
+    "rules": [
+      "No gossip, and no speculation about private life.",
+      "No fabricated quotes, and no full lyrics.",
+      "No photograph without a named creator, source, and licence.",
+      "No claim about an unreleased record that is not marked as provisional."
+    ],
+    "submit": {
+      "title": "Have a correction or a licensed photograph?",
+      "body": "A contact address will be added here. Until then, this box is a placeholder — no email address has been invented.",
+      "contact": "[contact email — to be added]"
+    }
+  },
+  "about": {
+    "eyebrow": "About this archive",
+    "title": "A fan archive, with receipts",
+    "lede": "Lizzy to Lana is an independent fan archive of Lana Del Rey's recorded work. It is built and maintained by a fan, for other fans.",
+    "sections": [
+      {
+        "heading": "What this is",
+        "body": [
+          "A multi-page reference for the eras, releases, and a small photo collection. Every page is generated from one JSON source; every photo has a credit and a licence.",
+          "The site is deliberately quiet. There is no autoplay, no tracking script, no comment section, and no infinite feed. The goal is to make the records easier to follow, not to compete with the official channels."
+        ]
+      },
+      {
+        "heading": "What this is not",
+        "body": [
+          "Not an official site. Not a news site. Not a diary. Not a lyrics database. Not a gossip page.",
+          "It does not speculate about private life, publish unverified claims, or reproduce full lyrics. Short quotations are used only where they are attributed and necessary."
+        ]
+      },
+      {
+        "heading": "Editorial policy",
+        "body": [
+          "Facts are checked against Wikipedia's cited sources and, where possible, the primary announcement. Date-sensitive claims — especially anything about Stove — are marked with the date they were checked.",
+          "Unreleased records are described as provisional. If a tracklist, title, or release date has not been confirmed, the page says so instead of filling the gap."
+        ]
+      },
+      {
+        "heading": "Photo policy",
+        "body": [
+          "Photographs are downloaded from Wikimedia Commons, stored locally, and served in responsive AVIF, WebP, and JPEG variants. Each image is credited to its creator, linked to its original file page, and used under a named Creative Commons licence.",
+          "If a licence cannot be established, the archive uses a placeholder. Two periods currently have no licensed photograph: the earliest Lizzy Grant years and the Chemtrails / Blue Banisters era."
+        ]
+      },
+      {
+        "heading": "Takedown and corrections",
+        "body": [
+          "If you are the rights holder for an image and believe it has been used incorrectly, contact the address below with the file URL and the licence concern. The image will be removed or corrected promptly.",
+          "The same address is the right place to send a factual correction. No contact email has been invented; the placeholder will be replaced before the site is promoted publicly."
+        ]
+      }
+    ],
+    "contact": {
+      "label": "Contact",
+      "value": "[contact email — to be added]",
+      "note": "This is a placeholder. Replace it in src/data.json; do not invent an address."
+    },
+    "colophon": [
+      "Static HTML, CSS, and a small amount of JavaScript. Built with a Node script; images and OG cards are generated with Python and Pillow.",
+      "Fonts: Cormorant Garamond, Inter, and Homemade Apple, self-hosted under the SIL Open Font License.",
+      "Search: Pagefind, generated at build time and run entirely in the browser.",
+      "Hosting: a private VPS running nginx, with HTTPS, gzip, long-lived caching for hashed assets, and a small set of security headers."
+    ]
+  },
+  "search": {
+    "eyebrow": "Search",
+    "title": "Search the archive",
+    "lede": "Find an era, a release, a photograph caption, or a page. The index is generated at build time with Pagefind and runs entirely in your browser.",
+    "note": "Search covers the text of every page. Photographs are indexed through their captions and credits on the gallery and era pages."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page has left the party",
+    "lede": "The page you asked for is not in the archive. It may have moved, or it may never have existed.",
+    "note": "Try the journey, the gallery, or the search page. The archive is small enough to browse."
+  }
+}

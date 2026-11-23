@@ -1,0 +1,17 @@
+{
+  "name": "lizzy-to-lana",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A source-led, multi-page fan archive of Lana Del Rey's recorded work.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "images": "python3 scripts/images.py",
+    "og": "python3 scripts/og.py",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "pagefind": "1.6.0"
+  }
+}
