@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/images.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
