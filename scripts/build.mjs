@@ -45,6 +45,12 @@ const attr = esc;
 
 const sha1 = (value) => createHash("sha1").update(value).digest("hex").slice(0, 8);
 
+const noteSlug = (value) =>
+  String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 const ensureDir = (dir) => fs.mkdirSync(dir, { recursive: true });
 
 function writeFile(relative, contents) {
@@ -128,6 +134,25 @@ function creditLine(photo, options = {}) {
   return `Photo: ${creator} · ${licence}`;
 }
 
+function creditText(photo) {
+  return [photo.caption, `${photo.credit} · ${photo.license}`, photo.source]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function copyButton(text, label, className = "copy-credit") {
+  return `<button class="${className}" type="button" data-copy-credit data-copy-text="${attr(
+    text
+  )}" aria-label="${attr(label)}">Copy credit</button>`;
+}
+
+function contactLink(value, label) {
+  if (/^https?:\/\//.test(value)) {
+    return `<a href="${attr(value)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>`;
+  }
+  return esc(value);
+}
+
 function eraPhoto(era) {
   for (const id of era.photoIds) {
     const photo = photoById[id];
@@ -155,9 +180,8 @@ function photoTile(photo, options = {}) {
   const meta = manifest[photo.id];
   if (!meta) throw new Error(`No image manifest entry for ${photo.id}`);
 
-  return `<button class="photo-tile" type="button" data-photo data-gallery-item data-era="${attr(
-    era
-  )}" data-full="${attr(meta.largest.jpg)}" data-full-width="${meta.largest.w}" data-full-height="${
+  return `<div class="photo-tile-wrap" data-gallery-item data-era="${attr(era)}">
+  <button class="photo-tile" type="button" data-photo data-full="${attr(meta.largest.jpg)}" data-full-width="${meta.largest.w}" data-full-height="${
     meta.largest.h
   }" data-alt="${attr(photo.alt)}" data-caption="${attr(photo.caption)}" data-credit="${attr(
     photo.credit
@@ -167,7 +191,9 @@ function photoTile(photo, options = {}) {
     ${picture(photo, { sizes, loading: options.loading || "lazy", fetchpriority: options.fetchpriority })}
     <span class="photo-tile__caption">${esc(photo.caption)}</span>
     <span class="photo-tile__credit">${esc(photo.credit)} · ${esc(photo.license)}</span>
-  </button>`;
+  </button>
+  ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`, "copy-credit copy-credit--tile")}
+</div>`;
 }
 
 function photoGrid(photos, options = {}) {
@@ -291,6 +317,7 @@ function lightbox() {
       <h2 class="lightbox__title" id="lightbox-title"></h2>
       <p class="lightbox__credit" id="lightbox-credit"></p>
       <div class="lightbox__links" id="lightbox-links"></div>
+      <button class="copy-credit copy-credit--inline" id="lightbox-copy" type="button" data-copy-credit>Copy credit</button>
     </div>
     <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close photograph">×</button>
     <button class="lightbox__prev" type="button" data-lightbox-prev aria-label="Previous photograph">←</button>
@@ -372,6 +399,7 @@ function head(options) {
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="${esc(site.name)} feed" href="/feed.xml">
   <link rel="preload" href="${assets.fonts.serif}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="${assets.fonts.sans}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${assets.css}">
@@ -406,6 +434,7 @@ function layout(options) {
 </head>
 <body${bodyClass ? ` class="${attr(bodyClass)}"` : ""}>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span data-progress-bar></span></div>
   ${header(pathname)}
   <main id="main" class="page-main" tabindex="-1"${
     noindex ? " data-pagefind-ignore" : " data-pagefind-body"
@@ -896,6 +925,22 @@ function renderEra(era, index) {
       </div>
 
       <aside class="era-aside">
+        <nav class="chapter-rail fact-card" aria-label="Chapters">
+          <p class="micro">Chapter ${String(index + 1).padStart(2, "0")} / ${String(
+            data.eras.length
+          ).padStart(2, "0")}</p>
+          <ol>
+            ${data.eras
+              .map(
+                (item, chapterIndex) =>
+                  `<li><a href="/journey/${attr(item.id)}"${
+                    chapterIndex === index ? ' aria-current="page"' : ""
+                  } aria-label="${attr(item.label)}"><span></span></a></li>`
+              )
+              .join("")}
+          </ol>
+          <strong>${esc(era.label)}</strong>
+        </nav>
         <div class="fact-card">
           <h2>At a glance</h2>
           ${factList(era.facts)}
@@ -1271,7 +1316,9 @@ function renderFanNotes() {
       <div class="notes-grid">
         ${notes.notes
           .map(
-            (note) => `<article class="note-card${note.status === "placeholder" ? " note-card--placeholder" : ""}">
+            (note) => `<article id="${attr(noteSlug(note.title))}" class="note-card${
+              note.status === "placeholder" ? " note-card--placeholder" : ""
+            }">
           <div class="note-card__meta">
             <span class="note-card__tag">${esc(note.tag)}</span>
             <span>${esc(note.date)}</span>
@@ -1294,7 +1341,10 @@ function renderFanNotes() {
         <div>
           <h2>${esc(notes.submit.title)}</h2>
           <p>${esc(notes.submit.body)}</p>
-          <span class="submit-card__contact">${esc(notes.submit.contact)}</span>
+          <span class="submit-card__contact">${contactLink(
+            notes.submit.url,
+            notes.submit.contact
+          )}</span>
         </div>
         <a class="btn btn--light" href="/about#contact">Contact details</a>
       </div>
@@ -1389,6 +1439,7 @@ function renderSources() {
               photo.licenseUrl
             )}" target="_blank" rel="noopener noreferrer">Licence</a></p>
           </div>
+          ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`)}
         </article>`
           )
           .join("\n        ")}
@@ -1441,7 +1492,7 @@ function renderAbout() {
         <div class="contact-box" id="contact">
           <h2>${esc(about.contact.label)}</h2>
           <p>Corrections, takedown requests, and licensed photograph offers:</p>
-          <strong>${esc(about.contact.value)}</strong>
+          <strong>${contactLink(about.contact.value, about.contact.action)}</strong>
           <small>${esc(about.contact.note)}</small>
         </div>
         <div class="fact-card">
@@ -1574,6 +1625,56 @@ function renderNotFound() {
    Sitemap, robots, index
    -------------------------------------------------------------------------- */
 
+function buildFeed() {
+  const items = [];
+
+  for (const note of data.fanNotes.notes) {
+    items.push({
+      title: note.title,
+      link: `${site.url}/fan-notes#${noteSlug(note.title)}`,
+      description: note.body[0] || note.tag,
+      date: `${note.date} UTC`,
+    });
+  }
+
+  for (const album of data.albums) {
+    items.push({
+      title: `${album.title} — ${album.type}`,
+      link: `${site.url}/discography/${album.id}`,
+      description: album.summary,
+      date: `${album.year}-01-01`,
+    });
+  }
+
+  items.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>${esc(site.name)} — ${esc(site.tagline)}</title>
+  <link>${esc(site.url)}/</link>
+  <description>${esc(site.description)}</description>
+  <language>en</language>
+  <lastBuildDate>${new Date(site.updated).toUTCString()}</lastBuildDate>
+  <atom:link href="${site.url}/feed.xml" rel="self" type="application/rss+xml" />
+  ${items
+    .map(
+      (item) => `<item>
+    <title>${esc(item.title)}</title>
+    <link>${esc(item.link)}</link>
+    <guid isPermaLink="true">${esc(item.link)}</guid>
+    <pubDate>${new Date(item.date).toUTCString()}</pubDate>
+    <description>${esc(item.description)}</description>
+  </item>`
+    )
+    .join("\n  ")}
+</channel>
+</rss>
+`;
+
+  writeFile("feed.xml", xml);
+}
+
 function buildSitemap() {
   const entries = [];
 
@@ -1636,7 +1737,7 @@ function buildIndex() {
     "index.json",
     JSON.stringify(
       {
-        site: { name: site.name, url: site.url, updated: site.updated },
+        site: { name: site.name, url: site.url, updated: site.updated, feed: "/feed.xml" },
         links,
         eras: data.eras.map((era) => ({
           id: era.id,
@@ -1701,6 +1802,7 @@ function main() {
   writeRoute("/404", renderNotFound());
 
   buildSitemap();
+  buildFeed();
   buildIndex();
 
   const pagefindLocal = path.join(ROOT, "node_modules", ".bin", "pagefind");

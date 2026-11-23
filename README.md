@@ -19,6 +19,9 @@ Live site: <https://blog.wldnanatayya.com>
 | `scripts/og.py` | Typographic Open Graph cards and icon set. |
 | `scripts/serve.mjs` | Local server that mirrors the clean-URL nginx rules. |
 | `scripts/check.mjs` | Validates metadata, internal links, assets, image attributes, and image credits. |
+| `deploy/nginx.conf` | Copy of the live vhost (root → `current` symlink). |
+| `deploy/deploy.sh` | Build-aware atomic release swap. |
+| `deploy/rollback.sh` | Point `current` at an older release. |
 | `AUDIT.md` | Baseline audit findings. |
 | `NEEDS.md` | Remaining photo and content placeholders. |
 
@@ -40,6 +43,9 @@ npm install
 npm run build     # clean dist/, regenerate everything, run Pagefind
 npm run check     # validate the generated site
 npm run serve     # http://localhost:4173 with clean URLs and a themed 404
+
+# Deploy the current dist/ atomically, then verify:
+./deploy/deploy.sh
 ```
 
 The build writes a complete site to `dist/`. Do not edit `dist/` by hand; edit `src/data.json` or the source files and rebuild.
@@ -63,10 +69,7 @@ Deployment uses a release directory and an atomic symlink swap. The old document
 
 ```bash
 # On the VPS, after copying dist/ to a new release directory:
-sudo rsync -a --delete dist/ /var/www/blog-releases/<timestamp>/
-sudo ln -sfn /var/www/blog-releases/<timestamp> /var/www/blog-releases/.next
-sudo mv -T /var/www/blog-releases/.next /var/www/blog-releases/current
-sudo nginx -t && sudo systemctl reload nginx
+./deploy/deploy.sh
 ```
 
 The nginx vhost root is `/var/www/blog-releases/current`. Only this vhost should be changed.
@@ -76,9 +79,7 @@ The nginx vhost root is `/var/www/blog-releases/current`. Only this vhost should
 Point `current` back to a previous release and reload nginx:
 
 ```bash
-sudo ln -sfn /var/www/blog-releases/<previous-timestamp> /var/www/blog-releases/.next
-sudo mv -T /var/www/blog-releases/.next /var/www/blog-releases/current
-sudo nginx -t && sudo systemctl reload nginx
+./deploy/rollback.sh <previous-release-name>
 ```
 
 The pre-rewrite site also remains at `/var/www/blog.wldnanatayya.com` and in `/var/www/blog-backups/`.

@@ -4,3 +4,7 @@ dist/
 src/images.manifest.json
 .DS_Store
 *.log
+.env
+.env.*
+*.pem
+*.key

@@ -23,7 +23,7 @@ Updated: **24 November 2026**.
 | Companion album title | Unconfirmed; announced as a companion album in July 2026 | Update when the official title, tracklist, and date are announced. |
 | 007 First Light theme | Listed from Wikipedia and BBC reporting | Add a direct publisher or artist announcement link if one is published. |
 | Archive keeper's note | Placeholder text in `fanNotes.notes[0]` | Replace with a short public note written for readers. |
-| Contact email | `[contact email — to be added]` in `src/data.json` | Replace before promoting the site. Do not invent an address. |
+| Contact email | Public GitHub Issues link in `src/data.json` | Deliberately no invented address. Replace with a real email if you want one. |
 
 ## C. Photo credits
 

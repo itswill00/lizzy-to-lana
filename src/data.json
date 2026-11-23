@@ -14,12 +14,30 @@
     "photoPolicy": "Every photograph is stored locally, credited, linked to its original file page, and used under a named open licence. No image is hotlinked from a search engine."
   },
   "nav": [
-    { "label": "Journey", "href": "/journey" },
-    { "label": "Gallery", "href": "/gallery" },
-    { "label": "Discography", "href": "/discography" },
-    { "label": "Fan Notes", "href": "/fan-notes" },
-    { "label": "Sources", "href": "/sources" },
-    { "label": "About", "href": "/about" }
+    {
+      "label": "Journey",
+      "href": "/journey"
+    },
+    {
+      "label": "Gallery",
+      "href": "/gallery"
+    },
+    {
+      "label": "Discography",
+      "href": "/discography"
+    },
+    {
+      "label": "Fan Notes",
+      "href": "/fan-notes"
+    },
+    {
+      "label": "Sources",
+      "href": "/sources"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    }
   ],
   "home": {
     "eyebrow": "Unofficial fan archive · Updated 24 November 2026",
@@ -29,14 +47,40 @@
     "intro": "This is not a diary and it is not a news site. It is a fan-made archive: a place to follow the records, the tours, and the visual chapters without gossip, speculation, or uncredited images.",
     "heroPhoto": "hero-lana-2024",
     "stats": [
-      { "value": "09", "label": "chapters" },
-      { "value": "16", "label": "releases" },
-      { "value": "18", "label": "credited photographs" },
-      { "value": "01", "label": "source of truth" }
+      {
+        "value": "09",
+        "label": "chapters"
+      },
+      {
+        "value": "16",
+        "label": "releases"
+      },
+      {
+        "value": "18",
+        "label": "credited photographs"
+      },
+      {
+        "value": "01",
+        "label": "source of truth"
+      }
     ],
-    "highlights": ["early", "nfr", "stove"],
-    "featuredAlbums": ["born-to-die", "norman-fucking-rockwell", "ocean-blvd", "stove"],
-    "galleryStrip": ["early-bowery-2011", "btd-cannes-2012", "ultra-headshot-2014", "stove-wembley-2025"],
+    "highlights": [
+      "early",
+      "nfr",
+      "stove"
+    ],
+    "featuredAlbums": [
+      "born-to-die",
+      "norman-fucking-rockwell",
+      "ocean-blvd",
+      "stove"
+    ],
+    "galleryStrip": [
+      "early-bowery-2011",
+      "btd-cannes-2012",
+      "ultra-headshot-2014",
+      "stove-wembley-2025"
+    ],
     "sections": {
       "introTitle": "A public record, not a personal feed",
       "introBody": [
@@ -57,8 +101,14 @@
       "title": "The archive is a map, not a monument.",
       "body": "Follow the eras in order, jump to the record that brought you here, or search the whole collection. Every route is a real page, and every page can be read without JavaScript.",
       "links": [
-        { "label": "Open the journey", "href": "/journey" },
-        { "label": "Search the archive", "href": "/search" }
+        {
+          "label": "Open the journey",
+          "href": "/journey"
+        },
+        {
+          "label": "Search the archive",
+          "href": "/search"
+        }
       ]
     }
   },
@@ -94,26 +144,59 @@
       {
         "title": "Explore",
         "links": [
-          { "label": "Journey", "href": "/journey" },
-          { "label": "Gallery", "href": "/gallery" },
-          { "label": "Discography", "href": "/discography" },
-          { "label": "Search", "href": "/search" }
+          {
+            "label": "Journey",
+            "href": "/journey"
+          },
+          {
+            "label": "Gallery",
+            "href": "/gallery"
+          },
+          {
+            "label": "Discography",
+            "href": "/discography"
+          },
+          {
+            "label": "Search",
+            "href": "/search"
+          }
         ]
       },
       {
         "title": "Archive",
         "links": [
-          { "label": "Fan notes", "href": "/fan-notes" },
-          { "label": "Sources", "href": "/sources" },
-          { "label": "About", "href": "/about" }
+          {
+            "label": "Fan notes",
+            "href": "/fan-notes"
+          },
+          {
+            "label": "Sources",
+            "href": "/sources"
+          },
+          {
+            "label": "About",
+            "href": "/about"
+          }
         ]
       },
       {
         "title": "Elsewhere",
         "links": [
-          { "label": "Official site", "href": "https://www.lanadelrey.com/", "external": true },
-          { "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey", "external": true },
-          { "label": "Wikimedia Commons", "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year", "external": true }
+          {
+            "label": "Official site",
+            "href": "https://www.lanadelrey.com/",
+            "external": true
+          },
+          {
+            "label": "Wikipedia",
+            "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
+            "external": true
+          },
+          {
+            "label": "Wikimedia Commons",
+            "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
+            "external": true
+          }
         ]
       }
     ]
@@ -144,17 +227,52 @@
         }
       ],
       "facts": [
-        { "label": "Born", "value": "21 June 1985, New York City" },
-        { "label": "Raised", "value": "Lake Placid, New York" },
-        { "label": "Education", "value": "Kent School; Fordham University (philosophy)" },
-        { "label": "Early aliases", "value": "Sparkle Jump Rope Queen; Lizzy Grant; May Jailer" },
-        { "label": "First release", "value": "Kill Kill EP (2008)" },
-        { "label": "Debut album", "value": "Lana Del Ray (2010)" }
+        {
+          "label": "Born",
+          "value": "21 June 1985, New York City"
+        },
+        {
+          "label": "Raised",
+          "value": "Lake Placid, New York"
+        },
+        {
+          "label": "Education",
+          "value": "Kent School; Fordham University (philosophy)"
+        },
+        {
+          "label": "Early aliases",
+          "value": "Sparkle Jump Rope Queen; Lizzy Grant; May Jailer"
+        },
+        {
+          "label": "First release",
+          "value": "Kill Kill EP (2008)"
+        },
+        {
+          "label": "Debut album",
+          "value": "Lana Del Ray (2010)"
+        }
       ],
-      "listening": ["Kill Kill", "Yayo", "Gramma (Blue Ribbon Sparkler Trailer Heaven)", "Video Games"],
-      "albums": ["kill-kill", "lana-del-ray"],
-      "photoIds": ["early-bowery-2011", "early-paradiso-2011", "placeholder-childhood"],
-      "sources": ["wikipedia-lana", "wikipedia-kill-kill", "wikipedia-lana-del-ray", "commons-lana"]
+      "listening": [
+        "Kill Kill",
+        "Yayo",
+        "Gramma (Blue Ribbon Sparkler Trailer Heaven)",
+        "Video Games"
+      ],
+      "albums": [
+        "kill-kill",
+        "lana-del-ray"
+      ],
+      "photoIds": [
+        "early-bowery-2011",
+        "early-paradiso-2011",
+        "placeholder-childhood"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-kill-kill",
+        "wikipedia-lana-del-ray",
+        "commons-lana"
+      ]
     },
     {
       "id": "born-to-die",
@@ -181,17 +299,57 @@
         }
       ],
       "facts": [
-        { "label": "Breakthrough", "value": "“Video Games” (2011)" },
-        { "label": "Major-label debut", "value": "Born to Die (27 January 2012)" },
-        { "label": "Follow-up", "value": "Paradise EP (9 November 2012)" },
-        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
-        { "label": "Film", "value": "Tropico (2013)" },
-        { "label": "Key singles", "value": "Video Games; Born to Die; Blue Jeans; Ride; Young and Beautiful" }
+        {
+          "label": "Breakthrough",
+          "value": "“Video Games” (2011)"
+        },
+        {
+          "label": "Major-label debut",
+          "value": "Born to Die (27 January 2012)"
+        },
+        {
+          "label": "Follow-up",
+          "value": "Paradise EP (9 November 2012)"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 2, Billboard 200"
+        },
+        {
+          "label": "Film",
+          "value": "Tropico (2013)"
+        },
+        {
+          "label": "Key singles",
+          "value": "Video Games; Born to Die; Blue Jeans; Ride; Young and Beautiful"
+        }
       ],
-      "listening": ["Video Games", "Born to Die", "Blue Jeans", "Ride", "Young and Beautiful"],
-      "albums": ["born-to-die", "lana-del-rey-ep", "paradise", "tropico"],
-      "photoIds": ["btd-irving-plaza-2012", "btd-cannes-2012", "btd-isle-of-wight-2012"],
-      "sources": ["wikipedia-lana", "wikipedia-born-to-die", "wikipedia-lana-del-rey-ep", "wikipedia-paradise", "wikipedia-tropico", "commons-lana"]
+      "listening": [
+        "Video Games",
+        "Born to Die",
+        "Blue Jeans",
+        "Ride",
+        "Young and Beautiful"
+      ],
+      "albums": [
+        "born-to-die",
+        "lana-del-rey-ep",
+        "paradise",
+        "tropico"
+      ],
+      "photoIds": [
+        "btd-irving-plaza-2012",
+        "btd-cannes-2012",
+        "btd-isle-of-wight-2012"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-born-to-die",
+        "wikipedia-lana-del-rey-ep",
+        "wikipedia-paradise",
+        "wikipedia-tropico",
+        "commons-lana"
+      ]
     },
     {
       "id": "ultraviolence",
@@ -218,17 +376,51 @@
         }
       ],
       "facts": [
-        { "label": "Released", "value": "13 June 2014" },
-        { "label": "Producers", "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels" },
-        { "label": "Standard tracks", "value": "11" },
-        { "label": "Chart peak", "value": "No. 1 in eleven countries, including the US" },
-        { "label": "Key singles", "value": "West Coast; Ultraviolence; Brooklyn Baby" },
-        { "label": "Film songs", "value": "“Big Eyes”; “I Can Fly” (2014)" }
+        {
+          "label": "Released",
+          "value": "13 June 2014"
+        },
+        {
+          "label": "Producers",
+          "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels"
+        },
+        {
+          "label": "Standard tracks",
+          "value": "11"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in eleven countries, including the US"
+        },
+        {
+          "label": "Key singles",
+          "value": "West Coast; Ultraviolence; Brooklyn Baby"
+        },
+        {
+          "label": "Film songs",
+          "value": "“Big Eyes”; “I Can Fly” (2014)"
+        }
       ],
-      "listening": ["West Coast", "Brooklyn Baby", "Ultraviolence", "Money Power Glory", "Old Money"],
-      "albums": ["ultraviolence"],
-      "photoIds": ["ultra-coachella-2014", "ultra-headshot-2014", "ultra-rock-en-seine-2014"],
-      "sources": ["wikipedia-lana", "wikipedia-ultraviolence", "commons-lana"]
+      "listening": [
+        "West Coast",
+        "Brooklyn Baby",
+        "Ultraviolence",
+        "Money Power Glory",
+        "Old Money"
+      ],
+      "albums": [
+        "ultraviolence"
+      ],
+      "photoIds": [
+        "ultra-coachella-2014",
+        "ultra-headshot-2014",
+        "ultra-rock-en-seine-2014"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-ultraviolence",
+        "commons-lana"
+      ]
     },
     {
       "id": "honeymoon",
@@ -255,17 +447,50 @@
         }
       ],
       "facts": [
-        { "label": "Released", "value": "18 September 2015" },
-        { "label": "Producers", "value": "Lana Del Rey; Rick Nowels; Kieron Menzies" },
-        { "label": "Tracks", "value": "14" },
-        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
-        { "label": "Key singles", "value": "High by the Beach; Music to Watch Boys To" },
-        { "label": "Tour", "value": "The Endless Summer Tour (2015)" }
+        {
+          "label": "Released",
+          "value": "18 September 2015"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Rick Nowels; Kieron Menzies"
+        },
+        {
+          "label": "Tracks",
+          "value": "14"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 2, Billboard 200"
+        },
+        {
+          "label": "Key singles",
+          "value": "High by the Beach; Music to Watch Boys To"
+        },
+        {
+          "label": "Tour",
+          "value": "The Endless Summer Tour (2015)"
+        }
       ],
-      "listening": ["Honeymoon", "Music to Watch Boys To", "High by the Beach", "The Blackest Day", "Salvatore"],
-      "albums": ["honeymoon"],
-      "photoIds": ["honeymoon-sasquatch-2015", "honeymoon-sasquatch-2015-2"],
-      "sources": ["wikipedia-lana", "wikipedia-honeymoon", "commons-lana"]
+      "listening": [
+        "Honeymoon",
+        "Music to Watch Boys To",
+        "High by the Beach",
+        "The Blackest Day",
+        "Salvatore"
+      ],
+      "albums": [
+        "honeymoon"
+      ],
+      "photoIds": [
+        "honeymoon-sasquatch-2015",
+        "honeymoon-sasquatch-2015-2"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-honeymoon",
+        "commons-lana"
+      ]
     },
     {
       "id": "lust-for-life",
@@ -292,17 +517,50 @@
         }
       ],
       "facts": [
-        { "label": "Released", "value": "21 July 2017" },
-        { "label": "Tracks", "value": "16" },
-        { "label": "Collaborators", "value": "The Weeknd; A$AP Rocky; Playboi Carti; Stevie Nicks; Sean Ono Lennon" },
-        { "label": "Chart peak", "value": "No. 1 in twelve countries, including the US and UK" },
-        { "label": "Grammy", "value": "Best Pop Vocal Album nomination (2018)" },
-        { "label": "Key singles", "value": "Love; Lust for Life; Summer Bummer; Groupie Love" }
+        {
+          "label": "Released",
+          "value": "21 July 2017"
+        },
+        {
+          "label": "Tracks",
+          "value": "16"
+        },
+        {
+          "label": "Collaborators",
+          "value": "The Weeknd; A$AP Rocky; Playboi Carti; Stevie Nicks; Sean Ono Lennon"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in twelve countries, including the US and UK"
+        },
+        {
+          "label": "Grammy",
+          "value": "Best Pop Vocal Album nomination (2018)"
+        },
+        {
+          "label": "Key singles",
+          "value": "Love; Lust for Life; Summer Bummer; Groupie Love"
+        }
       ],
-      "listening": ["Love", "Lust for Life", "Cherry", "Summer Bummer", "Get Free"],
-      "albums": ["lust-for-life"],
-      "photoIds": ["lfl-flow-2017", "lfl-kroq-2017"],
-      "sources": ["wikipedia-lana", "wikipedia-lust-for-life", "commons-lana"]
+      "listening": [
+        "Love",
+        "Lust for Life",
+        "Cherry",
+        "Summer Bummer",
+        "Get Free"
+      ],
+      "albums": [
+        "lust-for-life"
+      ],
+      "photoIds": [
+        "lfl-flow-2017",
+        "lfl-kroq-2017"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-lust-for-life",
+        "commons-lana"
+      ]
     },
     {
       "id": "nfr",
@@ -329,17 +587,50 @@
         }
       ],
       "facts": [
-        { "label": "Released", "value": "30 August 2019" },
-        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; additional collaborators" },
-        { "label": "Tracks", "value": "14" },
-        { "label": "Chart peak", "value": "No. 1 in seven countries; No. 3 US" },
-        { "label": "Grammy", "value": "Album of the Year nomination (2020)" },
-        { "label": "Key singles", "value": "Mariners Apartment Complex; Venice Bitch; Doin' Time; The Greatest" }
+        {
+          "label": "Released",
+          "value": "30 August 2019"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Jack Antonoff; additional collaborators"
+        },
+        {
+          "label": "Tracks",
+          "value": "14"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in seven countries; No. 3 US"
+        },
+        {
+          "label": "Grammy",
+          "value": "Album of the Year nomination (2020)"
+        },
+        {
+          "label": "Key singles",
+          "value": "Mariners Apartment Complex; Venice Bitch; Doin' Time; The Greatest"
+        }
       ],
-      "listening": ["Venice Bitch", "Mariners Apartment Complex", "The Greatest", "Cinnamon Girl", "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"],
-      "albums": ["norman-fucking-rockwell"],
-      "photoIds": ["nfr-grammy-museum-2019"],
-      "sources": ["wikipedia-lana", "wikipedia-nfr", "rollingstone-nfr", "commons-lana"]
+      "listening": [
+        "Venice Bitch",
+        "Mariners Apartment Complex",
+        "The Greatest",
+        "Cinnamon Girl",
+        "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"
+      ],
+      "albums": [
+        "norman-fucking-rockwell"
+      ],
+      "photoIds": [
+        "nfr-grammy-museum-2019"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-nfr",
+        "rollingstone-nfr",
+        "commons-lana"
+      ]
     },
     {
       "id": "chemtrails",
@@ -366,17 +657,53 @@
         }
       ],
       "facts": [
-        { "label": "Poetry book", "value": "Violet Bent Backwards over the Grass (29 September 2020)" },
-        { "label": "Spoken-word album", "value": "28 July 2020" },
-        { "label": "Chemtrails", "value": "19 March 2021" },
-        { "label": "Blue Banisters", "value": "22 October 2021" },
-        { "label": "Chemtrails peak", "value": "No. 1 in eight countries, including the UK" },
-        { "label": "Blue Banisters peak", "value": "No. 8, Billboard 200" }
+        {
+          "label": "Poetry book",
+          "value": "Violet Bent Backwards over the Grass (29 September 2020)"
+        },
+        {
+          "label": "Spoken-word album",
+          "value": "28 July 2020"
+        },
+        {
+          "label": "Chemtrails",
+          "value": "19 March 2021"
+        },
+        {
+          "label": "Blue Banisters",
+          "value": "22 October 2021"
+        },
+        {
+          "label": "Chemtrails peak",
+          "value": "No. 1 in eight countries, including the UK"
+        },
+        {
+          "label": "Blue Banisters peak",
+          "value": "No. 8, Billboard 200"
+        }
       ],
-      "listening": ["White Dress", "Chemtrails over the Country Club", "Blue Banisters", "Arcadia", "Wildflower Wildfire"],
-      "albums": ["violet-bent-backwards-over-the-grass", "chemtrails-over-the-country-club", "blue-banisters"],
-      "photoIds": ["placeholder-chemtrails"],
-      "sources": ["wikipedia-lana", "wikipedia-violet", "wikipedia-chemtrails", "wikipedia-blue-banisters", "commons-lana"]
+      "listening": [
+        "White Dress",
+        "Chemtrails over the Country Club",
+        "Blue Banisters",
+        "Arcadia",
+        "Wildflower Wildfire"
+      ],
+      "albums": [
+        "violet-bent-backwards-over-the-grass",
+        "chemtrails-over-the-country-club",
+        "blue-banisters"
+      ],
+      "photoIds": [
+        "placeholder-chemtrails"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-violet",
+        "wikipedia-chemtrails",
+        "wikipedia-blue-banisters",
+        "commons-lana"
+      ]
     },
     {
       "id": "ocean-blvd",
@@ -403,17 +730,49 @@
         }
       ],
       "facts": [
-        { "label": "Released", "value": "24 March 2023" },
-        { "label": "Tracks", "value": "16" },
-        { "label": "Length", "value": "77:52" },
-        { "label": "Chart peak", "value": "No. 1 in eight countries; No. 3 US" },
-        { "label": "Grammy", "value": "Album of the Year; Best Alternative Music Album nominations (2024)" },
-        { "label": "Key singles", "value": "A&W; The Grants; Candy Necklace" }
+        {
+          "label": "Released",
+          "value": "24 March 2023"
+        },
+        {
+          "label": "Tracks",
+          "value": "16"
+        },
+        {
+          "label": "Length",
+          "value": "77:52"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in eight countries; No. 3 US"
+        },
+        {
+          "label": "Grammy",
+          "value": "Album of the Year; Best Alternative Music Album nominations (2024)"
+        },
+        {
+          "label": "Key singles",
+          "value": "A&W; The Grants; Candy Necklace"
+        }
       ],
-      "listening": ["A&W", "The Grants", "Candy Necklace", "Kintsugi", "Let the Light In"],
-      "albums": ["ocean-blvd"],
-      "photoIds": ["ocean-mita-2023"],
-      "sources": ["wikipedia-lana", "wikipedia-ocean-blvd", "commons-lana"]
+      "listening": [
+        "A&W",
+        "The Grants",
+        "Candy Necklace",
+        "Kintsugi",
+        "Let the Light In"
+      ],
+      "albums": [
+        "ocean-blvd"
+      ],
+      "photoIds": [
+        "ocean-mita-2023"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-ocean-blvd",
+        "commons-lana"
+      ]
     },
     {
       "id": "stove",
@@ -440,17 +799,58 @@
         }
       ],
       "facts": [
-        { "label": "Status", "value": "Unreleased as of 24 November 2026" },
-        { "label": "Working titles", "value": "Lasso; The Right Person Will Stay; Stove" },
-        { "label": "Singles", "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter" },
-        { "label": "Stagecoach", "value": "April 2025" },
-        { "label": "Companion album", "value": "Announced 15 July 2026; title TBA" },
-        { "label": "2026 collaborations", "value": "007 First Light theme; “Lies” with Zach Bryan" }
+        {
+          "label": "Status",
+          "value": "Unreleased as of 24 November 2026"
+        },
+        {
+          "label": "Working titles",
+          "value": "Lasso; The Right Person Will Stay; Stove"
+        },
+        {
+          "label": "Singles",
+          "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter"
+        },
+        {
+          "label": "Stagecoach",
+          "value": "April 2025"
+        },
+        {
+          "label": "Companion album",
+          "value": "Announced 15 July 2026; title TBA"
+        },
+        {
+          "label": "2026 collaborations",
+          "value": "007 First Light theme; “Lies” with Zach Bryan"
+        }
       ],
-      "listening": ["Henry, Come On", "Bluebird", "White Feather Hawk Tail Deer Hunter", "Tough (with Quavo)", "Lies (with Zach Bryan)"],
-      "albums": ["stove", "companion-album"],
-      "photoIds": ["hero-lana-2024", "stove-primavera-2024", "stove-wembley-2025", "stove-wembley-detail-2025"],
-      "sources": ["wikipedia-lana", "wikipedia-stove", "billboard-lasso", "pitchfork-stove", "pitchfork-henry", "rollingstone-companion", "bbc-bond", "commons-lana"]
+      "listening": [
+        "Henry, Come On",
+        "Bluebird",
+        "White Feather Hawk Tail Deer Hunter",
+        "Tough (with Quavo)",
+        "Lies (with Zach Bryan)"
+      ],
+      "albums": [
+        "stove",
+        "companion-album"
+      ],
+      "photoIds": [
+        "hero-lana-2024",
+        "stove-primavera-2024",
+        "stove-wembley-2025",
+        "stove-wembley-detail-2025"
+      ],
+      "sources": [
+        "wikipedia-lana",
+        "wikipedia-stove",
+        "billboard-lasso",
+        "pitchfork-stove",
+        "pitchfork-henry",
+        "rollingstone-companion",
+        "bbc-bond",
+        "commons-lana"
+      ]
     }
   ],
   "albums": [
@@ -470,20 +870,47 @@
         "It is a small record, but it is the archive's starting point. The title track, “Yayo”, and “Gramma (Blue Ribbon Sparkler Trailer Heaven)” already contain the ingredients — the cinematic frame, the worn glamour, the slight remove from the present — that the later albums would amplify."
       ],
       "tracklist": [
-        { "title": "Kill Kill" },
-        { "title": "Yayo" },
-        { "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)" }
+        {
+          "title": "Kill Kill"
+        },
+        {
+          "title": "Yayo"
+        },
+        {
+          "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)"
+        }
       ],
       "tracklistNote": "Three tracks. The EP was later included in full on the 2010 album Lana Del Ray.",
       "facts": [
-        { "label": "Released", "value": "21 October 2008" },
-        { "label": "Label", "value": "5 Points" },
-        { "label": "Producer", "value": "David Kahne" },
-        { "label": "Tracks", "value": "3" },
-        { "label": "Length", "value": "13:40" },
-        { "label": "Status", "value": "Out of print; not on major streaming services" }
+        {
+          "label": "Released",
+          "value": "21 October 2008"
+        },
+        {
+          "label": "Label",
+          "value": "5 Points"
+        },
+        {
+          "label": "Producer",
+          "value": "David Kahne"
+        },
+        {
+          "label": "Tracks",
+          "value": "3"
+        },
+        {
+          "label": "Length",
+          "value": "13:40"
+        },
+        {
+          "label": "Status",
+          "value": "Out of print; not on major streaming services"
+        }
       ],
-      "sources": ["wikipedia-kill-kill", "wikipedia-lana-del-ray"]
+      "sources": [
+        "wikipedia-kill-kill",
+        "wikipedia-lana-del-ray"
+      ]
     },
     {
       "id": "lana-del-ray",
@@ -501,30 +928,77 @@
         "The album was withdrawn from digital retail after Del Rey signed with a major label; it remains the clearest document of the pre-“Video Games” project. The title is sometimes written Lana Del Ray and sometimes Lana Del Rey; the album cover uses Ray."
       ],
       "tracklist": [
-        { "title": "Kill Kill" },
-        { "title": "Queen of the Gas Station" },
-        { "title": "Oh Say Can You See" },
-        { "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)" },
-        { "title": "For K, Pt. 2" },
-        { "title": "Jump" },
-        { "title": "Mermaid Motel" },
-        { "title": "Raise Me Up (Mississippi South)" },
-        { "title": "Pawn Shop Blues" },
-        { "title": "Brite Lites" },
-        { "title": "Put Me in a Movie" },
-        { "title": "Smarty" },
-        { "title": "Yayo" }
+        {
+          "title": "Kill Kill"
+        },
+        {
+          "title": "Queen of the Gas Station"
+        },
+        {
+          "title": "Oh Say Can You See"
+        },
+        {
+          "title": "Gramma (Blue Ribbon Sparkler Trailer Heaven)"
+        },
+        {
+          "title": "For K, Pt. 2"
+        },
+        {
+          "title": "Jump"
+        },
+        {
+          "title": "Mermaid Motel"
+        },
+        {
+          "title": "Raise Me Up (Mississippi South)"
+        },
+        {
+          "title": "Pawn Shop Blues"
+        },
+        {
+          "title": "Brite Lites"
+        },
+        {
+          "title": "Put Me in a Movie"
+        },
+        {
+          "title": "Smarty"
+        },
+        {
+          "title": "Yayo"
+        }
       ],
       "tracklistNote": "Standard 13-track edition.",
       "facts": [
-        { "label": "Released", "value": "4 January 2010" },
-        { "label": "Label", "value": "5 Points" },
-        { "label": "Producer", "value": "David Kahne" },
-        { "label": "Tracks", "value": "13" },
-        { "label": "Length", "value": "47:38" },
-        { "label": "Status", "value": "Out of print" }
+        {
+          "label": "Released",
+          "value": "4 January 2010"
+        },
+        {
+          "label": "Label",
+          "value": "5 Points"
+        },
+        {
+          "label": "Producer",
+          "value": "David Kahne"
+        },
+        {
+          "label": "Tracks",
+          "value": "13"
+        },
+        {
+          "label": "Length",
+          "value": "47:38"
+        },
+        {
+          "label": "Status",
+          "value": "Out of print"
+        }
       ],
-      "sources": ["wikipedia-lana-del-ray", "wikipedia-kill-kill"]
+      "sources": [
+        "wikipedia-lana-del-ray",
+        "wikipedia-kill-kill"
+      ]
     },
     {
       "id": "born-to-die",
@@ -543,29 +1017,75 @@
         "The Paradise Edition reissue, released on 9 November 2012, combines the standard album with the eight-track Paradise EP."
       ],
       "tracklist": [
-        { "title": "Born to Die" },
-        { "title": "Off to the Races" },
-        { "title": "Blue Jeans" },
-        { "title": "Video Games" },
-        { "title": "Diet Mountain Dew" },
-        { "title": "National Anthem" },
-        { "title": "Dark Paradise" },
-        { "title": "Radio" },
-        { "title": "Carmen" },
-        { "title": "Million Dollar Man" },
-        { "title": "Summertime Sadness" },
-        { "title": "This Is What Makes Us Girls" }
+        {
+          "title": "Born to Die"
+        },
+        {
+          "title": "Off to the Races"
+        },
+        {
+          "title": "Blue Jeans"
+        },
+        {
+          "title": "Video Games"
+        },
+        {
+          "title": "Diet Mountain Dew"
+        },
+        {
+          "title": "National Anthem"
+        },
+        {
+          "title": "Dark Paradise"
+        },
+        {
+          "title": "Radio"
+        },
+        {
+          "title": "Carmen"
+        },
+        {
+          "title": "Million Dollar Man"
+        },
+        {
+          "title": "Summertime Sadness"
+        },
+        {
+          "title": "This Is What Makes Us Girls"
+        }
       ],
       "tracklistNote": "Standard edition. The deluxe edition adds “Without You”, “Lolita”, and “Lucky Ones”.",
       "facts": [
-        { "label": "Released", "value": "27 January 2012" },
-        { "label": "Labels", "value": "Stranger; Interscope; Polydor" },
-        { "label": "Standard tracks", "value": "12" },
-        { "label": "Deluxe tracks", "value": "15" },
-        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
-        { "label": "Reissue", "value": "The Paradise Edition (9 November 2012)" }
+        {
+          "label": "Released",
+          "value": "27 January 2012"
+        },
+        {
+          "label": "Labels",
+          "value": "Stranger; Interscope; Polydor"
+        },
+        {
+          "label": "Standard tracks",
+          "value": "12"
+        },
+        {
+          "label": "Deluxe tracks",
+          "value": "15"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 2, Billboard 200"
+        },
+        {
+          "label": "Reissue",
+          "value": "The Paradise Edition (9 November 2012)"
+        }
       ],
-      "sources": ["wikipedia-born-to-die", "wikipedia-paradise", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-born-to-die",
+        "wikipedia-paradise",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "lana-del-rey-ep",
@@ -583,20 +1103,46 @@
         "It is not the same release as the 2010 album Lana Del Ray. The shared name is one of the reasons the early discography needs a careful timeline."
       ],
       "tracklist": [
-        { "title": "Video Games" },
-        { "title": "Born to Die" },
-        { "title": "Blue Jeans" },
-        { "title": "Off to the Races" }
+        {
+          "title": "Video Games"
+        },
+        {
+          "title": "Born to Die"
+        },
+        {
+          "title": "Blue Jeans"
+        },
+        {
+          "title": "Off to the Races"
+        }
       ],
       "tracklistNote": "Four tracks, 17:19 total.",
       "facts": [
-        { "label": "Released", "value": "10 January 2012" },
-        { "label": "Label", "value": "Stranger" },
-        { "label": "Tracks", "value": "4" },
-        { "label": "Length", "value": "17:19" },
-        { "label": "Status", "value": "Released" }
+        {
+          "label": "Released",
+          "value": "10 January 2012"
+        },
+        {
+          "label": "Label",
+          "value": "Stranger"
+        },
+        {
+          "label": "Tracks",
+          "value": "4"
+        },
+        {
+          "label": "Length",
+          "value": "17:19"
+        },
+        {
+          "label": "Status",
+          "value": "Released"
+        }
       ],
-      "sources": ["wikipedia-lana-del-rey-ep", "wikipedia-born-to-die"]
+      "sources": [
+        "wikipedia-lana-del-rey-ep",
+        "wikipedia-born-to-die"
+      ]
     },
     {
       "id": "paradise",
@@ -614,26 +1160,66 @@
         "It debuted at number ten on the Billboard 200 and was later packaged with Born to Die as The Paradise Edition. The EP is the most direct bridge between the debut album and the Tropico film."
       ],
       "tracklist": [
-        { "title": "Ride" },
-        { "title": "American" },
-        { "title": "Cola" },
-        { "title": "Body Electric" },
-        { "title": "Blue Velvet" },
-        { "title": "Gods & Monsters" },
-        { "title": "Yayo" },
-        { "title": "Bel Air" },
-        { "title": "Burning Desire", "note": "iTunes bonus track" }
+        {
+          "title": "Ride"
+        },
+        {
+          "title": "American"
+        },
+        {
+          "title": "Cola"
+        },
+        {
+          "title": "Body Electric"
+        },
+        {
+          "title": "Blue Velvet"
+        },
+        {
+          "title": "Gods & Monsters"
+        },
+        {
+          "title": "Yayo"
+        },
+        {
+          "title": "Bel Air"
+        },
+        {
+          "title": "Burning Desire",
+          "note": "iTunes bonus track"
+        }
       ],
       "tracklistNote": "Eight standard tracks plus the iTunes bonus “Burning Desire”.",
       "facts": [
-        { "label": "Released", "value": "9 November 2012" },
-        { "label": "Labels", "value": "Polydor; Interscope" },
-        { "label": "Tracks", "value": "8 (+1 bonus)" },
-        { "label": "Length", "value": "33:07" },
-        { "label": "Chart peak", "value": "No. 10, Billboard 200" },
-        { "label": "Reissue", "value": "Born to Die: The Paradise Edition" }
+        {
+          "label": "Released",
+          "value": "9 November 2012"
+        },
+        {
+          "label": "Labels",
+          "value": "Polydor; Interscope"
+        },
+        {
+          "label": "Tracks",
+          "value": "8 (+1 bonus)"
+        },
+        {
+          "label": "Length",
+          "value": "33:07"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 10, Billboard 200"
+        },
+        {
+          "label": "Reissue",
+          "value": "Born to Die: The Paradise Edition"
+        }
       ],
-      "sources": ["wikipedia-paradise", "wikipedia-born-to-die"]
+      "sources": [
+        "wikipedia-paradise",
+        "wikipedia-born-to-die"
+      ]
     },
     {
       "id": "tropico",
@@ -651,21 +1237,51 @@
         "It is not a standalone album, but it belongs in the release chronology because it is the era's most complete visual statement. The film is listed here as a film/soundtrack release, not a studio album."
       ],
       "tracklist": [
-        { "title": "Body Electric" },
-        { "title": "Gods & Monsters" },
-        { "title": "Bel Air" },
-        { "title": "Tropico (film)", "note": "27:08" }
+        {
+          "title": "Body Electric"
+        },
+        {
+          "title": "Gods & Monsters"
+        },
+        {
+          "title": "Bel Air"
+        },
+        {
+          "title": "Tropico (film)",
+          "note": "27:08"
+        }
       ],
       "tracklistNote": "Three songs and the 27-minute film.",
       "facts": [
-        { "label": "Type", "value": "Short film / soundtrack" },
-        { "label": "Premiere", "value": "December 2013" },
-        { "label": "Director", "value": "Anthony Mandler" },
-        { "label": "Runtime", "value": "27:08" },
-        { "label": "Songs", "value": "Body Electric; Gods & Monsters; Bel Air" },
-        { "label": "Status", "value": "Released" }
+        {
+          "label": "Type",
+          "value": "Short film / soundtrack"
+        },
+        {
+          "label": "Premiere",
+          "value": "December 2013"
+        },
+        {
+          "label": "Director",
+          "value": "Anthony Mandler"
+        },
+        {
+          "label": "Runtime",
+          "value": "27:08"
+        },
+        {
+          "label": "Songs",
+          "value": "Body Electric; Gods & Monsters; Bel Air"
+        },
+        {
+          "label": "Status",
+          "value": "Released"
+        }
       ],
-      "sources": ["wikipedia-tropico", "wikipedia-paradise"]
+      "sources": [
+        "wikipedia-tropico",
+        "wikipedia-paradise"
+      ]
     },
     {
       "id": "ultraviolence",
@@ -683,28 +1299,71 @@
         "It debuted at number one in eleven countries, including the US, and reached the top five in more than twenty territories. The deluxe edition adds “Black Beauty”, “Guns and Roses”, and “Florida Kilos”; the iTunes edition adds “Is This Happiness”, and the Japanese/Target edition adds “Flipside”."
       ],
       "tracklist": [
-        { "title": "Cruel World" },
-        { "title": "Ultraviolence" },
-        { "title": "Shades of Cool" },
-        { "title": "Brooklyn Baby" },
-        { "title": "West Coast" },
-        { "title": "Sad Girl" },
-        { "title": "Pretty When You Cry" },
-        { "title": "Money Power Glory" },
-        { "title": "Fucked My Way Up to the Top" },
-        { "title": "Old Money" },
-        { "title": "The Other Woman" }
+        {
+          "title": "Cruel World"
+        },
+        {
+          "title": "Ultraviolence"
+        },
+        {
+          "title": "Shades of Cool"
+        },
+        {
+          "title": "Brooklyn Baby"
+        },
+        {
+          "title": "West Coast"
+        },
+        {
+          "title": "Sad Girl"
+        },
+        {
+          "title": "Pretty When You Cry"
+        },
+        {
+          "title": "Money Power Glory"
+        },
+        {
+          "title": "Fucked My Way Up to the Top"
+        },
+        {
+          "title": "Old Money"
+        },
+        {
+          "title": "The Other Woman"
+        }
       ],
       "tracklistNote": "Standard edition. Deluxe and retailer editions add “Black Beauty”, “Guns and Roses”, “Florida Kilos”, “Is This Happiness”, and “Flipside” in various combinations.",
       "facts": [
-        { "label": "Released", "value": "13 June 2014" },
-        { "label": "Producers", "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels" },
-        { "label": "Tracks", "value": "11" },
-        { "label": "Length", "value": "51:24" },
-        { "label": "Chart peak", "value": "No. 1 in eleven countries, including the US" },
-        { "label": "Key singles", "value": "West Coast; Ultraviolence; Brooklyn Baby" }
+        {
+          "label": "Released",
+          "value": "13 June 2014"
+        },
+        {
+          "label": "Producers",
+          "value": "Dan Auerbach; Lana Del Rey; Paul Epworth; Greg Kurstin; Rick Nowels"
+        },
+        {
+          "label": "Tracks",
+          "value": "11"
+        },
+        {
+          "label": "Length",
+          "value": "51:24"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in eleven countries, including the US"
+        },
+        {
+          "label": "Key singles",
+          "value": "West Coast; Ultraviolence; Brooklyn Baby"
+        }
       ],
-      "sources": ["wikipedia-ultraviolence", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-ultraviolence",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "honeymoon",
@@ -723,31 +1382,81 @@
         "The Endless Summer Tour followed in 2015, with Courtney Love and Grimes on selected dates. In 2016, Del Rey appeared on the Weeknd's “Starboy”."
       ],
       "tracklist": [
-        { "title": "Honeymoon" },
-        { "title": "Music to Watch Boys To" },
-        { "title": "Terrence Loves You" },
-        { "title": "God Knows I Tried" },
-        { "title": "High by the Beach" },
-        { "title": "Freak" },
-        { "title": "Art Deco" },
-        { "title": "Burnt Norton", "note": "Interlude" },
-        { "title": "Religion" },
-        { "title": "Salvatore" },
-        { "title": "The Blackest Day" },
-        { "title": "24" },
-        { "title": "Swan Song" },
-        { "title": "Don't Let Me Be Misunderstood" }
+        {
+          "title": "Honeymoon"
+        },
+        {
+          "title": "Music to Watch Boys To"
+        },
+        {
+          "title": "Terrence Loves You"
+        },
+        {
+          "title": "God Knows I Tried"
+        },
+        {
+          "title": "High by the Beach"
+        },
+        {
+          "title": "Freak"
+        },
+        {
+          "title": "Art Deco"
+        },
+        {
+          "title": "Burnt Norton",
+          "note": "Interlude"
+        },
+        {
+          "title": "Religion"
+        },
+        {
+          "title": "Salvatore"
+        },
+        {
+          "title": "The Blackest Day"
+        },
+        {
+          "title": "24"
+        },
+        {
+          "title": "Swan Song"
+        },
+        {
+          "title": "Don't Let Me Be Misunderstood"
+        }
       ],
       "tracklistNote": "Standard 14-track edition.",
       "facts": [
-        { "label": "Released", "value": "18 September 2015" },
-        { "label": "Producers", "value": "Lana Del Rey; Rick Nowels; Kieron Menzies" },
-        { "label": "Tracks", "value": "14" },
-        { "label": "Length", "value": "65:06" },
-        { "label": "Chart peak", "value": "No. 2, Billboard 200" },
-        { "label": "Key singles", "value": "High by the Beach; Music to Watch Boys To" }
+        {
+          "label": "Released",
+          "value": "18 September 2015"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Rick Nowels; Kieron Menzies"
+        },
+        {
+          "label": "Tracks",
+          "value": "14"
+        },
+        {
+          "label": "Length",
+          "value": "65:06"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 2, Billboard 200"
+        },
+        {
+          "label": "Key singles",
+          "value": "High by the Beach; Music to Watch Boys To"
+        }
       ],
-      "sources": ["wikipedia-honeymoon", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-honeymoon",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "lust-for-life",
@@ -765,33 +1474,91 @@
         "The album topped the charts in twelve countries, including the US and the UK, and was nominated for Best Pop Vocal Album at the 60th Grammy Awards. Its 16 tracks include “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love”, and “Get Free”."
       ],
       "tracklist": [
-        { "title": "Love" },
-        { "title": "Lust for Life", "note": "featuring the Weeknd" },
-        { "title": "13 Beaches" },
-        { "title": "Cherry" },
-        { "title": "White Mustang" },
-        { "title": "Summer Bummer", "note": "featuring A$AP Rocky and Playboi Carti" },
-        { "title": "Groupie Love", "note": "featuring A$AP Rocky" },
-        { "title": "In My Feelings" },
-        { "title": "Coachella – Woodstock in My Mind" },
-        { "title": "God Bless America – and All the Beautiful Women in It" },
-        { "title": "When the World Was at War We Kept Dancing" },
-        { "title": "Beautiful People Beautiful Problems", "note": "featuring Stevie Nicks" },
-        { "title": "Tomorrow Never Came", "note": "featuring Sean Ono Lennon" },
-        { "title": "Heroin" },
-        { "title": "Change" },
-        { "title": "Get Free" }
+        {
+          "title": "Love"
+        },
+        {
+          "title": "Lust for Life",
+          "note": "featuring the Weeknd"
+        },
+        {
+          "title": "13 Beaches"
+        },
+        {
+          "title": "Cherry"
+        },
+        {
+          "title": "White Mustang"
+        },
+        {
+          "title": "Summer Bummer",
+          "note": "featuring A$AP Rocky and Playboi Carti"
+        },
+        {
+          "title": "Groupie Love",
+          "note": "featuring A$AP Rocky"
+        },
+        {
+          "title": "In My Feelings"
+        },
+        {
+          "title": "Coachella – Woodstock in My Mind"
+        },
+        {
+          "title": "God Bless America – and All the Beautiful Women in It"
+        },
+        {
+          "title": "When the World Was at War We Kept Dancing"
+        },
+        {
+          "title": "Beautiful People Beautiful Problems",
+          "note": "featuring Stevie Nicks"
+        },
+        {
+          "title": "Tomorrow Never Came",
+          "note": "featuring Sean Ono Lennon"
+        },
+        {
+          "title": "Heroin"
+        },
+        {
+          "title": "Change"
+        },
+        {
+          "title": "Get Free"
+        }
       ],
       "tracklistNote": "Standard 16-track edition.",
       "facts": [
-        { "label": "Released", "value": "21 July 2017" },
-        { "label": "Tracks", "value": "16" },
-        { "label": "Length", "value": "72:08" },
-        { "label": "Chart peak", "value": "No. 1 in twelve countries, including the US and UK" },
-        { "label": "Grammy", "value": "Best Pop Vocal Album nomination (2018)" },
-        { "label": "Key singles", "value": "Love; Lust for Life; Summer Bummer; Groupie Love" }
+        {
+          "label": "Released",
+          "value": "21 July 2017"
+        },
+        {
+          "label": "Tracks",
+          "value": "16"
+        },
+        {
+          "label": "Length",
+          "value": "72:08"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in twelve countries, including the US and UK"
+        },
+        {
+          "label": "Grammy",
+          "value": "Best Pop Vocal Album nomination (2018)"
+        },
+        {
+          "label": "Key singles",
+          "value": "Love; Lust for Life; Summer Bummer; Groupie Love"
+        }
       ],
-      "sources": ["wikipedia-lust-for-life", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-lust-for-life",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "norman-fucking-rockwell",
@@ -810,31 +1577,81 @@
         "It reached number one in seven countries, including the UK, and number three in the US. It was nominated for Album of the Year at the 62nd Grammy Awards and later entered Rolling Stone's 500 Greatest Albums of All Time."
       ],
       "tracklist": [
-        { "title": "Norman Fucking Rockwell" },
-        { "title": "Mariners Apartment Complex" },
-        { "title": "Venice Bitch" },
-        { "title": "Fuck It I Love You" },
-        { "title": "Doin' Time" },
-        { "title": "Love Song" },
-        { "title": "Cinnamon Girl" },
-        { "title": "How to Disappear" },
-        { "title": "California" },
-        { "title": "The Next Best American Record" },
-        { "title": "The Greatest" },
-        { "title": "Bartender" },
-        { "title": "Happiness Is a Butterfly" },
-        { "title": "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It" }
+        {
+          "title": "Norman Fucking Rockwell"
+        },
+        {
+          "title": "Mariners Apartment Complex"
+        },
+        {
+          "title": "Venice Bitch"
+        },
+        {
+          "title": "Fuck It I Love You"
+        },
+        {
+          "title": "Doin' Time"
+        },
+        {
+          "title": "Love Song"
+        },
+        {
+          "title": "Cinnamon Girl"
+        },
+        {
+          "title": "How to Disappear"
+        },
+        {
+          "title": "California"
+        },
+        {
+          "title": "The Next Best American Record"
+        },
+        {
+          "title": "The Greatest"
+        },
+        {
+          "title": "Bartender"
+        },
+        {
+          "title": "Happiness Is a Butterfly"
+        },
+        {
+          "title": "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"
+        }
       ],
       "tracklistNote": "Standard 14-track edition. The title is often abbreviated to NFR!.",
       "facts": [
-        { "label": "Released", "value": "30 August 2019" },
-        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Andrew Watt; Dean Reid; Happy Perez; Kieron Menzies; Louis Bell; Rick Nowels; Zachary Dawes" },
-        { "label": "Tracks", "value": "14" },
-        { "label": "Length", "value": "67:43" },
-        { "label": "Chart peak", "value": "No. 1 in seven countries; No. 3 US" },
-        { "label": "Grammy", "value": "Album of the Year nomination (2020)" }
+        {
+          "label": "Released",
+          "value": "30 August 2019"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Jack Antonoff; Andrew Watt; Dean Reid; Happy Perez; Kieron Menzies; Louis Bell; Rick Nowels; Zachary Dawes"
+        },
+        {
+          "label": "Tracks",
+          "value": "14"
+        },
+        {
+          "label": "Length",
+          "value": "67:43"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in seven countries; No. 3 US"
+        },
+        {
+          "label": "Grammy",
+          "value": "Album of the Year nomination (2020)"
+        }
       ],
-      "sources": ["wikipedia-nfr", "rollingstone-nfr", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-nfr",
+        "rollingstone-nfr",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "violet-bent-backwards-over-the-grass",
@@ -852,31 +1669,80 @@
         "Its 14 tracks are poems, not songs; the record is best approached as a reading rather than a pop album. The book and the album are related but separate releases, and the archive lists them together because they share a voice and a moment."
       ],
       "tracklist": [
-        { "title": "LA Who Am I to Love You" },
-        { "title": "The Land of 1,000 Fires" },
-        { "title": "Violet Bent Backwards over the Grass" },
-        { "title": "Past the Bushes Cypress Thriving" },
-        { "title": "Salamander" },
-        { "title": "Never to Heaven" },
-        { "title": "SportCruiser" },
-        { "title": "Tessa DiPietro" },
-        { "title": "Quiet Waiter Blue Forever" },
-        { "title": "What Happened When I Left You" },
-        { "title": "Happy" },
-        { "title": "My Bedroom Is a Sacred Place Now – There Are Children at the Foot of My Bed" },
-        { "title": "Paradise Is Very Fragile" },
-        { "title": "Bare Feet on Linoleum" }
+        {
+          "title": "LA Who Am I to Love You"
+        },
+        {
+          "title": "The Land of 1,000 Fires"
+        },
+        {
+          "title": "Violet Bent Backwards over the Grass"
+        },
+        {
+          "title": "Past the Bushes Cypress Thriving"
+        },
+        {
+          "title": "Salamander"
+        },
+        {
+          "title": "Never to Heaven"
+        },
+        {
+          "title": "SportCruiser"
+        },
+        {
+          "title": "Tessa DiPietro"
+        },
+        {
+          "title": "Quiet Waiter Blue Forever"
+        },
+        {
+          "title": "What Happened When I Left You"
+        },
+        {
+          "title": "Happy"
+        },
+        {
+          "title": "My Bedroom Is a Sacred Place Now – There Are Children at the Foot of My Bed"
+        },
+        {
+          "title": "Paradise Is Very Fragile"
+        },
+        {
+          "title": "Bare Feet on Linoleum"
+        }
       ],
       "tracklistNote": "Spoken-word album; the poetry collection was published separately in September 2020.",
       "facts": [
-        { "label": "Book", "value": "29 September 2020 (Simon & Schuster)" },
-        { "label": "Album", "value": "28 July 2020" },
-        { "label": "Tracks", "value": "14" },
-        { "label": "Producers", "value": "Jack Antonoff; Lana Del Rey" },
-        { "label": "Format", "value": "Spoken word / poetry" },
-        { "label": "Status", "value": "Released" }
+        {
+          "label": "Book",
+          "value": "29 September 2020 (Simon & Schuster)"
+        },
+        {
+          "label": "Album",
+          "value": "28 July 2020"
+        },
+        {
+          "label": "Tracks",
+          "value": "14"
+        },
+        {
+          "label": "Producers",
+          "value": "Jack Antonoff; Lana Del Rey"
+        },
+        {
+          "label": "Format",
+          "value": "Spoken word / poetry"
+        },
+        {
+          "label": "Status",
+          "value": "Released"
+        }
       ],
-      "sources": ["wikipedia-violet", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-violet",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "chemtrails-over-the-country-club",
@@ -894,28 +1760,73 @@
         "It debuted at number one in eight countries, including the UK, and number two in the US. Its 11 tracks include “White Dress”, “Chemtrails over the Country Club”, “Tulsa Jesus Freak”, “Let Me Love You like a Woman”, “Yosemite”, and “For Free”."
       ],
       "tracklist": [
-        { "title": "White Dress" },
-        { "title": "Chemtrails over the Country Club" },
-        { "title": "Tulsa Jesus Freak" },
-        { "title": "Let Me Love You like a Woman" },
-        { "title": "Wild at Heart" },
-        { "title": "Dark but Just a Game" },
-        { "title": "Not All Who Wander Are Lost" },
-        { "title": "Yosemite" },
-        { "title": "Breaking Up Slowly", "note": "featuring Nikki Lane" },
-        { "title": "Dance Till We Die" },
-        { "title": "For Free", "note": "featuring Zella Day and Weyes Blood" }
+        {
+          "title": "White Dress"
+        },
+        {
+          "title": "Chemtrails over the Country Club"
+        },
+        {
+          "title": "Tulsa Jesus Freak"
+        },
+        {
+          "title": "Let Me Love You like a Woman"
+        },
+        {
+          "title": "Wild at Heart"
+        },
+        {
+          "title": "Dark but Just a Game"
+        },
+        {
+          "title": "Not All Who Wander Are Lost"
+        },
+        {
+          "title": "Yosemite"
+        },
+        {
+          "title": "Breaking Up Slowly",
+          "note": "featuring Nikki Lane"
+        },
+        {
+          "title": "Dance Till We Die"
+        },
+        {
+          "title": "For Free",
+          "note": "featuring Zella Day and Weyes Blood"
+        }
       ],
       "tracklistNote": "Standard 11-track edition.",
       "facts": [
-        { "label": "Released", "value": "19 March 2021" },
-        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Rick Nowels" },
-        { "label": "Tracks", "value": "11" },
-        { "label": "Length", "value": "45:28" },
-        { "label": "Chart peak", "value": "No. 1 in eight countries, including the UK; No. 2 US" },
-        { "label": "Features", "value": "Nikki Lane; Weyes Blood; Zella Day" }
+        {
+          "label": "Released",
+          "value": "19 March 2021"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Jack Antonoff; Rick Nowels"
+        },
+        {
+          "label": "Tracks",
+          "value": "11"
+        },
+        {
+          "label": "Length",
+          "value": "45:28"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in eight countries, including the UK; No. 2 US"
+        },
+        {
+          "label": "Features",
+          "value": "Nikki Lane; Weyes Blood; Zella Day"
+        }
       ],
-      "sources": ["wikipedia-chemtrails", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-chemtrails",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "blue-banisters",
@@ -933,32 +1844,83 @@
         "The 15-track album includes “Text Book”, “Blue Banisters”, “Arcadia”, “Black Bathing Suit”, “Dealer”, and “Wildflower Wildfire”. It peaked at number eight on the Billboard 200 and reached number one in Argentina and the Netherlands."
       ],
       "tracklist": [
-        { "title": "Text Book" },
-        { "title": "Blue Banisters" },
-        { "title": "Arcadia" },
-        { "title": "Interlude – The Trio" },
-        { "title": "Black Bathing Suit" },
-        { "title": "If You Lie Down with Me" },
-        { "title": "Beautiful" },
-        { "title": "Violets for Roses" },
-        { "title": "Dealer" },
-        { "title": "Thunder" },
-        { "title": "Wildflower Wildfire" },
-        { "title": "Nectar of the Gods" },
-        { "title": "Living Legend" },
-        { "title": "Cherry Blossom" },
-        { "title": "Sweet Carolina" }
+        {
+          "title": "Text Book"
+        },
+        {
+          "title": "Blue Banisters"
+        },
+        {
+          "title": "Arcadia"
+        },
+        {
+          "title": "Interlude – The Trio"
+        },
+        {
+          "title": "Black Bathing Suit"
+        },
+        {
+          "title": "If You Lie Down with Me"
+        },
+        {
+          "title": "Beautiful"
+        },
+        {
+          "title": "Violets for Roses"
+        },
+        {
+          "title": "Dealer"
+        },
+        {
+          "title": "Thunder"
+        },
+        {
+          "title": "Wildflower Wildfire"
+        },
+        {
+          "title": "Nectar of the Gods"
+        },
+        {
+          "title": "Living Legend"
+        },
+        {
+          "title": "Cherry Blossom"
+        },
+        {
+          "title": "Sweet Carolina"
+        }
       ],
       "tracklistNote": "Standard 15-track edition.",
       "facts": [
-        { "label": "Released", "value": "22 October 2021" },
-        { "label": "Producers", "value": "Lana Del Rey; Gabe Simon; Zachary Dawes; Drew Erickson; Dean Reid; Loren Humphrey; Mike Dean; Barrie-James O'Neill; Rick Nowels" },
-        { "label": "Tracks", "value": "15" },
-        { "label": "Length", "value": "61:54" },
-        { "label": "Chart peak", "value": "No. 8, Billboard 200; No. 1 in Argentina and the Netherlands" },
-        { "label": "Key singles", "value": "Blue Banisters; Arcadia" }
+        {
+          "label": "Released",
+          "value": "22 October 2021"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Gabe Simon; Zachary Dawes; Drew Erickson; Dean Reid; Loren Humphrey; Mike Dean; Barrie-James O'Neill; Rick Nowels"
+        },
+        {
+          "label": "Tracks",
+          "value": "15"
+        },
+        {
+          "label": "Length",
+          "value": "61:54"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 8, Billboard 200; No. 1 in Argentina and the Netherlands"
+        },
+        {
+          "label": "Key singles",
+          "value": "Blue Banisters; Arcadia"
+        }
       ],
-      "sources": ["wikipedia-blue-banisters", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-blue-banisters",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "ocean-blvd",
@@ -977,33 +1939,91 @@
         "It was nominated for Album of the Year and Best Alternative Music Album at the 66th Grammy Awards. In 2023, “Say Yes to Heaven” — a song recorded a decade earlier — was finally released officially."
       ],
       "tracklist": [
-        { "title": "The Grants" },
-        { "title": "Did You Know That There's a Tunnel Under Ocean Blvd" },
-        { "title": "Sweet" },
-        { "title": "A&W" },
-        { "title": "Judah Smith Interlude" },
-        { "title": "Candy Necklace", "note": "featuring Jon Batiste" },
-        { "title": "Jon Batiste Interlude" },
-        { "title": "Kintsugi" },
-        { "title": "Fingertips" },
-        { "title": "Paris, Texas", "note": "featuring SYML" },
-        { "title": "Grandfather Please Stand on the Shoulders of My Father While He's Deep-Sea Fishing" },
-        { "title": "Let the Light In", "note": "featuring Father John Misty" },
-        { "title": "Margaret", "note": "featuring Bleachers" },
-        { "title": "Fishtail" },
-        { "title": "Peppers", "note": "featuring Tommy Genesis" },
-        { "title": "Taco Truck x VB" }
+        {
+          "title": "The Grants"
+        },
+        {
+          "title": "Did You Know That There's a Tunnel Under Ocean Blvd"
+        },
+        {
+          "title": "Sweet"
+        },
+        {
+          "title": "A&W"
+        },
+        {
+          "title": "Judah Smith Interlude"
+        },
+        {
+          "title": "Candy Necklace",
+          "note": "featuring Jon Batiste"
+        },
+        {
+          "title": "Jon Batiste Interlude"
+        },
+        {
+          "title": "Kintsugi"
+        },
+        {
+          "title": "Fingertips"
+        },
+        {
+          "title": "Paris, Texas",
+          "note": "featuring SYML"
+        },
+        {
+          "title": "Grandfather Please Stand on the Shoulders of My Father While He's Deep-Sea Fishing"
+        },
+        {
+          "title": "Let the Light In",
+          "note": "featuring Father John Misty"
+        },
+        {
+          "title": "Margaret",
+          "note": "featuring Bleachers"
+        },
+        {
+          "title": "Fishtail"
+        },
+        {
+          "title": "Peppers",
+          "note": "featuring Tommy Genesis"
+        },
+        {
+          "title": "Taco Truck x VB"
+        }
       ],
       "tracklistNote": "Standard 16-track edition.",
       "facts": [
-        { "label": "Released", "value": "24 March 2023" },
-        { "label": "Tracks", "value": "16" },
-        { "label": "Length", "value": "77:52" },
-        { "label": "Chart peak", "value": "No. 1 in eight countries; No. 3 US" },
-        { "label": "Grammy", "value": "Album of the Year; Best Alternative Music Album nominations (2024)" },
-        { "label": "Key singles", "value": "A&W; The Grants; Candy Necklace" }
+        {
+          "label": "Released",
+          "value": "24 March 2023"
+        },
+        {
+          "label": "Tracks",
+          "value": "16"
+        },
+        {
+          "label": "Length",
+          "value": "77:52"
+        },
+        {
+          "label": "Chart peak",
+          "value": "No. 1 in eight countries; No. 3 US"
+        },
+        {
+          "label": "Grammy",
+          "value": "Album of the Year; Best Alternative Music Album nominations (2024)"
+        },
+        {
+          "label": "Key singles",
+          "value": "A&W; The Grants; Candy Necklace"
+        }
       ],
-      "sources": ["wikipedia-ocean-blvd", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-ocean-blvd",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "stove",
@@ -1024,14 +2044,39 @@
       "tracklist": [],
       "tracklistNote": "No official tracklist has been released. The confirmed singles are “Henry, Come On”, “Bluebird”, and “White Feather Hawk Tail Deer Hunter”.",
       "facts": [
-        { "label": "Status", "value": "Unreleased as of 24 November 2026" },
-        { "label": "Working titles", "value": "Lasso; The Right Person Will Stay; Stove" },
-        { "label": "Labels", "value": "Interscope; Polydor" },
-        { "label": "Producers", "value": "Lana Del Rey; Jack Antonoff; Drew Erickson; Luke Laird" },
-        { "label": "Singles", "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter" },
-        { "label": "Companion album", "value": "Announced 15 July 2026; title TBA" }
+        {
+          "label": "Status",
+          "value": "Unreleased as of 24 November 2026"
+        },
+        {
+          "label": "Working titles",
+          "value": "Lasso; The Right Person Will Stay; Stove"
+        },
+        {
+          "label": "Labels",
+          "value": "Interscope; Polydor"
+        },
+        {
+          "label": "Producers",
+          "value": "Lana Del Rey; Jack Antonoff; Drew Erickson; Luke Laird"
+        },
+        {
+          "label": "Singles",
+          "value": "Henry, Come On; Bluebird; White Feather Hawk Tail Deer Hunter"
+        },
+        {
+          "label": "Companion album",
+          "value": "Announced 15 July 2026; title TBA"
+        }
       ],
-      "sources": ["wikipedia-stove", "billboard-lasso", "pitchfork-stove", "pitchfork-henry", "rollingstone-companion", "wikipedia-lana"]
+      "sources": [
+        "wikipedia-stove",
+        "billboard-lasso",
+        "pitchfork-stove",
+        "pitchfork-henry",
+        "rollingstone-companion",
+        "wikipedia-lana"
+      ]
     },
     {
       "id": "companion-album",
@@ -1051,13 +2096,32 @@
       "tracklist": [],
       "tracklistNote": "No official title, tracklist, or release date has been announced.",
       "facts": [
-        { "label": "Announced", "value": "15 July 2026" },
-        { "label": "Status", "value": "Title, tracklist, and release date TBA" },
-        { "label": "Related release", "value": "Stove" },
-        { "label": "Labels", "value": "Interscope; Polydor (expected)" },
-        { "label": "Possible title", "value": "Spyda (suggested by artwork; unconfirmed)" }
+        {
+          "label": "Announced",
+          "value": "15 July 2026"
+        },
+        {
+          "label": "Status",
+          "value": "Title, tracklist, and release date TBA"
+        },
+        {
+          "label": "Related release",
+          "value": "Stove"
+        },
+        {
+          "label": "Labels",
+          "value": "Interscope; Polydor (expected)"
+        },
+        {
+          "label": "Possible title",
+          "value": "Spyda (suggested by artwork; unconfirmed)"
+        }
       ],
-      "sources": ["rollingstone-companion", "wikipedia-stove", "wikipedia-lana"]
+      "sources": [
+        "rollingstone-companion",
+        "wikipedia-stove",
+        "wikipedia-lana"
+      ]
     }
   ],
   "photos": [
@@ -1072,7 +2136,10 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 1,
-      "roles": ["hero", "gallery"],
+      "roles": [
+        "hero",
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1086,7 +2153,9 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 2,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1100,7 +2169,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 3,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1114,7 +2185,9 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 4,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1128,7 +2201,9 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "order": 5,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1142,7 +2217,9 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "order": 6,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1156,7 +2233,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 7,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1170,7 +2249,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 8,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1184,7 +2265,9 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 9,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1198,7 +2281,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 10,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1212,7 +2297,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 11,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1226,7 +2313,9 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "order": 12,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1240,7 +2329,9 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 13,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1254,7 +2345,9 @@
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "order": 14,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1268,7 +2361,9 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "order": 15,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1282,7 +2377,9 @@
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "order": 16,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1296,7 +2393,9 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "order": 17,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1310,7 +2409,9 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "order": 18,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": false
     },
     {
@@ -1324,7 +2425,9 @@
       "license": null,
       "licenseUrl": null,
       "order": 90,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": true,
       "placeholderNote": "Seeking a clearly licensed photograph from the pre-2011 years."
     },
@@ -1339,7 +2442,9 @@
       "license": null,
       "licenseUrl": null,
       "order": 91,
-      "roles": ["gallery"],
+      "roles": [
+        "gallery"
+      ],
       "placeholder": true,
       "placeholderNote": "Seeking a concert or press photograph from 2020–2022 with a named licence."
     }
@@ -1633,8 +2738,9 @@
     ],
     "submit": {
       "title": "Have a correction or a licensed photograph?",
-      "body": "A contact address will be added here. Until then, this box is a placeholder — no email address has been invented.",
-      "contact": "[contact email — to be added]"
+      "body": "Corrections, takedown requests, and licensed photograph offers are handled through a public issue on the project repository. No email address has been invented.",
+      "contact": "Open an issue on GitHub",
+      "url": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction"
     }
   },
   "about": {
@@ -1680,8 +2786,9 @@
     ],
     "contact": {
       "label": "Contact",
-      "value": "[contact email — to be added]",
-      "note": "This is a placeholder. Replace it in src/data.json; do not invent an address."
+      "value": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction",
+      "note": "Public issue tracker — no email address has been invented.",
+      "action": "Open an issue on GitHub"
     },
     "colophon": [
       "Static HTML, CSS, and a small amount of JavaScript. Built with a Node script; images and OG cards are generated with Python and Pillow.",

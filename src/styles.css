@@ -1880,7 +1880,7 @@ hr {
 .photo-tile picture {
   display: block;
   overflow: hidden;
-  background: var(--paper-3);
+  background-color: var(--paper-3);
 }
 
 .photo-tile img {
@@ -3432,6 +3432,396 @@ hr {
 /* --------------------------------------------------------------------------
    Print
    -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+   Reading progress, attribution copy, chapter rail, render budget
+   ------------------------------------------------------------------------- */
+
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 90;
+  height: 2px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--burgundy), var(--gold-bright));
+  transition: transform 90ms linear;
+}
+
+.photo-tile-wrap {
+  position: relative;
+}
+
+.copy-credit {
+  padding: 0.32rem 0.55rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: copy;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease,
+    opacity 180ms ease, transform 180ms ease;
+}
+
+.copy-credit:hover,
+.copy-credit:focus-visible {
+  border-color: var(--burgundy);
+  color: var(--burgundy);
+}
+
+.copy-credit.is-copied {
+  border-color: #2f6b4f;
+  color: #2f6b4f;
+}
+
+.copy-credit--tile {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-4px);
+  background: rgba(246, 238, 226, 0.94);
+}
+
+.photo-tile-wrap:hover .copy-credit--tile,
+.photo-tile-wrap:focus-within .copy-credit--tile,
+.copy-credit--tile:focus-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.copy-credit--inline {
+  margin-top: 1rem;
+}
+
+.lightbox .copy-credit--inline {
+  border-color: rgba(246, 238, 226, 0.3);
+  background: transparent;
+  color: var(--cream-dim);
+}
+
+.lightbox .copy-credit--inline:hover,
+.lightbox .copy-credit--inline:focus-visible,
+.lightbox .copy-credit--inline.is-copied {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+}
+
+.chapter-rail {
+  padding-bottom: 1.1rem;
+}
+
+.chapter-rail .micro {
+  margin: 0 0 0.8rem;
+}
+
+.chapter-rail ol {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0 0 0.8rem;
+  padding: 0;
+  list-style: none;
+}
+
+.chapter-rail li {
+  flex: 1 1 0;
+}
+
+.chapter-rail a {
+  display: block;
+  padding: 0.35rem 0;
+}
+
+.chapter-rail a span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--line-strong);
+  transition: background 180ms ease, height 180ms ease;
+}
+
+.chapter-rail a:hover span,
+.chapter-rail a[aria-current="page"] span {
+  height: 5px;
+}
+
+.chapter-rail a:hover span {
+  background: var(--burgundy);
+}
+
+.chapter-rail a[aria-current="page"] span {
+  background: var(--gold-ink);
+}
+
+.chapter-rail strong {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.section:not([id]),
+.ref-group,
+.about-copy > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 620px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress span {
+    transition: none;
+  }
+
+  .copy-credit--tile {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Interaction layer — every control answers a click
+   ------------------------------------------------------------------------- */
+
+button,
+a,
+[role="button"],
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+.btn,
+.filter-chip,
+.menu-toggle,
+.menu-close,
+.menu-nav a,
+.copy-credit,
+.photo-tile,
+.gallery-strip__item,
+.album-card,
+.era-card,
+.journey-item__link,
+.prev-next a,
+.era-link-card,
+.timeline-preview a,
+.ref-list__title a {
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 240ms ease, color 180ms ease, border-color 180ms ease,
+    background-color 180ms ease, opacity 180ms ease;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+button:active,
+.btn:active,
+.filter-chip:active,
+.menu-nav a:active,
+.photo-tile:active,
+.gallery-strip__item:active,
+.album-card:active,
+.era-card:active,
+.journey-item__link:active,
+.prev-next a:active,
+.era-link-card:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.btn,
+.filter-chip,
+.menu-toggle,
+.menu-close,
+.copy-credit,
+.photo-tile,
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next,
+.album-card,
+.era-card,
+.gallery-strip__item,
+.journey-item__link,
+.prev-next a,
+.era-link-card {
+  position: relative;
+}
+
+.ripple-host {
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: currentColor;
+  opacity: 0.2;
+  transform: scale(0);
+  animation: ripple-out 620ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+@keyframes ripple-out {
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.btn > *,
+.filter-chip > *,
+.menu-toggle > *,
+.photo-tile > *,
+.album-card > *,
+.era-card > *,
+.journey-item__link > *,
+.prev-next a > * {
+  position: relative;
+  z-index: 1;
+}
+
+.filter-chip:hover {
+  transform: translateY(-2px);
+}
+
+.filter-chip[aria-pressed="true"] {
+  box-shadow: 0 6px 18px rgba(90, 31, 43, 0.18);
+}
+
+.btn:hover,
+.era-link-card:hover,
+.prev-next a:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-preview a:hover .timeline-preview__arrow,
+.hero__scroll:hover::before,
+.btn:hover svg,
+.nav-search:hover svg {
+  transform: translate(3px, -2px);
+}
+
+.hero__scroll:hover::before {
+  transform: translateY(4px);
+}
+
+.source-list a,
+.ref-list__title a,
+.footer-col a,
+.aside-links a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 280ms ease, color 180ms ease;
+}
+
+.source-list a:hover,
+.ref-list__title a:hover,
+.footer-col a:hover,
+.aside-links a:hover {
+  background-size: 100% 1px;
+}
+
+.menu-dialog[open] .menu-nav a {
+  animation: menu-in 380ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.menu-dialog[open] .menu-nav a:nth-child(1) { animation-delay: 30ms; }
+.menu-dialog[open] .menu-nav a:nth-child(2) { animation-delay: 70ms; }
+.menu-dialog[open] .menu-nav a:nth-child(3) { animation-delay: 110ms; }
+.menu-dialog[open] .menu-nav a:nth-child(4) { animation-delay: 150ms; }
+.menu-dialog[open] .menu-nav a:nth-child(5) { animation-delay: 190ms; }
+.menu-dialog[open] .menu-nav a:nth-child(6) { animation-delay: 230ms; }
+.menu-dialog[open] .menu-nav a:nth-child(7) { animation-delay: 270ms; }
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.lightbox[open] {
+  animation: lightbox-fade 240ms ease both;
+}
+
+.lightbox[open] .lightbox__inner {
+  animation: lightbox-rise 320ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes lightbox-fade {
+  from { opacity: 0; }
+}
+
+@keyframes lightbox-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+}
+
+.copy-credit.is-copied {
+  animation: copied-pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes copied-pop {
+  50% { transform: scale(1.09); }
+}
+
+@supports (view-transition-name: none) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root) {
+    animation: 160ms ease both vt-fade-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both vt-fade-in;
+  }
+
+  @keyframes vt-fade-out {
+    to { opacity: 0; }
+  }
+
+  @keyframes vt-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ripple,
+  .menu-dialog[open] .menu-nav a,
+  .lightbox[open],
+  .lightbox[open] .lightbox__inner,
+  .copy-credit.is-copied {
+    animation: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
 
 @media print {
   .site-header,

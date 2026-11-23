@@ -37,7 +37,7 @@ function routeToFile(href) {
   if (clean.startsWith("/assets/") || clean.startsWith("/pagefind/")) {
     return path.join(DIST, clean);
   }
-  if (clean === "/favicon.svg" || clean === "/site.webmanifest") {
+  if (clean === "/favicon.svg" || clean === "/site.webmanifest" || clean === "/feed.xml") {
     return path.join(DIST, clean);
   }
   if (clean === "/404") return path.join(DIST, "404.html");
