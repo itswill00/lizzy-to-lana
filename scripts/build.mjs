@@ -181,6 +181,10 @@ function photoTile(photo, options = {}) {
   if (!meta) throw new Error(`No image manifest entry for ${photo.id}`);
 
   return `<div class="photo-tile-wrap" data-gallery-item data-era="${attr(era)}">
+  <div class="photo-tile__tools">
+    <span class="photo-tile__tag">Archive photograph</span>
+    ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`, "copy-credit copy-credit--tile")}
+  </div>
   <button class="photo-tile" type="button" data-photo data-full="${attr(meta.largest.jpg)}" data-full-width="${meta.largest.w}" data-full-height="${
     meta.largest.h
   }" data-alt="${attr(photo.alt)}" data-caption="${attr(photo.caption)}" data-credit="${attr(
@@ -192,7 +196,6 @@ function photoTile(photo, options = {}) {
     <span class="photo-tile__caption">${esc(photo.caption)}</span>
     <span class="photo-tile__credit">${esc(photo.credit)} · ${esc(photo.license)}</span>
   </button>
-  ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`, "copy-credit copy-credit--tile")}
 </div>`;
 }
 
@@ -311,7 +314,11 @@ function footer() {
 function lightbox() {
   return `<dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" data-pagefind-ignore>
   <div class="lightbox__inner">
-    <div class="lightbox__media"><img id="lightbox-image" alt="" width="1200" height="1500"></div>
+    <div class="lightbox__media">
+      <img id="lightbox-image" alt="" width="1200" height="1500">
+      <button class="lightbox__prev" type="button" data-lightbox-prev aria-label="Previous photograph">←</button>
+      <button class="lightbox__next" type="button" data-lightbox-next aria-label="Next photograph">→</button>
+    </div>
     <div class="lightbox__caption">
       <p class="lightbox__counter" id="lightbox-counter"></p>
       <h2 class="lightbox__title" id="lightbox-title"></h2>
@@ -320,8 +327,6 @@ function lightbox() {
       <button class="copy-credit copy-credit--inline" id="lightbox-copy" type="button" data-copy-credit>Copy credit</button>
     </div>
     <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close photograph">×</button>
-    <button class="lightbox__prev" type="button" data-lightbox-prev aria-label="Previous photograph">←</button>
-    <button class="lightbox__next" type="button" data-lightbox-next aria-label="Next photograph">→</button>
   </div>
 </dialog>`;
 }

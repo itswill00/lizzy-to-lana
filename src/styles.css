@@ -1784,6 +1784,17 @@ hr {
   text-decoration: underline;
 }
 
+.source-list a,
+.ref-list__title a,
+.aside-links a,
+.footer-col a,
+.breadcrumbs a,
+.text-link {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 0.2rem;
+}
+
 .source-list span {
   font-size: 0.58rem;
   letter-spacing: 0.1em;
@@ -2104,6 +2115,10 @@ hr {
 
 .gallery-page .photo-tile {
   border-color: rgba(246, 238, 226, 0.14);
+}
+
+.gallery-page .photo-tile__tag {
+  color: var(--cream-faint);
 }
 
 .gallery-page .photo-tile:hover {
@@ -2965,6 +2980,10 @@ hr {
   color: var(--burgundy);
 }
 
+.lightbox__media {
+  position: relative;
+}
+
 .lightbox__close,
 .lightbox__prev,
 .lightbox__next {
@@ -3459,8 +3478,27 @@ hr {
   position: relative;
 }
 
+.photo-tile__tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 30px;
+  margin-bottom: 0.4rem;
+}
+
+.photo-tile__tag {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
 .copy-credit {
-  padding: 0.32rem 0.55rem;
+  min-height: 26px;
+  padding: 0.42rem 0.7rem;
   border: 1px solid var(--line-strong);
   background: var(--paper);
   color: var(--ink-soft);
@@ -3487,20 +3525,12 @@ hr {
 }
 
 .copy-credit--tile {
-  position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
-  z-index: 2;
-  opacity: 0;
-  transform: translateY(-4px);
-  background: rgba(246, 238, 226, 0.94);
+  background: rgba(246, 238, 226, 0.92);
 }
 
-.photo-tile-wrap:hover .copy-credit--tile,
-.photo-tile-wrap:focus-within .copy-credit--tile,
+.copy-credit--tile:hover,
 .copy-credit--tile:focus-visible {
-  opacity: 1;
-  transform: none;
+  background: var(--paper);
 }
 
 .copy-credit--inline {
@@ -3508,16 +3538,16 @@ hr {
 }
 
 .lightbox .copy-credit--inline {
-  border-color: rgba(246, 238, 226, 0.3);
-  background: transparent;
-  color: var(--cream-dim);
+  border-color: var(--line-strong);
+  background: var(--paper-2);
+  color: var(--burgundy);
 }
 
 .lightbox .copy-credit--inline:hover,
 .lightbox .copy-credit--inline:focus-visible,
 .lightbox .copy-credit--inline.is-copied {
-  border-color: var(--gold-bright);
-  color: var(--gold-bright);
+  border-color: var(--burgundy);
+  color: var(--burgundy);
 }
 
 .chapter-rail {
@@ -3543,7 +3573,8 @@ hr {
 
 .chapter-rail a {
   display: block;
-  padding: 0.35rem 0;
+  min-height: 24px;
+  padding: 0.5rem 0;
 }
 
 .chapter-rail a span {
@@ -3574,13 +3605,6 @@ hr {
   color: var(--ink);
 }
 
-.section:not([id]),
-.ref-group,
-.about-copy > section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 620px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .reading-progress span {
     transition: none;
@@ -3590,6 +3614,13 @@ hr {
     opacity: 1;
     transform: none;
   }
+}
+
+.section:not([id]),
+.ref-group,
+.about-copy > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 620px;
 }
 
 /* -------------------------------------------------------------------------
@@ -3624,8 +3655,14 @@ button,
     background-color 180ms ease, opacity 180ms ease;
 }
 
-a:active {
-  opacity: 0.7;
+.nav-link:active,
+.text-link:active,
+.breadcrumbs a:active,
+.source-list a:active,
+.ref-list__title a:active,
+.aside-links a:active,
+.footer-col a:active {
+  opacity: 0.6;
 }
 
 button:active,
@@ -3648,9 +3685,6 @@ button:active,
 .menu-close,
 .copy-credit,
 .photo-tile,
-.lightbox__close,
-.lightbox__prev,
-.lightbox__next,
 .album-card,
 .era-card,
 .gallery-strip__item,
@@ -3666,11 +3700,11 @@ button:active,
 
 .ripple {
   position: absolute;
-  z-index: 0;
+  z-index: 5;
   border-radius: 50%;
   pointer-events: none;
   background: currentColor;
-  opacity: 0.2;
+  opacity: 0.16;
   transform: scale(0);
   animation: ripple-out 620ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
@@ -3680,18 +3714,6 @@ button:active,
     transform: scale(2.4);
     opacity: 0;
   }
-}
-
-.btn > *,
-.filter-chip > *,
-.menu-toggle > *,
-.photo-tile > *,
-.album-card > *,
-.era-card > *,
-.journey-item__link > *,
-.prev-next a > * {
-  position: relative;
-  z-index: 1;
 }
 
 .filter-chip:hover {
@@ -3708,11 +3730,8 @@ button:active,
   box-shadow: var(--shadow-md);
 }
 
-.timeline-preview a:hover .timeline-preview__arrow,
-.hero__scroll:hover::before,
-.btn:hover svg,
-.nav-search:hover svg {
-  transform: translate(3px, -2px);
+.timeline-preview a:hover .timeline-preview__arrow {
+  transform: translateX(4px);
 }
 
 .hero__scroll:hover::before {
@@ -3748,6 +3767,7 @@ button:active,
 .menu-dialog[open] .menu-nav a:nth-child(5) { animation-delay: 190ms; }
 .menu-dialog[open] .menu-nav a:nth-child(6) { animation-delay: 230ms; }
 .menu-dialog[open] .menu-nav a:nth-child(7) { animation-delay: 270ms; }
+.menu-dialog[open] .menu-nav a:nth-child(8) { animation-delay: 310ms; }
 
 @keyframes menu-in {
   from {
@@ -3784,6 +3804,10 @@ button:active,
 }
 
 @supports (view-transition-name: none) {
+  .page-main {
+    animation: none;
+  }
+
   @view-transition {
     navigation: auto;
   }
@@ -3861,4 +3885,36 @@ button:active,
   .era-card__shade {
     display: none;
   }
+}
+
+/* Pagefind's clear button needs a reliable hit area when it is shown. */
+#search .pagefind-ui__clear {
+  position: relative;
+  z-index: 3;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+/* Final tap-target pass — these sit after every component rule on purpose. */
+.hero__credit a,
+.hero__scroll,
+.page-hero__meta a,
+figcaption a,
+.submit-card__contact a,
+.contact-box a,
+.gallery-note a,
+.text-link,
+.breadcrumbs a,
+.source-list a,
+.ref-list__title a,
+.aside-links a,
+.footer-col a,
+.footer-bottom a {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 0.25rem;
+}
+
+#search {
+  min-height: 280px;
 }

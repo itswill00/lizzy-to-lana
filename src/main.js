@@ -426,14 +426,13 @@
       startLottie();
     } else {
       const library = lottieNodes[0].dataset.lottieLib;
-      const schedule = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 900));
 
-      schedule(() => {
+      window.setTimeout(() => {
         const script = doc.createElement("script");
         script.src = library;
         script.addEventListener("load", startLottie);
         doc.head.append(script);
-      });
+      }, 2500);
     }
   }
 
