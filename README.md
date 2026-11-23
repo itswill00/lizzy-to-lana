@@ -13,6 +13,7 @@ Live site: <https://blog.wldnanatayya.com>
 | `src/main.js` | Progressive enhancement: menu, gallery filters, lightbox, reveal effects, Pagefind init. |
 | `src/favicon.svg` | Original typographic favicon; PNG variants are generated at build time. |
 | `assets/img-src/` | Original licensed JPEG photographs. Never hotlinked. |
+| `assets/video/` | Self-hosted hero loop (MP4 + WebM), assembled only from the licensed archive photographs. |
 | `assets/fonts/` | Self-hosted WOFF2 fonts (SIL Open Font License). |
 | `scripts/build.mjs` | Full build: images, OG cards, hashed assets, 43 pages, sitemap, robots, web manifest, Pagefind. |
 | `scripts/images.py` | Responsive AVIF/WebP/JPEG variants plus tiny blur placeholders. |
@@ -61,6 +62,7 @@ Indonesian legacy URLs are redirected with nginx 301s to their English equivalen
 - No gossip, no speculation about private life, no fabricated quotes, no full lyrics.
 - Unreleased records are marked provisional and checked against the date shown on the page.
 - Every photograph is stored locally, credited, linked to its Wikimedia Commons file page, and used under a named Creative Commons licence.
+- The hero loop is generated in-house from those same licensed photographs, never scraped from a music video or hotlinked. It is self-hosted as small MP4/WebM loops: a 480p version for phones and a 960p version for wider screens.
 - The site is unofficial and carries a disclaimer in the footer and on the About page.
 
 ## Deployment

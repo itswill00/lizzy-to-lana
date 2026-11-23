@@ -25,6 +25,37 @@
   }
 
   /* ------------------------------------------------------------------------
+     Hero video — the photograph stays as the fallback, motion fades in as
+     soon as the first frame is ready. The sources swap at the layout break.
+     ------------------------------------------------------------------------ */
+
+  const heroVideo = doc.querySelector("[data-hero-video]");
+
+  if (heroVideo) {
+    const revealVideo = () => {
+      if (heroVideo.classList.contains("is-ready")) return;
+      heroVideo.classList.add("is-ready");
+      const playback = heroVideo.play();
+      if (playback && typeof playback.catch === "function") playback.catch(() => {});
+    };
+
+    heroVideo.addEventListener("canplay", revealVideo);
+    heroVideo.load();
+
+    const wideQuery = window.matchMedia("(min-width: 900px)");
+    let wasWide = wideQuery.matches;
+
+    if (typeof wideQuery.addEventListener === "function") {
+      wideQuery.addEventListener("change", () => {
+        if (wideQuery.matches === wasWide) return;
+        wasWide = wideQuery.matches;
+        heroVideo.classList.remove("is-ready");
+        heroVideo.load();
+      });
+    }
+  }
+
+  /* ------------------------------------------------------------------------
      Mobile menu
      ------------------------------------------------------------------------ */
 

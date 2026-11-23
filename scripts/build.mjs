@@ -597,6 +597,19 @@ function buildAssets() {
   const orbit = fs.readFileSync(path.join(SRC, "lottie-orbit.json"), "utf8");
   assets.orbit = writeHashed("assets/data", "orbit", "json", orbit);
 
+  const heroVideoWebm = fs.readFileSync(path.join(ROOT, "assets", "video", "hero-loop.webm"));
+  const heroVideoMp4 = fs.readFileSync(path.join(ROOT, "assets", "video", "hero-loop.mp4"));
+  assets.videoWebm = writeHashed("assets/video", "hero-loop", "webm", heroVideoWebm);
+  assets.videoMp4 = writeHashed("assets/video", "hero-loop", "mp4", heroVideoMp4);
+  const heroVideoLargeWebm = fs.readFileSync(
+    path.join(ROOT, "assets", "video", "hero-loop-large.webm")
+  );
+  const heroVideoLargeMp4 = fs.readFileSync(
+    path.join(ROOT, "assets", "video", "hero-loop-large.mp4")
+  );
+  assets.videoLargeWebm = writeHashed("assets/video", "hero-loop-large", "webm", heroVideoLargeWebm);
+  assets.videoLargeMp4 = writeHashed("assets/video", "hero-loop-large", "mp4", heroVideoLargeMp4);
+
   writeFile("favicon.svg", fs.readFileSync(path.join(SRC, "favicon.svg")));
 
   writeFile(
@@ -638,7 +651,14 @@ function renderHome() {
       sizes: "100vw",
       loading: "eager",
       fetchpriority: "high",
-    })}</div>
+    })}
+      <video class="hero__video" data-hero-video width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+        <source src="${assets.videoLargeMp4}" type="video/mp4" media="(min-width: 900px)">
+        <source src="${assets.videoLargeWebm}" type="video/webm" media="(min-width: 900px)">
+        <source src="${assets.videoMp4}" type="video/mp4">
+        <source src="${assets.videoWebm}" type="video/webm">
+      </video>
+    </div>
     <div class="hero__shade"></div>
     <div class="hero__inner">
       <div class="hero__content">
@@ -657,7 +677,9 @@ function renderHome() {
       <div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div>
       <span>EST. 2026 · CHAPTER 01 / 09</span>
     </div>
-    <p class="hero__credit">${creditLine(hero, { link: true })}</p>
+    <p class="hero__credit">${creditLine(hero, { link: true })} <span class="hero__credit-note">· ${esc(
+      home.heroVideoNote
+    )}</span></p>
   </section>
 
   <section class="section section--tight" id="archive">
