@@ -307,7 +307,8 @@
 
   const lottieNodes = doc.querySelectorAll("[data-lottie]");
 
-  if (lottieNodes.length && typeof window.lottie === "object") {
+  const startLottie = () => {
+    if (typeof window.lottie !== "object") return;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     lottieNodes.forEach((node) => {
@@ -321,6 +322,22 @@
 
       if (reduceMotion) animation.goToAndStop(0, true);
     });
+  };
+
+  if (lottieNodes.length) {
+    if (typeof window.lottie === "object") {
+      startLottie();
+    } else {
+      const library = lottieNodes[0].dataset.lottieLib;
+      const schedule = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 900));
+
+      schedule(() => {
+        const script = doc.createElement("script");
+        script.src = library;
+        script.addEventListener("load", startLottie);
+        doc.head.append(script);
+      });
+    }
   }
 
   /* ------------------------------------------------------------------------

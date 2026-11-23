@@ -620,7 +620,7 @@ function renderHome() {
       </div>
     </div>
     <div class="hero__aside" aria-hidden="true">
-      <div class="lottie-orbit" data-lottie="${assets.orbit}"></div>
+      <div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div>
       <span>EST. 2026 · CHAPTER 01 / 09</span>
     </div>
     <p class="hero__credit">${creditLine(hero, { link: true })}</p>
@@ -753,7 +753,6 @@ function renderHome() {
     og: "home",
     content,
     structuredData: structured,
-    extraScripts: `<script src="${assets.lottie}" defer></script>`,
     isHome: true,
   });
 }
@@ -1546,7 +1545,7 @@ function renderNotFound() {
   const content = `<section class="not-found">
     <div class="container">
       <div class="not-found__inner">
-        <div class="not-found__orbit" aria-hidden="true"><div class="lottie-orbit" data-lottie="${assets.orbit}"></div></div>
+        <div class="not-found__orbit" aria-hidden="true"><div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div></div>
         <p class="not-found__code" aria-hidden="true">404</p>
         <p class="eyebrow">${esc(page.eyebrow)}</p>
         <h1>${esc(page.title)}</h1>
@@ -1568,7 +1567,6 @@ function renderNotFound() {
     og: "404",
     noindex: true,
     content,
-    extraScripts: `<script src="${assets.lottie}" defer></script>`,
   });
 }
 
