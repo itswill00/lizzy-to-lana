@@ -59,7 +59,7 @@ Screenshots: `/tmp/opencode/audit/before-{360,768,1280,1920}.png`. Raw Lighthous
 
 ### P3 — nice to have
 
-15. **Transitions between pages** must be subtle and must respect `prefers-reduced-motion`. Do not re-introduce autoplay music.
+15. **Transitions between pages** must be subtle. Per owner decision (2026-11-24), animations stay on for every visitor on every device — there is no `prefers-reduced-motion` opt-out and no hardware-based downgrade. Do not re-introduce autoplay music.
 
 16. **Clean up dead files** (`netlify.toml`/`vercel.json` only if still useful), update README, keep `KEKURANGAN.md` (rename to English `NEEDS.md` or keep with English content).
 

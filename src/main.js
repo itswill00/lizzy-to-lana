@@ -342,7 +342,7 @@
   const revealItems = Array.from(doc.querySelectorAll(".reveal"));
 
   if (revealItems.length) {
-    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (!("IntersectionObserver" in window)) {
       revealItems.forEach((item) => item.classList.add("is-visible"));
     } else {
       const observer = new IntersectionObserver(
@@ -396,28 +396,25 @@
   }
 
   /* ------------------------------------------------------------------------
-     Lottie orbit — decorative, local, and disabled for reduced motion
+     Lottie orbit — decorative, local, and always animated
      ------------------------------------------------------------------------ */
 
   const lottieNodes = doc.querySelectorAll("[data-lottie]");
 
   const startLottie = () => {
     if (typeof window.lottie !== "object") return;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (window.lottie.setQuality) window.lottie.setQuality("low");
 
     lottieNodes.forEach((node) => {
-      const animation = window.lottie.loadAnimation({
+      window.lottie.loadAnimation({
         container: node,
         renderer: "svg",
         frameRate: 30,
         rendererSettings: { progressiveLoad: true },
-        loop: !reduceMotion,
-        autoplay: !reduceMotion,
+        loop: true,
+        autoplay: true,
         path: node.dataset.lottie,
       });
-
-      if (reduceMotion) animation.goToAndStop(0, true);
     });
   };
 
@@ -447,7 +444,6 @@
 
   doc.addEventListener("pointerdown", (event) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const host = event.target.closest(rippleTargets);
     if (!host) return;

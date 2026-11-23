@@ -3406,49 +3406,6 @@ hr {
 }
 
 /* --------------------------------------------------------------------------
-   Reduced motion
-   -------------------------------------------------------------------------- */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .js .reveal,
-  .js .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
-
-  .page-main {
-    animation: none;
-  }
-
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
-  }
-
-  .hero__media img,
-  .era-card__media img,
-  .photo-tile img,
-  .gallery-strip__item img,
-  .journey-item__thumb img {
-    transform: none !important;
-  }
-}
-
-/* --------------------------------------------------------------------------
    Print
    -------------------------------------------------------------------------- */
 
@@ -3603,17 +3560,6 @@ hr {
   font-size: 1.05rem;
   line-height: 1.25;
   color: var(--ink);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reading-progress span {
-    transition: none;
-  }
-
-  .copy-credit--tile {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 .section:not([id]),
@@ -3829,21 +3775,6 @@ button:active,
       opacity: 0;
       transform: translateY(8px);
     }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ripple,
-  .menu-dialog[open] .menu-nav a,
-  .lightbox[open],
-  .lightbox[open] .lightbox__inner,
-  .copy-credit.is-copied {
-    animation: none;
-  }
-
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
   }
 }
 
