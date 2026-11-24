@@ -1242,7 +1242,7 @@ function renderEra(era, index) {
             href: `/gallery/${era.id}`,
           })}
           ${photoGrid(photos, {
-            sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 33vw",
+            sizes: "(max-width: 720px) 50vw, (max-width: 1080px) 50vw, 33vw",
           })}
         </section>
 
@@ -1372,7 +1372,7 @@ function renderGallery() {
         t("showingItems", { count: data.photos.length, label: t("itemsLabel") })
       )}</p>
       ${photoGrid(data.photos, {
-        sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 33vw",
+        sizes: "(max-width: 720px) 50vw, (max-width: 1080px) 50vw, 33vw",
       })}
       <p class="gallery-note">${esc(page.note)} <a href="/sources">${esc(t("fullCreditsLink"))}</a>.</p>
     </div>
@@ -1430,7 +1430,7 @@ function renderGalleryEra(era, index) {
   <section class="section">
     <div class="container">
       ${photoGrid(photos, {
-        sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 33vw",
+        sizes: "(max-width: 720px) 50vw, (max-width: 1080px) 50vw, 33vw",
       })}
       <p class="gallery-note">${esc(data.site.photoPolicy)} <a href="/sources">${esc(t("fullCreditsLink"))}</a>.</p>
       ${prevNext(
