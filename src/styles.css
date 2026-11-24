@@ -4642,3 +4642,111 @@ figcaption a,
     font-size: 0.6rem;
   }
 }
+
+/* Pending-photo cards should read as deliberate archive notes, not broken
+   image slots. Keep the licence gap visible without leaving a blank panel. */
+.photo-placeholder {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  justify-content: flex-end;
+  aspect-ratio: 4 / 4.4;
+  border-style: solid;
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(201, 143, 139, 0.24), transparent 48%),
+    linear-gradient(145deg, var(--paper-2), var(--paper-3));
+}
+
+.photo-placeholder::before,
+.photo-placeholder::after {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.photo-placeholder::before {
+  content: "";
+  inset: 0.75rem;
+  border: 1px solid rgba(90, 31, 43, 0.16);
+}
+
+.photo-placeholder::after {
+  content: "L";
+  right: 0.65rem;
+  top: -0.3em;
+  color: rgba(90, 31, 43, 0.07);
+  font: 600 clamp(7rem, 14vw, 12rem)/1 var(--serif);
+}
+
+.photo-placeholder > * {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-placeholder__mark {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0;
+  background: rgba(246, 238, 226, 0.72);
+}
+
+.photo-placeholder strong {
+  max-width: 13ch;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+}
+
+.gallery-page .photo-placeholder {
+  border-color: rgba(224, 164, 88, 0.42);
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(201, 143, 139, 0.18), transparent 48%),
+    linear-gradient(145deg, #24283a, var(--midnight));
+  color: var(--cream);
+}
+
+.gallery-page .photo-placeholder::before {
+  border-color: rgba(246, 238, 226, 0.2);
+}
+
+.gallery-page .photo-placeholder::after {
+  color: rgba(246, 238, 226, 0.055);
+}
+
+.gallery-page .photo-placeholder__mark {
+  border-color: rgba(224, 164, 88, 0.72);
+  background: rgba(18, 23, 38, 0.68);
+  color: var(--gold-bright);
+}
+
+.gallery-page .photo-placeholder strong {
+  color: var(--cream);
+}
+
+.gallery-page .photo-placeholder span {
+  color: var(--cream-dim);
+}
+
+@media (max-width: 720px) {
+  .photo-placeholder {
+    gap: 0.5rem;
+    padding: 0.85rem;
+  }
+
+  .photo-placeholder::before {
+    inset: 0.5rem;
+  }
+
+  .photo-placeholder__mark {
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 0.95rem;
+  }
+
+  .photo-placeholder strong {
+    font-size: 1.05rem;
+  }
+
+  .photo-placeholder span {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+}
