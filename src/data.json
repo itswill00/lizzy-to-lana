@@ -2,16 +2,16 @@
   "site": {
     "name": "Lizzy to Lana",
     "tagline": "A Fan Archive",
-    "description": "An independent, source-led fan archive of Lana Del Rey: nine eras, sixteen releases, and a small, carefully credited photo collection.",
+    "description": "Release dates, chart positions, and credited concert photographs from Lana Del Rey's career, 2008–2026.",
     "url": "https://blog.wldnanatayya.com",
     "locale": "en",
     "updated": "2026-11-24",
     "updatedLabel": "24 November 2026",
-    "author": "[Archive keeper — name to be added]",
-    "contact": "[contact email — to be added]",
-    "disclaimer": "Lizzy to Lana is an unofficial fan archive. It is not affiliated with, endorsed by, sponsored by, or managed by Lana Del Rey, her management, or her record labels. All photographs remain the property of their respective creators and are used under the licences listed on each image.",
-    "shortDisclaimer": "Unofficial fan archive. Not affiliated with Lana Del Rey or her labels.",
-    "photoPolicy": "Every photograph is stored locally, credited, linked to its original file page, and used under a named open licence. No image is hotlinked from a search engine."
+    "author": "Lizzy to Lana",
+    "contact": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction",
+    "disclaimer": "Lizzy to Lana is an unofficial fan archive. It is not affiliated with or endorsed by Lana Del Rey or her labels. Photographs remain the property of their credited creators and are used under the licences linked on each image.",
+    "shortDisclaimer": "Unofficial fan archive; not affiliated with Lana Del Rey or her labels.",
+    "photoPolicy": "Photographs are stored locally with the creator, file page, and licence shown on every image."
   },
   "nav": [
     {
@@ -40,30 +40,13 @@
     }
   ],
   "home": {
-    "eyebrow": "Unofficial fan archive · Updated 24 November 2026",
+    "eyebrow": "Lizzy to Lana · Checked 24 November 2026",
     "title": "Lizzy to Lana",
     "subtitle": "A Fan Archive",
-    "tagline": "Nine eras, sixteen releases, and a small collection of photographs — a public record of Lana Del Rey's work, told in order.",
-    "intro": "This is not a diary and it is not a news site. It is a fan-made archive: a place to follow the records, the tours, and the visual chapters without gossip, speculation, or uncredited images.",
+    "tagline": "Nine eras of Lana Del Rey's recorded work, from the 2008 Kill Kill EP to the unreleased Stove. Every photograph carries its photographer, source, and licence.",
+    "intro": "The archive covers nine periods, sixteen releases, and eighteen concert photographs with named creators. Dates and chart positions are checked against cited sources.",
     "heroPhoto": "hero-lana-2024",
-    "stats": [
-      {
-        "value": "09",
-        "label": "chapters"
-      },
-      {
-        "value": "16",
-        "label": "releases"
-      },
-      {
-        "value": "18",
-        "label": "credited photographs"
-      },
-      {
-        "value": "01",
-        "label": "source of truth"
-      }
-    ],
+    "stats": [],
     "highlights": [
       "early",
       "nfr",
@@ -82,24 +65,24 @@
       "stove-wembley-2025"
     ],
     "sections": {
-      "introTitle": "A public record, not a personal feed",
+      "introTitle": "What the archive covers",
       "introBody": [
-        "This is not a diary and it is not a news site. It is a fan-made archive: a place to follow the records, the tours, and the visual chapters without gossip, speculation, or uncredited images.",
-        "Everything here is generated from one data file. A correction made once propagates to every page that uses it — and every photograph carries its creator, its source, and its licence."
+        "Nine periods, sixteen releases, and eighteen concert photographs with named creators. The earliest release is the Kill Kill EP (2008); the newest entry is Stove, still unreleased on 24 November 2026.",
+        "Dates and chart positions point to the references on the Sources page. Photographs are stored locally with the creator, file page, and licence attached."
       ],
-      "introAsideTitle": "What you will not find here",
-      "highlightsTitle": "Three ways in",
-      "highlightsNote": "A starting point for each kind of reader: the beginning, the record that changed the scale, and the chapter that is still open.",
-      "timelineTitle": "The whole arc",
-      "galleryTitle": "From the gallery",
-      "galleryNote": "A small selection from the eighteen credited photographs in the collection.",
-      "albumsTitle": "Records to start with",
-      "albumsNote": "Four releases that open different doors into the catalogue."
+      "introAsideTitle": "How facts are checked",
+      "highlightsTitle": "Three chapters to begin with",
+      "highlightsNote": "The first recordings, the 2019 album with Jack Antonoff, and the country project that remains unreleased.",
+      "timelineTitle": "Nine eras, 2008–2026",
+      "galleryTitle": "Four photographs from the archive",
+      "galleryNote": "Taken between 2011 and 2025. Each opens its era page.",
+      "albumsTitle": "Four releases from the catalogue",
+      "albumsNote": "Selected from the sixteen entries in the discography."
     },
     "closing": {
-      "kicker": "Start anywhere",
-      "title": "The archive is a map, not a monument.",
-      "body": "Follow the eras in order, jump to the record that brought you here, or search the whole collection. Every route is a real page, and every page can be read without JavaScript.",
+      "kicker": "Browse",
+      "title": "Nine eras, sixteen releases",
+      "body": "Use the journey index to follow the sequence, or search by title, year, or photographer.",
       "links": [
         {
           "label": "Open the journey",
@@ -115,32 +98,32 @@
   },
   "pages": {
     "journey": {
-      "eyebrow": "The journey",
-      "title": "Nine chapters, in order",
-      "lede": "From a three-song EP made under the name Lizzy Grant to an unreleased country record announced under three titles: the archive follows the work, not the noise around it.",
-      "note": "Each chapter links to its releases and to the photographs that survive with a clear licence. Dates are release dates, not the dates a song was first performed."
+      "eyebrow": "Journey",
+      "title": "Nine eras, 2008–2026",
+      "lede": "The sequence runs from the Kill Kill EP (2008) and Lana Del Ray (2010) to Did You Know That There's a Tunnel Under Ocean Blvd (2023) and the unreleased Stove.",
+      "note": "Dates are release dates. Chart positions come from the references listed on the Sources page."
     },
     "gallery": {
-      "eyebrow": "The gallery",
-      "title": "A small, credited collection",
-      "lede": "Eighteen photographs, stored locally and used under named open licences. No hotlinks, no search-engine grabs, no image without a creator and a source.",
-      "note": "Filter by chapter, open any photograph for its full caption, credit, licence, and original file page. Two periods currently use a clearly marked placeholder instead of an unlicensed image."
+      "eyebrow": "Gallery",
+      "title": "Eighteen photographs, 2011–2025",
+      "lede": "Each image has a photographer, a Wikimedia Commons file page, and a named Creative Commons licence. Open a photograph for the full record.",
+      "note": "Two periods use a marked placeholder until a photograph with a clear licence is available."
     },
     "discography": {
       "eyebrow": "Discography",
-      "title": "Sixteen releases, in order",
-      "lede": "Studio albums, EPs, a short film, a spoken-word record, and two releases that have been announced but not yet heard. Standard editions are listed unless noted otherwise.",
-      "note": "Tracklists follow the standard editions. Deluxe, retailer, and regional bonus tracks are noted in the text rather than mixed into the main list."
+      "title": "Sixteen releases, 2008–2026",
+      "lede": "Studio albums, EPs, a short film, a spoken-word record, and two announced but unreleased projects. Tracklists follow standard editions.",
+      "note": "Deluxe and regional bonus tracks are described in the page text, not added to the main tracklist."
     },
     "sources": {
       "eyebrow": "Sources",
-      "title": "Receipts, not rumours",
-      "lede": "Every factual claim in the archive has a reference behind it. Photographs have a separate credit list with the creator, the original file page, and the licence.",
-      "note": "Wikipedia is used as a finding aid, not as a final authority: its citations lead to interviews, announcements, and reviews. Date-sensitive claims are checked against the date shown on the page."
+      "title": "Source list",
+      "lede": "Release dates and chart positions come from the references below. Photographs have a separate list with creator, file page, and licence.",
+      "note": "Wikipedia is used to locate the underlying interview, announcement, or review. Date-sensitive entries show the date they were last checked."
     }
   },
   "footer": {
-    "note": "An independent, source-led fan archive of Lana Del Rey's recorded work. Built to be read, not to harvest attention.",
+    "note": "Nine eras of Lana Del Rey's recorded work, with sources and photograph credits. Checked 24 November 2026.",
     "columns": [
       {
         "title": "Explore",
@@ -209,7 +192,7 @@
       "title": "Lizzy Grant & the early recordings",
       "years": "1985–2010",
       "accent": "#A95663",
-      "summary": "Before the name, the room: church choirs, school bands, Brooklyn clubs, and two records made under the name Lizzy Grant.",
+      "summary": "Church choirs, school bands, Brooklyn clubs, and two records made as Lizzy Grant.",
       "lede": "Elizabeth Woolridge Grant was born in New York City on 21 June 1985 and grew up in Lake Placid. Music came first through church and school, then through small clubs in Brooklyn and New Jersey, where she performed under names including Sparkle Jump Rope Queen and Lizzy Grant.",
       "sections": [
         {
@@ -281,7 +264,7 @@
       "title": "Born to Die, Paradise, and the bright dark",
       "years": "2011–2013",
       "accent": "#A86F2A",
-      "summary": "A homemade video becomes a major-label debut, and the baroque-pop frame gets its first full-scale test.",
+      "summary": "The 2011 “Video Games” video, the January 2012 major-label debut, and the Paradise EP that followed.",
       "lede": "The “Video Games” video arrived in 2011 with a homemade Super 8 quality and a chorus that felt older than the internet. By the time Born to Die was released in January 2012, the song had already changed the scale of the project.",
       "sections": [
         {
@@ -358,7 +341,7 @@
       "title": "Ultraviolence and the guitar",
       "years": "2014",
       "accent": "#7D2F3A",
-      "summary": "Dan Auerbach, live guitars, and a harder, stranger record than the one before it.",
+      "summary": "Released 13 June 2014 with Dan Auerbach as a central collaborator and live guitars across the record.",
       "lede": "Ultraviolence was released on 13 June 2014. After the orchestral scale of Born to Die and Paradise, the third album moved toward live guitar, desert-rock space, and a rawer vocal presence, with Dan Auerbach of the Black Keys as a central collaborator.",
       "sections": [
         {
@@ -429,7 +412,7 @@
       "title": "Honeymoon in slow motion",
       "years": "2015–2016",
       "accent": "#3F4F6B",
-      "summary": "A longer, slower record; a tour that widened the stage; a brief detour into someone else's album.",
+      "summary": "Fourteen tracks released 18 September 2015, produced by Del Rey with Rick Nowels and Kieron Menzies.",
       "lede": "Honeymoon arrived on 18 September 2015: fourteen tracks, 65 minutes, and a deliberate step back toward the baroque pop of Born to Die after the guitar-heavy Ultraviolence. It was produced by Del Rey with Rick Nowels and Kieron Menzies.",
       "sections": [
         {
@@ -499,7 +482,7 @@
       "title": "Lust for Life and the open door",
       "years": "2017–2018",
       "accent": "#A95663",
-      "summary": "A brighter, collaborative record that put the audience in the room.",
+      "summary": "Released 21 July 2017 with guest appearances from Stevie Nicks, the Weeknd, A$AP Rocky, and Sean Ono Lennon.",
       "lede": "Lust for Life was released on 21 July 2017. It is the first Del Rey album that sounds like a group conversation: the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, and Sean Ono Lennon all pass through it.",
       "sections": [
         {
@@ -569,7 +552,7 @@
       "title": "Norman Fucking Rockwell! and the long exhale",
       "years": "2019",
       "accent": "#8C6A2F",
-      "summary": "Jack Antonoff, Laurel Canyon light, and the record that many critics treat as her best.",
+      "summary": "Released 30 August 2019 with Jack Antonoff. Nominated for Album of the Year at the 2020 Grammy Awards.",
       "lede": "Norman Fucking Rockwell! was released on 30 August 2019. The first full album with Jack Antonoff as a central collaborator, it traded some of the earlier maximalism for soft rock, piano, and a slower, more conversational kind of songwriting.",
       "sections": [
         {
@@ -639,7 +622,7 @@
       "title": "Chemtrails, Blue Banisters, and the quiet house",
       "years": "2020–2021",
       "accent": "#7A5B4A",
-      "summary": "Two albums in seven months, plus a poetry book and a spoken-word record: the most domestic, reflective stretch of the catalogue.",
+      "summary": "Two albums released seven months apart in 2021, alongside a poetry book and a spoken-word record.",
       "lede": "In 2020, Del Rey published Violet Bent Backwards over the Grass, a poetry collection with a companion spoken-word album. Chemtrails over the Country Club followed on 19 March 2021; Blue Banisters arrived on 22 October 2021, only seven months later.",
       "sections": [
         {
@@ -712,7 +695,7 @@
       "title": "Ocean Blvd and the tunnel",
       "years": "2022–2023",
       "accent": "#3F4F6B",
-      "summary": "A long, dense album about family, memory, and the stories we build around both.",
+      "summary": "Sixteen tracks released 24 March 2023, produced with Jack Antonoff, Drew Erickson, and Zach Dawes.",
       "lede": "Did You Know That There's a Tunnel Under Ocean Blvd was released on 24 March 2023. At 16 tracks and nearly 78 minutes, it is one of Del Rey's densest records, with production from Jack Antonoff, Drew Erickson, Zach Dawes, and others.",
       "sections": [
         {
@@ -781,7 +764,7 @@
       "title": "Stove and the next chapter",
       "years": "2024–2026",
       "accent": "#7D2F3A",
-      "summary": "A country record announced under three titles, delayed, expanded, and still not out — plus a companion album and a handful of singles.",
+      "summary": "A country project first announced as Lasso in January 2024, renamed twice, and still unreleased on 24 November 2026.",
       "lede": "The next chapter has been public for longer than most albums. In January 2024, Del Rey announced a country project called Lasso; by November 2024 it had become The Right Person Will Stay, and in August 2025 she confirmed the title Stove. As of 24 November 2026, the album has not been released.",
       "sections": [
         {
@@ -1011,11 +994,10 @@
       "label": "Stranger / Interscope / Polydor",
       "producers": "Emile Haynie; Patrik Berger; Justin Parker; Robopop; Rick Nowels; Al Shux",
       "status": "released",
-      "summary": "The major-label debut: 12 tracks in its standard edition, a deluxe edition with three more, and a cinematic frame that became the template for the next decade.",
+      "summary": "Released 27 January 2012. Twelve tracks on the standard edition; the deluxe edition adds three more.",
       "narrative": [
-        "Born to Die was released on 27 January 2012. Its standard edition runs 12 tracks, from “Born to Die” and “Off to the Races” to “Summertime Sadness” and “This Is What Makes Us Girls”; the deluxe edition adds “Without You”, “Lolita”, and “Lucky Ones”.",
-        "The album peaked at number two on the Billboard 200 and topped charts in Australia, France, Germany, and the UK, among others. By December 2025, it had spent 618 weeks on the Billboard 200 — the longest run by a female artist in the chart's history, according to Billboard.",
-        "The Paradise Edition reissue, released on 9 November 2012, combines the standard album with the eight-track Paradise EP."
+        "Born to Die was released on 27 January 2012 through Interscope and Polydor. The standard edition has 12 tracks; the deluxe edition adds three more.",
+        "The album peaked at No. 2 on the Billboard 200. “Video Games”, “Born to Die”, and “Blue Jeans” were released as singles before and around the album."
       ],
       "tracklist": [
         {
@@ -1571,7 +1553,7 @@
       "label": "Interscope / Polydor",
       "producers": "Lana Del Rey; Jack Antonoff; Andrew Watt; Dean Reid; Happy Perez; Kieron Menzies; Louis Bell; Rick Nowels; Zachary Dawes",
       "status": "released",
-      "summary": "Soft rock, piano, and long songs: the record that many critics treat as her best.",
+      "summary": "Released 30 August 2019. Fourteen tracks, produced with Jack Antonoff, and nominated for Album of the Year at the 2020 Grammy Awards.",
       "narrative": [
         "Norman Fucking Rockwell! was released on 30 August 2019. Primarily produced by Del Rey and Jack Antonoff, with additional contributions from Zach Dawes, Andrew Watt, and Rick Nowels, it explored soft rock, psych-rock, and piano balladry.",
         "The 14-track album includes “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin' Time”, “Cinnamon Girl”, “The Greatest”, and “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
@@ -2040,7 +2022,7 @@
       "narrative": [
         "Stove was first announced in January 2024 as Lasso, then renamed The Right Person Will Stay in November 2024, and finally confirmed as Stove in August 2025. It is described as a country record, though Del Rey has said it is not a heavy departure from her previous work.",
         "Three singles have been released: “Henry, Come On” (11 April 2025), “Bluebird” (18 April 2025), and “White Feather Hawk Tail Deer Hunter” (17 February 2026). At Stagecoach in April 2025, she performed three new songs — “Stars Fell on Alabama”, “Quiet in the South”, and “57.5” — that were expected to appear on the album.",
-        "The album was not released in early 2026 as originally planned. No official tracklist or final release date has been announced. This page will be updated when both are confirmed."
+        "The album did not appear in early 2026. A single, “White Feather Hawk Tail Deer Hunter”, was released on 17 February 2026. On 15 July 2026 Del Rey said the album was close to completion and that the extra material had become a separate companion record."
       ],
       "tracklist": [],
       "tracklistNote": "No official tracklist has been released. The confirmed singles are “Henry, Come On”, “Bluebird”, and “White Feather Hawk Tail Deer Hunter”.",
@@ -2092,7 +2074,7 @@
       "summary": "Additional material from the Stove sessions, announced as a separate album in July 2026.",
       "narrative": [
         "On 15 July 2026, Del Rey announced that the extra material from the Stove sessions had grown into a companion album. The announcement included vinyl artwork for Stove and a second cover featuring a boat named “Spyda”, which suggested a possible title.",
-        "No title, tracklist, or release date has been confirmed. This page is a placeholder for that release, not a claim about its final form."
+        "No title, tracklist, or release date has been confirmed. The entry records the announcement and the checked-on date, 24 November 2026."
       ],
       "tracklist": [],
       "tracklistNote": "No official title, tracklist, or release date has been announced.",
@@ -2130,8 +2112,8 @@
       "id": "hero-lana-2024",
       "src": "assets/img-src/hero-lana-2024.jpg",
       "era": "stove",
-      "caption": "Primavera Sound, Barcelona, 31 May 2024.",
-      "alt": "Lana Del Rey singing under a stage light at Primavera Sound in 2024.",
+      "caption": "31 May 2024 · Primavera Sound, Barcelona · Raph_PH",
+      "alt": "Lana Del Rey in a beaded top, holding a microphone at an outdoor stage in Barcelona.",
       "credit": "Raph_PH",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%282024%29.jpg",
       "license": "CC BY 2.0",
@@ -2147,8 +2129,8 @@
       "id": "early-bowery-2011",
       "src": "assets/img-src/early-bowery-2011.jpg",
       "era": "early",
-      "caption": "Bowery Ballroom, New York, 2011.",
-      "alt": "Lana Del Rey singing into a microphone at Bowery Ballroom, New York, in 2011.",
+      "caption": "2011 · Bowery Ballroom, New York · aphrodite-in-nyc",
+      "alt": "Lana Del Rey singing into a microphone on a dim club stage in New York.",
       "credit": "aphrodite-in-nyc",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Bowery_2011_P1150546.jpg",
       "license": "CC BY 2.0",
@@ -2163,8 +2145,8 @@
       "id": "early-paradiso-2011",
       "src": "assets/img-src/early-paradiso-2011.jpg",
       "era": "early",
-      "caption": "Paradiso, Amsterdam, 10 November 2011.",
-      "alt": "Lana Del Rey performing at Paradiso in Amsterdam, with balloons behind the stage.",
+      "caption": "10 November 2011 · Paradiso, Amsterdam · nvivo.es, 5gig",
+      "alt": "Lana Del Rey on stage at Paradiso with pale balloons above the audience.",
       "credit": "nvivo.es, 5gig",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%40Paradiso_%28Amsterdam%292.jpg",
       "license": "CC BY-SA 2.0",
@@ -2179,8 +2161,8 @@
       "id": "btd-irving-plaza-2012",
       "src": "assets/img-src/btd-irving-plaza-2012.jpg",
       "era": "born-to-die",
-      "caption": "Irving Plaza, New York, 7 June 2012.",
-      "alt": "Lana Del Rey standing with a microphone on stage at Irving Plaza, New York, in 2012.",
+      "caption": "7 June 2012 · Irving Plaza, New York · petercruise",
+      "alt": "Lana Del Rey standing with a microphone under white stage lights at Irving Plaza.",
       "credit": "petercruise",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Irving_Plaza.jpg",
       "license": "CC BY 2.0",
@@ -2195,8 +2177,8 @@
       "id": "btd-cannes-2012",
       "src": "assets/img-src/btd-cannes-2012.jpg",
       "era": "born-to-die",
-      "caption": "Cannes Film Festival, May 2012.",
-      "alt": "Portrait of Lana Del Rey at the Cannes Film Festival in 2012.",
+      "caption": "May 2012 · Cannes Film Festival · Georges Biard",
+      "alt": "Head-and-shoulders portrait of Lana Del Rey at a 2012 film festival.",
       "credit": "Georges Biard",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Cannes_2012.jpg",
       "license": "CC BY-SA 3.0",
@@ -2211,8 +2193,8 @@
       "id": "btd-isle-of-wight-2012",
       "src": "assets/img-src/btd-isle-of-wight-2012.jpg",
       "era": "born-to-die",
-      "caption": "Isle of Wight Festival, 22 June 2012.",
-      "alt": "Lana Del Rey singing on stage at the Isle of Wight Festival in 2012.",
+      "caption": "22 June 2012 · Isle of Wight Festival · Editor5807",
+      "alt": "Lana Del Rey performing in front of a large projection screen at a festival.",
       "credit": "Editor5807",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_performing_at_Isle_of_Wight_Festival_2012.jpg",
       "license": "CC BY-SA 4.0",
@@ -2227,8 +2209,8 @@
       "id": "ultra-coachella-2014",
       "src": "assets/img-src/ultra-coachella-2014.jpg",
       "era": "ultraviolence",
-      "caption": "Coachella, 20 April 2014.",
-      "alt": "Lana Del Rey singing and playing guitar at Coachella in 2014.",
+      "caption": "20 April 2014 · Coachella · Neon Tommy",
+      "alt": "Lana Del Rey playing an acoustic guitar under red stage lights.",
       "credit": "Neon Tommy",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_2014_Coachella.jpg",
       "license": "CC BY-SA 2.0",
@@ -2243,8 +2225,8 @@
       "id": "ultra-headshot-2014",
       "src": "assets/img-src/ultra-headshot-2014.jpg",
       "era": "ultraviolence",
-      "caption": "Coachella, 20 April 2014.",
-      "alt": "Close portrait of Lana Del Rey at Coachella in 2014.",
+      "caption": "20 April 2014 · Coachella · Neon Tommy",
+      "alt": "Close portrait of Lana Del Rey at a microphone, lit from the side.",
       "credit": "Neon Tommy",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_headshot%2C_Coachella_2014.jpg",
       "license": "CC BY-SA 2.0",
@@ -2259,8 +2241,8 @@
       "id": "ultra-rock-en-seine-2014",
       "src": "assets/img-src/ultra-rock-en-seine-2014.jpg",
       "era": "ultraviolence",
-      "caption": "Rock en Seine, France, 2014.",
-      "alt": "Lana Del Rey performing with a guitar at Rock en Seine in 2014.",
+      "caption": "2014 · Rock en Seine, France · itstrashdistance",
+      "alt": "Lana Del Rey with a guitar on an outdoor festival stage in France.",
       "credit": "itstrashdistance",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_Rock_en_Seine_2014.jpg",
       "license": "CC BY 2.0",
@@ -2275,8 +2257,8 @@
       "id": "honeymoon-sasquatch-2015",
       "src": "assets/img-src/honeymoon-sasquatch-2015.jpg",
       "era": "honeymoon",
-      "caption": "Sasquatch! Music Festival, 2015.",
-      "alt": "Lana Del Rey singing in the spotlight at Sasquatch! Music Festival in 2015.",
+      "caption": "2015 · Sasquatch! Music Festival · David Lee",
+      "alt": "A small figure of Lana Del Rey under a circle of stage lights above a crowd.",
       "credit": "David Lee",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_-_Sasquatch_2015.jpg",
       "license": "CC BY-SA 2.0",
@@ -2291,8 +2273,8 @@
       "id": "honeymoon-sasquatch-2015-2",
       "src": "assets/img-src/honeymoon-sasquatch-2015-2.jpg",
       "era": "honeymoon",
-      "caption": "Sasquatch! Music Festival, 2015.",
-      "alt": "Lana Del Rey on stage at Sasquatch! Music Festival in 2015, with stage lights behind her.",
+      "caption": "2015 · Sasquatch! Music Festival · David Lee",
+      "alt": "Lana Del Rey at a microphone with a line of bright lights behind her.",
       "credit": "David Lee",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_-_Sasquatch_2015_2.jpg",
       "license": "CC BY-SA 2.0",
@@ -2307,8 +2289,8 @@
       "id": "lfl-flow-2017",
       "src": "assets/img-src/lfl-flow-2017.jpg",
       "era": "lust-for-life",
-      "caption": "Flow Festival, Helsinki, 11 August 2017.",
-      "alt": "Lana Del Rey singing at Flow Festival in Helsinki in 2017.",
+      "caption": "11 August 2017 · Flow Festival, Helsinki · Nick Stroil",
+      "alt": "Lana Del Rey in dark clothing standing on a stage washed in pale light.",
       "credit": "Nick Stroil",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Flow_Festival_2017_%285%29_%28cropped%29.jpg",
       "license": "CC BY-SA 4.0",
@@ -2323,8 +2305,8 @@
       "id": "lfl-kroq-2017",
       "src": "assets/img-src/lfl-kroq-2017.jpg",
       "era": "lust-for-life",
-      "caption": "KROQ Weenie Roast, 20 May 2017.",
-      "alt": "Portrait of Lana Del Rey with a microphone at KROQ Weenie Roast in 2017.",
+      "caption": "20 May 2017 · KROQ Weenie Roast · Harmony Gerber",
+      "alt": "Lana Del Rey holding a microphone against a pink-lit backdrop.",
       "credit": "Harmony Gerber",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_KROQ_Weenie_Roast_2017_%28cropped%29.jpg",
       "license": "CC BY 2.0",
@@ -2339,8 +2321,8 @@
       "id": "nfr-grammy-museum-2019",
       "src": "assets/img-src/nfr-grammy-museum-2019.jpg",
       "era": "nfr",
-      "caption": "Grammy Museum, Los Angeles, 13 October 2019.",
-      "alt": "Lana Del Rey singing at the Grammy Museum in Los Angeles in 2019.",
+      "caption": "13 October 2019 · Grammy Museum, Los Angeles · Justin Higuchi",
+      "alt": "Lana Del Rey singing into a microphone in a small museum hall.",
       "credit": "Justin Higuchi",
       "source": "https://commons.wikimedia.org/wiki/File:LDR2019-cr.jpg",
       "license": "CC BY-SA 2.0",
@@ -2355,8 +2337,8 @@
       "id": "ocean-mita-2023",
       "src": "assets/img-src/ocean-mita-2023.jpg",
       "era": "ocean-blvd",
-      "caption": "MITA, 2023.",
-      "alt": "Wide view of Lana Del Rey performing at MITA in 2023, with the crowd in the foreground.",
+      "caption": "2023 · MITA · Raphaelp18",
+      "alt": "A wide black-and-white frame of Lana Del Rey performing with the crowd in front.",
       "credit": "Raphaelp18",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_del_rey_MITA.jpg_%28cropped%29.jpg",
       "license": "CC BY-SA 4.0",
@@ -2371,8 +2353,8 @@
       "id": "stove-primavera-2024",
       "src": "assets/img-src/stove-primavera-2024.jpg",
       "era": "stove",
-      "caption": "Primavera Sound, Barcelona, 31 May 2024.",
-      "alt": "Lana Del Rey singing on stage at Primavera Sound in Barcelona in 2024.",
+      "caption": "31 May 2024 · Primavera Sound, Barcelona · Raph_PH",
+      "alt": "Lana Del Rey on an open-air stage with green foliage behind her.",
       "credit": "Raph_PH",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_%E2%80%93_Primavera_Sound.jpg",
       "license": "CC BY 2.0",
@@ -2387,8 +2369,8 @@
       "id": "stove-wembley-2025",
       "src": "assets/img-src/stove-wembley-2025.jpg",
       "era": "stove",
-      "caption": "Wembley Stadium, London, 3 July 2025.",
-      "alt": "Lana Del Rey singing at Wembley Stadium in London in July 2025.",
+      "caption": "3 July 2025 · Wembley Stadium, London · Raph_PH",
+      "alt": "Lana Del Rey performing under pink and red lights at a stadium show.",
       "credit": "Raph_PH",
       "source": "https://commons.wikimedia.org/wiki/File:Lana_Del_Rey_at_Wembley_2025.jpg",
       "license": "CC BY 4.0",
@@ -2403,8 +2385,8 @@
       "id": "stove-wembley-detail-2025",
       "src": "assets/img-src/stove-wembley-detail-2025.jpg",
       "era": "stove",
-      "caption": "Wembley Stadium, London, 3 July 2025.",
-      "alt": "Close portrait of Lana Del Rey with a microphone at Wembley Stadium in 2025.",
+      "caption": "3 July 2025 · Wembley Stadium, London · Raph_PH",
+      "alt": "Close view of Lana Del Rey in profile at a microphone on the same Wembley night.",
       "credit": "Raph_PH",
       "source": "https://commons.wikimedia.org/wiki/File:LanaWembley030725-89_%28cropped%29.jpg",
       "license": "CC BY 4.0",
@@ -2696,118 +2678,108 @@
     }
   ],
   "fanNotes": {
-    "eyebrow": "Fan notes",
-    "title": "Notes from the archive",
-    "lede": "A public-facing notebook about why this archive exists, how it is made, and what it refuses to do. It is written for readers, not kept as a private diary.",
+    "eyebrow": "Editorial",
+    "title": "How this archive is checked",
+    "lede": "Two rules govern these pages: dates come from cited sources, and photographs need a named creator and licence.",
     "notes": [
       {
-        "title": "Why this archive exists",
-        "date": "24 November 2026",
-        "status": "placeholder",
-        "tag": "Placeholder",
-        "body": [
-          "[Archive keeper: add a short note about why you started this archive, what you want it to be for other fans, and what you would like to add next.]",
-          "This space is reserved for the person who maintains the site. Write for readers who arrive without context, not for a private diary."
-        ]
-      },
-      {
-        "title": "How a photograph earns its place",
-        "date": "24 November 2026",
-        "status": "published",
-        "tag": "Photo policy",
-        "body": [
-          "Every image in the archive is downloaded and stored locally. Nothing is hotlinked from a search engine. Each photo has a named creator, a link to its original file page, a licence, and a link to the licence terms.",
-          "If a photo's licence cannot be established, it is not used. Two eras currently use a placeholder instead of an uncredited image: the earliest Lizzy Grant years and the Chemtrails / Blue Banisters period. That is a deliberate limit, not an oversight."
-        ]
-      },
-      {
-        "title": "A note on corrections",
+        "title": "How facts are checked",
         "date": "24 November 2026",
         "status": "published",
         "tag": "Editorial",
         "body": [
-          "This is a fan archive, not a newsroom. Facts are checked against Wikipedia's cited sources and, where possible, the primary announcement. Date-sensitive claims — especially anything about Stove — are marked with the date they were checked.",
-          "If something is wrong, the fix is to correct it in the data source and rebuild, not to quietly patch the HTML. The archive is generated from one JSON file, so a correction propagates to every page that uses it."
+          "A release date, chart position, or announcement is recorded only when a cited source supports it. Wikipedia is used to find the underlying interview, label notice, or review; the Sources page lists each reference.",
+          "Unreleased projects are marked provisional. Stove and the untitled companion album show the date each status was checked: 24 November 2026. Corrections are made in the data file, and every page that uses the fact is rebuilt."
+        ]
+      },
+      {
+        "title": "How photographs are selected",
+        "date": "24 November 2026",
+        "status": "published",
+        "tag": "Photo policy",
+        "body": [
+          "A photograph is used only when its creator, source file page, and licence are visible on Wikimedia Commons. Each image is stored locally and shows its credit on the gallery tile and in the lightbox.",
+          "Two periods have no qualifying image in this collection: the early Lizzy Grant years and the Chemtrails / Blue Banisters period. Their tiles are marked as placeholders."
         ]
       }
     ],
     "rules": [
-      "No gossip, and no speculation about private life.",
-      "No fabricated quotes, and no full lyrics.",
-      "No photograph without a named creator, source, and licence.",
-      "No claim about an unreleased record that is not marked as provisional."
+      "Dates are linked to a named source.",
+      "Photographs carry a creator, file page, and licence.",
+      "Unreleased material is marked provisional with a checked-on date.",
+      "Corrections go into the data file, not the generated HTML."
     ],
     "submit": {
-      "title": "Have a correction or a licensed photograph?",
-      "body": "Corrections, takedown requests, and licensed photograph offers are handled through a public issue on the project repository. No email address has been invented.",
+      "title": "Corrections, takedowns, and licensed photographs",
+      "body": "Send a correction, a takedown request, or an offer of a licensed photograph through the public issue tracker. Include the page URL and the source you are citing.",
       "contact": "Open an issue on GitHub",
       "url": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction"
     }
   },
   "about": {
-    "eyebrow": "About this archive",
-    "title": "A fan archive, with receipts",
-    "lede": "Lizzy to Lana is an independent fan archive of Lana Del Rey's recorded work. It is built and maintained by a fan, for other fans.",
+    "eyebrow": "About",
+    "title": "Lizzy to Lana",
+    "lede": "A reference for Lana Del Rey's recorded work: nine eras, sixteen releases, and eighteen credited concert photographs. Last checked 24 November 2026.",
     "sections": [
       {
-        "heading": "What this is",
+        "heading": "What is here",
         "body": [
-          "A multi-page reference for the eras, releases, and a small photo collection. Every page is generated from one JSON source; every photo has a credit and a licence.",
-          "The site is deliberately quiet. There is no autoplay, no tracking script, no comment section, and no infinite feed. The goal is to make the records easier to follow, not to compete with the official channels."
+          "Nine era pages, individual album pages, a gallery with 18 licensed photographs, a source list, and a search index. The earliest release is the Kill Kill EP (2008); the newest entry is Stove, still unreleased on 24 November 2026.",
+          "Each photograph shows its creator, Commons file page, and licence. Dates and chart positions point to the references on the Sources page."
         ]
       },
       {
-        "heading": "What this is not",
+        "heading": "Status",
         "body": [
-          "Not an official site. Not a news site. Not a diary. Not a lyrics database. Not a gossip page.",
-          "It does not speculate about private life, publish unverified claims, or reproduce full lyrics. Short quotations are used only where they are attributed and necessary."
+          "This is an unofficial fan archive. It has no connection to Lana Del Rey, her management, or her labels.",
+          "It publishes no full lyrics, fabricated quotations, or speculation about private life."
         ]
       },
       {
-        "heading": "Editorial policy",
+        "heading": "Editorial checks",
         "body": [
-          "Facts are checked against Wikipedia's cited sources and, where possible, the primary announcement. Date-sensitive claims — especially anything about Stove — are marked with the date they were checked.",
-          "Unreleased records are described as provisional. If a tracklist, title, or release date has not been confirmed, the page says so instead of filling the gap."
+          "Dates and chart positions are checked against the cited sources and, where possible, the primary announcement. Stove and its companion album carry the date 24 November 2026.",
+          "Unreleased records are marked provisional. Where a title, tracklist, or date has not been confirmed, the entry says so."
         ]
       },
       {
-        "heading": "Photo policy",
+        "heading": "Photographs",
         "body": [
-          "Photographs are downloaded from Wikimedia Commons, stored locally, and served in responsive AVIF, WebP, and JPEG variants. Each image is credited to its creator, linked to its original file page, and used under a named Creative Commons licence.",
-          "If a licence cannot be established, the archive uses a placeholder. Two periods currently have no licensed photograph: the earliest Lizzy Grant years and the Chemtrails / Blue Banisters era."
+          "Photographs come from Wikimedia Commons, are stored locally, and are served in AVIF, WebP, and JPEG variants. Each carries its creator, file page, and named Creative Commons licence.",
+          "Two periods have no qualifying image in the collection: the early Lizzy Grant years and the Chemtrails / Blue Banisters era. Their tiles are marked as placeholders."
         ]
       },
       {
-        "heading": "Takedown and corrections",
+        "heading": "Corrections",
         "body": [
-          "If you are the rights holder for an image and believe it has been used incorrectly, contact the address below with the file URL and the licence concern. The image will be removed or corrected promptly.",
-          "The same address is the right place to send a factual correction. No contact email has been invented; the placeholder will be replaced before the site is promoted publicly."
+          "Use the public issue tracker linked below. Include the page URL and the source for a correction, or the file page and licence for a photograph.",
+          "Rights holders can request removal through the same tracker."
         ]
       }
     ],
     "contact": {
-      "label": "Contact",
+      "label": "Corrections and takedowns",
       "value": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction",
-      "note": "Public issue tracker — no email address has been invented.",
+      "note": "Public issue tracker for the project repository.",
       "action": "Open an issue on GitHub"
     },
     "colophon": [
-      "Static HTML, CSS, and a small amount of JavaScript. Built with a Node script; images and OG cards are generated with Python and Pillow.",
+      "Static HTML and CSS generated from one JSON file with a Node build script.",
       "Fonts: Cormorant Garamond, Inter, and Homemade Apple, self-hosted under the SIL Open Font License.",
-      "Search: Pagefind, generated at build time and run entirely in the browser.",
-      "Hosting: a private VPS running nginx, with HTTPS, gzip, long-lived caching for hashed assets, and a small set of security headers."
+      "Photographs and Open Graph cards are generated with Python and Pillow.",
+      "Search: Pagefind, built into the site."
     ]
   },
   "search": {
     "eyebrow": "Search",
     "title": "Search the archive",
-    "lede": "Find an era, a release, a photograph caption, or a page. The index is generated at build time with Pagefind and runs entirely in your browser.",
-    "note": "Search covers the text of every page. Photographs are indexed through their captions and credits on the gallery and era pages."
+    "lede": "Search era names, release titles, dates, and photograph captions.",
+    "note": "Photograph credits are included in the index."
   },
   "notFound": {
     "eyebrow": "404",
-    "title": "This page has left the party",
-    "lede": "The page you asked for is not in the archive. It may have moved, or it may never have existed.",
-    "note": "Try the journey, the gallery, or the search page. The archive is small enough to browse."
+    "title": "Page not found",
+    "lede": "That address is not in the archive.",
+    "note": "Use the journey index, the gallery, or search to find the page."
   }
 }
