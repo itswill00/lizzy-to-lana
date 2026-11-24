@@ -286,11 +286,45 @@ function localeSwitcher(position) {
       }${esc(item.name)}</a>`;
     })
     .join("\n        ");
-  return `<nav class="locale-switcher locale-switcher--${position}" aria-label="${attr(
-    t("localeSwitcher")
-  )}">
+
+  if (position === "footer") {
+    return `<nav class="locale-switcher locale-switcher--footer" aria-label="${attr(
+      t("localeSwitcher")
+    )}">
         ${links}
       </nav>`;
+  }
+
+  const current = enabledLocales().find((item) => item.code === locale);
+  const items = enabledLocales()
+    .map((item) => {
+      const active = item.code === locale;
+      return `<li><a class="locale-switcher__item" href="@@LOCALE@@${attr(
+        hrefFor(item.code, currentPath)
+      )}" hreflang="${attr(item.hreflang)}" lang="${attr(item.hreflang)}"${
+        active ? ' aria-current="page"' : ""
+      }>
+          <span class="locale-switcher__check" aria-hidden="true">${
+            active
+              ? `<svg viewBox="0 0 24 24" focusable="false"><path d="m5 13 4 4 10-11"></path></svg>`
+              : ""
+          }</span>
+          <span>${esc(item.name)}</span>
+        </a></li>`;
+    })
+    .join("\n        ");
+
+  return `<details class="locale-switcher locale-switcher--header" data-locale-menu>
+      <summary class="locale-switcher__summary" title="${attr(current.name)}">
+        <svg class="locale-switcher__globe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"></path></svg>
+        <span class="locale-switcher__current" aria-hidden="true">${esc(current.code.toUpperCase())}</span>
+        <svg class="locale-switcher__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"></path></svg>
+        <span class="visually-hidden">${esc(current.name)} — ${esc(t("localeSwitcher"))}</span>
+      </summary>
+      <nav class="locale-switcher__menu" aria-label="${attr(t("localeSwitcher"))}">
+        <ul class="locale-switcher__list">${items}</ul>
+      </nav>
+    </details>`;
 }
 
 function localize(html) {
@@ -718,6 +752,9 @@ function layout(options) {
 ${localize(content)}
   </main>
   ${localize(footer())}
+  <button class="to-top" type="button" data-to-top aria-label="${attr(t("backToTop"))}" hidden data-pagefind-ignore>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+  </button>
   ${lightbox()}
   ${extraScripts}
   <script src="${assets.js}" defer></script>

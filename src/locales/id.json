@@ -249,7 +249,8 @@
       "Upcoming studio album": "Album studio mendatang"
     },
     "officialSite": "Situs resmi",
-    "ogCardAlt": "{title} — kartu tipografis"
+    "ogCardAlt": "{title} — kartu tipografis",
+    "backToTop": "Kembali ke atas"
   },
   "site": {
     "tagline": "Arsip Penggemar",

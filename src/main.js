@@ -489,7 +489,8 @@
   const rippleTargets =
     ".btn, .filter-chip, .menu-toggle, .menu-close, .copy-credit, .photo-tile, " +
     ".lightbox__close, .lightbox__prev, .lightbox__next, .gallery-strip__item, " +
-    ".album-card, .era-card, .journey-item__link, .prev-next a, .era-link-card";
+    ".album-card, .era-card, .journey-item__link, .prev-next a, .era-link-card, " +
+    ".to-top, .locale-switcher__summary";
 
   doc.addEventListener("pointerdown", (event) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -512,6 +513,47 @@
     host.append(ripple);
     ripple.addEventListener("animationend", () => ripple.remove(), { once: true });
   });
+
+  /* ------------------------------------------------------------------------
+     Header language menu — a native disclosure, closed politely
+     ------------------------------------------------------------------------ */
+
+  doc.querySelectorAll("[data-locale-menu]").forEach((details) => {
+    const summary = details.querySelector(".locale-switcher__summary");
+
+    doc.addEventListener("click", (event) => {
+      if (details.open && !details.contains(event.target)) details.open = false;
+    });
+
+    details.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && details.open) {
+        details.open = false;
+        if (summary) summary.focus();
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     Back to top — appears once the reader is a screen or so down
+     ------------------------------------------------------------------------ */
+
+  const toTop = doc.querySelector("[data-to-top]");
+
+  if (toTop) {
+    const syncToTop = () => {
+      toTop.hidden = window.scrollY < window.innerHeight * 1.2;
+    };
+
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      const brand = doc.querySelector(".brand");
+      if (brand) brand.focus({ preventScroll: true });
+    });
+
+    window.addEventListener("scroll", syncToTop, { passive: true });
+    window.addEventListener("resize", syncToTop, { passive: true });
+    syncToTop();
+  }
 
   /* ------------------------------------------------------------------------
      Small niceties

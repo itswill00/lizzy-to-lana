@@ -249,7 +249,8 @@
       "Upcoming studio album": "Álbum de estudio próximo"
     },
     "officialSite": "Sitio oficial",
-    "ogCardAlt": "{title} — tarjeta tipográfica"
+    "ogCardAlt": "{title} — tarjeta tipográfica",
+    "backToTop": "Volver arriba"
   },
   "site": {
     "tagline": "Un archivo de fans",

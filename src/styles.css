@@ -3234,7 +3234,9 @@ hr {
   }
 }
 
-@media (max-width: 900px) {
+/* The horizontal nav carries six long labels plus search, so it only appears
+   when there is genuinely room. Below this the menu toggle takes over. */
+@media (max-width: 1152px) {
   .desktop-nav {
     display: none;
   }
@@ -3242,7 +3244,9 @@ hr {
   .menu-toggle {
     display: inline-flex;
   }
+}
 
+@media (max-width: 900px) {
   .hero h1 {
     font-size: clamp(3.8rem, 15vw, 8rem);
   }
@@ -3635,7 +3639,10 @@ button,
 .prev-next a,
 .era-link-card,
 .timeline-preview a,
-.ref-list__title a {
+.ref-list__title a,
+.to-top,
+.locale-switcher__summary,
+.locale-switcher__item {
   transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 240ms ease, color 180ms ease, border-color 180ms ease,
     background-color 180ms ease, opacity 180ms ease;
@@ -3654,6 +3661,8 @@ button,
 button:active,
 .btn:active,
 .filter-chip:active,
+.to-top:active,
+.locale-switcher__summary:active,
 .menu-nav a:active,
 .photo-tile:active,
 .gallery-strip__item:active,
@@ -3677,6 +3686,11 @@ button:active,
 .journey-item__link,
 .prev-next a,
 .era-link-card {
+  position: relative;
+}
+
+.locale-switcher__summary,
+.locale-switcher__item {
   position: relative;
 }
 
@@ -3827,6 +3841,10 @@ button:active,
   .filter-status,
   .lightbox,
   .menu-dialog,
+  .to-top,
+  .locale-switcher,
+  .locale-suggest,
+  .reading-progress,
   .skip-link {
     display: none !important;
   }
@@ -3855,6 +3873,22 @@ button:active,
   .era-card__media,
   .era-card__shade {
     display: none;
+  }
+
+  /* Never let a scroll-driven reveal hide content on paper. */
+  .journey-item,
+  .timeline-preview,
+  .album-card,
+  .era-card,
+  .photo-tile-wrap,
+  .photo-tile--placeholder,
+  .credit-card,
+  .note-card,
+  .section-head,
+  .ref-list > li {
+    animation: none !important;
+    opacity: 1 !important;
+    translate: none !important;
   }
 }
 
@@ -3898,15 +3932,18 @@ figcaption a,
   color: var(--gold-bright);
 }
 
-/* Locale switcher */
-.locale-switcher {
-  display: flex;
+/* Locale switcher — inline links in the footer */
+.locale-switcher--footer {
+  display: none;
   flex-wrap: wrap;
   gap: 0.35rem 0.7rem;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(246, 238, 226, 0.12);
 }
 
-.locale-switcher a {
+.locale-switcher--footer a {
   display: inline-block;
   min-height: 28px;
   padding: 0.15rem 0.35rem;
@@ -3918,31 +3955,264 @@ figcaption a,
   transition: color 160ms ease, border-color 160ms ease;
 }
 
-.locale-switcher a:hover,
-.locale-switcher a:focus-visible,
-.locale-switcher a[aria-current="true"] {
+.locale-switcher--footer a:hover,
+.locale-switcher--footer a:focus-visible,
+.locale-switcher--footer a[aria-current="page"] {
   color: var(--gold-bright);
   border-bottom-color: currentColor;
 }
 
+/* Locale switcher — compact disclosure in the header */
 .locale-switcher--header {
+  position: relative;
+  flex: 0 0 auto;
   margin-left: 0.4rem;
 }
 
-.locale-switcher--footer {
-  display: none;
-  justify-content: flex-start;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(246, 238, 226, 0.12);
+.locale-switcher__summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 34px;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(246, 238, 226, 0.28);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--cream-dim);
+  font-family: inherit;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
-@media (max-width: 900px) {
+.locale-switcher__summary::-webkit-details-marker {
+  display: none;
+}
+
+.locale-switcher__summary::marker {
+  content: "";
+}
+
+.locale-switcher__summary:hover,
+.locale-switcher__summary:focus-visible,
+.locale-switcher--header[open] > .locale-switcher__summary {
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+  background: rgba(224, 164, 88, 0.08);
+}
+
+.locale-switcher__globe {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.locale-switcher__chevron {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  transition: transform 200ms ease;
+}
+
+.locale-switcher--header[open] > .locale-switcher__summary .locale-switcher__chevron {
+  transform: rotate(180deg);
+}
+
+.locale-switcher__menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.55rem);
+  z-index: 120;
+  min-width: 12rem;
+  padding: 0.3rem;
+  background: var(--midnight-2);
+  border: 1px solid rgba(246, 238, 226, 0.18);
+  box-shadow: var(--shadow-md);
+  animation: locale-in 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes locale-in {
+  from {
+    opacity: 0;
+    translate: 0 -6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.locale-switcher__list {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locale-switcher__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 34px;
+  padding: 0.3rem 0.5rem;
+  color: var(--cream-dim);
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.locale-switcher__item:hover,
+.locale-switcher__item:focus-visible {
+  color: var(--cream);
+  background: rgba(246, 238, 226, 0.06);
+}
+
+.locale-switcher__item[aria-current="page"] {
+  color: var(--gold-bright);
+  border-left-color: var(--gold-bright);
+}
+
+.locale-switcher__check {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+}
+
+.locale-switcher__check svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.4;
+}
+
+@media (max-width: 1152px) {
   .locale-switcher--header {
     display: none;
   }
 
   .locale-switcher--footer {
     display: flex;
+  }
+}
+
+/* Back to top */
+.to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 1.7rem);
+  bottom: clamp(1rem, 3vw, 1.7rem);
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(246, 238, 226, 0.3);
+  border-radius: 999px;
+  background: rgba(18, 23, 38, 0.92);
+  color: var(--cream);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: to-top-in 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.to-top[hidden] {
+  display: none;
+}
+
+.to-top svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+.to-top:active {
+  transform: translateY(-2px);
+}
+
+@keyframes to-top-in {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (max-width: 1152px) {
+  .site-footer {
+    padding-bottom: 4.75rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Scroll-driven reveal — passive, compositor-friendly, no JavaScript
+   ------------------------------------------------------------------------- */
+
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .journey-item,
+  .timeline-preview,
+  .album-card,
+  .era-card,
+  .photo-tile-wrap,
+  .photo-tile--placeholder,
+  .credit-card,
+  .note-card,
+  .section-head,
+  .ref-list > li {
+    animation: reveal-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 26%;
+  }
+}
+
+/* Hero — a slow drift so a still photograph still breathes */
+.hero__media img {
+  animation: hero-drift 26s ease-in-out infinite alternate;
+}
+
+@keyframes hero-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
   }
 }
 
