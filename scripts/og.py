@@ -269,115 +269,123 @@ def icon(size: int) -> Image.Image:
     return image.resize((size, size), Image.Resampling.LANCZOS)
 
 
+def tr(ui: dict, key: str, **vars) -> str:
+    value = ui.get(key)
+    if not isinstance(value, str) or not value.strip():
+        raise KeyError(f"missing OG translation key: {key}")
+    for name, replacement in vars.items():
+        value = value.replace("{" + name + "}", str(replacement))
+    return value
+
+
 def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    config = json.loads((ROOT / "src" / "i18n.json").read_text(encoding="utf-8"))
     OG_DIR.mkdir(parents=True, exist_ok=True)
     ICON_DIR.mkdir(parents=True, exist_ok=True)
 
-    site = data["site"]
-    eras = {era["id"]: era for era in data["eras"]}
+    eras = data["eras"]
     albums = data["albums"]
-    photos = data["photos"]
+    photos = [p for p in data["photos"] if not p.get("placeholder")]
+    site = data["site"]
 
-    cards: dict[str, Image.Image] = {}
+    for item in config["locales"]:
+        if not item["enabled"]:
+            continue
+        code = item["code"]
+        loc = json.loads((ROOT / "src" / "locales" / f"{code}.json").read_text(encoding="utf-8"))
+        ui = loc["ui"]
+        pages = loc["pages"]
+        out_dir = OG_DIR / code
+        out_dir.mkdir(parents=True, exist_ok=True)
+        cards: dict[str, Image.Image] = {}
 
-    cards["home"] = card(
-        "UNOFFICIAL FAN ARCHIVE",
-        site["name"],
-        f"{site['tagline']} · Nine eras, sixteen releases, one source of truth",
-        GOLD,
-    )
-
-    pages = data["pages"]
-
-    cards["journey"] = card(
-        "THE JOURNEY",
-        pages["journey"]["title"],
-        "Nine chapters · 1985–2026 · every release in order",
-        ROSE,
-    )
-
-    for index, era in enumerate(data["eras"], start=1):
-        count = len(era["albums"])
-        label = "release" if count == 1 else "releases"
-        cards[f"journey-{era['id']}"] = card(
-            f"ERA {index:02d} · {era['years']}",
-            era["title"],
-            f"{count} {label} · {era['label']}",
+        cards["home"] = card(
+            tr(ui, "ogHomeKicker"),
+            site["name"],
+            tr(ui, "ogHomeDesc", tagline=loc["site"]["tagline"]),
+            GOLD,
+        )
+        cards["journey"] = card(
+            tr(ui, "ogJourneyKicker"),
+            pages["journey"]["title"],
+            tr(ui, "ogJourneyDesc", count=len(eras), years=f"{eras[0]['years']}–{eras[-1]['years'][:4]}"),
             ROSE,
         )
-
-    cards["gallery"] = card(
-        "THE GALLERY",
-        pages["gallery"]["title"],
-        f"{len(photos)} images · every one credited and licensed",
-        GOLD,
-    )
-
-    for era in data["eras"]:
-        count = sum(1 for photo in photos if photo["era"] == era["id"] and not photo.get("placeholder"))
-        label = "photograph" if count == 1 else "photographs"
-        cards[f"gallery-{era['id']}"] = card(
-            f"GALLERY · {era['label'].upper()}",
-            f"{era['label']} in photographs",
-            f"{count} {label} · {era['years']}",
+        for index, era in enumerate(eras, start=1):
+            count = len(era["albums"])
+            cards[f"journey-{era['id']}"] = card(
+                tr(ui, "ogEraKicker", index=f"{index:02d}", years=era["years"]),
+                loc["eras"][era["id"]]["title"],
+                f"{count} {tr(ui, 'releaseLabel' if count == 1 else 'releasesLabel')} · {loc['eras'][era['id']]['label']}",
+                ROSE,
+            )
+        cards["gallery"] = card(
+            tr(ui, "ogGalleryKicker"),
+            pages["gallery"]["title"],
+            tr(ui, "ogGalleryDesc", count=len(photos)),
             GOLD,
         )
-
-    cards["discography"] = card(
-        "DISCOGRAPHY",
-        pages["discography"]["title"],
-        "Studio albums · EPs · film · spoken word · unreleased",
-        GOLD,
-    )
-
-    for album in albums:
-        status = "Unreleased" if album.get("status") == "upcoming" else album.get("released", "")
-        cards[f"discography-{album['id']}"] = card(
-            f"DISCOGRAPHY · {album['type'].upper()}",
-            album["title"],
-            f"{album['year']} · {status} · {album['era'].replace('-', ' ').title()} era",
+        for era in eras:
+            count = sum(1 for p in photos if p["era"] == era["id"])
+            label = loc["eras"][era["id"]]["label"]
+            cards[f"gallery-{era['id']}"] = card(
+                tr(ui, "ogGalleryEraKicker", era=label.upper()),
+                tr(ui, "ogGalleryEraTitle", era=label),
+                tr(ui, "ogGalleryEraDesc", count=count, years=era["years"]),
+                GOLD,
+            )
+        cards["discography"] = card(
+            tr(ui, "ogDiscographyKicker"),
+            pages["discography"]["title"],
+            tr(ui, "ogDiscographyDesc"),
             GOLD,
         )
-
-    cards["fan-notes"] = card(
-        "FAN NOTES",
-        data["fanNotes"]["title"],
-        "Why this archive exists · how it is made · what it refuses to do",
-        ROSE,
-    )
-    cards["sources"] = card(
-        "SOURCES",
-        pages["sources"]["title"],
-        f"{len(data['references'])} references · {len([p for p in photos if not p.get('placeholder')])} photo credits",
-        GOLD,
-    )
-    cards["about"] = card(
-        "ABOUT",
-        data["about"]["title"],
-        "An independent fan archive · editorial and photo policy",
-        ROSE,
-    )
-    cards["search"] = card(
-        "SEARCH",
-        data["search"]["title"],
-        "Eras · releases · photographs · every page",
-        GOLD,
-    )
-    cards["404"] = card(
-        "404",
-        data["notFound"]["title"],
-        "Try the journey, the gallery, or the search page",
-        ROSE,
-    )
-
-    for slug, image in cards.items():
-        image.save(OG_DIR / f"{slug}.jpg", "JPEG", quality=90, optimize=True, subsampling=0)
+        for album in albums:
+            status = tr(ui, "upcoming") if album.get("status") == "upcoming" else album.get("released", "")
+            cards[f"discography-{album['id']}"] = card(
+                tr(ui, "ogAlbumKicker", type=album["type"].upper()),
+                album["title"],
+                tr(ui, "ogAlbumDesc", year=album["year"], status=status, era=album["era"].replace("-", " ").title()),
+                GOLD,
+            )
+        cards["fan-notes"] = card(
+            tr(ui, "ogFanNotesKicker"),
+            loc["fanNotes"]["title"],
+            tr(ui, "ogFanNotesDesc"),
+            ROSE,
+        )
+        cards["sources"] = card(
+            tr(ui, "ogSourcesKicker"),
+            pages["sources"]["title"],
+            tr(ui, "ogSourcesDesc", refs=len(data["references"]), photos=len(photos)),
+            GOLD,
+        )
+        cards["about"] = card(
+            tr(ui, "ogAboutKicker"),
+            loc["about"]["title"],
+            tr(ui, "ogAboutDesc"),
+            ROSE,
+        )
+        cards["search"] = card(
+            tr(ui, "ogSearchKicker"),
+            loc["search"]["title"],
+            tr(ui, "ogSearchDesc"),
+            GOLD,
+        )
+        cards["404"] = card(
+            tr(ui, "og404Kicker"),
+            loc["notFound"]["title"],
+            tr(ui, "og404Desc"),
+            ROSE,
+        )
+        for slug, image in cards.items():
+            image.save(out_dir / f"{slug}.jpg", "JPEG", quality=90, optimize=True, subsampling=0)
 
     for size, name in ((32, "favicon-32.png"), (180, "apple-touch-icon.png"), (512, "icon-512.png")):
         icon(size).save(ICON_DIR / name, "PNG", optimize=True)
 
-    print(f"og: {len(cards)} cards, 3 icons")
+    print("og: multilingual cards and 3 icons")
 
 
 if __name__ == "__main__":

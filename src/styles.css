@@ -3897,3 +3897,51 @@ figcaption a,
 .submit-card__contact a {
   color: var(--gold-bright);
 }
+
+/* Locale switcher */
+.locale-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  align-items: center;
+}
+
+.locale-switcher a {
+  display: inline-block;
+  min-height: 28px;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--cream-dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.locale-switcher a:hover,
+.locale-switcher a:focus-visible,
+.locale-switcher a[aria-current="true"] {
+  color: var(--gold-bright);
+  border-bottom-color: currentColor;
+}
+
+.locale-switcher--header {
+  margin-left: 0.4rem;
+}
+
+.locale-switcher--footer {
+  display: none;
+  justify-content: flex-start;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(246, 238, 226, 0.12);
+}
+
+@media (max-width: 900px) {
+  .locale-switcher--header {
+    display: none;
+  }
+
+  .locale-switcher--footer {
+    display: flex;
+  }
+}

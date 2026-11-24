@@ -6,28 +6,32 @@
       "prefix": "",
       "name": "English",
       "intl": "en-US",
-      "enabled": true
+      "enabled": true,
+      "hreflang": "en"
     },
     {
       "code": "id",
       "prefix": "/id",
       "name": "Bahasa Indonesia",
       "intl": "id-ID",
-      "enabled": true
+      "enabled": true,
+      "hreflang": "id"
     },
     {
       "code": "es",
       "prefix": "/es",
-      "name": "Español",
+      "name": "Espa\u00f1ol",
       "intl": "es-ES",
-      "enabled": true
+      "enabled": true,
+      "hreflang": "es"
     },
     {
       "code": "pt-br",
       "prefix": "/pt-br",
-      "name": "Português (Brasil)",
+      "name": "Portugu\u00eas (Brasil)",
       "intl": "pt-BR",
-      "enabled": true
+      "enabled": true,
+      "hreflang": "pt-BR"
     }
   ]
 }

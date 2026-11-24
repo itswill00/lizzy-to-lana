@@ -8,6 +8,29 @@
 
   const doc = document;
   const root = doc.documentElement;
+  const I18N = window.__I18N__ || { locale: "en", locales: [], ui: {} };
+
+  const tr = (key, vars = {}) => {
+    const value = (I18N.ui || {})[key];
+    if (typeof value !== "string" || !value.trim()) return key;
+    return value.replace(/\{(\w+)\}/g, (match, name) =>
+      Object.prototype.hasOwnProperty.call(vars, name) ? String(vars[name]) : match
+    );
+  };
+
+  /* ------------------------------------------------------------------------
+     Language choice — remembered, never applied as an auto-redirect
+     ------------------------------------------------------------------------ */
+
+  doc.querySelectorAll(".locale-switcher a[lang]").forEach((link) => {
+    link.addEventListener("click", () => {
+      try {
+        window.localStorage.setItem("lizzy-locale", link.lang);
+      } catch {
+        /* Storage can be unavailable in private modes. */
+      }
+    });
+  });
 
   /* ------------------------------------------------------------------------
      Header shadow
@@ -90,8 +113,8 @@
       });
 
       if (status) {
-        const label = visible === 1 ? "item" : "items";
-        status.textContent = `Showing ${visible} ${label}.`;
+        const label = visible === 1 ? tr("itemLabel") : tr("itemsLabel");
+        status.textContent = tr("showingItems", { count: visible, label });
       }
 
       if (updateUrl) {
@@ -162,7 +185,7 @@
           sourceLink.href = source;
           sourceLink.target = "_blank";
           sourceLink.rel = "noopener noreferrer";
-          sourceLink.textContent = "Original file page";
+          sourceLink.textContent = tr("originalFilePage");
           links.append(sourceLink);
         }
 
@@ -264,7 +287,7 @@
       .then(() => {
         const original = button.dataset.originalLabel || button.textContent;
         button.dataset.originalLabel = original;
-        button.textContent = "Copied ✓";
+        button.textContent = tr("copied");
         button.classList.add("is-copied");
         window.setTimeout(() => {
           button.textContent = original;
@@ -272,9 +295,9 @@
         }, 1600);
       })
       .catch(() => {
-        button.textContent = "Copy failed";
+        button.textContent = tr("copyFailed");
         window.setTimeout(() => {
-          button.textContent = button.dataset.originalLabel || "Copy credit";
+          button.textContent = button.dataset.originalLabel || tr("copyCredit");
         }, 1600);
       });
   });
@@ -325,15 +348,16 @@
   if (searchRoot && typeof window.PagefindUI === "function") {
     new window.PagefindUI({
       element: "#search",
+      bundlePath: I18N.locale === "en" ? "/pagefind/" : `/pagefind/${I18N.locale}/`,
       showSubResults: true,
       showImages: false,
       resetStyles: false,
       translations: {
-        placeholder: "Search eras, releases, and photographs",
-        zero_results: "No results for [SEARCH_TERM]. Try an album title or a year.",
-        many_results: "[COUNT] results for [SEARCH_TERM]",
-        one_result: "1 result for [SEARCH_TERM]",
-        searching: "Searching…"
+        placeholder: tr("searchPlaceholder"),
+        zero_results: tr("zeroResults"),
+        many_results: tr("manyResults"),
+        one_result: tr("oneResult"),
+        searching: tr("searching")
       }
     });
 

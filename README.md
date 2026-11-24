@@ -1,6 +1,6 @@
 # Lizzy to Lana — A Fan Archive
 
-A public-facing, fully English, multi-page fan archive of Lana Del Rey's recorded work. It is built from one JSON source into static HTML, CSS, and a small amount of JavaScript. There is no runtime framework, no tracking, and no client-side rendering requirement.
+A public-facing, multi-language fan archive of Lana Del Rey's recorded work. English is the default at unprefixed URLs; Indonesian, Spanish, and Brazilian Portuguese live under `/id/`, `/es/`, and `/pt-br/`. It is built from one facts file plus per-language prose into static HTML, CSS, and a small amount of JavaScript. There is no runtime translation, tracking, or client-side rendering requirement.
 
 Live site: <https://blog.wldnanatayya.com>
 
@@ -8,17 +8,19 @@ Live site: <https://blog.wldnanatayya.com>
 
 | Path | Purpose |
 |---|---|
-| `src/data.json` | Single source of truth: site copy, nine eras, sixteen releases, photographs, references, and notes. |
+| `src/data.json` | Single source of structured facts: dates, tracklists, chart positions, credits, licences, URLs, IDs, and order. |
+| `src/i18n.json` | Locale config: default, native language names, URL prefixes, `enabled` flags, and Intl tags. |
+| `src/locales/*.json` | One file per language: UI strings, translations of editorial prose, alt text, captions, meta copy, and OG text. |
 | `src/styles.css` | Stylesheet with font placeholders replaced at build time. |
 | `src/main.js` | Progressive enhancement: menu, gallery filters, lightbox, reveal effects, Pagefind init. |
 | `src/favicon.svg` | Original typographic favicon; PNG variants are generated at build time. |
 | `assets/img-src/` | Original licensed JPEG photographs. Never hotlinked. |
 | `assets/fonts/` | Self-hosted WOFF2 fonts (SIL Open Font License). |
-| `scripts/build.mjs` | Full build: images, OG cards, hashed assets, 43 pages, sitemap, robots, web manifest, Pagefind. |
+| `scripts/build.mjs` | Full static build: images, localized OG cards, hashed assets, every page in every enabled locale, hreflang, sitemap, robots, web manifest, per-language Pagefind indexes. |
 | `scripts/images.py` | Responsive AVIF/WebP/JPEG variants plus tiny blur placeholders. |
 | `scripts/og.py` | Typographic Open Graph cards and icon set. |
 | `scripts/serve.mjs` | Local server that mirrors the clean-URL nginx rules. |
-| `scripts/check.mjs` | Validates metadata, internal links, assets, image attributes, and image credits. |
+| `scripts/check.mjs` | Validates locale key parity, every route in every enabled locale, hreflang, metadata, links, assets, and image credits. |
 | `deploy/nginx.conf` | Copy of the live vhost (root → `current` symlink). |
 | `deploy/deploy.sh` | Build-aware atomic release swap. |
 | `deploy/rollback.sh` | Point `current` at an older release. |
@@ -26,6 +28,7 @@ Live site: <https://blog.wldnanatayya.com>
 | `AUDIT-SLOP.md` | Pre-edit audit of template-like copy, layout, and motion. |
 | `REFERENCES.md` | Design, writing, and AI-slop references used for the de-slop pass. |
 | `NEEDS.md` | Remaining photo and content placeholders. |
+| `TRANSLATION_STATUS.md` | Published locales and which prose needs native-speaker review. |
 
 ## Requirements
 
@@ -89,3 +92,13 @@ The pre-rewrite site also remains at `/var/www/blog.wldnanatayya.com` and in `/v
 ## Placeholders to resolve
 
 See `NEEDS.md`. The remaining placeholders are: two era photographs under a clear licence, the archive keeper's personal note, and the contact email address.
+
+
+## Adding a language
+
+1. Add one entry to `src/i18n.json` with a unique `code`, URL `prefix`, native `name`, Intl tag, and `enabled` (start with `false` until the prose is complete).
+2. Copy `src/locales/en.json` to `src/locales/<code>.json` and translate every value. Keep keys and placeholders such as `{count}` untouched. Proper nouns (album/song titles, people, places, credit names, licence names) stay in their original form.
+3. Run `npm run check`. The build fails if a locale is missing a key, has an empty string, or has an untranslated page.
+4. Set `enabled: true` only after the translation is complete, then rebuild and deploy.
+
+The locale switcher, hreflang tags, sitemap alternates, 404 pages, and Pagefind index are generated from the config. No template code changes are needed for a new language.

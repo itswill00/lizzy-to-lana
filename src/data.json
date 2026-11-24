@@ -28,7 +28,7 @@
   "eras": [
     {
       "id": "early",
-      "years": "1985–2010",
+      "years": "1985\u20132010",
       "accent": "#A95663",
       "facts": [
         {
@@ -80,12 +80,12 @@
     },
     {
       "id": "born-to-die",
-      "years": "2011–2013",
+      "years": "2011\u20132013",
       "accent": "#A86F2A",
       "facts": [
         {
           "label": "Breakthrough",
-          "value": "“Video Games” (2011)"
+          "value": "\u201cVideo Games\u201d (2011)"
         },
         {
           "label": "Major-label debut",
@@ -162,7 +162,7 @@
         },
         {
           "label": "Film songs",
-          "value": "“Big Eyes”; “I Can Fly” (2014)"
+          "value": "\u201cBig Eyes\u201d; \u201cI Can Fly\u201d (2014)"
         }
       ],
       "listening": [
@@ -188,7 +188,7 @@
     },
     {
       "id": "honeymoon",
-      "years": "2015–2016",
+      "years": "2015\u20132016",
       "accent": "#3F4F6B",
       "facts": [
         {
@@ -238,7 +238,7 @@
     },
     {
       "id": "lust-for-life",
-      "years": "2017–2018",
+      "years": "2017\u20132018",
       "accent": "#A95663",
       "facts": [
         {
@@ -321,7 +321,7 @@
         "Mariners Apartment Complex",
         "The Greatest",
         "Cinnamon Girl",
-        "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"
+        "Hope Is a Dangerous Thing for a Woman Like Me to Have \u2013 but I Have It"
       ],
       "albums": [
         "norman-fucking-rockwell"
@@ -338,7 +338,7 @@
     },
     {
       "id": "chemtrails",
-      "years": "2020–2021",
+      "years": "2020\u20132021",
       "accent": "#7A5B4A",
       "facts": [
         {
@@ -391,7 +391,7 @@
     },
     {
       "id": "ocean-blvd",
-      "years": "2022–2023",
+      "years": "2022\u20132023",
       "accent": "#3F4F6B",
       "facts": [
         {
@@ -440,7 +440,7 @@
     },
     {
       "id": "stove",
-      "years": "2024–2026",
+      "years": "2024\u20132026",
       "accent": "#7D2F3A",
       "facts": [
         {
@@ -465,7 +465,7 @@
         },
         {
           "label": "2026 collaborations",
-          "value": "007 First Light theme; “Lies” with Zach Bryan"
+          "value": "007 First Light theme; \u201cLies\u201d with Zach Bryan"
         }
       ],
       "listening": [
@@ -1091,10 +1091,10 @@
           "title": "In My Feelings"
         },
         {
-          "title": "Coachella – Woodstock in My Mind"
+          "title": "Coachella \u2013 Woodstock in My Mind"
         },
         {
-          "title": "God Bless America – and All the Beautiful Women in It"
+          "title": "God Bless America \u2013 and All the Beautiful Women in It"
         },
         {
           "title": "When the World Was at War We Kept Dancing"
@@ -1199,7 +1199,7 @@
           "title": "Happiness Is a Butterfly"
         },
         {
-          "title": "Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It"
+          "title": "Hope Is a Dangerous Thing for a Woman Like Me to Have \u2013 but I Have It"
         }
       ],
       "facts": [
@@ -1279,7 +1279,7 @@
           "title": "Happy"
         },
         {
-          "title": "My Bedroom Is a Sacred Place Now – There Are Children at the Foot of My Bed"
+          "title": "My Bedroom Is a Sacred Place Now \u2013 There Are Children at the Foot of My Bed"
         },
         {
           "title": "Paradise Is Very Fragile"
@@ -1418,7 +1418,7 @@
           "title": "Arcadia"
         },
         {
-          "title": "Interlude – The Trio"
+          "title": "Interlude \u2013 The Trio"
         },
         {
           "title": "Black Bathing Suit"
@@ -2003,7 +2003,7 @@
     },
     {
       "id": "official-site",
-      "title": "Lana Del Rey — official site",
+      "title": "Lana Del Rey \u2014 official site",
       "publisher": "lanadelrey.com",
       "url": "https://www.lanadelrey.com/",
       "accessed": "24 November 2026"
@@ -2176,5 +2176,61 @@
       "url": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
       "accessed": "24 November 2026"
     }
-  ]
+  ],
+  "footer": {
+    "columns": [
+      {
+        "links": [
+          {
+            "href": "/journey",
+            "external": false
+          },
+          {
+            "href": "/gallery",
+            "external": false
+          },
+          {
+            "href": "/discography",
+            "external": false
+          },
+          {
+            "href": "/search",
+            "external": false
+          }
+        ]
+      },
+      {
+        "links": [
+          {
+            "href": "/fan-notes",
+            "external": false
+          },
+          {
+            "href": "/sources",
+            "external": false
+          },
+          {
+            "href": "/about",
+            "external": false
+          }
+        ]
+      },
+      {
+        "links": [
+          {
+            "href": "https://www.lanadelrey.com/",
+            "external": true
+          },
+          {
+            "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
+            "external": true
+          },
+          {
+            "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
+            "external": true
+          }
+        ]
+      }
+    ]
+  }
 }

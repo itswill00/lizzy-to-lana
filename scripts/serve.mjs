@@ -75,7 +75,9 @@ const server = http.createServer((request, response) => {
 
   const relative = resolve(pathname);
   const notFound = relative === null;
-  const file = path.join(DIST, notFound ? "404.html" : relative);
+  const prefix = (pathname.match(/^\/(id|es|pt-br)(?=\/|$)/) || [])[1];
+  const notFoundFile = prefix ? `${prefix}/404.html` : "404.html";
+  const file = path.join(DIST, notFound ? notFoundFile : relative);
 
   fs.readFile(file, (error, contents) => {
     if (error) {

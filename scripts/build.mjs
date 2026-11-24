@@ -19,13 +19,24 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "src");
 const DIST = path.join(ROOT, "dist");
 
-const data = JSON.parse(fs.readFileSync(path.join(SRC, "data.json"), "utf8"));
-const site = data.site;
+const facts = JSON.parse(fs.readFileSync(path.join(SRC, "data.json"), "utf8"));
+const i18n = JSON.parse(fs.readFileSync(path.join(SRC, "i18n.json"), "utf8"));
+const localeFiles = Object.fromEntries(
+  i18n.locales.map((locale) => [
+    locale.code,
+    JSON.parse(fs.readFileSync(path.join(SRC, "locales", `${locale.code}.json`), "utf8")),
+  ])
+);
 
-const eraById = Object.fromEntries(data.eras.map((era) => [era.id, era]));
-const albumById = Object.fromEntries(data.albums.map((album) => [album.id, album]));
-const photoById = Object.fromEntries(data.photos.map((photo) => [photo.id, photo]));
-const refById = Object.fromEntries(data.references.map((ref) => [ref.id, ref]));
+let locale = i18n.default;
+let currentPath = "/";
+let ui = localeFiles[locale].ui;
+let site;
+let data;
+let eraById;
+let albumById;
+let photoById;
+let refById;
 
 const routes = [];
 
@@ -42,6 +53,117 @@ const esc = (value = "") =>
     .replace(/'/g, "&#39;");
 
 const attr = esc;
+
+function lookup(object, key) {
+  return key.split(".").reduce((value, part) => (value == null ? undefined : value[part]), object);
+}
+
+function t(key, vars = {}) {
+  const value = lookup(ui, key);
+  if (typeof value !== "string" || !value.trim()) {
+    throw new Error(`i18n: missing or empty UI key "${key}" in ${locale}`);
+  }
+  return value.replace(/\{(\w+)\}/g, (match, name) =>
+    Object.prototype.hasOwnProperty.call(vars, name) ? String(vars[name]) : match
+  );
+}
+
+function currentConfig() {
+  return i18n.locales.find((item) => item.code === locale);
+}
+
+function formatDate(iso, intl = currentConfig().intl) {
+  if (!iso) return "";
+  if (/^\d{4}$/.test(iso)) return iso;
+  const date = new Date(/^\d{4}-\d{2}$/.test(iso) ? `${iso}-01T00:00:00Z` : `${iso}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return iso;
+  return new Intl.DateTimeFormat(intl, {
+    day: /^\d{4}-\d{2}-\d{2}$/.test(iso) ? "numeric" : undefined,
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
+function canonicalPath(pathname) {
+  const match = pathname.match(/^\/(?:id|es|pt-br)(?=\/|$)/);
+  return match ? pathname.slice(match[0].length) || "/" : pathname;
+}
+
+function hrefFor(code, pathname) {
+  const config = i18n.locales.find((item) => item.code === code);
+  const clean = canonicalPath(pathname);
+  if (!config.prefix) return clean;
+  return clean === "/" ? config.prefix : `${config.prefix}${clean}`;
+}
+
+function formatCaption(photo) {
+  return t("photoCaptionPattern", {
+    date: formatDate(photo.date),
+    place: photo.place,
+    credit: photo.credit,
+  });
+}
+
+const navKeyByHref = {
+  "/journey": "journey",
+  "/gallery": "gallery",
+  "/discography": "discography",
+  "/fan-notes": "fanNotes",
+  "/sources": "sources",
+  "/about": "about",
+  "/search": "search",
+};
+
+function setLocale(code) {
+  if (!localeFiles[code]) throw new Error(`i18n: no content file for ${code}`);
+  locale = code;
+  ui = localeFiles[code].ui;
+  const loc = localeFiles[code];
+  const intl = currentConfig().intl;
+  site = {
+    ...facts.site,
+    ...loc.site,
+    name: facts.site.name,
+    url: facts.site.url,
+    updated: facts.site.updated,
+    updatedLabel: formatDate(facts.site.updated, intl),
+  };
+  data = {
+    ...facts,
+    site,
+    nav: facts.nav.map((item) => ({ ...item, label: t(`nav.${navKeyByHref[item.href]}`) })),
+    home: loc.home,
+    pages: loc.pages,
+    fanNotes: loc.fanNotes,
+    about: loc.about,
+    search: loc.search,
+    notFound: loc.notFound,
+    footer: {
+      ...loc.footer,
+      columns: (facts.footer?.columns || []).map((column, index) => ({
+        ...column,
+        title: t(["footerExplore", "footerArchive", "footerElsewhere"][index]),
+        links: column.links.map((link) => ({
+          ...link,
+          label: navKeyByHref[link.href] ? t(`nav.${navKeyByHref[link.href]}`) : link.label,
+        })),
+      })),
+    },
+    eras: facts.eras.map((era) => ({ ...era, ...(loc.eras[era.id] || {}) })),
+    albums: facts.albums.map((album) => ({ ...album, ...(loc.albums[album.id] || {}) })),
+    photos: facts.photos.map((photo) => ({
+      ...photo,
+      ...(loc.photos[photo.id] || {}),
+      caption: formatCaption(photo),
+    })),
+    references: facts.references.map((ref) => ({ ...ref, ...(loc.references[ref.id] || {}) })),
+  };
+  eraById = Object.fromEntries(data.eras.map((era) => [era.id, era]));
+  albumById = Object.fromEntries(data.albums.map((album) => [album.id, album]));
+  photoById = Object.fromEntries(data.photos.map((photo) => [photo.id, photo]));
+  refById = Object.fromEntries(data.references.map((ref) => [ref.id, ref]));
+}
 
 const sha1 = (value) => createHash("sha1").update(value).digest("hex").slice(0, 8);
 
@@ -84,8 +206,62 @@ function pageTitle(title, isHome = false) {
   return isHome ? `${site.name} — ${site.tagline}` : `${title} · ${site.name}`;
 }
 
+function absoluteRaw(pathname) {
+  return `${site.url}${pathname === "" || pathname === "/" ? "" : pathname}`;
+}
+
 function absolute(pathname) {
-  return `${site.url}${pathname === "/" ? "" : pathname}`;
+  return absoluteRaw(hrefFor(locale, pathname));
+}
+
+function enabledLocales() {
+  return i18n.locales.filter((item) => item.enabled);
+}
+
+function localeAlternates(pathname) {
+  return enabledLocales()
+    .map((item) => `<link rel="alternate" hreflang="${attr(item.hreflang)}" href="${attr(
+      absoluteRaw(hrefFor(item.code, pathname))
+    )}">`)
+    .concat(
+      `<link rel="alternate" hreflang="x-default" href="${attr(
+        absoluteRaw(hrefFor(i18n.default, pathname))
+      )}">`
+    )
+    .join("\n  ");
+}
+
+function localeSwitcher(position) {
+  const links = enabledLocales()
+    .map((item) => {
+      const active = item.code === locale;
+      return `<a href="@@LOCALE@@${attr(hrefFor(item.code, currentPath))}" hreflang="${attr(
+        item.hreflang
+      )}" lang="${attr(item.hreflang)}"${active ? ' aria-current="true"' : ""}>${
+        active ? `<span class="visually-hidden">${esc(t("currentLanguage"))}: </span>` : ""
+      }${esc(item.name)}</a>`;
+    })
+    .join("\n        ");
+  return `<nav class="locale-switcher locale-switcher--${position}" aria-label="${attr(
+    t("localeSwitcher")
+  )}">
+        ${links}
+      </nav>`;
+}
+
+function localize(html) {
+  return localizeLinks(html).replaceAll("@@LOCALE@@", "");
+}
+
+function localizeLinks(html) {
+  const prefix = currentConfig().prefix;
+  if (!prefix) return html;
+  return html.replace(/href="\/([^"]*)"/g, (match, target) => {
+    if (/^(assets\/|pagefind\/|feed\.xml|sitemap\.xml|robots\.txt|site\.webmanifest|favicon\.svg)/.test(target)) {
+      return match;
+    }
+    return `href="${prefix}${target ? `/${target}` : ""}"`;
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -129,7 +305,7 @@ function creditLine(photo, options = {}) {
     ? `<a href="${attr(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>`
     : esc(photo.license);
   const source = options.link
-    ? `<a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">Source file</a>`
+    ? `<a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">${esc(t("sourceFile"))}</a>`
     : esc(photo.source);
   return `${licence} · ${source}`;
 }
@@ -143,7 +319,7 @@ function creditText(photo) {
 function copyButton(text, label, className = "copy-credit") {
   return `<button class="${className}" type="button" data-copy-credit data-copy-text="${attr(
     text
-  )}" aria-label="${attr(label)}">Copy credit</button>`;
+  )}" aria-label="${attr(label)}">${esc(t("copyCredit"))}</button>`;
 }
 
 function contactLink(value, label) {
@@ -170,7 +346,7 @@ function photoTile(photo, options = {}) {
     return `<div class="photo-tile photo-tile--placeholder" data-gallery-item data-era="${attr(era)}">
       <div class="photo-placeholder">
         <span class="photo-placeholder__mark" aria-hidden="true">?</span>
-        <strong>Photograph pending</strong>
+        <strong>${esc(t("photographPending"))}</strong>
         <span>${esc(photo.caption)}</span>
         <span class="micro">${esc(photo.placeholderNote || "")}</span>
       </div>
@@ -182,7 +358,7 @@ function photoTile(photo, options = {}) {
 
   return `<div class="photo-tile-wrap" data-gallery-item data-era="${attr(era)}">
   <div class="photo-tile__tools">
-    ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`, "copy-credit copy-credit--tile")}
+    ${copyButton(creditText(photo), t("copyCreditFor", { caption: photo.caption }), "copy-credit copy-credit--tile")}
   </div>
   <button class="photo-tile" type="button" data-photo data-full="${attr(meta.largest.jpg)}" data-full-width="${meta.largest.w}" data-full-height="${
     meta.largest.h
@@ -225,38 +401,39 @@ function navLink(item, currentPath) {
 
 function header(currentPath) {
   const menuLinks = [
-    { label: "Home", href: "/" },
+    { label: t("brandHome"), href: "/" },
     ...data.nav,
-    { label: "Search", href: "/search" },
+    { label: t("nav.search"), href: "/search" },
   ];
 
   return `<header class="site-header" data-header data-pagefind-ignore>
   <div class="header-inner">
-    <a class="brand" href="/" aria-label="${attr(site.name)} — home">
+    <a class="brand" href="/" aria-label="${attr(t("homeAria", { site: site.name }))}">
       <span class="brand-mark">${esc(site.name)}</span>
       <span class="brand-text">${esc(site.tagline)}</span>
     </a>
-    <nav class="desktop-nav" aria-label="Primary">
+    <nav class="desktop-nav" aria-label="${attr(t("primaryNav"))}">
       ${data.nav.map((item) => navLink(item, currentPath)).join("\n      ")}
-      <a class="nav-link nav-search" href="/search" aria-label="Search the archive">
+      <a class="nav-link nav-search" href="/search" aria-label="${attr(t("searchAria"))}">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
-        <span>Search</span>
+        <span>${esc(t("nav.search"))}</span>
       </a>
     </nav>
     <button class="menu-toggle" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
-      Menu
+      ${esc(t("menu"))}
     </button>
+    ${localeSwitcher("header")}
   </div>
 </header>
 
 <dialog class="menu-dialog" id="site-menu" aria-labelledby="menu-title" data-pagefind-ignore>
   <div class="menu-panel">
     <div class="menu-head">
-      <span id="menu-title">Menu</span>
-      <button class="menu-close" type="button" data-menu-close>Close</button>
+      <span id="menu-title">${esc(t("menu"))}</span>
+      <button class="menu-close" type="button" data-menu-close>${esc(t("close"))}</button>
     </div>
-    <nav class="menu-nav" aria-label="Mobile">
+    <nav class="menu-nav" aria-label="${attr(t("mobileNav"))}">
       ${menuLinks
         .map(
           (item, index) =>
@@ -315,17 +492,17 @@ function lightbox() {
   <div class="lightbox__inner">
     <div class="lightbox__media">
       <img id="lightbox-image" alt="" width="1200" height="1500">
-      <button class="lightbox__prev" type="button" data-lightbox-prev aria-label="Previous photograph">←</button>
-      <button class="lightbox__next" type="button" data-lightbox-next aria-label="Next photograph">→</button>
+      <button class="lightbox__prev" type="button" data-lightbox-prev aria-label="${attr(t("prevPhoto"))}">←</button>
+      <button class="lightbox__next" type="button" data-lightbox-next aria-label="${attr(t("nextPhoto"))}">→</button>
     </div>
     <div class="lightbox__caption">
       <p class="lightbox__counter" id="lightbox-counter"></p>
       <h2 class="lightbox__title" id="lightbox-title"></h2>
       <p class="lightbox__credit" id="lightbox-credit"></p>
       <div class="lightbox__links" id="lightbox-links"></div>
-      <button class="copy-credit copy-credit--inline" id="lightbox-copy" type="button" data-copy-credit>Copy credit</button>
+      <button class="copy-credit copy-credit--inline" id="lightbox-copy" type="button" data-copy-credit>${esc(t("copyCredit"))}</button>
     </div>
-    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close photograph">×</button>
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="${attr(t("closePhoto"))}">×</button>
   </div>
 </dialog>`;
 }
@@ -372,13 +549,15 @@ function head(options) {
 
   const canonical = absolute(pathname);
   const fullTitle = pageTitle(title, isHome);
-  const ogImage = `${site.url}/assets/og/${og}.jpg`;
+  const ogImage = `${site.url}/assets/og/${locale}/${og}.jpg`;
+  const ogLocale = currentConfig().intl.replace("-", "_");
 
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(fullTitle)}</title>
   <meta name="description" content="${attr(description)}">
   <link rel="canonical" href="${attr(canonical)}">
+  ${localeAlternates(pathname)}
   <meta name="robots" content="${
     noindex ? "noindex, follow" : "index, follow, max-image-preview:large"
   }">
@@ -386,7 +565,14 @@ function head(options) {
   <meta name="color-scheme" content="light">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="${attr(site.name)}">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="${attr(ogLocale)}">
+  ${enabledLocales()
+    .filter((item) => item.code !== locale)
+    .map(
+      (item) =>
+        `<meta property="og:locale:alternate" content="${attr(item.intl.replace("-", "_"))}">`
+    )
+    .join("\n  ")}
   <meta property="og:title" content="${attr(fullTitle)}">
   <meta property="og:description" content="${attr(description)}">
   <meta property="og:url" content="${attr(canonical)}">
@@ -408,6 +594,32 @@ function head(options) {
   <link rel="preload" href="${assets.fonts.sans}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${assets.css}">
   <script>document.documentElement.classList.add("js");</script>
+  <script>window.__I18N__=${JSON.stringify({
+    locale,
+    locales: enabledLocales().map(({ code, name }) => ({ code, name })),
+    ui: Object.fromEntries(
+      [
+        "copyCredit",
+        "copied",
+        "copyFailed",
+        "originalFilePage",
+        "itemLabel",
+        "itemsLabel",
+        "openPhoto",
+        "prevPhoto",
+        "nextPhoto",
+        "closePhoto",
+        "showingItems",
+        "searchPlaceholder",
+        "zeroResults",
+        "manyResults",
+        "oneResult",
+        "searching",
+        "currentLanguage",
+        "dismiss",
+      ].map((key) => [key, ui[key]])
+    ),
+  }).replace(/</g, "\\u003c")};</script>
   ${extraHead}`;
 }
 
@@ -429,23 +641,25 @@ function layout(options) {
 
   const crumbsJson = breadcrumbJsonLd(crumbs, pathname);
   const jsonLd = [...structuredData, ...(crumbsJson ? [crumbsJson] : [])];
+  currentPath = pathname;
 
   return `<!doctype html>
-<html lang="en">
+<html lang="${attr(locale)}">
 <head>
   ${head({ pathname, title, description, og, noindex, extraHead, isHome })}
   ${jsonLd.map(jsonLdScript).join("\n  ")}
 </head>
 <body${bodyClass ? ` class="${attr(bodyClass)}"` : ""}>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">${esc(t("skipLink"))}</a>
   <div class="reading-progress" aria-hidden="true"><span data-progress-bar></span></div>
-  ${header(pathname)}
+  ${localize(header(pathname))}
   <main id="main" class="page-main" tabindex="-1"${
     noindex ? " data-pagefind-ignore" : " data-pagefind-body"
   }>
-${content}
+${localize(content)}
   </main>
-  ${footer()}
+  ${localize(footer())}
+  ${localeSwitcher("footer")}
   ${lightbox()}
   ${extraScripts}
   <script src="${assets.js}" defer></script>
@@ -455,9 +669,12 @@ ${content}
 }
 
 function writeRoute(pathname, html) {
-  const relative = pathname === "/" ? "index.html" : `${pathname.replace(/^\//, "")}.html`;
+  const localized = hrefFor(locale, pathname);
+  const relative = localized === "" || localized === "/"
+    ? "index.html"
+    : `${localized.replace(/^\//, "")}.html`;
   writeFile(relative, html);
-  routes.push(pathname);
+  routes.push({ pathname, locale });
 }
 
 function sectionHead(title, note, link) {
@@ -484,7 +701,7 @@ function eraCard(era) {
       <p class="era-card__years">${esc(era.years)}</p>
       <h3>${esc(era.label)}</h3>
       <p>${esc(era.summary)}</p>
-      <span class="text-link">Enter the chapter</span>
+      <span class="text-link">${esc(t("enterChapter"))}</span>
     </div>
   </a>`;
 }
@@ -509,9 +726,9 @@ function albumCard(album) {
 function releaseTable(albums) {
   return `<div class="table-wrap">
     <table class="release-table">
-      <caption class="visually-hidden">Releases with year, type, label, and status</caption>
+      <caption class="visually-hidden">${esc(t("releaseTableCaption"))}</caption>
       <thead>
-        <tr><th scope="col">Year</th><th scope="col">Release</th><th scope="col">Type</th><th scope="col">Label</th><th scope="col">Status</th></tr>
+        <tr><th scope="col">${esc(t("year"))}</th><th scope="col">${esc(t("release"))}</th><th scope="col">${esc(t("type"))}</th><th scope="col">${esc(t("label"))}</th><th scope="col">${esc(t("status"))}</th></tr>
       </thead>
       <tbody>
         ${albums
@@ -521,7 +738,7 @@ function releaseTable(albums) {
           <td><a href="/discography/${attr(album.id)}">${esc(album.title)}</a></td>
           <td>${esc(album.type)}</td>
           <td>${esc(album.label)}</td>
-          <td>${album.status === "upcoming" ? "Unreleased" : "Released"}</td>
+          <td>${album.status === "upcoming" ? esc(t("upcoming")) : esc(t("released"))}</td>
         </tr>`
           )
           .join("\n        ")}
@@ -559,14 +776,14 @@ function prevNext(previous, next, label) {
   return `<nav class="prev-next" aria-label="${attr(label)}">
     ${
       previous
-        ? `<a href="${attr(previous.href)}"><span>Previous</span><strong>${esc(
+        ? `<a href="${attr(previous.href)}"><span>${esc(t("previous"))}</span><strong>${esc(
             previous.label
           )}</strong></a>`
         : "<span></span>"
     }
     ${
       next
-        ? `<a href="${attr(next.href)}"><span>Next</span><strong>${esc(next.label)}</strong></a>`
+        ? `<a href="${attr(next.href)}"><span>${esc(t("next"))}</span><strong>${esc(next.label)}</strong></a>`
         : "<span></span>"
     }
   </nav>`;
@@ -671,10 +888,10 @@ function renderHome() {
         <span class="hero__subtitle">${esc(home.subtitle)}</span>
         <p class="hero__tagline">${esc(home.tagline)}</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="/journey">Begin the journey</a>
-          <a class="btn btn--ghost" href="/gallery">Browse the gallery</a>
+          <a class="btn btn--primary" href="/journey">${esc(t("heroJourney"))}</a>
+          <a class="btn btn--ghost" href="/gallery">${esc(t("heroGallery"))}</a>
         </div>
-        <a class="hero__scroll" href="#archive">Inside the archive</a>
+        <a class="hero__scroll" href="#archive">${esc(t("heroScroll"))}</a>
       </div>
     </div>
     <div class="hero__aside" aria-hidden="true">
@@ -686,7 +903,7 @@ function renderHome() {
   <section class="section" id="archive">
     <div class="container home-intro">
       <div>
-        <p class="eyebrow">Coverage</p>
+        <p class="eyebrow">${esc(t("coverage"))}</p>
         <h2>${esc(home.sections.introTitle)}</h2>
         ${home.sections.introBody.map((paragraph) => `<p class="lede">${esc(paragraph)}</p>`).join("")}
       </div>
@@ -702,7 +919,7 @@ function renderHome() {
   <section class="section section--paper-2">
     <div class="container">
       ${sectionHead(home.sections.highlightsTitle, home.sections.highlightsNote, {
-        label: "All chapters",
+        label: t("allChapters"),
         href: "/journey",
       })}
       <div class="card-grid">
@@ -714,7 +931,7 @@ function renderHome() {
   <section class="section">
     <div class="container">
       ${sectionHead(home.sections.timelineTitle, "", {
-        label: "Open the journey",
+        label: t("timelineLink"),
         href: "/journey",
       })}
       <ol class="timeline-preview">
@@ -734,7 +951,7 @@ function renderHome() {
   <section class="section section--paper-3">
     <div class="container">
       ${sectionHead(home.sections.galleryTitle, home.sections.galleryNote, {
-        label: "See all photographs",
+        label: t("galleryLink"),
         href: "/gallery",
       })}
       <div class="gallery-strip">
@@ -753,7 +970,7 @@ function renderHome() {
   <section class="section">
     <div class="container">
       ${sectionHead(home.sections.albumsTitle, home.sections.albumsNote, {
-        label: "Full discography",
+        label: t("discographyLink"),
         href: "/discography",
       })}
       <div class="release-grid release-grid--four">
@@ -811,8 +1028,8 @@ function renderHome() {
 function renderJourney() {
   const page = data.pages.journey;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Journey" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.journey") },
   ];
 
   const content = `<section class="page-hero">
@@ -872,7 +1089,7 @@ function renderEra(era, index) {
   const previousEra = data.eras[index - 1];
   const nextEra = data.eras[index + 1];
   const crumbs = [
-    { label: "Home", href: "/" },
+    { label: t("brandHome"), href: "/" },
     { label: "Journey", href: "/journey" },
     { label: era.label },
   ];
@@ -887,8 +1104,8 @@ function renderEra(era, index) {
           <h1>${esc(era.title)}</h1>
           <p class="lede">${esc(era.lede)}</p>
           <div class="link-row" style="margin-top: 1.5rem">
-            <a class="btn btn--primary" href="#releases">Releases in this chapter</a>
-            <a class="btn btn--ghost" href="/gallery/${attr(era.id)}">Photographs</a>
+            <a class="btn btn--primary" href="#releases">${esc(t("releasesInChapter"))}</a>
+            <a class="btn btn--ghost" href="/gallery/${attr(era.id)}">${esc(t("photographs"))}</a>
           </div>
         </div>
         ${
@@ -899,7 +1116,7 @@ function renderEra(era, index) {
         </figure>`
             : `<div class="era-hero__media era-hero__media--empty"><span>${esc(
                 era.label
-              )}<br><small>No licensed photograph yet</small></span></div>`
+              )}<br><small>${esc(t("noLicensedPhoto"))}</small></span></div>`
         }
       </div>
     </div>
@@ -918,14 +1135,14 @@ function renderEra(era, index) {
           .join("\n        ")}
 
         <section class="era-releases" id="releases">
-          <h2>Releases in this chapter</h2>
+          <h2>${esc(t("releasesInChapter"))}</h2>
           <div class="release-grid">
             ${albums.map(albumCard).join("\n            ")}
           </div>
         </section>
 
         <section class="era-photos">
-          ${sectionHead("Photographs", `Images from the ${era.label} chapter.`, {
+          ${sectionHead(t("photographs"), t("imagesFromChapter", { chapter: era.label }), {
             label: "Open the gallery",
             href: `/gallery/${era.id}`,
           })}
@@ -937,7 +1154,7 @@ function renderEra(era, index) {
         ${prevNext(
           previousEra ? { href: `/journey/${previousEra.id}`, label: previousEra.label } : null,
           nextEra ? { href: `/journey/${nextEra.id}`, label: nextEra.label } : null,
-          "Previous and next chapters"
+          t("prevNextChapters")
         )}
       </div>
 
@@ -957,11 +1174,11 @@ function renderEra(era, index) {
           <strong>${esc(era.label)}</strong>
         </nav>
         <div class="fact-card">
-          <h2>At a glance</h2>
+          <h2>${esc(t("atAGlance"))}</h2>
           ${factList(era.facts)}
         </div>
         <div class="fact-card">
-          <h2>Start listening</h2>
+          <h2>${esc(t("startListening"))}</h2>
           <ul class="listen-list">
             ${era.listening.map((item) => `<li>${esc(item)}</li>`).join("\n            ")}
           </ul>
@@ -980,7 +1197,7 @@ function renderEra(era, index) {
           </ul>
         </div>
         <div class="fact-card">
-          <h2>Sources</h2>
+          <h2>${esc(t("sources"))}</h2>
           ${sourceList(era.sources)}
         </div>
       </aside>
@@ -1016,8 +1233,8 @@ function renderEra(era, index) {
 function renderGallery() {
   const page = data.pages.gallery;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Gallery" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.gallery") },
   ];
   const realPhotos = data.photos.filter((photo) => !photo.placeholder);
 
@@ -1043,8 +1260,8 @@ function renderGallery() {
 
   <section class="section">
     <div class="container">
-      <div class="filter-bar" data-filter-bar role="group" aria-label="Filter photographs by chapter">
-        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All <span>${
+      <div class="filter-bar" data-filter-bar role="group" aria-label="${attr(t("filterLabel"))}">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">${esc(t("filterAll"))} <span>${
           data.photos.length
         }</span></button>
         ${data.eras
@@ -1056,13 +1273,13 @@ function renderGallery() {
           )
           .join("\n        ")}
       </div>
-      <p class="filter-status" data-filter-status role="status" aria-live="polite">Showing ${
-        data.photos.length
-      } items.</p>
+      <p class="filter-status" data-filter-status role="status" aria-live="polite">${esc(
+        t("showingItems", { count: data.photos.length, label: t("itemsLabel") })
+      )}</p>
       ${photoGrid(data.photos, {
         sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 33vw",
       })}
-      <p class="gallery-note">${esc(page.note)} <a href="/sources">Full credits and licences</a>.</p>
+      <p class="gallery-note">${esc(page.note)} <a href="/sources">${esc(t("fullCreditsLink"))}</a>.</p>
     </div>
   </section>`;
 
@@ -1093,12 +1310,12 @@ function renderGalleryEra(era, index) {
   const previousEra = data.eras[index - 1];
   const nextEra = data.eras[index + 1];
   const crumbs = [
-    { label: "Home", href: "/" },
+    { label: t("brandHome"), href: "/" },
     { label: "Gallery", href: "/gallery" },
     { label: era.label },
   ];
   const title = `${era.label} in photographs`;
-  const description = `Photographs of Lana Del Rey from the ${era.label} era (${era.years}). Every image includes a named creator, source, and licence.`;
+  const description = t("galleryEraDescription", { era: era.label, years: era.years });
 
   const content = `<section class="page-hero">
     <div class="container">
@@ -1108,7 +1325,7 @@ function renderGalleryEra(era, index) {
       <p class="lede">${esc(era.summary)}</p>
       <div class="page-hero__meta">
         <span>${real.length} credited ${real.length === 1 ? "photograph" : "photographs"}</span>
-        <span><a href="/journey/${attr(era.id)}">Read the chapter</a></span>
+        <span><a href="/journey/${attr(era.id)}">${esc(t("readChapter"))}</a></span>
       </div>
     </div>
   </section>
@@ -1118,13 +1335,13 @@ function renderGalleryEra(era, index) {
       ${photoGrid(photos, {
         sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 33vw",
       })}
-      <p class="gallery-note">${esc(data.site.photoPolicy)} <a href="/sources">Full credits and licences</a>.</p>
+      <p class="gallery-note">${esc(data.site.photoPolicy)} <a href="/sources">${esc(t("fullCreditsLink"))}</a>.</p>
       ${prevNext(
         previousEra
           ? { href: `/gallery/${previousEra.id}`, label: `${previousEra.label} gallery` }
           : { href: "/gallery", label: "All photographs" },
         nextEra ? { href: `/gallery/${nextEra.id}`, label: `${nextEra.label} gallery` } : null,
-        "Previous and next galleries"
+        t("prevNextGalleries")
       )}
     </div>
   </section>`;
@@ -1149,8 +1366,8 @@ function renderDiscography() {
   const released = data.albums.filter((album) => album.status !== "upcoming");
   const upcoming = data.albums.filter((album) => album.status === "upcoming");
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Discography" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.discography") },
   ];
 
   const content = `<section class="page-hero">
@@ -1162,21 +1379,21 @@ function renderDiscography() {
       <div class="page-hero__meta">
         <span>${released.length} released</span>
         <span>${upcoming.length} announced</span>
-        <span>Standard editions</span>
+        <span>${esc(t("standardEditions"))}</span>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      ${sectionHead("Released", "Albums, EPs, a film, and a spoken-word record, in chronological order.")}
+      ${sectionHead(t("released"), "Albums, EPs, a film, and a spoken-word record, in chronological order.")}
       ${releaseTable(released)}
     </div>
   </section>
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead("Announced", "Described as provisional until a final tracklist and release date are confirmed.")}
+      ${sectionHead(t("announced"), "Described as provisional until a final tracklist and release date are confirmed.")}
       ${releaseTable(upcoming)}
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
@@ -1197,7 +1414,7 @@ function renderAlbum(album, index) {
   const previousAlbum = data.albums[index - 1];
   const nextAlbum = data.albums[index + 1];
   const crumbs = [
-    { label: "Home", href: "/" },
+    { label: t("brandHome"), href: "/" },
     { label: "Discography", href: "/discography" },
     { label: album.title },
   ];
@@ -1217,7 +1434,7 @@ function renderAlbum(album, index) {
           .join("\n        ")}
       </ol>`
     : `<div class="empty-state">
-        <strong>No official tracklist yet</strong>
+        <strong>${esc(t("noTracklist"))}</strong>
         <p>${esc(album.tracklistNote)}</p>
       </div>`;
 
@@ -1230,7 +1447,7 @@ function renderAlbum(album, index) {
       <ul class="release-meta">
         <li>${esc(album.released)}</li>
         <li>${esc(album.label)}</li>
-        <li>${album.status === "upcoming" ? "Unreleased" : "Released"}</li>
+        <li>${album.status === "upcoming" ? esc(t("upcoming")) : esc(t("released"))}</li>
       </ul>
     </div>
   </section>
@@ -1238,11 +1455,11 @@ function renderAlbum(album, index) {
   <section class="section">
     <div class="container release-layout">
       <div class="release-narrative">
-        <h2>About this release</h2>
+        <h2>${esc(t("aboutRelease"))}</h2>
         ${album.narrative.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("\n        ")}
 
         <section class="tracklist-block">
-          <h2>Tracklist</h2>
+          <h2>${esc(t("tracklist"))}</h2>
           <p>${esc(album.tracklistNote)}</p>
           ${tracklist}
         </section>
@@ -1252,13 +1469,13 @@ function renderAlbum(album, index) {
             ? { href: `/discography/${previousAlbum.id}`, label: previousAlbum.title }
             : null,
           nextAlbum ? { href: `/discography/${nextAlbum.id}`, label: nextAlbum.title } : null,
-          "Previous and next releases"
+          t("prevNextReleases")
         )}
       </div>
 
       <aside class="release-aside">
         <div class="fact-card">
-          <h2>Details</h2>
+          <h2>${esc(t("details"))}</h2>
           ${factList(album.facts)}
         </div>
         <a class="era-link-card" href="/journey/${attr(era.id)}">
@@ -1266,7 +1483,7 @@ function renderAlbum(album, index) {
           <strong>${esc(era.title)}</strong>
         </a>
         <div class="fact-card">
-          <h2>Sources</h2>
+          <h2>${esc(t("sources"))}</h2>
           ${sourceList(album.sources)}
         </div>
       </aside>
@@ -1303,8 +1520,8 @@ function renderAlbum(album, index) {
 function renderFanNotes() {
   const notes = data.fanNotes;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Fan notes" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.fanNotes") },
   ];
 
   const content = `<section class="page-hero">
@@ -1336,7 +1553,7 @@ function renderFanNotes() {
       </div>
 
       <div class="rules-block">
-        <h2>Editorial rules</h2>
+        <h2>${esc(t("editorialRules"))}</h2>
         <ul class="rules-list">
           ${notes.rules.map((rule) => `<li>${esc(rule)}</li>`).join("\n          ")}
         </ul>
@@ -1351,7 +1568,7 @@ function renderFanNotes() {
             notes.submit.contact
           )}</span>
         </div>
-        <a class="btn btn--light" href="/about#contact">Contact details</a>
+        <a class="btn btn--light" href="/about#contact">${esc(t("contactDetails"))}</a>
       </div>
     </div>
   </section>`;
@@ -1369,8 +1586,8 @@ function renderFanNotes() {
 function renderSources() {
   const page = data.pages.sources;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Sources" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.sources") },
   ];
 
   const groups = [];
@@ -1428,7 +1645,7 @@ function renderSources() {
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead("Photograph credits", "Date, place, photographer, licence, and the file page for each image.")}
+      ${sectionHead(t("photographCredits"), "Date, place, photographer, licence, and the file page for each image.")}
       <div class="credit-grid">
         ${credits
           .map(
@@ -1437,16 +1654,16 @@ function renderSources() {
           <div>
             <h3>${esc(photo.caption)}</h3>
             <p>${esc(photo.license)}</p>
-            <p><a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">Original file page</a> · <a href="${attr(
+            <p><a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">${esc(t("originalFilePage"))}</a> · <a href="${attr(
               photo.licenseUrl
-            )}" target="_blank" rel="noopener noreferrer">Licence</a></p>
+            )}" target="_blank" rel="noopener noreferrer">${esc(t("licence"))}</a></p>
           </div>
-          ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`)}
+          ${copyButton(creditText(photo), t("copyCreditFor", { caption: photo.caption }))}
         </article>`
           )
           .join("\n        ")}
       </div>
-      <p class="license-note">${esc(site.photoPolicy)} Licences used in this collection: CC BY 2.0, CC BY-SA 2.0, CC BY-SA 3.0, CC BY-SA 4.0, and CC BY 4.0. Creative Commons licences do not remove the need for attribution; each card links to the terms that apply.</p>
+      <p class="license-note">${esc(site.photoPolicy)} ${esc(t("licenseNoteText"))}</p>
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
   </section>`;
@@ -1464,8 +1681,8 @@ function renderSources() {
 function renderAbout() {
   const about = data.about;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "About" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.about") },
   ];
 
   const content = `<section class="page-hero">
@@ -1497,14 +1714,14 @@ function renderAbout() {
           <small>${esc(about.contact.note)}</small>
         </div>
         <div class="fact-card">
-          <h2>Colophon</h2>
+          <h2>${esc(t("colophon"))}</h2>
           <ul class="colophon">
             ${about.colophon.map((item) => `<li>${esc(item)}</li>`).join("\n            ")}
           </ul>
         </div>
         <a class="era-link-card" href="/sources">
-          <span>Verify a claim</span>
-          <strong>Open the source list</strong>
+          <span>${esc(t("verifyClaim"))}</span>
+          <strong>${esc(t("openSourceList"))}</strong>
         </a>
       </aside>
     </div>
@@ -1513,9 +1730,9 @@ function renderAbout() {
   <section class="section section--paper-2">
     <div class="container">
       <div class="disclaimer-box">
-        <h2>Disclaimer</h2>
+        <h2>${esc(t("disclaimer"))}</h2>
         <p>${esc(site.disclaimer)}</p>
-        <p>Photographs are used under the open licences linked on each image. Rights holders can request removal through the issue tracker above.</p>
+        <p>${esc(t("disclaimerExtra"))}</p>
       </div>
     </div>
   </section>`;
@@ -1542,8 +1759,8 @@ function renderAbout() {
 function renderSearch() {
   const page = data.search;
   const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Search" },
+    { label: t("brandHome"), href: "/" },
+    { label: t("nav.search") },
   ];
 
   const content = `<section class="page-hero">
@@ -1561,17 +1778,21 @@ function renderSearch() {
         <div id="search"></div>
         <noscript>
           <div class="search-fallback">
-            <p>Browse the index without search:</p>
+            <p>${esc(t("browseIndex"))}</p>
             <ul>
-              <li><a href="/journey">Journey — all nine chapters</a></li>
-              <li><a href="/discography">Discography — all sixteen releases</a></li>
-              <li><a href="/gallery">Gallery — all photographs</a></li>
-              <li><a href="/sources">Sources and credits</a></li>
+              <li><a href="/journey">${esc(t("journeyIndex"))}</a></li>
+              <li><a href="/discography">${esc(t("discographyIndex"))}</a></li>
+              <li><a href="/gallery">${esc(t("galleryIndex"))}</a></li>
+              <li><a href="/sources">${esc(t("sourcesAndCredits"))}</a></li>
             </ul>
           </div>
         </noscript>
         <div class="search-fallback" id="search-fallback" hidden>
-          <p>The search index could not be loaded. Browse the <a href="/journey">journey</a>, the <a href="/discography">discography</a>, or the <a href="/gallery">gallery</a> instead.</p>
+          <p>${t("searchUnavailable", {
+            journey: `<a href="/journey">${esc(t("nav.journey"))}</a>`,
+            discography: `<a href="/discography">${esc(t("nav.discography"))}</a>`,
+            gallery: `<a href="/gallery">${esc(t("nav.gallery"))}</a>`,
+          })}</p>
         </div>
         <p class="search-note micro">${esc(page.note)}</p>
       </div>
@@ -1586,8 +1807,12 @@ function renderSearch() {
     noindex: true,
     crumbs,
     content,
-    extraHead: `<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
-  <script src="/pagefind/pagefind-ui.js" defer></script>`,
+    extraHead: `<link rel="stylesheet" href="/pagefind/${
+      locale === i18n.default ? "" : `${locale}/`
+    }pagefind-ui.css">
+  <script src="/pagefind/${
+    locale === i18n.default ? "" : `${locale}/`
+  }pagefind-ui.js" defer></script>`,
   });
 }
 
@@ -1603,9 +1828,9 @@ function renderNotFound() {
         <p class="lede">${esc(page.lede)}</p>
         <p class="micro">${esc(page.note)}</p>
         <div class="not-found__links">
-          <a class="btn btn--light" href="/journey">Open the journey</a>
-          <a class="btn btn--ghost" href="/gallery">Browse the gallery</a>
-          <a class="btn btn--ghost" href="/search">Search the archive</a>
+          <a class="btn btn--light" href="/journey">${esc(t("openJourney"))}</a>
+          <a class="btn btn--ghost" href="/gallery">${esc(t("heroGallery"))}</a>
+          <a class="btn btn--ghost" href="/search">${esc(t("searchAria"))}</a>
         </div>
       </div>
     </div>
@@ -1675,33 +1900,55 @@ function buildFeed() {
   writeFile("feed.xml", xml);
 }
 
+function canonicalRoutes() {
+  const entries = [
+    { pathname: "/", priority: "1.0", changefreq: "monthly" },
+    { pathname: "/journey", priority: "0.9", changefreq: "monthly" },
+    ...facts.eras.map((era) => ({ pathname: `/journey/${era.id}`, priority: "0.8" })),
+    { pathname: "/gallery", priority: "0.8", changefreq: "monthly" },
+    ...facts.eras.map((era) => ({ pathname: `/gallery/${era.id}`, priority: "0.6" })),
+    { pathname: "/discography", priority: "0.9", changefreq: "monthly" },
+    ...facts.albums.map((album) => ({ pathname: `/discography/${album.id}`, priority: "0.7" })),
+    { pathname: "/fan-notes", priority: "0.5", changefreq: "monthly" },
+    { pathname: "/sources", priority: "0.5", changefreq: "monthly" },
+    { pathname: "/about", priority: "0.5", changefreq: "monthly" },
+  ];
+  return entries;
+}
+
+function urlFor(code, pathname) {
+  const localized = hrefFor(code, pathname);
+  return `${facts.site.url}${localized === "" || localized === "/" ? "" : localized}`;
+}
+
 function buildSitemap() {
   const entries = [];
-
-  const add = (pathname, priority, changefreq = "monthly") => {
-    entries.push({ pathname, priority, changefreq });
-  };
-
-  add("/", "1.0", "monthly");
-  add("/journey", "0.9");
-  for (const era of data.eras) add(`/journey/${era.id}`, "0.8");
-  add("/gallery", "0.8");
-  for (const era of data.eras) add(`/gallery/${era.id}`, "0.6");
-  add("/discography", "0.9");
-  for (const album of data.albums) add(`/discography/${album.id}`, "0.7");
-  add("/fan-notes", "0.5");
-  add("/sources", "0.5");
-  add("/about", "0.5");
+  for (const item of canonicalRoutes()) {
+    for (const lang of enabledLocales()) {
+      entries.push({ ...item, code: lang.code });
+    }
+  }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entries
   .map(
     (entry) => `  <url>
-    <loc>${esc(absolute(entry.pathname))}</loc>
-    <lastmod>${site.updated}</lastmod>
-    <changefreq>${entry.changefreq}</changefreq>
-    <priority>${entry.priority}</priority>
+    <loc>${esc(urlFor(entry.code, entry.pathname))}</loc>
+    <lastmod>${esc(facts.site.updated)}</lastmod>
+    <changefreq>${esc(entry.changefreq || "monthly")}</changefreq>
+    <priority>${esc(entry.priority)}</priority>
+${enabledLocales()
+  .map(
+    (lang) =>
+      `    <xhtml:link rel="alternate" hreflang="${attr(lang.hreflang)}" href="${attr(
+        urlFor(lang.code, entry.pathname)
+      )}"/>`
+  )
+  .join("\n")}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${attr(
+      urlFor(i18n.default, entry.pathname)
+    )}"/>
   </url>`
   )
   .join("\n")}
@@ -1714,23 +1961,25 @@ ${entries
     "robots.txt",
     `User-agent: *
 Allow: /
-Disallow: /search
+${enabledLocales()
+  .map((lang) => `Disallow: ${lang.prefix || ""}/search`)
+  .join("\n")}
 Disallow: /pagefind/
 
-Sitemap: ${site.url}/sitemap.xml
+Sitemap: ${facts.site.url}/sitemap.xml
 `
   );
 }
 
 function buildIndex() {
   const links = [
-    { href: "/journey", label: "Journey" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/discography", label: "Discography" },
-    { href: "/fan-notes", label: "Fan notes" },
-    { href: "/sources", label: "Sources" },
-    { href: "/about", label: "About" },
-    { href: "/search", label: "Search" },
+    { href: "/journey", label: t("nav.journey") },
+    { href: "/gallery", label: t("nav.gallery") },
+    { href: "/discography", label: t("nav.discography") },
+    { href: "/fan-notes", label: t("nav.fanNotes") },
+    { href: "/sources", label: t("nav.sources") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/search", label: t("nav.search") },
   ];
 
   writeFile(
@@ -1765,6 +2014,46 @@ function buildIndex() {
    Main
    -------------------------------------------------------------------------- */
 
+function renderAllRoutes() {
+  writeRoute("/", renderHome());
+  writeRoute("/journey", renderJourney());
+  data.eras.forEach((era, index) => writeRoute(`/journey/${era.id}`, renderEra(era, index)));
+  writeRoute("/gallery", renderGallery());
+  data.eras.forEach((era, index) => writeRoute(`/gallery/${era.id}`, renderGalleryEra(era, index)));
+  writeRoute("/discography", renderDiscography());
+  data.albums.forEach((album, index) =>
+    writeRoute(`/discography/${album.id}`, renderAlbum(album, index))
+  );
+  writeRoute("/fan-notes", renderFanNotes());
+  writeRoute("/sources", renderSources());
+  writeRoute("/about", renderAbout());
+  writeRoute("/search", renderSearch());
+  writeRoute("/404", renderNotFound());
+}
+
+function buildPagefind(bin) {
+  for (const item of enabledLocales()) {
+    const subdir = item.code === i18n.default ? "pagefind" : `pagefind/${item.code}`;
+    const glob = item.code === i18n.default
+      ? `{${[
+          "index.html",
+          "404.html",
+          ...canonicalRoutes()
+            .filter((route) => route.pathname !== "/")
+            .map((route) => `${route.pathname.replace(/^\//, "")}.html`),
+        ].join(",")}}`
+      : `{${item.code}.html,${item.code}/**/*.html}`;
+    console.log(`build: pagefind ${item.code}`);
+    run(bin, [
+      "--site", DIST,
+      "--output-subdir", subdir,
+      "--glob", glob,
+      "--force-language", item.code,
+      "--silent",
+    ]);
+  }
+}
+
 function main() {
   console.log("build: cleaning dist/");
   fs.rmSync(DIST, { recursive: true, force: true });
@@ -1779,28 +2068,16 @@ function main() {
   manifest = JSON.parse(fs.readFileSync(path.join(SRC, "images.manifest.json"), "utf8"));
 
   console.log("build: assets");
+  setLocale(i18n.default);
   buildAssets();
 
   console.log("build: pages");
-  writeRoute("/", renderHome());
-  writeRoute("/journey", renderJourney());
-  data.eras.forEach((era, index) => {
-    writeRoute(`/journey/${era.id}`, renderEra(era, index));
-  });
-  writeRoute("/gallery", renderGallery());
-  data.eras.forEach((era, index) => {
-    writeRoute(`/gallery/${era.id}`, renderGalleryEra(era, index));
-  });
-  writeRoute("/discography", renderDiscography());
-  data.albums.forEach((album, index) => {
-    writeRoute(`/discography/${album.id}`, renderAlbum(album, index));
-  });
-  writeRoute("/fan-notes", renderFanNotes());
-  writeRoute("/sources", renderSources());
-  writeRoute("/about", renderAbout());
-  writeRoute("/search", renderSearch());
-  writeRoute("/404", renderNotFound());
+  for (const item of enabledLocales()) {
+    setLocale(item.code);
+    renderAllRoutes();
+  }
 
+  setLocale(i18n.default);
   buildSitemap();
   buildFeed();
   buildIndex();
@@ -1809,19 +2086,14 @@ function main() {
   const pagefind = fs.existsSync(pagefindLocal)
     ? pagefindLocal
     : process.env.PAGEFIND || "pagefind";
-
-  console.log("build: pagefind");
   try {
-    run(pagefind, ["--site", DIST, "--force-language", "en"]);
+    buildPagefind(pagefind);
   } catch (error) {
-    console.error(
-      "build: pagefind failed. Install it with `npm install` or set PAGEFIND=/path/to/pagefind."
-    );
+    console.error("build: pagefind failed. Install it with `npm install` or set PAGEFIND=/path/to/pagefind.");
     throw error;
   }
 
-  const htmlCount = routes.length;
-  console.log(`build: ${htmlCount} pages written to ${DIST}`);
+  console.log(`build: ${routes.length} pages written to ${DIST}`);
 }
 
 main();
