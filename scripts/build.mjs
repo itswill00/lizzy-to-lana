@@ -125,17 +125,17 @@ function picture(photo, options = {}) {
 
 function creditLine(photo, options = {}) {
   if (!photo.credit) return "";
-  const creator = options.link
-    ? `<a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">${esc(photo.credit)}</a>`
-    : esc(photo.credit);
   const licence = options.link
     ? `<a href="${attr(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>`
     : esc(photo.license);
-  return `Photo: ${creator} · ${licence}`;
+  const source = options.link
+    ? `<a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">Source file</a>`
+    : esc(photo.source);
+  return `${licence} · ${source}`;
 }
 
 function creditText(photo) {
-  return [photo.caption, `${photo.credit} · ${photo.license}`, photo.source]
+  return [photo.caption, photo.license, photo.licenseUrl, photo.source]
     .filter(Boolean)
     .join("\n");
 }
@@ -182,7 +182,6 @@ function photoTile(photo, options = {}) {
 
   return `<div class="photo-tile-wrap" data-gallery-item data-era="${attr(era)}">
   <div class="photo-tile__tools">
-    <span class="photo-tile__tag">Archive photograph</span>
     ${copyButton(creditText(photo), `Copy credit for ${photo.caption}`, "copy-credit copy-credit--tile")}
   </div>
   <button class="photo-tile" type="button" data-photo data-full="${attr(meta.largest.jpg)}" data-full-width="${meta.largest.w}" data-full-height="${
@@ -194,7 +193,7 @@ function photoTile(photo, options = {}) {
   )}" data-source="${attr(photo.source)}" aria-label="Open photograph: ${attr(photo.caption)}">
     ${picture(photo, { sizes, loading: options.loading || "lazy", fetchpriority: options.fetchpriority })}
     <span class="photo-tile__caption">${esc(photo.caption)}</span>
-    <span class="photo-tile__credit">${esc(photo.credit)} · ${esc(photo.license)}</span>
+    <span class="photo-tile__credit">${esc(photo.license)}</span>
   </button>
 </div>`;
 }
@@ -507,6 +506,30 @@ function albumCard(album) {
   </a>`;
 }
 
+function releaseTable(albums) {
+  return `<div class="table-wrap">
+    <table class="release-table">
+      <caption class="visually-hidden">Releases with year, type, label, and status</caption>
+      <thead>
+        <tr><th scope="col">Year</th><th scope="col">Release</th><th scope="col">Type</th><th scope="col">Label</th><th scope="col">Status</th></tr>
+      </thead>
+      <tbody>
+        ${albums
+          .map(
+            (album) => `<tr>
+          <td class="release-table__year">${esc(album.year)}</td>
+          <td><a href="/discography/${attr(album.id)}">${esc(album.title)}</a></td>
+          <td>${esc(album.type)}</td>
+          <td>${esc(album.label)}</td>
+          <td>${album.status === "upcoming" ? "Unreleased" : "Released"}</td>
+        </tr>`
+          )
+          .join("\n        ")}
+      </tbody>
+    </table>
+  </div>`;
+}
+
 function sourceList(ids) {
   const refs = ids.map((id) => refById[id]).filter(Boolean);
   if (!refs.length) return "";
@@ -675,27 +698,16 @@ function renderHome() {
     </div>
     <div class="hero__aside" aria-hidden="true">
       <div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div>
-      <span>EST. 2026 · CHAPTER 01 / 09</span>
     </div>
     <p class="hero__credit">${creditLine(hero, { link: true })} <span class="hero__credit-note">· ${esc(
       home.heroVideoNote
     )}</span></p>
   </section>
 
-  <section class="section section--tight" id="archive">
-    <div class="container">
-      <dl class="stats">
-        ${home.stats
-          .map((stat) => `<div><dt>${esc(stat.value)}</dt><dd>${esc(stat.label)}</dd></div>`)
-          .join("\n        ")}
-      </dl>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section" id="archive">
     <div class="container home-intro">
       <div>
-        <p class="eyebrow">The archive</p>
+        <p class="eyebrow">Coverage</p>
         <h2>${esc(home.sections.introTitle)}</h2>
         ${home.sections.introBody.map((paragraph) => `<p class="lede">${esc(paragraph)}</p>`).join("")}
       </div>
@@ -711,7 +723,7 @@ function renderHome() {
   <section class="section section--paper-2">
     <div class="container">
       ${sectionHead(home.sections.highlightsTitle, home.sections.highlightsNote, {
-        label: "All nine chapters",
+        label: "All chapters",
         href: "/journey",
       })}
       <div class="card-grid">
@@ -1049,7 +1061,6 @@ function renderGallery() {
       <div class="page-hero__meta">
         <span>${realPhotos.length} credited photographs</span>
         <span>${data.eras.length} chapters</span>
-        <span>Stored locally</span>
       </div>
     </div>
   </section>
@@ -1183,18 +1194,14 @@ function renderDiscography() {
   <section class="section">
     <div class="container">
       ${sectionHead("Released", "Albums, EPs, a film, and a spoken-word record, in chronological order.")}
-      <div class="release-grid">
-        ${released.map(albumCard).join("\n        ")}
-      </div>
+      ${releaseTable(released)}
     </div>
   </section>
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead("Announced, not yet heard", "Described as provisional until a final tracklist and release date are confirmed.")}
-      <div class="release-grid">
-        ${upcoming.map(albumCard).join("\n        ")}
-      </div>
+      ${sectionHead("Announced", "Described as provisional until a final tracklist and release date are confirmed.")}
+      ${releaseTable(upcoming)}
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
   </section>`;
@@ -1274,11 +1281,6 @@ function renderAlbum(album, index) {
       </div>
 
       <aside class="release-aside">
-        <div class="release-mark">
-          <span class="release-mark__year">${esc(album.year)}</span>
-          <span class="release-mark__type">${esc(album.type)}<br>${esc(album.label)}</span>
-          <span class="release-mark__initial" aria-hidden="true">${esc(album.title.charAt(0))}</span>
-        </div>
         <div class="fact-card">
           <h2>Details</h2>
           ${factList(album.facts)}
@@ -1358,7 +1360,7 @@ function renderFanNotes() {
       </div>
 
       <div class="rules-block">
-        <h2>House rules</h2>
+        <h2>Editorial rules</h2>
         <ul class="rules-list">
           ${notes.rules.map((rule) => `<li>${esc(rule)}</li>`).join("\n          ")}
         </ul>
@@ -1405,7 +1407,6 @@ function renderSources() {
     group.refs.push(ref);
   }
 
-  let counter = 0;
   const credits = data.photos.filter((photo) => !photo.placeholder);
 
   const content = `<section class="page-hero">
@@ -1431,17 +1432,15 @@ function renderSources() {
           <h2>${esc(group.name)}</h2>
           <ol class="ref-list">
             ${group.refs
-              .map((ref) => {
-                counter += 1;
-                return `<li>
-              <span class="ref-list__num">${String(counter).padStart(2, "0")}</span>
+              .map(
+                (ref) => `<li>
               <span class="ref-list__title"><a href="${attr(
                 ref.url
               )}" target="_blank" rel="noopener noreferrer">${esc(ref.title)}</a></span>
               <span class="ref-list__meta">${esc(ref.publisher)} · accessed ${esc(ref.accessed)}</span>
               <span class="ref-list__note">${esc(ref.note)}</span>
-            </li>`;
-              })
+            </li>`
+              )
               .join("\n            ")}
           </ol>
         </section>`
@@ -1453,7 +1452,7 @@ function renderSources() {
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead("Photograph credits", "Every image, its creator, its licence, and the file page it came from.")}
+      ${sectionHead("Photograph credits", "Date, place, photographer, licence, and the file page for each image.")}
       <div class="credit-grid">
         ${credits
           .map(
@@ -1461,7 +1460,7 @@ function renderSources() {
           ${picture(photo, { sizes: "80px" })}
           <div>
             <h3>${esc(photo.caption)}</h3>
-            <p>${esc(photo.credit)} · ${esc(photo.license)}</p>
+            <p>${esc(photo.license)}</p>
             <p><a href="${attr(photo.source)}" target="_blank" rel="noopener noreferrer">Original file page</a> · <a href="${attr(
               photo.licenseUrl
             )}" target="_blank" rel="noopener noreferrer">Licence</a></p>
@@ -1518,7 +1517,6 @@ function renderAbout() {
       <aside class="about-aside">
         <div class="contact-box" id="contact">
           <h2>${esc(about.contact.label)}</h2>
-          <p>Corrections, takedown requests, and licensed photograph offers:</p>
           <strong>${contactLink(about.contact.value, about.contact.action)}</strong>
           <small>${esc(about.contact.note)}</small>
         </div>
@@ -1541,7 +1539,7 @@ function renderAbout() {
       <div class="disclaimer-box">
         <h2>Disclaimer</h2>
         <p>${esc(site.disclaimer)}</p>
-        <p>This site is a non-commercial fan project. It does not host or distribute copyrighted audio, full lyrics, or paid artwork. Photographs are used under the open licences listed on each image, and are removed or corrected on request.</p>
+        <p>Photographs are used under the open licences linked on each image. Rights holders can request removal through the issue tracker above.</p>
       </div>
     </div>
   </section>`;
@@ -1587,7 +1585,7 @@ function renderSearch() {
         <div id="search"></div>
         <noscript>
           <div class="search-fallback">
-            <p>Search needs JavaScript. Every page is still reachable without it:</p>
+            <p>Browse the index without search:</p>
             <ul>
               <li><a href="/journey">Journey — all nine chapters</a></li>
               <li><a href="/discography">Discography — all sixteen releases</a></li>
@@ -1623,7 +1621,6 @@ function renderNotFound() {
   const content = `<section class="not-found">
     <div class="container">
       <div class="not-found__inner">
-        <div class="not-found__orbit" aria-hidden="true"><div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div></div>
         <p class="not-found__code" aria-hidden="true">404</p>
         <p class="eyebrow">${esc(page.eyebrow)}</p>
         <h1>${esc(page.title)}</h1>

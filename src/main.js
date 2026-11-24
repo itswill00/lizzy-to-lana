@@ -175,12 +175,12 @@
       if (counter) counter.textContent = `${index + 1} / ${group.length}`;
       if (title) title.textContent = caption || "";
       if (credit) {
-        credit.textContent = [by, license].filter(Boolean).join(" · ");
+        credit.textContent = license || "";
       }
 
       const copy = doc.getElementById("lightbox-copy");
       if (copy) {
-        copy.dataset.copyText = [caption, [by, license].filter(Boolean).join(" · "), source]
+        copy.dataset.copyText = [caption, license, licenseUrl, source]
           .filter(Boolean)
           .join("\n");
       }
@@ -346,51 +346,6 @@
       else window.location.href = "/search";
     }
   });
-
-  /* ------------------------------------------------------------------------
-     Reveal on scroll
-     ------------------------------------------------------------------------ */
-
-  const revealSelectors = [
-    ".section-head",
-    ".card-grid > *",
-    ".release-grid > *",
-    ".photo-grid > *",
-    ".journey-item",
-    ".timeline-preview li",
-    ".tracklist li",
-    ".ref-list li",
-    ".note-card",
-    ".credit-card",
-    ".fact-card"
-  ].join(", ");
-
-  doc.querySelectorAll(revealSelectors).forEach((element, index) => {
-    element.classList.add("reveal");
-    element.style.transitionDelay = `${(index % 6) * 45}ms`;
-  });
-
-  const revealItems = Array.from(doc.querySelectorAll(".reveal"));
-
-  if (revealItems.length) {
-    if (!("IntersectionObserver" in window)) {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
-    } else {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-      );
-
-      revealItems.forEach((item) => observer.observe(item));
-    }
-  }
 
   /* ------------------------------------------------------------------------
      Pagefind
