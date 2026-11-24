@@ -94,6 +94,18 @@ const englishLeak = [
   "Change language", "Tracklist", "About this release", "Editorial rules",
   ">Released<", ">Tracks<", ">Chart peak<", ">Standard tracks<", ">Deluxe tracks<",
   ">Producers<", ">Length<", "as of 24 November 2026",
+  "aria-label=\"Breadcrumb\"", "aria-label=\"Chapters\"", "aria-label=\"Open photograph:",
+  "title=\"Lizzy to Lana feed\"",
+  " in photographs", " credited photographs", " credited photograph<",
+  " references</span>", " photo credits", ">Checked ", "Gallery · ",
+  "Part of the ", "Date, place, photographer",
+  ">Gallery</a>", ">Journey</a>", ">Discography</a>", "Open the gallery",
+  ">All photographs<", " gallery</strong>", "in chronological order",
+  "Described as provisional", "until a final tracklist",
+  ">Studio album<", ">Spoken-word album<", ">Short film / soundtrack<", ">Upcoming album<",
+  ">Upcoming studio album<", ">Official site<", ">Untitled companion album<",
+  ">Spoken word / poetry<", "philosophy", "Title, tracklist, and release date TBA",
+  "and the Netherlands",
 ];
 const englishMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const sharedMonths = { en: [], id: ["April","September","October","November","December"], es: [], "pt-br": [] };
@@ -153,7 +165,7 @@ for (const item of LOCALES) {
 
     for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)(?:[?#][^"]*)?"/g)) {
       const href = match[1];
-      if (/^\/(assets|pagefind|feed\.xml|sitemap\.xml|robots\.txt|site\.webmanifest|favicon\.svg)/.test(href)) continue;
+      if (/^\/(?:(?:id|es|pt-br)\/)?(?:assets|pagefind|feed\.xml|sitemap\.xml|robots\.txt|site\.webmanifest|favicon\.svg)/.test(href)) continue;
       if (href.startsWith("/404")) continue;
       const matchPrefix = href.match(/^\/(id|es|pt-br)(?=\/|$)/);
       const withoutPrefix = matchPrefix ? href.slice(matchPrefix[0].length) || "/" : href;
@@ -173,6 +185,7 @@ for (const item of LOCALES) {
       }
       const datePattern = englishDatePatternFor(item.code);
       if (datePattern && datePattern.test(plain)) errors.push(`${label}: untranslated English date`);
+      if (html.includes('"inLanguage":"en"')) errors.push(`${label}: JSON-LD inLanguage not localized`);
     }
   }
 }

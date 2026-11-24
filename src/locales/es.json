@@ -212,9 +212,43 @@
       "additional collaborators": "colaboradores adicionales",
       "suggested by artwork; unconfirmed": "sugerido por la portada; sin confirmar",
       "as of": "a",
-      "Released": "Lanzado"
+      "Released": "Lanzado",
+      "Short film / soundtrack": "Cortometraje / banda sonora",
+      "Spoken word / poetry": "Palabra hablada / poesía",
+      "Title, tracklist, and release date TBA": "Título, lista de canciones y fecha de lanzamiento por confirmar",
+      "philosophy": "filosofía",
+      "and the Netherlands": "y los Países Bajos"
     },
-    "suggestedSavedLocale": "Antes elegiste {language}. ¿Volver?"
+    "suggestedSavedLocale": "Antes elegiste {language}. ¿Volver?",
+    "breadcrumb": "Ruta de navegación",
+    "chaptersNav": "Capítulos",
+    "feedTitle": "Feed de {site}",
+    "creditedCount": "{count} fotografías acreditadas",
+    "creditedCountOne": "{count} fotografía acreditada",
+    "chaptersCount": "{count} capítulos",
+    "galleryEraTitle": "{era} en fotografías",
+    "galleryEraEyebrow": "Galería · {years}",
+    "releasedCount": "{count} publicados",
+    "announcedCount": "{count} anunciados",
+    "refCount": "{count} referencias",
+    "refCountOne": "{count} referencia",
+    "creditCount": "{count} créditos de foto",
+    "creditCountOne": "{count} crédito de foto",
+    "checkedOn": "Revisado {date}",
+    "creditSectionNote": "Fecha, lugar, fotógrafo, licencia y la página del archivo de cada imagen.",
+    "openGallery": "Abrir la galería",
+    "galleryNavLabel": "{era} · galería",
+    "discographySectionNote": "Álbumes, EP, una película y un disco hablado, en orden cronológico.",
+    "announcedSectionNote": "Descrito como provisional hasta que se confirmen la lista de canciones y la fecha de lanzamiento definitivas.",
+    "albumTypes": {
+      "Studio album": "Álbum de estudio",
+      "EP": "EP",
+      "Short film / soundtrack": "Cortometraje / banda sonora",
+      "Spoken-word album": "Álbum hablado",
+      "Upcoming album": "Álbum próximo",
+      "Upcoming studio album": "Álbum de estudio próximo"
+    },
+    "officialSite": "Sitio oficial"
   },
   "site": {
     "tagline": "Un archivo de fans",
@@ -804,7 +838,8 @@
         "El 15 de julio de 2026, Del Rey anunció que el material sobrante de las sesiones de Stove se había convertido en un álbum complementario. El anuncio incluía la portada en vinilo de Stove y una segunda cubierta con un barco llamado “Spyda”, que sugería un posible título.",
         "No se ha confirmado ningún título, lista de canciones ni fecha de lanzamiento. La entrada recoge el anuncio y la fecha de revisión, 24 de noviembre de 2026."
       ],
-      "tracklistNote": "No se han anunciado título, lista de canciones ni fecha de lanzamiento oficiales."
+      "tracklistNote": "No se han anunciado título, lista de canciones ni fecha de lanzamiento oficiales.",
+      "title": "Álbum complementario sin título"
     }
   },
   "photos": {

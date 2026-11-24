@@ -212,9 +212,43 @@
       "additional collaborators": "additional collaborators",
       "suggested by artwork; unconfirmed": "suggested by artwork; unconfirmed",
       "as of": "as of",
-      "Released": "Released"
+      "Released": "Released",
+      "Short film / soundtrack": "Short film / soundtrack",
+      "Spoken word / poetry": "Spoken word / poetry",
+      "Title, tracklist, and release date TBA": "Title, tracklist, and release date TBA",
+      "philosophy": "philosophy",
+      "and the Netherlands": "and the Netherlands"
     },
-    "suggestedSavedLocale": "You previously chose {language}. Switch back?"
+    "suggestedSavedLocale": "You previously chose {language}. Switch back?",
+    "breadcrumb": "Breadcrumb",
+    "chaptersNav": "Chapters",
+    "feedTitle": "{site} feed",
+    "creditedCount": "{count} credited photographs",
+    "creditedCountOne": "{count} credited photograph",
+    "chaptersCount": "{count} chapters",
+    "galleryEraTitle": "{era} in photographs",
+    "galleryEraEyebrow": "Gallery · {years}",
+    "releasedCount": "{count} released",
+    "announcedCount": "{count} announced",
+    "refCount": "{count} references",
+    "refCountOne": "{count} reference",
+    "creditCount": "{count} photo credits",
+    "creditCountOne": "{count} photo credit",
+    "checkedOn": "Checked {date}",
+    "creditSectionNote": "Date, place, photographer, licence, and the file page for each image.",
+    "openGallery": "Open the gallery",
+    "galleryNavLabel": "{era} gallery",
+    "discographySectionNote": "Albums, EPs, a film, and a spoken-word record, in chronological order.",
+    "announcedSectionNote": "Described as provisional until a final tracklist and release date are confirmed.",
+    "albumTypes": {
+      "Studio album": "Studio album",
+      "EP": "EP",
+      "Short film / soundtrack": "Short film / soundtrack",
+      "Spoken-word album": "Spoken-word album",
+      "Upcoming album": "Upcoming album",
+      "Upcoming studio album": "Upcoming studio album"
+    },
+    "officialSite": "Official site"
   },
   "site": {
     "tagline": "A Fan Archive",
@@ -804,7 +838,8 @@
         "On 15 July 2026, Del Rey announced that the extra material from the Stove sessions had grown into a companion album. The announcement included vinyl artwork for Stove and a second cover featuring a boat named “Spyda”, which suggested a possible title.",
         "No title, tracklist, or release date has been confirmed. The entry records the announcement and the checked-on date, 24 November 2026."
       ],
-      "tracklistNote": "No official title, tracklist, or release date has been announced."
+      "tracklistNote": "No official title, tracklist, or release date has been announced.",
+      "title": "Untitled companion album"
     }
   },
   "photos": {

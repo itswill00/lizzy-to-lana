@@ -212,9 +212,43 @@
       "additional collaborators": "kolaborator tambahan",
       "suggested by artwork; unconfirmed": "diusulkan dari sampul; belum dikonfirmasi",
       "as of": "per",
-      "Released": "Dirilis"
+      "Released": "Dirilis",
+      "Short film / soundtrack": "Film pendek / musik film",
+      "Spoken word / poetry": "Spoken word / puisi",
+      "Title, tracklist, and release date TBA": "Judul, daftar lagu, dan tanggal rilis TBA",
+      "philosophy": "filsafat",
+      "and the Netherlands": "dan Belanda"
     },
-    "suggestedSavedLocale": "Sebelumnya kamu memilih {language}. Kembali?"
+    "suggestedSavedLocale": "Sebelumnya kamu memilih {language}. Kembali?",
+    "breadcrumb": "Navigasi remah",
+    "chaptersNav": "Bab",
+    "feedTitle": "Feed {site}",
+    "creditedCount": "{count} foto berkredit",
+    "creditedCountOne": "{count} foto berkredit",
+    "chaptersCount": "{count} bab",
+    "galleryEraTitle": "{era} dalam foto",
+    "galleryEraEyebrow": "Galeri · {years}",
+    "releasedCount": "{count} dirilis",
+    "announcedCount": "{count} diumumkan",
+    "refCount": "{count} referensi",
+    "refCountOne": "{count} referensi",
+    "creditCount": "{count} kredit foto",
+    "creditCountOne": "{count} kredit foto",
+    "checkedOn": "Diperiksa {date}",
+    "creditSectionNote": "Tanggal, tempat, fotografer, lisensi, dan halaman berkas untuk setiap gambar.",
+    "openGallery": "Buka galeri",
+    "galleryNavLabel": "Galeri {era}",
+    "discographySectionNote": "Album, EP, film, dan rekaman spoken word, dalam urutan kronologis.",
+    "announcedSectionNote": "Masih bersifat sementara sampai daftar lagu dan tanggal rilis final dikonfirmasi.",
+    "albumTypes": {
+      "Studio album": "Album studio",
+      "EP": "EP",
+      "Short film / soundtrack": "Film pendek / musik film",
+      "Spoken-word album": "Album spoken word",
+      "Upcoming album": "Album mendatang",
+      "Upcoming studio album": "Album studio mendatang"
+    },
+    "officialSite": "Situs resmi"
   },
   "site": {
     "tagline": "Arsip Penggemar",
@@ -805,7 +839,8 @@
         "Pada 15 Juli 2026, Del Rey mengumumkan bahwa materi tambahan dari sesi Stove telah berkembang menjadi album pendamping. Pengumuman itu menyertakan sampul vinyl Stove dan sampul kedua yang menampilkan perahu bernama “Spyda”, yang mengisyaratkan kemungkinan judul.",
         "Belum ada judul, daftar trek, atau tanggal rilis yang dikonfirmasi. Entri ini mencatat pengumuman dan tanggal pemeriksaan, 24 November 2026."
       ],
-      "tracklistNote": "Belum ada judul, daftar trek, atau tanggal rilis resmi yang diumumkan."
+      "tracklistNote": "Belum ada judul, daftar trek, atau tanggal rilis resmi yang diumumkan.",
+      "title": "Album pendamping tanpa judul"
     }
   },
   "photos": {

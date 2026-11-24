@@ -68,6 +68,11 @@ function t(key, vars = {}) {
   );
 }
 
+function tCount(base, count, vars = {}) {
+  const key = count === 1 && lookup(ui, `${base}One`) ? `${base}One` : base;
+  return t(key, { count, ...vars });
+}
+
 function currentConfig() {
   return i18n.locales.find((item) => item.code === locale);
 }
@@ -102,6 +107,12 @@ function localizeFactValue(value) {
     if (phrases[phrase]) text = text.split(phrase).join(phrases[phrase]);
   }
   return text;
+}
+
+function albumType(value) {
+  const map = ui.albumTypes || {};
+  if (!map[value]) throw new Error(`i18n: missing album type "${value}" in ${locale}`);
+  return map[value];
 }
 
 function factLabel(label) {
@@ -140,6 +151,10 @@ const navKeyByHref = {
   "/search": "search",
 };
 
+const footerLinkKeyByLabel = {
+  "Official site": "officialSite",
+};
+
 function setLocale(code) {
   if (!localeFiles[code]) throw new Error(`i18n: no content file for ${code}`);
   locale = code;
@@ -171,7 +186,11 @@ function setLocale(code) {
         title: t(["footerExplore", "footerArchive", "footerElsewhere"][index]),
         links: column.links.map((link) => ({
           ...link,
-          label: navKeyByHref[link.href] ? t(`nav.${navKeyByHref[link.href]}`) : link.label,
+          label: navKeyByHref[link.href]
+            ? t(`nav.${navKeyByHref[link.href]}`)
+            : footerLinkKeyByLabel[link.label]
+              ? t(footerLinkKeyByLabel[link.label])
+              : link.label,
         })),
       })),
     },
@@ -372,7 +391,6 @@ function photoTile(photo, options = {}) {
       <div class="photo-placeholder">
         <span class="photo-placeholder__mark" aria-hidden="true">?</span>
         <strong>${esc(t("photographPending"))}</strong>
-        <span>${esc(photo.caption)}</span>
         <span class="micro">${esc(photo.placeholderNote || "")}</span>
       </div>
     </div>`;
@@ -391,7 +409,9 @@ function photoTile(photo, options = {}) {
     photo.credit
   )}" data-license="${attr(photo.license)}" data-license-url="${attr(
     photo.licenseUrl
-  )}" data-source="${attr(photo.source)}" aria-label="Open photograph: ${attr(photo.caption)}">
+  )}" data-source="${attr(photo.source)}" aria-label="${attr(
+    t("openPhoto", { caption: photo.caption })
+  )}">
     ${picture(photo, { sizes, loading: options.loading || "lazy", fetchpriority: options.fetchpriority })}
     <span class="photo-tile__caption">${esc(photo.caption)}</span>
     <span class="photo-tile__credit">${esc(photo.license)}</span>
@@ -535,7 +555,7 @@ function lightbox() {
 
 function breadcrumbs(items) {
   if (!items.length) return "";
-  return `<nav class="breadcrumbs" aria-label="Breadcrumb">
+  return `<nav class="breadcrumbs" aria-label="${attr(t("breadcrumb"))}">
     <ol>
       ${items
         .map((item, index) => {
@@ -615,7 +635,9 @@ function head(options) {
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="alternate" type="application/rss+xml" title="${esc(site.name)} feed" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="${esc(
+    t("feedTitle", { site: site.name })
+  )}" href="${attr(hrefFor(locale, "/feed.xml"))}">
   <link rel="preload" href="${assets.fonts.serif}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="${assets.fonts.sans}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${assets.css}">
@@ -749,7 +771,7 @@ function albumCard(album) {
   )}">
     <div class="album-card__top">
       <span class="album-card__year">${esc(album.year)}</span>
-      <span class="album-card__type">${esc(album.type)}</span>
+      <span class="album-card__type">${esc(albumType(album.type))}</span>
     </div>
     <h3 class="album-card__title">${esc(album.title)}</h3>
     <p class="album-card__meta">${esc(localizeFactValue(album.released))}${
@@ -772,7 +794,7 @@ function releaseTable(albums) {
             (album) => `<tr>
           <td class="release-table__year">${esc(album.year)}</td>
           <td><a href="/discography/${attr(album.id)}">${esc(album.title)}</a></td>
-          <td>${esc(album.type)}</td>
+          <td>${esc(albumType(album.type))}</td>
           <td>${esc(album.label)}</td>
           <td>${album.status === "upcoming" ? esc(t("upcoming")) : esc(t("released"))}</td>
         </tr>`
@@ -1041,7 +1063,7 @@ function renderHome() {
       alternateName: site.tagline,
       url: site.url,
       description: site.description,
-      inLanguage: "en",
+      inLanguage: currentConfig().hreflang,
       dateModified: site.updated,
     },
   ];
@@ -1126,7 +1148,7 @@ function renderEra(era, index) {
   const nextEra = data.eras[index + 1];
   const crumbs = [
     { label: t("brandHome"), href: "/" },
-    { label: "Journey", href: "/journey" },
+    { label: t("nav.journey"), href: "/journey" },
     { label: era.label },
   ];
 
@@ -1179,7 +1201,7 @@ function renderEra(era, index) {
 
         <section class="era-photos">
           ${sectionHead(t("photographs"), t("imagesFromChapter", { chapter: era.label }), {
-            label: "Open the gallery",
+            label: t("openGallery"),
             href: `/gallery/${era.id}`,
           })}
           ${photoGrid(photos, {
@@ -1195,7 +1217,7 @@ function renderEra(era, index) {
       </div>
 
       <aside class="era-aside">
-        <nav class="chapter-rail fact-card" aria-label="Chapters">
+        <nav class="chapter-rail fact-card" aria-label="${attr(t("chaptersNav"))}">
           <p class="micro">${esc(era.years)}</p>
           <ol>
             ${data.eras
@@ -1288,8 +1310,8 @@ function renderGallery() {
       <h1>${esc(page.title)}</h1>
       <p class="lede">${esc(page.lede)}</p>
       <div class="page-hero__meta">
-        <span>${realPhotos.length} credited photographs</span>
-        <span>${data.eras.length} chapters</span>
+        <span>${esc(tCount("creditedCount", realPhotos.length))}</span>
+        <span>${esc(t("chaptersCount", { count: data.eras.length }))}</span>
       </div>
     </div>
   </section>
@@ -1347,20 +1369,22 @@ function renderGalleryEra(era, index) {
   const nextEra = data.eras[index + 1];
   const crumbs = [
     { label: t("brandHome"), href: "/" },
-    { label: "Gallery", href: "/gallery" },
+    { label: t("nav.gallery"), href: "/gallery" },
     { label: era.label },
   ];
-  const title = `${era.label} in photographs`;
+  const title = t("galleryEraTitle", { era: era.label });
   const description = t("galleryEraDescription", { era: era.label, years: era.years });
 
   const content = `<section class="page-hero">
     <div class="container">
       ${breadcrumbs(crumbs)}
-      <p class="eyebrow" style="margin-top: 2rem">Gallery · ${esc(era.years)}</p>
+      <p class="eyebrow" style="margin-top: 2rem">${esc(
+        t("galleryEraEyebrow", { years: era.years })
+      )}</p>
       <h1>${esc(title)}</h1>
       <p class="lede">${esc(era.summary)}</p>
       <div class="page-hero__meta">
-        <span>${real.length} credited ${real.length === 1 ? "photograph" : "photographs"}</span>
+        <span>${esc(tCount("creditedCount", real.length))}</span>
         <span><a href="/journey/${attr(era.id)}">${esc(t("readChapter"))}</a></span>
       </div>
     </div>
@@ -1374,9 +1398,9 @@ function renderGalleryEra(era, index) {
       <p class="gallery-note">${esc(data.site.photoPolicy)} <a href="/sources">${esc(t("fullCreditsLink"))}</a>.</p>
       ${prevNext(
         previousEra
-          ? { href: `/gallery/${previousEra.id}`, label: `${previousEra.label} gallery` }
-          : { href: "/gallery", label: "All photographs" },
-        nextEra ? { href: `/gallery/${nextEra.id}`, label: `${nextEra.label} gallery` } : null,
+          ? { href: `/gallery/${previousEra.id}`, label: t("galleryNavLabel", { era: previousEra.label }) }
+          : { href: "/gallery", label: t("allPhotographs") },
+        nextEra ? { href: `/gallery/${nextEra.id}`, label: t("galleryNavLabel", { era: nextEra.label }) } : null,
         t("prevNextGalleries")
       )}
     </div>
@@ -1413,8 +1437,8 @@ function renderDiscography() {
       <h1>${esc(page.title)}</h1>
       <p class="lede">${esc(page.lede)}</p>
       <div class="page-hero__meta">
-        <span>${released.length} released</span>
-        <span>${upcoming.length} announced</span>
+        <span>${esc(t("releasedCount", { count: released.length }))}</span>
+        <span>${esc(t("announcedCount", { count: upcoming.length }))}</span>
         <span>${esc(t("standardEditions"))}</span>
       </div>
     </div>
@@ -1422,14 +1446,14 @@ function renderDiscography() {
 
   <section class="section">
     <div class="container">
-      ${sectionHead(t("released"), "Albums, EPs, a film, and a spoken-word record, in chronological order.")}
+      ${sectionHead(t("released"), t("discographySectionNote"))}
       ${releaseTable(released)}
     </div>
   </section>
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead(t("announced"), "Described as provisional until a final tracklist and release date are confirmed.")}
+      ${sectionHead(t("announced"), t("announcedSectionNote"))}
       ${releaseTable(upcoming)}
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
@@ -1451,7 +1475,7 @@ function renderAlbum(album, index) {
   const nextAlbum = data.albums[index + 1];
   const crumbs = [
     { label: t("brandHome"), href: "/" },
-    { label: "Discography", href: "/discography" },
+    { label: t("nav.discography"), href: "/discography" },
     { label: album.title },
   ];
   const title = album.title;
@@ -1477,7 +1501,7 @@ function renderAlbum(album, index) {
   const content = `<section class="release-hero" style="--accent: ${attr(era.accent)}">
     <div class="container">
       ${breadcrumbs(crumbs)}
-      <p class="eyebrow" style="margin-top: 2rem">${esc(album.type)} · ${esc(era.label)}</p>
+      <p class="eyebrow" style="margin-top: 2rem">${esc(albumType(album.type))} · ${esc(era.label)}</p>
       <h1>${esc(title)}</h1>
       <p class="lede">${esc(album.summary)}</p>
       <ul class="release-meta">
@@ -1515,7 +1539,7 @@ function renderAlbum(album, index) {
           ${factList(album.facts)}
         </div>
         <a class="era-link-card" href="/journey/${attr(era.id)}">
-          <span>Part of the ${esc(era.label)} chapter</span>
+          <span>${esc(t("partOfChapter", { chapter: era.label }))}</span>
           <strong>${esc(era.title)}</strong>
         </a>
         <div class="fact-card">
@@ -1645,9 +1669,9 @@ function renderSources() {
       <h1>${esc(page.title)}</h1>
       <p class="lede">${esc(page.lede)}</p>
       <div class="page-hero__meta">
-        <span>${data.references.length} references</span>
-        <span>${credits.length} photo credits</span>
-        <span>Checked ${esc(site.updatedLabel)}</span>
+        <span>${esc(tCount("refCount", data.references.length))}</span>
+        <span>${esc(tCount("creditCount", credits.length))}</span>
+        <span>${esc(t("checkedOn", { date: site.updatedLabel }))}</span>
       </div>
     </div>
   </section>
@@ -1681,7 +1705,7 @@ function renderSources() {
 
   <section class="section section--paper-2">
     <div class="container">
-      ${sectionHead(t("photographCredits"), "Date, place, photographer, licence, and the file page for each image.")}
+      ${sectionHead(t("photographCredits"), t("creditSectionNote"))}
       <div class="credit-grid">
         ${credits
           .map(
@@ -1886,13 +1910,15 @@ function renderNotFound() {
    Sitemap, robots, index
    -------------------------------------------------------------------------- */
 
-function buildFeed() {
+function buildFeed(config) {
   const items = [];
+  const prefix = config.prefix || "";
+  const home = `${site.url}${prefix}/`;
 
   for (const note of data.fanNotes.notes) {
     items.push({
       title: note.title,
-      link: `${site.url}/fan-notes#${noteSlug(note.title)}`,
+      link: `${site.url}${prefix}/fan-notes#${noteSlug(note.title)}`,
       description: note.body[0] || note.tag,
       date: `${note.date} UTC`,
     });
@@ -1900,8 +1926,8 @@ function buildFeed() {
 
   for (const album of data.albums) {
     items.push({
-      title: `${album.title} — ${album.type}`,
-      link: `${site.url}/discography/${album.id}`,
+      title: `${album.title} — ${albumType(album.type)}`,
+      link: `${site.url}${prefix}/discography/${album.id}`,
       description: album.summary,
       date: `${album.year}-01-01`,
     });
@@ -1913,11 +1939,11 @@ function buildFeed() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>${esc(site.name)} — ${esc(site.tagline)}</title>
-  <link>${esc(site.url)}/</link>
+  <link>${esc(home)}</link>
   <description>${esc(site.description)}</description>
-  <language>en</language>
+  <language>${esc(config.intl)}</language>
   <lastBuildDate>${new Date(site.updated).toUTCString()}</lastBuildDate>
-  <atom:link href="${site.url}/feed.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="${esc(home)}feed.xml" rel="self" type="application/rss+xml" />
   ${items
     .map(
       (item) => `<item>
@@ -1933,7 +1959,7 @@ function buildFeed() {
 </rss>
 `;
 
-  writeFile("feed.xml", xml);
+  writeFile(`${config.prefix ? `${config.prefix.slice(1)}/` : ""}feed.xml`, xml);
 }
 
 function canonicalRoutes() {
@@ -2113,9 +2139,13 @@ function main() {
     renderAllRoutes();
   }
 
+  for (const item of enabledLocales()) {
+    setLocale(item.code);
+    buildFeed(item);
+  }
+
   setLocale(i18n.default);
   buildSitemap();
-  buildFeed();
   buildIndex();
 
   const pagefindLocal = path.join(ROOT, "node_modules", ".bin", "pagefind");
