@@ -1,0 +1,33 @@
+{
+  "default": "en",
+  "locales": [
+    {
+      "code": "en",
+      "prefix": "",
+      "name": "English",
+      "intl": "en-US",
+      "enabled": true
+    },
+    {
+      "code": "id",
+      "prefix": "/id",
+      "name": "Bahasa Indonesia",
+      "intl": "id-ID",
+      "enabled": true
+    },
+    {
+      "code": "es",
+      "prefix": "/es",
+      "name": "Español",
+      "intl": "es-ES",
+      "enabled": true
+    },
+    {
+      "code": "pt-br",
+      "prefix": "/pt-br",
+      "name": "Português (Brasil)",
+      "intl": "pt-BR",
+      "enabled": true
+    }
+  ]
+}
