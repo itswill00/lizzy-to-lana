@@ -1,0 +1,913 @@
+{
+  "ui": {
+    "nav": {
+      "journey": "Perjalanan",
+      "gallery": "Galeri",
+      "discography": "Diskografi",
+      "fanNotes": "Catatan penggemar",
+      "sources": "Sumber",
+      "about": "Tentang",
+      "search": "Pencarian"
+    },
+    "breadcrumbHome": "Beranda",
+    "skipLink": "Lewati ke konten",
+    "menu": "Menu",
+    "closeMenu": "Tutup menu",
+    "heroJourney": "Mulai perjalanan",
+    "heroGallery": "Jelajahi galeri",
+    "heroScroll": "Di dalam arsip",
+    "coverage": "Cakupan",
+    "allChapters": "Semua bab",
+    "timelineLink": "Buka perjalanan",
+    "galleryLink": "Lihat semua foto",
+    "discographyLink": "Diskografi lengkap",
+    "browse": "Jelajahi",
+    "released": "Dirilis",
+    "announced": "Diumumkan",
+    "creditedPhotographs": "foto berkredit",
+    "chapters": "bab",
+    "filterLabel": "Filter foto berdasarkan bab",
+    "filterAll": "Semua",
+    "showingItems": "Menampilkan {count} {label}.",
+    "readChapter": "Baca bab",
+    "releasesInChapter": "Rilis dalam bab ini",
+    "photographs": "Foto",
+    "prevNextChapters": "Bab sebelumnya dan berikutnya",
+    "aboutRelease": "Tentang rilis ini",
+    "tracklist": "Daftar trek",
+    "details": "Detail",
+    "sources": "Sumber",
+    "partOfChapter": "Bagian dari bab {chapter}",
+    "prevNextReleases": "Rilis sebelumnya dan berikutnya",
+    "noTracklist": "Belum ada daftar trek resmi",
+    "photographPending": "Foto belum tersedia",
+    "editorialRules": "Aturan editorial",
+    "openIssue": "Buka isu di GitHub",
+    "correctionsTakedowns": "Koreksi dan penghapusan",
+    "colophon": "Kolofon",
+    "disclaimer": "Penafian",
+    "browseIndex": "Jelajahi indeks tanpa pencarian:",
+    "searchPlaceholder": "Cari era, rilis, dan foto",
+    "zeroResults": "Tidak ada hasil untuk [SEARCH_TERM]. Coba judul album atau tahun.",
+    "manyResults": "[COUNT] hasil untuk [SEARCH_TERM]",
+    "oneResult": "1 hasil untuk [SEARCH_TERM]",
+    "searching": "Mencari…",
+    "copyCredit": "Salin kredit",
+    "copied": "Tersalin ✓",
+    "openPhoto": "Buka foto: {caption}",
+    "prevPhoto": "Foto sebelumnya",
+    "nextPhoto": "Foto berikutnya",
+    "closePhoto": "Tutup foto",
+    "sourceFile": "Berkas sumber",
+    "fullCredits": "Kredit dan lisensi lengkap",
+    "allPhotographs": "Semua foto",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "localeSwitcherLabel": "Ubah bahasa",
+    "suggestedLocale": "Sepertinya Anda lebih memilih {language}. Ganti?",
+    "dismiss": "Abaikan",
+    "photoCaptionPattern": "{date} · {place} · {credit}",
+    "footerExplore": "Jelajahi",
+    "footerArchive": "Arsip",
+    "footerElsewhere": "Di tempat lain",
+    "atAGlance": "Sekilas",
+    "close": "Tutup",
+    "contactDetails": "Detail kontak",
+    "enterChapter": "Masuk ke bab",
+    "noLicensedPhoto": "Belum ada foto berlisensi",
+    "openSourceList": "Buka daftar sumber",
+    "originalFilePage": "Halaman berkas asli",
+    "release": "Rilis",
+    "releases": "Rilis",
+    "standardEditions": "Edisi standar",
+    "startListening": "Mulai mendengarkan",
+    "verifyClaim": "Verifikasi klaim",
+    "year": "Tahun",
+    "type": "Jenis",
+    "label": "Label",
+    "status": "Status",
+    "licence": "Lisensi",
+    "sourcesAndCredits": "Sumber dan kredit",
+    "journeyIndex": "Perjalanan — sembilan bab",
+    "discographyIndex": "Diskografi — enam belas rilis",
+    "galleryIndex": "Galeri — seluruh foto",
+    "searchUnavailable": "Indeks pencarian tidak dapat dimuat. Jelajahi {journey}, {discography}, atau {gallery} sebagai gantinya.",
+    "searchFallbackHint": "Jelajahi indeks tanpa pencarian:",
+    "localeSwitcher": "Ubah bahasa",
+    "currentLanguage": "Bahasa saat ini",
+    "primaryNav": "Utama",
+    "mobileNav": "Seluler",
+    "homeAria": "{site} — beranda",
+    "searchAria": "Cari di arsip",
+    "brandHome": "Beranda",
+    "upcoming": "Diumumkan",
+    "releaseTableCaption": "Rilis dengan tahun, jenis, label, dan status",
+    "photographCredits": "Kredit foto",
+    "imagesFromChapter": "Gambar dari bab {chapter}.",
+    "galleryEraDescription": "Foto Lana Del Rey dari era {era} ({years}). Setiap gambar mencantumkan pembuat, sumber, dan lisensi.",
+    "licenseNoteText": "Lisensi yang digunakan dalam koleksi ini: CC BY 2.0, CC BY-SA 2.0, CC BY-SA 3.0, CC BY-SA 4.0, dan CC BY 4.0. Lisensi Creative Commons tidak menghapus kewajiban atribusi; setiap kartu menautkan ketentuan yang berlaku.",
+    "disclaimerExtra": "Foto digunakan berdasarkan lisensi terbuka yang ditautkan pada setiap gambar. Pemegang hak dapat meminta penghapusan melalui pelacak isu di atas.",
+    "prevNextGalleries": "Galeri sebelumnya dan berikutnya",
+    "fullCreditsLink": "Kredit dan lisensi lengkap",
+    "openJourney": "Buka perjalanan",
+    "itemLabel": "entri",
+    "itemsLabel": "entri",
+    "copyFailed": "Gagal menyalin",
+    "ogHomeKicker": "ARSIP PENGGEMAR TIDAK RESMI",
+    "ogHomeDesc": "{tagline} · Sembilan era, enam belas rilis",
+    "ogJourneyKicker": "PERJALANAN",
+    "ogJourneyDesc": "{count} bab · {years} · setiap rilis secara berurutan",
+    "ogEraKicker": "ERA {index} · {years}",
+    "ogGalleryKicker": "GALERI",
+    "ogGalleryDesc": "{count} gambar · semuanya berkredit dan berlisensi",
+    "ogGalleryEraKicker": "GALERI · {era}",
+    "ogGalleryEraTitle": "{era} dalam foto",
+    "ogGalleryEraDesc": "{count} foto · {years}",
+    "ogDiscographyKicker": "DISKOGRAFI",
+    "ogDiscographyDesc": "Album studio · EP · film · spoken word · belum dirilis",
+    "ogAlbumKicker": "DISKOGRAFI · {type}",
+    "ogAlbumDesc": "{year} · {status} · era {era}",
+    "ogFanNotesKicker": "CATATAN PENGGEMAR",
+    "ogFanNotesDesc": "Catatan editorial · koreksi · kebijakan foto",
+    "ogSourcesKicker": "SUMBER",
+    "ogSourcesDesc": "{refs} referensi · {photos} kredit foto",
+    "ogAboutKicker": "TENTANG",
+    "ogAboutDesc": "Arsip penggemar independen · kebijakan editorial dan foto",
+    "ogSearchKicker": "PENCARIAN",
+    "ogSearchDesc": "Era · rilis · foto · setiap halaman",
+    "og404Kicker": "404",
+    "og404Desc": "Coba perjalanan, galeri, atau halaman pencarian",
+    "releaseLabel": "rilis",
+    "releasesLabel": "rilis",
+    "photographLabel": "foto",
+    "photographsLabel": "foto",
+    "copyCreditFor": "Salin kredit untuk {caption}",
+    "accessed": "diakses"
+  },
+  "site": {
+    "tagline": "Arsip Penggemar",
+    "description": "Tanggal rilis, posisi tangga lagu, dan foto konser berkredit dari karier Lana Del Rey, 2008–2026.",
+    "disclaimer": "Lizzy to Lana adalah arsip penggemar tidak resmi. Arsip ini tidak berafiliasi dengan maupun mendapat dukungan dari Lana Del Rey atau label-labelnya. Foto tetap menjadi milik pembuat yang dicantumkan kreditnya dan digunakan berdasarkan lisensi yang ditautkan pada setiap gambar.",
+    "shortDisclaimer": "Arsip penggemar tidak resmi; tidak berafiliasi dengan Lana Del Rey atau label-labelnya.",
+    "photoPolicy": "Foto disimpan secara lokal dengan pembuat, halaman berkas, dan lisensi yang ditampilkan pada setiap gambar."
+  },
+  "home": {
+    "eyebrow": "Lizzy to Lana · Diperiksa 24 November 2026",
+    "title": "Lizzy to Lana",
+    "subtitle": "Arsip Penggemar",
+    "tagline": "Sembilan era karya rekaman Lana Del Rey, dari EP Kill Kill 2008 hingga Stove yang belum dirilis. Setiap foto mencantumkan fotografer, sumber, dan lisensinya.",
+    "intro": "Arsip ini mencakup sembilan periode, enam belas rilis, dan delapan belas foto konser dengan pembuat yang dicantumkan. Tanggal dan posisi tangga lagu diperiksa terhadap sumber yang dikutip.",
+    "heroPhoto": "hero-lana-2024",
+    "stats": [],
+    "highlights": [
+      "early",
+      "nfr",
+      "stove"
+    ],
+    "featuredAlbums": [
+      "born-to-die",
+      "norman-fucking-rockwell",
+      "ocean-blvd",
+      "stove"
+    ],
+    "galleryStrip": [
+      "early-bowery-2011",
+      "btd-cannes-2012",
+      "ultra-headshot-2014",
+      "stove-wembley-2025"
+    ],
+    "sections": {
+      "introTitle": "Cakupan arsip",
+      "introBody": [
+        "Sembilan periode, enam belas rilis, dan delapan belas foto konser dengan pembuat yang dicantumkan. Rilis terawal adalah EP Kill Kill (2008); entri terbaru adalah Stove, yang masih belum dirilis pada 24 November 2026.",
+        "Tanggal dan posisi tangga lagu merujuk ke referensi di halaman Sumber. Foto disimpan secara lokal dengan pembuat, halaman berkas, dan lisensi yang terlampir."
+      ],
+      "introAsideTitle": "Bagaimana fakta diperiksa",
+      "highlightsTitle": "Tiga bab untuk memulai",
+      "highlightsNote": "Rekaman awal, album 2019 bersama Jack Antonoff, dan proyek country yang masih belum dirilis.",
+      "timelineTitle": "Sembilan era, 2008–2026",
+      "galleryTitle": "Empat foto dari arsip",
+      "galleryNote": "Diambil antara 2011 dan 2025. Setiap foto membuka halaman eranya.",
+      "albumsTitle": "Empat rilis dari katalog",
+      "albumsNote": "Dipilih dari enam belas entri dalam diskografi."
+    },
+    "closing": {
+      "kicker": "Jelajahi",
+      "title": "Sembilan era, enam belas rilis",
+      "body": "Gunakan indeks perjalanan untuk mengikuti urutannya, atau cari berdasarkan judul, tahun, atau fotografer.",
+      "links": [
+        {
+          "label": "Buka perjalanan",
+          "href": "/journey"
+        },
+        {
+          "label": "Cari di arsip",
+          "href": "/search"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "journey": {
+      "eyebrow": "Perjalanan",
+      "title": "Sembilan era, 2008–2026",
+      "lede": "Urutannya dimulai dari EP Kill Kill (2008) dan Lana Del Ray (2010) hingga Did You Know That There's a Tunnel Under Ocean Blvd (2023) dan Stove yang belum dirilis.",
+      "note": "Tanggal yang dimaksud adalah tanggal rilis. Posisi tangga lagu berasal dari referensi yang tercantum di halaman Sumber."
+    },
+    "gallery": {
+      "eyebrow": "Galeri",
+      "title": "Delapan belas foto, 2011–2025",
+      "lede": "Setiap gambar memiliki fotografer, halaman berkas Wikimedia Commons, dan lisensi Creative Commons yang disebut namanya. Buka sebuah foto untuk melihat catatan lengkapnya.",
+      "note": "Dua periode menggunakan penanda sementara hingga tersedia foto dengan lisensi yang jelas."
+    },
+    "discography": {
+      "eyebrow": "Diskografi",
+      "title": "Enam belas rilis, 2008–2026",
+      "lede": "Album studio, EP, film pendek, rekaman spoken word, dan dua proyek yang telah diumumkan tetapi belum dirilis. Daftar trek mengikuti edisi standar.",
+      "note": "Trek bonus edisi deluxe dan regional dijelaskan dalam teks halaman, tidak ditambahkan ke daftar trek utama."
+    },
+    "sources": {
+      "eyebrow": "Sumber",
+      "title": "Daftar sumber",
+      "lede": "Tanggal rilis dan posisi tangga lagu berasal dari referensi di bawah ini. Foto memiliki daftar terpisah dengan pembuat, halaman berkas, dan lisensi.",
+      "note": "Wikipedia digunakan untuk menemukan wawancara, pengumuman, atau ulasan aslinya. Entri yang sensitif terhadap tanggal menampilkan tanggal terakhir diperiksa."
+    }
+  },
+  "fanNotes": {
+    "eyebrow": "Editorial",
+    "title": "Bagaimana arsip ini diperiksa",
+    "lede": "Dua aturan mengatur halaman-halaman ini: tanggal berasal dari sumber yang dikutip, dan foto harus memiliki pembuat serta lisensi yang disebut namanya.",
+    "notes": [
+      {
+        "title": "Bagaimana fakta diperiksa",
+        "date": "2026-11-24",
+        "status": "published",
+        "tag": "Editorial",
+        "body": [
+          "Tanggal rilis, posisi tangga lagu, atau pengumuman hanya dicatat jika ada sumber yang dikutip yang mendukungnya. Wikipedia dipakai untuk menemukan wawancara, pengumuman label, atau ulasan aslinya; halaman Sumber mencantumkan setiap referensi.",
+          "Proyek yang belum dirilis ditandai sebagai sementara. Stove dan album pendamping tanpa judul menampilkan tanggal saat status tersebut terakhir diperiksa: 24 November 2026. Koreksi dilakukan pada berkas data, lalu semua halaman yang memakai data itu dibangun ulang."
+        ]
+      },
+      {
+        "title": "Bagaimana foto dipilih",
+        "date": "2026-11-24",
+        "status": "published",
+        "tag": "Kebijakan foto",
+        "body": [
+          "Sebuah foto hanya digunakan jika pembuat, halaman berkas sumber, dan lisensinya terlihat di Wikimedia Commons. Setiap gambar disimpan secara lokal dan kreditnya ditampilkan pada ubin galeri serta dalam tampilan pembesar.",
+          "Dua periode tidak memiliki gambar yang memenuhi syarat dalam koleksi ini: tahun-tahun awal Lizzy Grant dan periode Chemtrails / Blue Banisters. Ubin keduanya ditandai sebagai penanda sementara."
+        ]
+      }
+    ],
+    "rules": [
+      "Tanggal ditautkan ke sumber yang disebut namanya.",
+      "Foto mencantumkan pembuat, halaman berkas, dan lisensi.",
+      "Material yang belum dirilis ditandai sementara dengan tanggal pemeriksaan.",
+      "Koreksi masuk ke berkas data, bukan ke HTML yang dihasilkan."
+    ],
+    "submit": {
+      "title": "Koreksi, penghapusan, dan foto berlisensi",
+      "body": "Kirim koreksi, permintaan penghapusan, atau tawaran foto berlisensi melalui pelacak isu publik. Sertakan URL halaman dan sumber yang Anda kutip.",
+      "contact": "Buka isu di GitHub",
+      "url": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction"
+    }
+  },
+  "about": {
+    "eyebrow": "Tentang",
+    "title": "Lizzy to Lana",
+    "lede": "Sumber rujukan untuk karya rekaman Lana Del Rey: sembilan era, enam belas rilis, dan delapan belas foto konser berkredit. Terakhir diperiksa 24 November 2026.",
+    "sections": [
+      {
+        "heading": "Isi arsip",
+        "body": [
+          "Sembilan halaman era, halaman album tersendiri, galeri dengan 18 foto berlisensi, daftar sumber, dan indeks pencarian. Rilis terawal adalah EP Kill Kill (2008); entri terbaru adalah Stove, yang masih belum dirilis pada 24 November 2026.",
+          "Setiap foto menampilkan pembuat, halaman berkas Commons, dan lisensinya. Tanggal dan posisi tangga lagu merujuk ke referensi di halaman Sumber."
+        ]
+      },
+      {
+        "heading": "Status",
+        "body": [
+          "Ini adalah arsip penggemar tidak resmi. Arsip ini tidak memiliki hubungan dengan Lana Del Rey, manajemennya, maupun label-labelnya.",
+          "Arsip ini tidak memuat lirik lengkap, kutipan buatan, atau spekulasi tentang kehidupan pribadi."
+        ]
+      },
+      {
+        "heading": "Pemeriksaan editorial",
+        "body": [
+          "Tanggal dan posisi tangga lagu diperiksa terhadap sumber yang dikutip dan, jika memungkinkan, pengumuman utama. Stove dan album pendampingnya mencantumkan tanggal 24 November 2026.",
+          "Rekaman yang belum dirilis ditandai sementara. Jika judul, daftar trek, atau tanggal belum dikonfirmasi, entri menyatakannya.",
+          "Terjemahan mungkin memuat kesalahan; koreksi dapat dilaporkan melalui GitHub Issues."
+        ]
+      },
+      {
+        "heading": "Foto",
+        "body": [
+          "Foto berasal dari Wikimedia Commons, disimpan secara lokal, dan disajikan dalam varian AVIF, WebP, dan JPEG. Setiap foto mencantumkan pembuat, halaman berkas, dan lisensi Creative Commons yang disebut namanya.",
+          "Dua periode tidak memiliki gambar yang memenuhi syarat dalam koleksi ini: tahun-tahun awal Lizzy Grant dan era Chemtrails / Blue Banisters. Ubin keduanya ditandai sebagai penanda sementara."
+        ]
+      },
+      {
+        "heading": "Koreksi",
+        "body": [
+          "Gunakan pelacak isu publik yang ditautkan di bawah. Sertakan URL halaman dan sumber untuk koreksi, atau halaman berkas dan lisensi untuk sebuah foto.",
+          "Pemegang hak dapat meminta penghapusan melalui pelacak yang sama."
+        ]
+      }
+    ],
+    "contact": {
+      "label": "Koreksi dan penghapusan",
+      "value": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction",
+      "note": "Pelacak isu publik untuk repositori proyek.",
+      "action": "Buka isu di GitHub"
+    },
+    "colophon": [
+      "HTML dan CSS statis yang dihasilkan dari satu berkas JSON dengan skrip build Node.",
+      "Font: Cormorant Garamond, Inter, dan Homemade Apple, di-host sendiri di bawah SIL Open Font License.",
+      "Foto dan kartu Open Graph dibuat dengan Python dan Pillow.",
+      "Pencarian: Pagefind, bawaan situs."
+    ]
+  },
+  "search": {
+    "eyebrow": "Pencarian",
+    "title": "Cari di arsip",
+    "lede": "Cari nama era, judul rilis, tanggal, dan keterangan foto.",
+    "note": "Kredit foto juga termasuk dalam indeks."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Halaman tidak ditemukan",
+    "lede": "Alamat itu tidak ada dalam arsip.",
+    "note": "Gunakan indeks perjalanan, galeri, atau pencarian untuk menemukan halaman."
+  },
+  "footer": {
+    "note": "Sembilan era karya rekaman Lana Del Rey, dengan sumber dan kredit foto. Diperiksa 24 November 2026.",
+    "columns": [
+      {
+        "title": "Jelajahi",
+        "links": [
+          {
+            "label": "Perjalanan",
+            "href": "/journey"
+          },
+          {
+            "label": "Galeri",
+            "href": "/gallery"
+          },
+          {
+            "label": "Diskografi",
+            "href": "/discography"
+          },
+          {
+            "label": "Pencarian",
+            "href": "/search"
+          }
+        ]
+      },
+      {
+        "title": "Arsip",
+        "links": [
+          {
+            "label": "Catatan penggemar",
+            "href": "/fan-notes"
+          },
+          {
+            "label": "Sumber",
+            "href": "/sources"
+          },
+          {
+            "label": "Tentang",
+            "href": "/about"
+          }
+        ]
+      },
+      {
+        "title": "Di tempat lain",
+        "links": [
+          {
+            "label": "Situs resmi",
+            "href": "https://www.lanadelrey.com/",
+            "external": true
+          },
+          {
+            "label": "Wikipedia",
+            "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
+            "external": true
+          },
+          {
+            "label": "Wikimedia Commons",
+            "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
+            "external": true
+          }
+        ]
+      }
+    ]
+  },
+  "eras": {
+    "early": {
+      "title": "Lizzy Grant dan rekaman awal",
+      "label": "Lizzy Grant",
+      "summary": "Paduan suara gereja, band sekolah, klub-klub Brooklyn, dan dua rekaman yang dibuat atas nama Lizzy Grant.",
+      "lede": "Elizabeth Woolridge Grant lahir di New York City pada 21 Juni 1985 dan besar di Lake Placid. Musik masuk lewat gereja dan sekolah, lalu klub-klub kecil di Brooklyn dan New Jersey, tempat ia tampil dengan nama antara lain Sparkle Jump Rope Queen dan Lizzy Grant.",
+      "sections": [
+        {
+          "heading": "Rilis pertama",
+          "body": [
+            "Setelah belajar filsafat di Fordham University, Grant bekerja sama dengan produser David Kahne. EP tiga lagu Kill Kill muncul pada Oktober 2008 lewat 5 Points Records; album Lana Del Ray menyusul pada Januari 2010.",
+            "Kedua rekaman dirilis atas namanya sendiri. Keduanya membuka kronologi, sebelum nama panggung dan debut di label besar."
+          ]
+        },
+        {
+          "heading": "Perubahan nama",
+          "body": [
+            "Rekaman Lizzy Grant sudah tidak dicetak lagi. Rilis berikutnya memakai nama Lana Del Rey, dengan produksi yang lebih luas dan video “Video Games” pada 2011.",
+            "Bab ini sengaja dipisahkan dari Born to Die karena kedua rekaman dibuat dengan nama berbeda dan dirilis oleh label berbeda."
+          ]
+        }
+      ]
+    },
+    "born-to-die": {
+      "title": "Born to Die, Paradise, dan nuansa terang-gelap",
+      "label": "Born to Die / Paradise",
+      "summary": "Video “Video Games” pada 2011, debut label besar pada Januari 2012, dan EP Paradise yang menyusul.",
+      "lede": "Video “Video Games” muncul pada 2011 dengan kesan Super 8 buatan sendiri dan refrain yang terasa lebih tua dari internet. Saat Born to Die dirilis pada Januari 2012, lagu itu sudah mengubah skala proyek ini.",
+      "sections": [
+        {
+          "heading": "Debut label besar",
+          "body": [
+            "Born to Die dirilis pada 27 Januari 2012 melalui Stranger, Interscope, dan Polydor. Edisi standar 12 trek memadukan baroque pop, trip hop, dan dawai; edisi deluxe menambahkan “Without You”, “Lolita”, dan “Lucky Ones”. Album ini mencapai posisi No. 2 di Billboard 200 dan memimpin tangga lagu di Australia, Prancis, Jerman, dan Inggris.",
+            "Pada Desember 2025, Billboard melaporkan bahwa Born to Die telah bertahan 618 minggu di Billboard 200, rentang terpanjang bagi album dari artis perempuan dalam sejarah tangga lagu tersebut."
+          ]
+        },
+        {
+          "heading": "Paradise dan film",
+          "body": [
+            "Paradise menyusul pada November 2012: delapan trek, termasuk “Ride”, “American”, “Cola”, dan “Gods & Monsters”, ditambah bonus iTunes “Burning Desire”. Tahun berikutnya, film pendek 27 menit Tropico merangkai “Body Electric”, “Gods & Monsters”, dan “Bel Air” menjadi narasi tiga bab.",
+            "Video dan sampulnya memakai citra Americana: motel, langit luas, dan pengambilan gambar panjang. “Young and Beautiful” serta remix Cedric Gervais atas “Summertime Sadness” membawa era ini ke film dan radio pada 2013."
+          ]
+        }
+      ]
+    },
+    "ultraviolence": {
+      "title": "Ultraviolence dan gitar",
+      "label": "Ultraviolence",
+      "summary": "Dirilis 13 Juni 2014 dengan Dan Auerbach sebagai kolaborator utama dan gitar yang dimainkan langsung di seluruh rekaman.",
+      "lede": "Ultraviolence dirilis pada 13 Juni 2014. Setelah skala orkestra Born to Die dan Paradise, album ketiga ini bergerak ke arah gitar langsung, ruang rock gurun, dan vokal yang lebih mentah, dengan Dan Auerbach dari the Black Keys sebagai kolaborator utama.",
+      "sections": [
+        {
+          "heading": "Rekaman ini",
+          "body": [
+            "Edisi standar 11 trek dibuka dengan “Cruel World” dan memuat “West Coast”, “Brooklyn Baby”, “Money Power Glory”, dan “The Other Woman”. Dan Auerbach memproduksi sebagian besar album bersama Del Rey.",
+            "Album ini debut di No. 1 di sebelas negara, termasuk Amerika Serikat, dan masuk lima besar di lebih dari dua puluh wilayah. Edisi deluxe menambahkan “Black Beauty”, “Guns and Roses”, dan “Florida Kilos”."
+          ]
+        },
+        {
+          "heading": "Di luar album",
+          "body": [
+            "Era ini juga menghasilkan “Big Eyes” dan “I Can Fly” untuk film Big Eyes (2014) karya Tim Burton.",
+            "Foto dalam bab ini berasal dari Coachella dan Rock en Seine pada 2014."
+          ]
+        }
+      ]
+    },
+    "honeymoon": {
+      "title": "Honeymoon dalam gerak lambat",
+      "label": "Honeymoon",
+      "summary": "Empat belas trek dirilis 18 September 2015, diproduksi oleh Del Rey bersama Rick Nowels dan Kieron Menzies.",
+      "lede": "Honeymoon hadir pada 18 September 2015: empat belas trek, 65 menit, dan langkah sadar kembali ke baroque pop Born to Die setelah Ultraviolence yang penuh gitar. Album ini diproduksi Del Rey bersama Rick Nowels dan Kieron Menzies.",
+      "sections": [
+        {
+          "heading": "Rekaman ini",
+          "body": [
+            "Album dibuka dengan lagu judul dan berlanjut melalui “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak”, dan “The Blackest Day”. “Burnt Norton” menempatkan petikan T. S. Eliot di atas selingan; “Don’t Let Me Be Misunderstood” menutup rekaman.",
+            "Album ini mencapai No. 2 di Billboard 200 dan masuk lima besar di lebih dari dua puluh negara. Del Rey memprodusinya bersama Rick Nowels dan Kieron Menzies."
+          ]
+        },
+        {
+          "heading": "Tur",
+          "body": [
+            "Endless Summer Tour membawa album ini ke seluruh Amerika Utara pada 2015, dengan Courtney Love dan Grimes pada beberapa tanggal. Pada 2016, Del Rey tampil pada “Starboy” karya the Weeknd.",
+            "Foto Honeymoon berasal dari Sasquatch! pada 2015. Foto-foto itu menampilkan Del Rey dari kejauhan di bawah lampu panggung."
+          ]
+        }
+      ]
+    },
+    "lust-for-life": {
+      "title": "Lust for Life dan pintu yang terbuka",
+      "label": "Lust for Life",
+      "summary": "Dirilis 21 Juli 2017 dengan penampilan tamu dari Stevie Nicks, the Weeknd, A$AP Rocky, dan Sean Ono Lennon.",
+      "lede": "Lust for Life dirilis pada 21 Juli 2017. Ini adalah album Del Rey pertama yang terdengar seperti percakapan bersama: the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, dan Sean Ono Lennon semuanya lewat di dalamnya.",
+      "sections": [
+        {
+          "heading": "Pemeran yang lebih luas",
+          "body": [
+            "Album 16 trek ini memuat “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love”, dan “Get Free”. Album ini memimpin tangga lagu di dua belas negara, termasuk AS dan Inggris, serta dinominasikan untuk Album Vokal Pop Terbaik di Grammy Awards ke-60.",
+            "Daftar kredit mencantumkan the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, dan Sean Ono Lennon di antara artis tamu."
+          ]
+        },
+        {
+          "heading": "Peralihan visual",
+          "body": [
+            "Video “Love” disutradarai oleh Rich Lee. Sampulnya menampilkan Del Rey di depan sebuah truk.",
+            "Foto festival 2017 dalam bab ini berasal dari Flow Festival di Helsinki dan KROQ Weenie Roast di California."
+          ]
+        }
+      ]
+    },
+    "nfr": {
+      "title": "Norman Fucking Rockwell! dan napas panjang",
+      "label": "Norman Fucking Rockwell!",
+      "summary": "Dirilis 30 Agustus 2019 bersama Jack Antonoff. Dinominasikan untuk Album Tahun Ini di Grammy Awards 2020.",
+      "lede": "Norman Fucking Rockwell! dirilis pada 30 Agustus 2019. Album penuh pertama dengan Jack Antonoff sebagai kolaborator utama ini mengganti sebagian maksimalisme awal dengan soft rock, piano, dan penulisan lagu yang lebih pelan serta lebih menyerupai percakapan.",
+      "sections": [
+        {
+          "heading": "Rekaman ini",
+          "body": [
+            "Album 14 trek ini memuat “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin’ Time”, “Cinnamon Girl”, “The Greatest”, dan “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+            "Album ini mencapai No. 1 di tujuh negara, termasuk Inggris, dan No. 3 di AS. Album ini dinominasikan untuk Album Tahun Ini di Grammy Awards ke-62 dan kemudian masuk dalam daftar 500 Album Terbaik Sepanjang Masa Rolling Stone."
+          ]
+        },
+        {
+          "heading": "Apresiasi",
+          "body": [
+            "Jack Antonoff menjadi produser utama album yang dirilis 30 Agustus 2019 ini.",
+            "Satu-satunya foto NFR dalam koleksi ini berasal dari Grammy Museum pada Oktober 2019, dipotret oleh Justin Higuchi."
+          ]
+        }
+      ]
+    },
+    "chemtrails": {
+      "title": "Chemtrails, Blue Banisters, dan rumah yang sunyi",
+      "label": "Chemtrails / Blue Banisters",
+      "summary": "Dua album yang dirilis berselang tujuh bulan pada 2021, disertai buku puisi dan rekaman spoken word.",
+      "lede": "Pada 2020, Del Rey menerbitkan Violet Bent Backwards over the Grass, kumpulan puisi dengan album spoken word pendampingnya. Chemtrails over the Country Club menyusul pada 19 Maret 2021; Blue Banisters hadir pada 22 Oktober 2021, hanya tujuh bulan kemudian.",
+      "sections": [
+        {
+          "heading": "Violet",
+          "body": [
+            "Album spoken word yang diproduksi bersama Jack Antonoff ini menempatkan 14 puisi di atas piano dan dawai yang jarang. Del Rey membacakan puisi-puisinya, bukan menyanyikannya.",
+            "Album ini muncul pada Juli 2020; bukunya, diterbitkan oleh Simon & Schuster, menyusul pada September. Keduanya dicantumkan bersama karena memakai teks yang sama."
+          ]
+        },
+        {
+          "heading": "Dua album",
+          "body": [
+            "Chemtrails adalah rekaman folk, country-folk, dan Americana dengan kontribusi dari Nikki Lane, Weyes Blood, dan Zella Day. Album ini debut di No. 1 di delapan negara, termasuk Inggris, dan No. 2 di AS.",
+            "Blue Banisters menyusul pada 22 Oktober 2021, tujuh bulan kemudian. Album ini mencapai No. 8 di AS dan No. 1 di Argentina dan Belanda."
+          ]
+        }
+      ]
+    },
+    "ocean-blvd": {
+      "title": "Ocean Blvd dan terowongan",
+      "label": "Ocean Blvd",
+      "summary": "Enam belas trek dirilis 24 Maret 2023, diproduksi bersama Jack Antonoff, Drew Erickson, dan Zach Dawes.",
+      "lede": "Did You Know That There's a Tunnel Under Ocean Blvd dirilis pada 24 Maret 2023. Dengan 16 trek dan hampir 78 menit, ini salah satu rekaman Del Rey yang paling padat, dengan produksi dari Jack Antonoff, Drew Erickson, Zach Dawes, dan lain-lain.",
+      "sections": [
+        {
+          "heading": "Rekaman ini",
+          "body": [
+            "Album ini memuat “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In”, dan “Taco Truck x VB”. Album ini menampilkan Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML, dan Riopy.",
+            "Album ini memimpin tangga lagu di delapan negara dan mencapai No. 3 di AS. Album ini mendapat nominasi Album Tahun Ini dan Album Musik Alternatif Terbaik di Grammy Awards ke-66."
+          ]
+        },
+        {
+          "heading": "Sebelum dan sesudah",
+          "body": [
+            "Pada 2022, “Snow on the Beach”, kolaborasi dengan Taylor Swift, menjadi entri Del Rey dengan posisi tertinggi di Billboard Hot 100 saat itu. Pada 2023, “Say Yes to Heaven”, yang direkam satu dekade sebelumnya, dirilis secara resmi.",
+            "Dengan durasi 77 menit 52 detik, Ocean Blvd adalah album terpanjang dalam arsip ini. Foto MITA adalah bidikan lebar hitam-putih dari penampilan Del Rey dengan kerumunan di depan, pada 2023."
+          ]
+        }
+      ]
+    },
+    "stove": {
+      "title": "Stove dan bab berikutnya",
+      "label": "Stove",
+      "summary": "Proyek country yang pertama kali diumumkan sebagai Lasso pada Januari 2024, berganti nama dua kali, dan masih belum dirilis pada 24 November 2026.",
+      "lede": "Bab berikutnya sudah diketahui publik lebih lama dari kebanyakan album. Pada Januari 2024, Del Rey mengumumkan proyek country bernama Lasso; pada November 2024 namanya menjadi The Right Person Will Stay, dan pada Agustus 2025 ia mengonfirmasi judul Stove. Hingga 24 November 2026, album ini belum dirilis.",
+      "sections": [
+        {
+          "heading": "Singel-singel",
+          "body": [
+            "“Henry, Come On” muncul pada 11 April 2025, disusul “Bluebird” pada 18 April 2025 dan “White Feather Hawk Tail Deer Hunter” pada 17 Februari 2026. Di Stagecoach pada April 2025, Del Rey membawakan “Stars Fell on Alabama”, “Quiet in the South”, dan “57.5”.",
+            "Rilisnya awalnya diharapkan pada September 2024, lalu Mei 2025, lalu awal 2026. Del Rey mengatakan penundaan itu terjadi karena penambahan materi baru."
+          ]
+        },
+        {
+          "heading": "Konteks yang lebih luas",
+          "body": [
+            "Pada 2024, “Tough” bersama Quavo dirilis. Pada 2026, Del Rey diumumkan sebagai penyanyi lagu tema game James Bond 007 First Light, dan ia tampil pada “Lies” karya Zach Bryan.",
+            "Pada 15 Juli 2026, ia mengatakan materi tambahan itu telah menjadi album pendamping tersendiri. Ilustrasi sampul mengisyaratkan judul Spyda; hingga 24 November 2026, belum ada judul final, daftar trek, atau tanggal rilis yang dikonfirmasi."
+          ]
+        }
+      ]
+    }
+  },
+  "albums": {
+    "kill-kill": {
+      "summary": "Rekaman publik pertama: tiga lagu, 13 menit, dan nama yang tidak bertahan lama.",
+      "narrative": [
+        "Kill Kill dirilis pada 21 Oktober 2008 atas nama Lizzy Grant. Diproduseri David Kahne, EP tiga trek ini memperkenalkan warna torch song dan citra trailer park yang kelak menjadi lebih jelas.",
+        "Ini rekaman kecil, tetapi merupakan titik awal arsip. Lagu judul, “Yayo”, dan “Gramma (Blue Ribbon Sparkler Trailer Heaven)” sudah memuat unsur-unsur — bingkai sinematik, kemewahan yang usang, dan jarak tipis dari masa kini — yang akan diperbesar album-album berikutnya."
+      ],
+      "tracklistNote": "Tiga trek. EP ini kemudian dimuat seluruhnya dalam album Lana Del Ray tahun 2010."
+    },
+    "lana-del-ray": {
+      "summary": "Album debut atas nama Lizzy Grant: 13 trek, ejaan yang berbeda, dan rekaman yang segera hilang dari pasaran.",
+      "narrative": [
+        "Lana Del Ray — perhatikan ejaannya — dirilis pada 4 Januari 2010 melalui 5 Points Records. Diproduseri David Kahne, album ini memuat 13 lagu, termasuk versi baru dari “Kill Kill”, “Gramma”, dan “Yayo”.",
+        "Album ini ditarik dari toko digital setelah Del Rey menandatangani kontrak dengan label besar; album ini tetap menjadi dokumen paling jelas dari proyek pra-“Video Games”. Judulnya kadang ditulis Lana Del Ray dan kadang Lana Del Rey; sampul album memakai Ray."
+      ],
+      "tracklistNote": "Edisi standar 13 trek."
+    },
+    "born-to-die": {
+      "summary": "Dirilis 27 Januari 2012. Dua belas trek pada edisi standar; edisi deluxe menambahkan tiga lagi.",
+      "narrative": [
+        "Born to Die dirilis pada 27 Januari 2012 melalui Interscope dan Polydor. Edisi standar memuat 12 trek; edisi deluxe menambahkan tiga lagi.",
+        "Album ini mencapai posisi No. 2 di Billboard 200. “Video Games”, “Born to Die”, dan “Blue Jeans” dirilis sebagai singel sebelum dan sekitar perilisan album."
+      ],
+      "tracklistNote": "Edisi standar. Edisi deluxe menambahkan “Without You”, “Lolita”, dan “Lucky Ones”."
+    },
+    "lana-del-rey-ep": {
+      "summary": "Pengenalan empat trek yang dirilis tepat sebelum album debut.",
+      "narrative": [
+        "EP Lana Del Rey dirilis pada 10 Januari 2012 melalui Stranger Records. Keempat treknya — “Video Games”, “Born to Die”, “Blue Jeans”, dan “Off to the Races” — merupakan pernyataan awal yang paling jelas tentang jangkauan proyek ini: satu hit buatan sendiri, satu balada layar lebar, satu lagu gitar bernuansa noir, dan satu kejutan yang mendekati rap.",
+        "Ini bukan rilis yang sama dengan album Lana Del Ray tahun 2010. Nama yang sama menjadi salah satu alasan mengapa diskografi awal memerlukan linimasa yang cermat."
+      ],
+      "tracklistNote": "Empat trek, total 17:19."
+    },
+    "paradise": {
+      "summary": "Delapan trek Americana layar lebar, ditambah bonus iTunes “Burning Desire”.",
+      "narrative": [
+        "Paradise dirilis pada 9 November 2012. Delapan treknya mencakup “Ride”, “American”, “Cola”, “Body Electric”, “Blue Velvet”, “Gods & Monsters”, “Yayo”, dan “Bel Air”; edisi iTunes menambahkan “Burning Desire”.",
+        "Album ini debut di posisi kesepuluh di Billboard 200 dan kemudian dikemas ulang bersama Born to Die sebagai The Paradise Edition. EP ini adalah jembatan paling langsung antara album debut dan film Tropico."
+      ],
+      "tracklistNote": "Delapan trek standar ditambah bonus iTunes “Burning Desire”."
+    },
+    "tropico": {
+      "summary": "Film pendek 27 menit yang dibangun di sekitar tiga lagu dari Paradise.",
+      "narrative": [
+        "Tropico adalah film pendek 27 menit yang disutradarai Anthony Mandler, tayang perdana pada Desember 2013. Film ini terbagi dalam tiga bab — “Body Electric”, “Gods & Monsters”, dan “Bel Air” — dan membingkai lagu-lagu itu sebagai kisah Adam dan Hawa yang longgar.",
+        "Film ini dicantumkan sebagai rilis film/soundtrack karena menempati kronologi 2012–13 antara Paradise dan Ultraviolence."
+      ],
+      "tracklistNote": "Tiga lagu dan film 27 menit."
+    },
+    "ultraviolence": {
+      "summary": "11 trek gitar langsung, rock gurun, dan vokal yang lebih tajam.",
+      "narrative": [
+        "Ultraviolence dirilis pada 13 Juni 2014. Diproduseri terutama bersama Dan Auerbach, edisi standar 11 treknya bergerak dari “Cruel World” ke “The Other Woman”, dengan “West Coast”, “Brooklyn Baby”, dan “Shades of Cool” di tengahnya.",
+        "Album ini debut di nomor satu di sebelas negara, termasuk AS, dan masuk lima besar di lebih dari dua puluh wilayah. Edisi deluxe menambahkan “Black Beauty”, “Guns and Roses”, dan “Florida Kilos”; edisi iTunes menambahkan “Is This Happiness”, dan edisi Jepang/Target menambahkan “Flipside”."
+      ],
+      "tracklistNote": "Edisi standar. Edisi deluxe dan edisi toko menambahkan “Black Beauty”, “Guns and Roses”, “Florida Kilos”, “Is This Happiness”, dan “Flipside” dalam berbagai kombinasi."
+    },
+    "honeymoon": {
+      "summary": "Kembali ke baroque pop dengan 14 trek dan durasi 65 menit, direkam bersama Rick Nowels dan Kieron Menzies.",
+      "narrative": [
+        "Honeymoon dirilis pada 18 September 2015. Diproduseri Del Rey bersama Rick Nowels dan Kieron Menzies, album ini menandai perpisahan dari Ultraviolence yang digerakkan gitar dan kembali ke baroque pop Born to Die dan Paradise.",
+        "Album dibuka dengan lagu judul lalu berjalan melalui “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak”, dan “The Blackest Day”. Album ini mencapai posisi kedua di Billboard 200 dan masuk lima besar di lebih dari dua puluh negara.",
+        "Endless Summer Tour menyusul pada 2015, dengan Courtney Love dan Grimes pada beberapa tanggal. Pada 2016, Del Rey tampil pada “Starboy” karya the Weeknd."
+      ],
+      "tracklistNote": "Edisi standar 14 trek."
+    },
+    "lust-for-life": {
+      "summary": "Rekaman kolaboratif 16 trek yang memimpin tangga lagu di dua belas negara dan mendapat nominasi Grammy.",
+      "narrative": [
+        "Lust for Life dirilis pada 21 Juli 2017. Album ini menampilkan the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks, dan Sean Ono Lennon, dan menandai kembalinya suara yang terinspirasi hip-hop dari Born to Die, berdampingan dengan tekstur folk dan trap-pop pertengahan 2010-an.",
+        "Album ini memimpin tangga lagu di dua belas negara, termasuk AS dan Inggris, serta dinominasikan untuk Album Vokal Pop Terbaik di Grammy Awards ke-60. Ke-16 treknya mencakup “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love”, dan “Get Free”."
+      ],
+      "tracklistNote": "Edisi standar 16 trek."
+    },
+    "norman-fucking-rockwell": {
+      "summary": "Dirilis 30 Agustus 2019. Empat belas trek, diproduksi bersama Jack Antonoff, dan dinominasikan untuk Album Tahun Ini di Grammy Awards 2020.",
+      "narrative": [
+        "Norman Fucking Rockwell! dirilis pada 30 Agustus 2019. Diproduseri terutama oleh Del Rey dan Jack Antonoff, dengan kontribusi tambahan dari Zach Dawes, Andrew Watt, dan Rick Nowels, album ini mengeksplorasi soft rock, psych-rock, dan balada piano.",
+        "Album 14 trek ini memuat “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin' Time”, “Cinnamon Girl”, “The Greatest”, dan “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+        "Album ini mencapai nomor satu di tujuh negara, termasuk Inggris, dan nomor tiga di AS. Album ini dinominasikan untuk Album Tahun Ini di Grammy Awards ke-62 dan kemudian masuk dalam daftar 500 Album Terbaik Sepanjang Masa Rolling Stone."
+      ],
+      "tracklistNote": "Edisi standar 14 trek. Judulnya sering disingkat menjadi NFR!."
+    },
+    "violet-bent-backwards-over-the-grass": {
+      "summary": "Kumpulan puisi dan album spoken word pendamping: 14 puisi, piano yang jarang, dan bentuk perhatian yang berbeda.",
+      "narrative": [
+        "Violet Bent Backwards over the Grass mulanya adalah kumpulan puisi yang diterbitkan Simon & Schuster pada 29 September 2020. Album spoken word pendampingnya muncul lebih awal, pada 28 Juli 2020, melalui Interscope dan Polydor, dengan musik oleh Jack Antonoff.",
+        "Ke-14 treknya adalah puisi, bukan lagu; sebaiknya rekaman ini didengar sebagai pembacaan, bukan album pop. Buku dan album saling terkait tetapi merupakan rilis terpisah, dan arsip mencantumkannya bersama karena berbagi suara dan momen yang sama."
+      ],
+      "tracklistNote": "Album spoken word; kumpulan puisi diterbitkan terpisah pada September 2020."
+    },
+    "chemtrails-over-the-country-club": {
+      "summary": "Folk, country-folk, dan Americana: rekaman yang lebih tenang bersama Nikki Lane, Weyes Blood, dan Zella Day.",
+      "narrative": [
+        "Chemtrails over the Country Club dirilis pada 19 Maret 2021. Del Rey mengajak Jack Antonoff sebagai ko-produser untuk sebagian besar album, sementara Rick Nowels memproduksi satu trek; album ini menampilkan Nikki Lane, Weyes Blood, dan Zella Day.",
+        "Album ini debut di nomor satu di delapan negara, termasuk Inggris, dan nomor dua di AS. Ke-11 treknya mencakup “White Dress”, “Chemtrails over the Country Club”, “Tulsa Jesus Freak”, “Let Me Love You like a Woman”, “Yosemite”, dan “For Free”."
+      ],
+      "tracklistNote": "Edisi standar 11 trek."
+    },
+    "blue-banisters": {
+      "summary": "Album 15 trek yang longgar dan merujuk pada diri sendiri, dirilis tujuh bulan setelah Chemtrails.",
+      "narrative": [
+        "Blue Banisters dirilis pada 22 Oktober 2021, tujuh bulan setelah Chemtrails over the Country Club. Album ini diproduksi Del Rey bersama Zachary Dawes, Drew Erickson, Loren Humphrey, Mike Dean, Barrie-James O'Neill, Rick Nowels, dan lain-lain.",
+        "Album 15 trek ini memuat “Text Book”, “Blue Banisters”, “Arcadia”, “Black Bathing Suit”, “Dealer”, dan “Wildflower Wildfire”. Album ini mencapai posisi kedelapan di Billboard 200 dan nomor satu di Argentina serta Belanda."
+      ],
+      "tracklistNote": "Edisi standar 15 trek."
+    },
+    "ocean-blvd": {
+      "summary": "Album 16 trek, 78 menit, tentang keluarga, ingatan, dan cerita yang kita bangun di sekitar keduanya.",
+      "narrative": [
+        "Did You Know That There's a Tunnel Under Ocean Blvd dirilis pada 24 Maret 2023. Album ini menampilkan produksi dari Del Rey, Mike Hermosa, Jack Antonoff, Drew Erickson, Zach Dawes, dan Benji Lysaght, serta kolaborasi dengan Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML, dan Riopy.",
+        "Album ini memuat “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In”, dan “Taco Truck x VB”. Album ini memimpin tangga lagu di delapan negara dan mencapai nomor tiga di AS.",
+        "Album ini dinominasikan untuk Album Tahun Ini dan Album Musik Alternatif Terbaik di Grammy Awards ke-66. Pada 2023, “Say Yes to Heaven” — lagu yang direkam satu dekade sebelumnya — akhirnya dirilis secara resmi."
+      ],
+      "tracklistNote": "Edisi standar 16 trek."
+    },
+    "stove": {
+      "summary": "Album studio kesepuluh: proyek country yang diumumkan dengan tiga judul, tertunda, dan masih menunggu hingga 24 November 2026.",
+      "narrative": [
+        "Stove pertama kali diumumkan pada Januari 2024 sebagai Lasso, berganti nama menjadi The Right Person Will Stay pada November 2024, dan dikonfirmasi sebagai Stove pada Agustus 2025. Del Rey menyebutnya rekaman country dan mengatakan bahwa album itu akan tetap dekat dengan karya awalnya.",
+        "Tiga singel telah dirilis: “Henry, Come On” (11 April 2025), “Bluebird” (18 April 2025), dan “White Feather Hawk Tail Deer Hunter” (17 Februari 2026). Di Stagecoach pada April 2025, ia membawakan tiga lagu baru — “Stars Fell on Alabama”, “Quiet in the South”, dan “57.5” — yang diperkirakan akan muncul di album.",
+        "Album itu tidak muncul pada awal 2026. Sebuah singel, “White Feather Hawk Tail Deer Hunter”, dirilis pada 17 Februari 2026. Pada 15 Juli 2026 Del Rey mengatakan album itu hampir selesai dan materi tambahannya telah menjadi rekaman pendamping tersendiri."
+      ],
+      "tracklistNote": "Belum ada daftar trek resmi yang dirilis. Singel yang dikonfirmasi adalah “Henry, Come On”, “Bluebird”, dan “White Feather Hawk Tail Deer Hunter”."
+    },
+    "companion-album": {
+      "summary": "Materi tambahan dari sesi Stove, diumumkan sebagai album terpisah pada Juli 2026.",
+      "narrative": [
+        "Pada 15 Juli 2026, Del Rey mengumumkan bahwa materi tambahan dari sesi Stove telah berkembang menjadi album pendamping. Pengumuman itu menyertakan sampul vinyl Stove dan sampul kedua yang menampilkan perahu bernama “Spyda”, yang mengisyaratkan kemungkinan judul.",
+        "Belum ada judul, daftar trek, atau tanggal rilis yang dikonfirmasi. Entri ini mencatat pengumuman dan tanggal pemeriksaan, 24 November 2026."
+      ],
+      "tracklistNote": "Belum ada judul, daftar trek, atau tanggal rilis resmi yang diumumkan."
+    }
+  },
+  "photos": {
+    "hero-lana-2024": {
+      "alt": "Lana Del Rey mengenakan atasan manik-manik, memegang mikrofon di panggung terbuka di Barcelona."
+    },
+    "early-bowery-2011": {
+      "alt": "Lana Del Rey bernyanyi ke mikrofon di panggung klub yang redup di New York."
+    },
+    "early-paradiso-2011": {
+      "alt": "Lana Del Rey di panggung Paradiso dengan balon pucat di atas penonton."
+    },
+    "btd-irving-plaza-2012": {
+      "alt": "Lana Del Rey berdiri dengan mikrofon di bawah lampu panggung putih di Irving Plaza."
+    },
+    "btd-cannes-2012": {
+      "alt": "Potret kepala dan bahu Lana Del Rey di festival film tahun 2012."
+    },
+    "btd-isle-of-wight-2012": {
+      "alt": "Lana Del Rey tampil di depan layar proyeksi besar di sebuah festival."
+    },
+    "ultra-coachella-2014": {
+      "alt": "Lana Del Rey memainkan gitar akustik di bawah lampu panggung merah."
+    },
+    "ultra-headshot-2014": {
+      "alt": "Potret dekat Lana Del Rey di depan mikrofon, diterangi dari samping."
+    },
+    "ultra-rock-en-seine-2014": {
+      "alt": "Lana Del Rey dengan gitar di panggung festival terbuka di Prancis."
+    },
+    "honeymoon-sasquatch-2015": {
+      "alt": "Sosok kecil Lana Del Rey di bawah lingkaran lampu panggung di atas kerumunan."
+    },
+    "honeymoon-sasquatch-2015-2": {
+      "alt": "Lana Del Rey di mikrofon dengan deretan lampu terang di belakangnya."
+    },
+    "lfl-flow-2017": {
+      "alt": "Lana Del Rey berpakaian gelap berdiri di panggung yang disinari cahaya pucat."
+    },
+    "lfl-kroq-2017": {
+      "alt": "Lana Del Rey memegang mikrofon dengan latar bernuansa merah muda."
+    },
+    "nfr-grammy-museum-2019": {
+      "alt": "Lana Del Rey bernyanyi ke mikrofon di aula museum kecil."
+    },
+    "ocean-mita-2023": {
+      "alt": "Bidikan lebar hitam-putih Lana Del Rey yang sedang tampil, dengan kerumunan di depan."
+    },
+    "stove-primavera-2024": {
+      "alt": "Lana Del Rey di panggung terbuka dengan dedaunan hijau di belakangnya."
+    },
+    "stove-wembley-2025": {
+      "alt": "Lana Del Rey tampil di bawah lampu merah muda dan merah di konser stadion."
+    },
+    "stove-wembley-detail-2025": {
+      "alt": "Tampilan dekat Lana Del Rey dalam profil di mikrofon pada malam Wembley yang sama."
+    },
+    "placeholder-childhood": {
+      "alt": "Penanda sementara untuk foto yang tidak tersedia dari tahun-tahun awal Lizzy Grant.",
+      "placeholderNote": "Mencari foto dengan lisensi jelas dari tahun-tahun sebelum 2011."
+    },
+    "placeholder-chemtrails": {
+      "alt": "Penanda sementara untuk foto yang tidak tersedia dari periode Chemtrails dan Blue Banisters.",
+      "placeholderNote": "Mencari foto konser atau pers dari 2020–2022 dengan lisensi yang disebut namanya."
+    }
+  },
+  "references": {
+    "wikipedia-lana": {
+      "category": "Referensi utama",
+      "note": "Biografi, ringkasan karier, dan rujukan ke wawancara serta pengumuman utama."
+    },
+    "wikipedia-discography": {
+      "category": "Referensi utama",
+      "note": "Kronologi rilis, posisi tangga lagu, dan ringkasan sertifikasi."
+    },
+    "official-site": {
+      "category": "Referensi utama",
+      "note": "Pengumuman resmi, informasi tur, dan tautan rilis."
+    },
+    "wikipedia-kill-kill": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit EP, tanggal rilis, dan daftar trek."
+    },
+    "wikipedia-lana-del-ray": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album debut, tanggal rilis, dan daftar trek."
+    },
+    "wikipedia-born-to-die": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, riwayat tangga lagu, dan edisi."
+    },
+    "wikipedia-lana-del-rey-ep": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit EP dan daftar empat trek."
+    },
+    "wikipedia-paradise": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit EP, tanggal rilis, dan daftar trek."
+    },
+    "wikipedia-tropico": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit film, durasi, dan lagu yang ditampilkan."
+    },
+    "wikipedia-ultraviolence": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, riwayat tangga lagu, dan edisi."
+    },
+    "wikipedia-honeymoon": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, riwayat tangga lagu, dan daftar trek."
+    },
+    "wikipedia-lust-for-life": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, kolaborator, dan riwayat tangga lagu."
+    },
+    "wikipedia-nfr": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, riwayat tangga lagu, dan daftar trek."
+    },
+    "wikipedia-violet": {
+      "category": "Halaman album dan rilis",
+      "note": "Detail buku dan album spoken word."
+    },
+    "wikipedia-chemtrails": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, kolaborator, dan riwayat tangga lagu."
+    },
+    "wikipedia-blue-banisters": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, riwayat tangga lagu, dan daftar trek."
+    },
+    "wikipedia-ocean-blvd": {
+      "category": "Halaman album dan rilis",
+      "note": "Kredit album, kolaborator, dan riwayat tangga lagu."
+    },
+    "wikipedia-stove": {
+      "category": "Halaman album dan rilis",
+      "note": "Status rilis, perubahan judul, singel, dan pengumuman album pendamping."
+    },
+    "vogue-2011": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Asal-usul nama panggung, dalam kata-kata Del Rey sendiri."
+    },
+    "artistdirect-2015": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Kutipan wawancara singkat tentang tahun 1950-an dan proses menulisnya."
+    },
+    "rollingstone-nfr": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Ulasan kontemporer atas album 2019."
+    },
+    "billboard-lasso": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Pengumuman proyek country pada Januari 2024."
+    },
+    "pitchfork-stove": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Konfirmasi judul dan jendela rilis pada Agustus 2025."
+    },
+    "pitchfork-henry": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Rilis singel pada April 2025."
+    },
+    "rollingstone-companion": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Pengumuman album pendamping pada Juli 2026."
+    },
+    "bbc-bond": {
+      "category": "Wawancara dan pengumuman",
+      "note": "Pengumuman lagu tema game pada April 2026."
+    },
+    "commons-lana": {
+      "category": "Fotografi",
+      "note": "Kategori sumber foto arsip. Halaman berkas dan lisensi masing-masing tercantum dalam kredit foto."
+    }
+  }
+}

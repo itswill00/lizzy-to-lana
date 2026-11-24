@@ -2183,19 +2183,23 @@
         "links": [
           {
             "href": "/journey",
-            "external": false
+            "external": false,
+            "label": "Journey"
           },
           {
             "href": "/gallery",
-            "external": false
+            "external": false,
+            "label": "Gallery"
           },
           {
             "href": "/discography",
-            "external": false
+            "external": false,
+            "label": "Discography"
           },
           {
             "href": "/search",
-            "external": false
+            "external": false,
+            "label": "Search"
           }
         ]
       },
@@ -2203,15 +2207,18 @@
         "links": [
           {
             "href": "/fan-notes",
-            "external": false
+            "external": false,
+            "label": "Fan notes"
           },
           {
             "href": "/sources",
-            "external": false
+            "external": false,
+            "label": "Sources"
           },
           {
             "href": "/about",
-            "external": false
+            "external": false,
+            "label": "About"
           }
         ]
       },
@@ -2219,15 +2226,18 @@
         "links": [
           {
             "href": "https://www.lanadelrey.com/",
-            "external": true
+            "external": true,
+            "label": "Official site"
           },
           {
             "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
-            "external": true
+            "external": true,
+            "label": "Wikipedia"
           },
           {
             "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
-            "external": true
+            "external": true,
+            "label": "Wikimedia Commons"
           }
         ]
       }

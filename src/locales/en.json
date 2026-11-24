@@ -141,7 +141,8 @@
     "releasesLabel": "releases",
     "photographLabel": "photograph",
     "photographsLabel": "photographs",
-    "copyCreditFor": "Copy credit for {caption}"
+    "copyCreditFor": "Copy credit for {caption}",
+    "accessed": "accessed"
   },
   "site": {
     "tagline": "A Fan Archive",
@@ -239,7 +240,7 @@
     "notes": [
       {
         "title": "How facts are checked",
-        "date": "24 November 2026",
+        "date": "2026-11-24",
         "status": "published",
         "tag": "Editorial",
         "body": [
@@ -249,7 +250,7 @@
       },
       {
         "title": "How photographs are selected",
-        "date": "24 November 2026",
+        "date": "2026-11-24",
         "status": "published",
         "tag": "Photo policy",
         "body": [

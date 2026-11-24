@@ -481,8 +481,9 @@ function footer() {
     </div>
     <div class="footer-bottom">
       <p class="footer-disclaimer">${esc(site.disclaimer)}</p>
-      <p>© ${year} ${esc(site.name)} · <a href="/sources">Sources</a> · <a href="/about">About</a></p>
+      <p>© ${year} ${esc(site.name)} · <a href="/sources">${esc(t("nav.sources"))}</a> · <a href="/about">${esc(t("nav.about"))}</a></p>
     </div>
+    ${localeSwitcher("footer")}
   </div>
 </footer>`;
 }
@@ -659,7 +660,6 @@ function layout(options) {
 ${localize(content)}
   </main>
   ${localize(footer())}
-  ${localeSwitcher("footer")}
   ${lightbox()}
   ${extraScripts}
   <script src="${assets.js}" defer></script>
@@ -1184,7 +1184,7 @@ function renderEra(era, index) {
           </ul>
         </div>
         <div class="fact-card">
-          <h2>Releases</h2>
+          <h2>${esc(t("releases"))}</h2>
           <ul class="aside-links">
             ${albums
               .map(
@@ -1543,7 +1543,7 @@ function renderFanNotes() {
             }">
           <div class="note-card__meta">
             <span class="note-card__tag">${esc(note.tag)}</span>
-            <span>${esc(note.date)}</span>
+            <span>${esc(formatDate(note.date))}</span>
           </div>
           <h2>${esc(note.title)}</h2>
           ${note.body.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("\n          ")}
@@ -1630,7 +1630,7 @@ function renderSources() {
               <span class="ref-list__title"><a href="${attr(
                 ref.url
               )}" target="_blank" rel="noopener noreferrer">${esc(ref.title)}</a></span>
-              <span class="ref-list__meta">${esc(ref.publisher)} · accessed ${esc(ref.accessed)}</span>
+              <span class="ref-list__meta">${esc(ref.publisher)} · ${esc(t("accessed"))} ${esc(formatDate(ref.accessed))}</span>
               <span class="ref-list__note">${esc(ref.note)}</span>
             </li>`
               )
