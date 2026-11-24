@@ -620,19 +620,6 @@ function buildAssets() {
   const orbit = fs.readFileSync(path.join(SRC, "lottie-orbit.json"), "utf8");
   assets.orbit = writeHashed("assets/data", "orbit", "json", orbit);
 
-  const heroVideoWebm = fs.readFileSync(path.join(ROOT, "assets", "video", "hero-loop.webm"));
-  const heroVideoMp4 = fs.readFileSync(path.join(ROOT, "assets", "video", "hero-loop.mp4"));
-  assets.videoWebm = writeHashed("assets/video", "hero-loop", "webm", heroVideoWebm);
-  assets.videoMp4 = writeHashed("assets/video", "hero-loop", "mp4", heroVideoMp4);
-  const heroVideoLargeWebm = fs.readFileSync(
-    path.join(ROOT, "assets", "video", "hero-loop-large.webm")
-  );
-  const heroVideoLargeMp4 = fs.readFileSync(
-    path.join(ROOT, "assets", "video", "hero-loop-large.mp4")
-  );
-  assets.videoLargeWebm = writeHashed("assets/video", "hero-loop-large", "webm", heroVideoLargeWebm);
-  assets.videoLargeMp4 = writeHashed("assets/video", "hero-loop-large", "mp4", heroVideoLargeMp4);
-
   writeFile("favicon.svg", fs.readFileSync(path.join(SRC, "favicon.svg")));
 
   writeFile(
@@ -675,12 +662,6 @@ function renderHome() {
       loading: "eager",
       fetchpriority: "high",
     })}
-      <video class="hero__video" data-hero-video width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
-        <source src="${assets.videoLargeMp4}" type="video/mp4" media="(min-width: 900px)">
-        <source src="${assets.videoLargeWebm}" type="video/webm" media="(min-width: 900px)">
-        <source src="${assets.videoMp4}" type="video/mp4">
-        <source src="${assets.videoWebm}" type="video/webm">
-      </video>
     </div>
     <div class="hero__shade"></div>
     <div class="hero__inner">
@@ -699,9 +680,7 @@ function renderHome() {
     <div class="hero__aside" aria-hidden="true">
       <div class="lottie-orbit" data-lottie="${assets.orbit}" data-lottie-lib="${assets.lottie}"></div>
     </div>
-    <p class="hero__credit">${creditLine(hero, { link: true })} <span class="hero__credit-note">· ${esc(
-      home.heroVideoNote
-    )}</span></p>
+    <p class="hero__credit">${creditLine(hero, { link: true })}</p>
   </section>
 
   <section class="section" id="archive">
@@ -1468,7 +1447,6 @@ function renderSources() {
           .join("\n        ")}
       </div>
       <p class="license-note">${esc(site.photoPolicy)} Licences used in this collection: CC BY 2.0, CC BY-SA 2.0, CC BY-SA 3.0, CC BY-SA 4.0, and CC BY 4.0. Creative Commons licences do not remove the need for attribution; each card links to the terms that apply.</p>
-      <p class="license-note">${esc(page.videoNote)}</p>
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
   </section>`;

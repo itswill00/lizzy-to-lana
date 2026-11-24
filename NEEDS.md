@@ -31,7 +31,3 @@ Every active photograph has `credit`, `source`, `license`, and `licenseUrl` in `
 
 - Grammy Museum 2019 → `LDR2019-cr.jpg` (Justin Higuchi, CC BY-SA 2.0)
 - Wembley 2025 → `stove-wembley-2025.jpg` and `stove-wembley-detail-2025.jpg` (Raph_PH, CC BY 4.0)
-
-## D. Hero video
-
-The silent eight-second loop is assembled in this repository from four photographs already credited in the gallery: `hero-lana-2024`, `ultra-headshot-2014`, `nfr-grammy-museum-2019`, and `stove-wembley-2025`. It uses no third-party footage or audio. The source entry `hero-video-loop` on the Sources page records the four creators and licences.

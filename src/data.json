@@ -93,8 +93,7 @@
           "href": "/search"
         }
       ]
-    },
-    "heroVideoNote": "Motion loop · credits in Sources."
+    }
   },
   "pages": {
     "journey": {
@@ -119,8 +118,7 @@
       "eyebrow": "Sources",
       "title": "Source list",
       "lede": "Release dates and chart positions come from the references below. Photographs have a separate list with creator, file page, and licence.",
-      "note": "Wikipedia is used to locate the underlying interview, announcement, or review. Date-sensitive entries show the date they were last checked.",
-      "videoNote": "The hero video is a silent loop assembled in this archive from four of the credited photographs above. It uses no third-party footage or audio."
+      "note": "Wikipedia is used to locate the underlying interview, announcement, or review. Date-sensitive entries show the date they were last checked."
     }
   },
   "footer": {
@@ -2675,15 +2673,6 @@
       "publisher": "Wikimedia Commons",
       "url": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
       "note": "Source category for the archive's photographs. Individual file pages and licences are listed in the photo credits.",
-      "accessed": "24 November 2026"
-    },
-    {
-      "id": "hero-video-loop",
-      "category": "Photography",
-      "title": "Hero loop source photographs",
-      "publisher": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
-      "note": "Eight-second silent loop assembled in this archive from four photographs already credited in the gallery: Primavera Sound 2024 (Raph_PH, CC BY 2.0), Coachella 2014 (Neon Tommy, CC BY-SA 2.0), Grammy Museum 2019 (Justin Higuchi, CC BY-SA 2.0), Wembley 2025 (Raph_PH, CC BY 4.0). No third-party footage, audio, or downloaded video.",
       "accessed": "24 November 2026"
     }
   ],
