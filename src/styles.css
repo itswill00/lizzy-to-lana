@@ -1322,6 +1322,9 @@ hr {
 }
 
 .release-table a {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 0.2rem;
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(90, 31, 43, 0.28);
@@ -3902,4 +3905,12 @@ figcaption a,
 
 #search {
   min-height: 280px;
+}
+
+.contact-box a {
+  color: var(--gold-bright);
+}
+
+.submit-card__contact a {
+  color: var(--gold-bright);
 }

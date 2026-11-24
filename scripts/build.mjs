@@ -854,7 +854,6 @@ function renderJourney() {
             return `<li class="journey-item">
           <a class="journey-item__link" href="/journey/${attr(era.id)}">
             <span>
-              <span class="journey-item__index">Chapter ${String(index + 1).padStart(2, "0")}</span>
               <span class="journey-item__year">${esc(era.years)}</span>
             </span>
             <span>
@@ -905,7 +904,7 @@ function renderEra(era, index) {
       <div class="era-hero">
         <div class="era-hero__copy">
           <p class="era-hero__years">${esc(era.years)}</p>
-          <p class="eyebrow">Chapter ${String(index + 1).padStart(2, "0")} · ${esc(era.label)}</p>
+          <p class="eyebrow">${esc(era.label)}</p>
           <h1>${esc(era.title)}</h1>
           <p class="lede">${esc(era.lede)}</p>
           <div class="link-row" style="margin-top: 1.5rem">
@@ -965,9 +964,7 @@ function renderEra(era, index) {
 
       <aside class="era-aside">
         <nav class="chapter-rail fact-card" aria-label="Chapters">
-          <p class="micro">Chapter ${String(index + 1).padStart(2, "0")} / ${String(
-            data.eras.length
-          ).padStart(2, "0")}</p>
+          <p class="micro">${esc(era.years)}</p>
           <ol>
             ${data.eras
               .map(
