@@ -32,6 +32,76 @@
     });
   });
 
+  const suggest = doc.querySelector("[data-locale-suggest]");
+
+  if (suggest) {
+    let saved = null;
+    try {
+      saved = window.localStorage.getItem("lizzy-locale");
+    } catch {
+      /* Storage can be unavailable. */
+    }
+
+    const currentConfig = I18N.locales.find((item) => item.code === I18N.locale);
+    const browser = (window.navigator.language || "").toLowerCase();
+    const matched = I18N.locales.find(
+      (item) =>
+        browser === item.intl.toLowerCase() ||
+        browser === item.code ||
+        browser.startsWith(`${item.code}-`)
+    );
+    const savedMatch = I18N.locales.find(
+      (item) => saved && item.code.toLowerCase() === String(saved).toLowerCase()
+    );
+    const target =
+      savedMatch && savedMatch.code !== I18N.locale
+        ? savedMatch
+        : matched && matched.code !== I18N.locale
+          ? matched
+          : null;
+
+    if (target) {
+      const key = `lizzy-locale-suggestion-${target.code}`;
+      let dismissed = null;
+      try {
+        dismissed = window.localStorage.getItem(key);
+      } catch {
+        /* Storage can be unavailable. */
+      }
+
+      if (!dismissed) {
+        const clean = currentConfig?.prefix && window.location.pathname.startsWith(currentConfig.prefix)
+          ? window.location.pathname.slice(currentConfig.prefix.length) || "/"
+          : window.location.pathname;
+        const targetPath = target.prefix
+          ? `${target.prefix}${clean === "/" ? "" : clean}`
+          : clean;
+
+        const text = suggest.querySelector("[data-locale-suggest-text]");
+        const link = suggest.querySelector("[data-locale-suggest-link]");
+        const close = suggest.querySelector("[data-locale-suggest-dismiss]");
+        if (text) text.textContent = savedMatch ? tr("suggestedSavedLocale", { language: target.name }) : tr("suggestedLocale", { language: target.name });
+        if (link) {
+          link.href = targetPath;
+          link.lang = target.intl;
+          link.hreflang = target.code;
+          link.textContent = target.name;
+        }
+        if (close) {
+          close.addEventListener("click", () => {
+            try {
+              window.localStorage.setItem(key, "1");
+            } catch {
+              /* Storage can be unavailable. */
+            }
+            suggest.hidden = true;
+          });
+        }
+        suggest.hidden = false;
+      }
+    }
+  }
+
   /* ------------------------------------------------------------------------
      Header shadow
      ------------------------------------------------------------------------ */

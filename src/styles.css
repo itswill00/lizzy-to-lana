@@ -3945,3 +3945,58 @@ figcaption a,
     display: flex;
   }
 }
+
+/* Language suggestion — small, dismissible, never an auto-redirect */
+.locale-suggest {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  padding: 0.6rem 0.7rem;
+  transform: translateX(-50%);
+  background: var(--midnight);
+  border: 1px solid var(--gold-bright);
+  box-shadow: var(--shadow-md);
+  color: var(--cream);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.locale-suggest[hidden] {
+  display: none;
+}
+
+.locale-suggest p {
+  margin: 0;
+}
+
+.locale-suggest a {
+  min-height: 24px;
+  color: var(--gold-bright);
+  text-decoration: underline;
+}
+
+.locale-suggest__close {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(246, 238, 226, 0.35);
+  color: var(--cream);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.locale-suggest__close:hover,
+.locale-suggest__close:focus-visible {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+}

@@ -92,7 +92,16 @@ const englishLeak = [
   "Previous photograph", "Next photograph", "Close photograph", "At a glance",
   "No official tracklist yet", "Photograph pending", "Source file", "Full credits and licences",
   "Change language", "Tracklist", "About this release", "Editorial rules",
+  ">Released<", ">Tracks<", ">Chart peak<", ">Standard tracks<", ">Deluxe tracks<",
+  ">Producers<", ">Length<", "as of 24 November 2026",
 ];
+const englishMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const sharedMonths = { en: [], id: ["April","September","October","November","December"], es: [], "pt-br": [] };
+function englishDatePatternFor(code) {
+  const months = englishMonths.filter((month) => !(sharedMonths[code] || []).includes(month));
+  if (!months.length) return null;
+  return new RegExp(`\\b\\d{1,2}\\s+(${months.join("|")})\\s+\\d{4}\\b|\\b(${months.join("|")})\\s+\\d{4}\\b`);
+}
 
 for (const item of LOCALES) {
   const titles = new Map();
@@ -162,6 +171,8 @@ for (const item of LOCALES) {
       for (const phrase of englishLeak) {
         if (plain.includes(phrase)) errors.push(`${label}: untranslated English phrase "${phrase}"`);
       }
+      const datePattern = englishDatePatternFor(item.code);
+      if (datePattern && datePattern.test(plain)) errors.push(`${label}: untranslated English date`);
     }
   }
 }

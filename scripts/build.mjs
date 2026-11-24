@@ -85,6 +85,31 @@ function formatDate(iso, intl = currentConfig().intl) {
   }).format(date);
 }
 
+const MONTHS = {
+  January: "01", February: "02", March: "03", April: "04", May: "05", June: "06",
+  July: "07", August: "08", September: "09", October: "10", November: "11", December: "12",
+};
+
+function localizeFactValue(value) {
+  let text = String(value);
+  text = text.replace(/\b(?:(\d{1,2})\s+)?(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b/g,
+    (_, day, month, year) =>
+      day
+        ? formatDate(`${year}-${MONTHS[month]}-${String(day).padStart(2, "0")}`)
+        : formatDate(`${year}-${MONTHS[month]}-01`));
+  const phrases = ui.factPhrases || {};
+  for (const phrase of Object.keys(phrases).sort((a, b) => b.length - a.length)) {
+    if (phrases[phrase]) text = text.split(phrase).join(phrases[phrase]);
+  }
+  return text;
+}
+
+function factLabel(label) {
+  const value = (ui.factLabels || {})[label];
+  if (!value) throw new Error(`i18n: missing fact label "${label}" in ${locale}`);
+  return value;
+}
+
 function canonicalPath(pathname) {
   const match = pathname.match(/^\/(?:id|es|pt-br)(?=\/|$)/);
   return match ? pathname.slice(match[0].length) || "/" : pathname;
@@ -237,7 +262,7 @@ function localeSwitcher(position) {
       const active = item.code === locale;
       return `<a href="@@LOCALE@@${attr(hrefFor(item.code, currentPath))}" hreflang="${attr(
         item.hreflang
-      )}" lang="${attr(item.hreflang)}"${active ? ' aria-current="true"' : ""}>${
+      )}" lang="${attr(item.hreflang)}"${active ? ' aria-current="page"' : ""}>${
         active ? `<span class="visually-hidden">${esc(t("currentLanguage"))}: </span>` : ""
       }${esc(item.name)}</a>`;
     })
@@ -597,7 +622,7 @@ function head(options) {
   <script>document.documentElement.classList.add("js");</script>
   <script>window.__I18N__=${JSON.stringify({
     locale,
-    locales: enabledLocales().map(({ code, name }) => ({ code, name })),
+    locales: enabledLocales().map(({ code, name, prefix, intl }) => ({ code, name, prefix, intl })),
     ui: Object.fromEntries(
       [
         "copyCredit",
@@ -618,6 +643,8 @@ function head(options) {
         "searching",
         "currentLanguage",
         "dismiss",
+        "suggestedLocale",
+        "suggestedSavedLocale",
       ].map((key) => [key, ui[key]])
     ),
   }).replace(/</g, "\\u003c")};</script>
@@ -653,6 +680,15 @@ function layout(options) {
 <body${bodyClass ? ` class="${attr(bodyClass)}"` : ""}>
   <a class="skip-link" href="#main">${esc(t("skipLink"))}</a>
   <div class="reading-progress" aria-hidden="true"><span data-progress-bar></span></div>
+  <div class="locale-suggest" data-locale-suggest role="status" aria-live="polite" hidden>
+    <p data-locale-suggest-text></p>
+    <a data-locale-suggest-link href="${attr(hrefFor(locale, pathname))}" lang="${attr(
+      locale
+    )}" hreflang="${attr(currentConfig().hreflang)}"></a>
+    <button class="locale-suggest__close" type="button" data-locale-suggest-dismiss aria-label="${attr(
+      t("dismiss")
+    )}">×</button>
+  </div>
   ${localize(header(pathname))}
   <main id="main" class="page-main" tabindex="-1"${
     noindex ? " data-pagefind-ignore" : " data-pagefind-body"
@@ -716,8 +752,8 @@ function albumCard(album) {
       <span class="album-card__type">${esc(album.type)}</span>
     </div>
     <h3 class="album-card__title">${esc(album.title)}</h3>
-    <p class="album-card__meta">${esc(album.released)}${
-      upcoming && album.released !== "Unreleased" ? " · Unreleased" : ""
+    <p class="album-card__meta">${esc(localizeFactValue(album.released))}${
+      upcoming && album.released !== "Unreleased" ? ` · ${esc(t("upcoming"))}` : ""
     }</p>
     <span class="album-card__initial" aria-hidden="true">${esc(album.title.charAt(0))}</span>
   </a>`;
@@ -766,7 +802,7 @@ function factList(facts) {
   return `<dl class="fact-list">${facts
     .map(
       (fact) =>
-        `<div><dt>${esc(fact.label)}</dt><dd>${esc(fact.value)}</dd></div>`
+        `<div><dt>${esc(factLabel(fact.label))}</dt><dd>${esc(localizeFactValue(fact.value))}</dd></div>`
     )
     .join("")}</dl>`;
 }
@@ -1445,7 +1481,7 @@ function renderAlbum(album, index) {
       <h1>${esc(title)}</h1>
       <p class="lede">${esc(album.summary)}</p>
       <ul class="release-meta">
-        <li>${esc(album.released)}</li>
+        <li>${esc(localizeFactValue(album.released))}</li>
         <li>${esc(album.label)}</li>
         <li>${album.status === "upcoming" ? esc(t("upcoming")) : esc(t("released"))}</li>
       </ul>
