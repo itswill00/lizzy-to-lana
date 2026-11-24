@@ -626,7 +626,7 @@ function head(options) {
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="${attr(`${fullTitle} — typographic card`)}">
+  <meta property="og:image:alt" content="${attr(t("ogCardAlt", { title: fullTitle }))}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${attr(fullTitle)}">
   <meta name="twitter:description" content="${attr(description)}">
@@ -1799,7 +1799,7 @@ function renderAbout() {
 
   return layout({
     pathname: "/about",
-    title: about.title,
+    title: about.eyebrow,
     description: about.lede,
     og: "about",
     crumbs,

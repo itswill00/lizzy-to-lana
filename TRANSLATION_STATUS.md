@@ -14,7 +14,7 @@ Checked on 24 November 2026. Build-time validation runs in `npm run check`; this
 - `/about` — editorial policy, status, and the translation-error note added per locale.
 - `/fan-notes` — factual notes about fact checking and photo licensing.
 - `/sources` — source categories and reference notes.
-- Every `/journey/[era]` and `/discography/[album]` — long-form translated prose; facts and tracklists come from `src/data.json` and are not translated.
+- Every `/journey/[era]` and `/discography/[album]` — long-form translated prose. Fact labels, fact values (dates and phrases), and album types now come from the locale files (`ui.factLabels`, `ui.factPhrases`, `ui.albumTypes`); raw IDs, chart numbers, album and song titles, and tracklists stay as-is.
 - Search page and 404 — short UI strings, easy to review.
 
 ## Rules for reviewers
@@ -23,3 +23,5 @@ Checked on 24 November 2026. Build-time validation runs in `npm run check`; this
 - Keep all placeholders (`{count}`, `{chapter}`, `[SEARCH_TERM]`, etc.) intact.
 - Flag any sentence that sounds like a literal rendering of English rather than natural editorial prose.
 - Corrections go into the locale JSON file and are rebuilt; never edit generated HTML.
+
+`npm run check` fails if a non-English page still shows an English UI phrase, an English-formatted date, or `"inLanguage":"en"`, so regressions surface before publishing. Each locale also has its own feed at `/feed.xml`, `/id/feed.xml`, `/es/feed.xml`, and `/pt-br/feed.xml`.

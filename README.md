@@ -97,7 +97,7 @@ See `NEEDS.md`. The remaining placeholders are: two era photographs under a clea
 ## Adding a language
 
 1. Add one entry to `src/i18n.json` with a unique `code`, URL `prefix`, native `name`, Intl tag, and `enabled` (start with `false` until the prose is complete).
-2. Copy `src/locales/en.json` to `src/locales/<code>.json` and translate every value. Keep keys and placeholders such as `{count}` untouched. Proper nouns (album/song titles, people, places, credit names, licence names) stay in their original form.
+2. Copy `src/locales/en.json` to `src/locales/<code>.json` and translate every value, including the `ui.albumTypes`, `ui.factLabels`, and `ui.factPhrases` maps (the labels and phrases used in the fact tables). Keep keys and placeholders such as `{count}` untouched. Proper nouns (album/song titles, people, places, credit names, licence names) stay in their original form.
 3. Run `npm run check`. The build fails if a locale is missing a key, has an empty string, or has an untranslated page.
 4. Set `enabled: true` only after the translation is complete, then rebuild and deploy.
 

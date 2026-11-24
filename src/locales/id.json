@@ -248,7 +248,8 @@
       "Upcoming album": "Album mendatang",
       "Upcoming studio album": "Album studio mendatang"
     },
-    "officialSite": "Situs resmi"
+    "officialSite": "Situs resmi",
+    "ogCardAlt": "{title} — kartu tipografis"
   },
   "site": {
     "tagline": "Arsip Penggemar",

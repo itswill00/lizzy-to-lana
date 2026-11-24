@@ -105,7 +105,7 @@ const englishLeak = [
   ">Studio album<", ">Spoken-word album<", ">Short film / soundtrack<", ">Upcoming album<",
   ">Upcoming studio album<", ">Official site<", ">Untitled companion album<",
   ">Spoken word / poetry<", "philosophy", "Title, tracklist, and release date TBA",
-  "and the Netherlands",
+  "and the Netherlands", "typographic card", "Lizzy to Lana · Lizzy to Lana",
 ];
 const englishMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const sharedMonths = { en: [], id: ["April","September","October","November","December"], es: [], "pt-br": [] };

@@ -248,7 +248,8 @@
       "Upcoming album": "Álbum próximo",
       "Upcoming studio album": "Álbum de estudio próximo"
     },
-    "officialSite": "Sitio oficial"
+    "officialSite": "Sitio oficial",
+    "ogCardAlt": "{title} — tarjeta tipográfica"
   },
   "site": {
     "tagline": "Un archivo de fans",

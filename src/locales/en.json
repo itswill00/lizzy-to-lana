@@ -248,7 +248,8 @@
       "Upcoming album": "Upcoming album",
       "Upcoming studio album": "Upcoming studio album"
     },
-    "officialSite": "Official site"
+    "officialSite": "Official site",
+    "ogCardAlt": "{title} — typographic card"
   },
   "site": {
     "tagline": "A Fan Archive",
