@@ -1471,6 +1471,7 @@ function renderSources() {
           .join("\n        ")}
       </div>
       <p class="license-note">${esc(site.photoPolicy)} Licences used in this collection: CC BY 2.0, CC BY-SA 2.0, CC BY-SA 3.0, CC BY-SA 4.0, and CC BY 4.0. Creative Commons licences do not remove the need for attribution; each card links to the terms that apply.</p>
+      <p class="license-note">${esc(page.videoNote)}</p>
       <p class="journey-note micro">${esc(page.note)}</p>
     </div>
   </section>`;

@@ -22,8 +22,8 @@ Updated: **24 November 2026**.
 | Final `Stove` release date | **TBA** as of 24 November 2026. Title history: `Lasso` → `The Right Person Will Stay` → `Stove` | Update the Stove era and album pages when the record is actually released. |
 | Companion album title | Unconfirmed; announced as a companion album in July 2026 | Update when the official title, tracklist, and date are announced. |
 | 007 First Light theme | Listed from Wikipedia and BBC reporting | Add a direct publisher or artist announcement link if one is published. |
-| Archive keeper's note | Placeholder text in `fanNotes.notes[0]` | Replace with a short public note written for readers. |
-| Contact email | Public GitHub Issues link in `src/data.json` | Deliberately no invented address. Replace with a real email if you want one. |
+| Keeper's own note | No keeper anecdote or personal note on the site | If you want one, write it yourself; none was invented for the de-slop pass. |
+| Contact email | Public GitHub Issues link in `src/data.json` (repo is public, Issues enabled, checked 24 November 2026) | Deliberately no invented address. Add a real email only if you want one. |
 
 ## C. Photo credits
 
@@ -31,3 +31,7 @@ Every active photograph has `credit`, `source`, `license`, and `licenseUrl` in `
 
 - Grammy Museum 2019 → `LDR2019-cr.jpg` (Justin Higuchi, CC BY-SA 2.0)
 - Wembley 2025 → `stove-wembley-2025.jpg` and `stove-wembley-detail-2025.jpg` (Raph_PH, CC BY 4.0)
+
+## D. Hero video
+
+The silent eight-second loop is assembled in this repository from four photographs already credited in the gallery: `hero-lana-2024`, `ultra-headshot-2014`, `nfr-grammy-museum-2019`, and `stove-wembley-2025`. It uses no third-party footage or audio. The source entry `hero-video-loop` on the Sources page records the four creators and licences.

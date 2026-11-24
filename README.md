@@ -24,6 +24,8 @@ Live site: <https://blog.wldnanatayya.com>
 | `deploy/deploy.sh` | Build-aware atomic release swap. |
 | `deploy/rollback.sh` | Point `current` at an older release. |
 | `AUDIT.md` | Baseline audit findings. |
+| `AUDIT-SLOP.md` | Pre-edit audit of template-like copy, layout, and motion. |
+| `REFERENCES.md` | Design, writing, and AI-slop references used for the de-slop pass. |
 | `NEEDS.md` | Remaining photo and content placeholders. |
 
 ## Requirements
