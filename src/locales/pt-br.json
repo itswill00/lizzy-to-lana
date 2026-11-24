@@ -1,0 +1,912 @@
+{
+  "ui": {
+    "nav": {
+      "journey": "Jornada",
+      "gallery": "Galeria",
+      "discography": "Discografia",
+      "fanNotes": "Notas de fã",
+      "sources": "Fontes",
+      "about": "Sobre",
+      "search": "Buscar"
+    },
+    "breadcrumbHome": "Início",
+    "skipLink": "Ir para o conteúdo",
+    "menu": "Menu",
+    "closeMenu": "Fechar menu",
+    "heroJourney": "Começar a jornada",
+    "heroGallery": "Explorar a galeria",
+    "heroScroll": "Dentro do arquivo",
+    "coverage": "Cobertura",
+    "allChapters": "Todos os capítulos",
+    "timelineLink": "Abrir a jornada",
+    "galleryLink": "Ver todas as fotografias",
+    "discographyLink": "Discografia completa",
+    "browse": "Explorar",
+    "released": "Lançado",
+    "announced": "Anunciado",
+    "creditedPhotographs": "fotografias creditadas",
+    "chapters": "capítulos",
+    "filterLabel": "Filtrar fotografias por capítulo",
+    "filterAll": "Todas",
+    "showingItems": "Exibindo {count} {label}.",
+    "readChapter": "Ler o capítulo",
+    "releasesInChapter": "Lançamentos neste capítulo",
+    "photographs": "Fotografias",
+    "prevNextChapters": "Capítulo anterior e seguinte",
+    "aboutRelease": "Sobre este lançamento",
+    "tracklist": "Lista de faixas",
+    "details": "Detalhes",
+    "sources": "Fontes",
+    "partOfChapter": "Parte do capítulo {chapter}",
+    "prevNextReleases": "Lançamento anterior e seguinte",
+    "noTracklist": "Ainda não há uma lista de faixas oficial",
+    "photographPending": "Fotografia pendente",
+    "editorialRules": "Regras editoriais",
+    "openIssue": "Abrir uma issue no GitHub",
+    "correctionsTakedowns": "Correções e retiradas",
+    "colophon": "Colofão",
+    "disclaimer": "Aviso legal",
+    "browseIndex": "Navegue pelo índice sem busca:",
+    "searchPlaceholder": "Busque eras, lançamentos e fotografias",
+    "zeroResults": "Nenhum resultado para [SEARCH_TERM]. Tente o título de um álbum ou um ano.",
+    "manyResults": "[COUNT] resultados para [SEARCH_TERM]",
+    "oneResult": "1 resultado para [SEARCH_TERM]",
+    "searching": "Buscando…",
+    "copyCredit": "Copiar crédito",
+    "copied": "Copiado ✓",
+    "openPhoto": "Abrir fotografia: {caption}",
+    "prevPhoto": "Fotografia anterior",
+    "nextPhoto": "Próxima fotografia",
+    "closePhoto": "Fechar fotografia",
+    "sourceFile": "Arquivo de origem",
+    "fullCredits": "Créditos e licenças completos",
+    "allPhotographs": "Todas as fotografias",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "localeSwitcherLabel": "Alterar idioma",
+    "suggestedLocale": "Parece que você prefere {language}. Alternar?",
+    "dismiss": "Dispensar",
+    "photoCaptionPattern": "{date} · {place} · {credit}",
+    "footerExplore": "Explorar",
+    "footerArchive": "Arquivo",
+    "footerElsewhere": "Outros sites",
+    "atAGlance": "Visão geral",
+    "close": "Fechar",
+    "contactDetails": "Dados de contato",
+    "enterChapter": "Entrar no capítulo",
+    "noLicensedPhoto": "Ainda não há fotografia licenciada",
+    "openSourceList": "Abrir a lista de fontes",
+    "originalFilePage": "Página do arquivo original",
+    "release": "Lançamento",
+    "releases": "Lançamentos",
+    "standardEditions": "Edições padrão",
+    "startListening": "Começar a ouvir",
+    "verifyClaim": "Verificar uma informação",
+    "year": "Ano",
+    "type": "Tipo",
+    "label": "Gravadora",
+    "status": "Status",
+    "licence": "Licença",
+    "sourcesAndCredits": "Fontes e créditos",
+    "journeyIndex": "Jornada — todos os nove capítulos",
+    "discographyIndex": "Discografia — todos os dezesseis lançamentos",
+    "galleryIndex": "Galeria — todas as fotografias",
+    "searchUnavailable": "Não foi possível carregar o índice de busca. Navegue pela {journey}, pela {discography} ou pela {gallery}.",
+    "searchFallbackHint": "Navegue pelo índice sem busca:",
+    "localeSwitcher": "Alterar idioma",
+    "currentLanguage": "Idioma atual",
+    "primaryNav": "Principal",
+    "mobileNav": "Móvel",
+    "homeAria": "{site} — início",
+    "searchAria": "Buscar no arquivo",
+    "brandHome": "Início",
+    "upcoming": "Anunciado",
+    "releaseTableCaption": "Lançamentos com ano, tipo, gravadora e status",
+    "photographCredits": "Créditos das fotografias",
+    "imagesFromChapter": "Imagens do capítulo {chapter}.",
+    "galleryEraDescription": "Fotografias de Lana Del Rey da era {era} ({years}). Cada imagem traz criador, fonte e licença identificados.",
+    "licenseNoteText": "Licenças usadas nesta coleção: CC BY 2.0, CC BY-SA 2.0, CC BY-SA 3.0, CC BY-SA 4.0 e CC BY 4.0. As licenças Creative Commons não dispensam a atribuição de crédito; cada cartão traz um link para os termos aplicáveis.",
+    "disclaimerExtra": "As fotografias são usadas sob as licenças abertas indicadas em cada imagem. Os detentores dos direitos podem pedir a remoção pelo rastreador de problemas indicado acima.",
+    "prevNextGalleries": "Galeria anterior e seguinte",
+    "fullCreditsLink": "Créditos e licenças completos",
+    "openJourney": "Abrir a jornada",
+    "itemLabel": "item",
+    "itemsLabel": "itens",
+    "copyFailed": "Falha ao copiar",
+    "ogHomeKicker": "ARQUIVO DE FÃ NÃO OFICIAL",
+    "ogHomeDesc": "{tagline} · Nove eras, dezesseis lançamentos",
+    "ogJourneyKicker": "A JORNADA",
+    "ogJourneyDesc": "{count} capítulos · {years} · todos os lançamentos em ordem",
+    "ogEraKicker": "ERA {index} · {years}",
+    "ogGalleryKicker": "A GALERIA",
+    "ogGalleryDesc": "{count} imagens · todas com crédito e licença",
+    "ogGalleryEraKicker": "GALERIA · {era}",
+    "ogGalleryEraTitle": "{era} em fotografias",
+    "ogGalleryEraDesc": "{count} fotografias · {years}",
+    "ogDiscographyKicker": "DISCOGRAFIA",
+    "ogDiscographyDesc": "Álbuns de estúdio · EPs · filme · poesia falada · inéditos",
+    "ogAlbumKicker": "DISCOGRAFIA · {type}",
+    "ogAlbumDesc": "{year} · {status} · era {era}",
+    "ogFanNotesKicker": "NOTAS DE FÃ",
+    "ogFanNotesDesc": "Notas editoriais · correções · política de fotos",
+    "ogSourcesKicker": "FONTES",
+    "ogSourcesDesc": "{refs} referências · {photos} créditos de fotos",
+    "ogAboutKicker": "SOBRE",
+    "ogAboutDesc": "Um arquivo de fã independente · política editorial e de fotos",
+    "ogSearchKicker": "BUSCA",
+    "ogSearchDesc": "Eras · lançamentos · fotografias · todas as páginas",
+    "og404Kicker": "404",
+    "og404Desc": "Experimente a jornada, a galeria ou a página de busca",
+    "releaseLabel": "lançamento",
+    "releasesLabel": "lançamentos",
+    "photographLabel": "fotografia",
+    "photographsLabel": "fotografias",
+    "copyCreditFor": "Copiar crédito de {caption}",
+    "accessed": "acessado"
+  },
+  "site": {
+    "tagline": "Um arquivo de fã",
+    "description": "Datas de lançamento, posições nas paradas e fotografias de shows creditadas da carreira de Lana Del Rey, 2008–2026.",
+    "disclaimer": "Lizzy to Lana é um arquivo de fã não oficial. Não tem afiliação com Lana Del Rey nem com suas gravadoras, e não conta com o endosso delas. As fotografias continuam sendo propriedade de seus criadores creditados e são usadas sob as licenças indicadas em cada imagem.",
+    "shortDisclaimer": "Arquivo de fã não oficial; sem afiliação com Lana Del Rey ou suas gravadoras.",
+    "photoPolicy": "As fotografias são armazenadas localmente, com criador, página do arquivo e licença exibidos em cada imagem."
+  },
+  "home": {
+    "eyebrow": "Lizzy to Lana · Verificado em 24 de novembro de 2026",
+    "title": "Lizzy to Lana",
+    "subtitle": "Um arquivo de fã",
+    "tagline": "Nove eras da obra gravada de Lana Del Rey, do EP Kill Kill, de 2008, ao inédito Stove. Toda fotografia traz seu fotógrafo, fonte e licença.",
+    "intro": "O arquivo cobre nove períodos, dezesseis lançamentos e dezoito fotografias de shows com criadores identificados. Datas e posições nas paradas são conferidas com as fontes citadas.",
+    "heroPhoto": "hero-lana-2024",
+    "stats": [],
+    "highlights": [
+      "early",
+      "nfr",
+      "stove"
+    ],
+    "featuredAlbums": [
+      "born-to-die",
+      "norman-fucking-rockwell",
+      "ocean-blvd",
+      "stove"
+    ],
+    "galleryStrip": [
+      "early-bowery-2011",
+      "btd-cannes-2012",
+      "ultra-headshot-2014",
+      "stove-wembley-2025"
+    ],
+    "sections": {
+      "introTitle": "O que o arquivo cobre",
+      "introBody": [
+        "Nove períodos, dezesseis lançamentos e dezoito fotografias de shows com criadores identificados. O lançamento mais antigo é o EP Kill Kill (2008); a entrada mais recente é Stove, ainda inédito em 24 de novembro de 2026.",
+        "Datas e posições nas paradas remetem às referências da página Fontes. As fotografias são armazenadas localmente, com criador, página do arquivo e licença anexados."
+      ],
+      "introAsideTitle": "Como os fatos são verificados",
+      "highlightsTitle": "Três capítulos para começar",
+      "highlightsNote": "Os primeiros registros, o álbum de 2019 com Jack Antonoff e o projeto country que continua inédito.",
+      "timelineTitle": "Nove eras, 2008–2026",
+      "galleryTitle": "Quatro fotografias do arquivo",
+      "galleryNote": "Feitas entre 2011 e 2025. Cada uma abre a página de sua era.",
+      "albumsTitle": "Quatro lançamentos do catálogo",
+      "albumsNote": "Selecionados entre as dezesseis entradas da discografia."
+    },
+    "closing": {
+      "kicker": "Explorar",
+      "title": "Nove eras, dezesseis lançamentos",
+      "body": "Use o índice da jornada para seguir a sequência ou busque por título, ano ou fotógrafo.",
+      "links": [
+        {
+          "label": "Abrir a jornada",
+          "href": "/journey"
+        },
+        {
+          "label": "Buscar no arquivo",
+          "href": "/search"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "journey": {
+      "eyebrow": "Jornada",
+      "title": "Nove eras, 2008–2026",
+      "lede": "A sequência vai do EP Kill Kill (2008) e Lana Del Ray (2010) até Did You Know That There's a Tunnel Under Ocean Blvd (2023) e o inédito Stove.",
+      "note": "As datas são datas de lançamento. As posições nas paradas vêm das referências listadas na página Fontes."
+    },
+    "gallery": {
+      "eyebrow": "Galeria",
+      "title": "Dezoito fotografias, 2011–2025",
+      "lede": "Cada imagem tem fotógrafo, página de arquivo no Wikimedia Commons e uma licença Creative Commons identificada. Abra uma fotografia para ver o registro completo.",
+      "note": "Dois períodos usam um marcador provisório até que haja uma fotografia com licença clara."
+    },
+    "discography": {
+      "eyebrow": "Discografia",
+      "title": "Dezesseis lançamentos, 2008–2026",
+      "lede": "Álbuns de estúdio, EPs, um curta-metragem, um disco de poesia falada e dois projetos anunciados, mas inéditos. As listas de faixas seguem as edições padrão.",
+      "note": "Faixas bônus deluxe e regionais são descritas no texto da página, não acrescentadas à lista de faixas principal."
+    },
+    "sources": {
+      "eyebrow": "Fontes",
+      "title": "Lista de fontes",
+      "lede": "Datas de lançamento e posições nas paradas vêm das referências abaixo. As fotografias têm uma lista separada, com criador, página do arquivo e licença.",
+      "note": "A Wikipedia é usada para localizar a entrevista, o anúncio ou a resenha originais. As entradas sensíveis a datas mostram quando foram verificadas pela última vez."
+    }
+  },
+  "fanNotes": {
+    "eyebrow": "Editorial",
+    "title": "Como este arquivo é verificado",
+    "lede": "Duas regras orientam estas páginas: as datas vêm de fontes citadas, e as fotografias precisam de criador e licença identificados.",
+    "notes": [
+      {
+        "title": "Como os fatos são verificados",
+        "date": "24 de novembro de 2026",
+        "status": "published",
+        "tag": "Editorial",
+        "body": [
+          "Uma data de lançamento, posição nas paradas ou anúncio só é registrado quando uma fonte citada o sustenta. A Wikipedia é usada para encontrar a entrevista, o comunicado da gravadora ou a resenha originais; a página Fontes lista cada referência.",
+          "Projetos inéditos são marcados como provisórios. Stove e o álbum complementar sem título mostram a data em que cada situação foi verificada: 24 de novembro de 2026. As correções são feitas no arquivo de dados, e todas as páginas que usam o fato são reconstruídas."
+        ]
+      },
+      {
+        "title": "Como as fotografias são selecionadas",
+        "date": "24 de novembro de 2026",
+        "status": "published",
+        "tag": "Política de fotos",
+        "body": [
+          "Uma fotografia só é usada quando seu criador, a página do arquivo de origem e a licença estão visíveis no Wikimedia Commons. Cada imagem é armazenada localmente e mostra seu crédito no cartão da galeria e na janela de ampliação.",
+          "Dois períodos não têm imagem qualificada nesta coleção: os primeiros anos de Lizzy Grant e o período de Chemtrails / Blue Banisters. Seus cartões estão marcados como provisórios."
+        ]
+      }
+    ],
+    "rules": [
+      "As datas são vinculadas a uma fonte identificada.",
+      "As fotografias trazem criador, página do arquivo e licença.",
+      "Material inédito é marcado como provisório, com a data da verificação.",
+      "Correções vão para o arquivo de dados, não para o HTML gerado."
+    ],
+    "submit": {
+      "title": "Correções, retiradas e fotografias licenciadas",
+      "body": "Envie uma correção, um pedido de retirada ou a oferta de uma fotografia licenciada pelo rastreador público de problemas. Inclua a URL da página e a fonte que você cita.",
+      "contact": "Abrir uma issue no GitHub",
+      "url": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction"
+    }
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "title": "Lizzy to Lana",
+    "lede": "Uma referência sobre a obra gravada de Lana Del Rey: nove eras, dezesseis lançamentos e dezoito fotografias de shows creditadas. Última verificação em 24 de novembro de 2026.",
+    "sections": [
+      {
+        "heading": "O que há aqui",
+        "body": [
+          "Nove páginas de eras, páginas individuais de álbuns, uma galeria com 18 fotografias licenciadas, uma lista de fontes e um índice de busca. O lançamento mais antigo é o EP Kill Kill (2008); a entrada mais recente é Stove, ainda inédito em 24 de novembro de 2026.",
+          "Cada fotografia mostra seu criador, a página do arquivo no Commons e a licença. Datas e posições nas paradas remetem às referências da página Fontes."
+        ]
+      },
+      {
+        "heading": "Status",
+        "body": [
+          "Este é um arquivo de fã não oficial. Não tem nenhuma ligação com Lana Del Rey, sua administração ou suas gravadoras.",
+          "Não publica letras completas, citações inventadas nem especulações sobre a vida privada."
+        ]
+      },
+      {
+        "heading": "Verificações editoriais",
+        "body": [
+          "Datas e posições nas paradas são conferidas com as fontes citadas e, quando possível, com o anúncio original. Stove e seu álbum complementar trazem a data de 24 de novembro de 2026.",
+          "Discos inéditos são marcados como provisórios. Quando um título, uma lista de faixas ou uma data não foi confirmado, a entrada diz isso. As traduções podem conter erros; correções podem ser relatadas por meio do GitHub Issues."
+        ]
+      },
+      {
+        "heading": "Fotografias",
+        "body": [
+          "As fotografias vêm do Wikimedia Commons, são armazenadas localmente e servidas em versões AVIF, WebP e JPEG. Cada uma traz seu criador, a página do arquivo e a licença Creative Commons identificada.",
+          "Dois períodos não têm imagem qualificada na coleção: os primeiros anos de Lizzy Grant e a era de Chemtrails / Blue Banisters. Seus cartões estão marcados como provisórios."
+        ]
+      },
+      {
+        "heading": "Correções",
+        "body": [
+          "Use o rastreador público de problemas indicado abaixo. Inclua a URL da página e a fonte de uma correção, ou a página do arquivo e a licença de uma fotografia.",
+          "Os detentores de direitos podem pedir a remoção pelo mesmo rastreador."
+        ]
+      }
+    ],
+    "contact": {
+      "label": "Correções e retiradas",
+      "value": "https://github.com/itswill00/lizzy-to-lana/issues/new?title=Takedown%20or%20correction",
+      "note": "Rastreador público de problemas do repositório do projeto.",
+      "action": "Abrir uma issue no GitHub"
+    },
+    "colophon": [
+      "HTML e CSS estáticos gerados a partir de um único arquivo JSON com um script de build em Node.",
+      "Fontes: Cormorant Garamond, Inter e Homemade Apple, hospedadas localmente sob a SIL Open Font License.",
+      "Fotografias e cartões Open Graph são gerados com Python e Pillow.",
+      "Busca: Pagefind, integrada ao site."
+    ]
+  },
+  "search": {
+    "eyebrow": "Busca",
+    "title": "Buscar no arquivo",
+    "lede": "Busque nomes de eras, títulos de lançamentos, datas e legendas de fotografias.",
+    "note": "Os créditos das fotografias também estão no índice."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Página não encontrada",
+    "lede": "Esse endereço não está no arquivo.",
+    "note": "Use o índice da jornada, a galeria ou a busca para encontrar a página."
+  },
+  "footer": {
+    "note": "Nove eras da obra gravada de Lana Del Rey, com fontes e créditos das fotografias. Verificado em 24 de novembro de 2026.",
+    "columns": [
+      {
+        "title": "Explorar",
+        "links": [
+          {
+            "label": "Jornada",
+            "href": "/journey"
+          },
+          {
+            "label": "Galeria",
+            "href": "/gallery"
+          },
+          {
+            "label": "Discografia",
+            "href": "/discography"
+          },
+          {
+            "label": "Buscar",
+            "href": "/search"
+          }
+        ]
+      },
+      {
+        "title": "Arquivo",
+        "links": [
+          {
+            "label": "Notas de fã",
+            "href": "/fan-notes"
+          },
+          {
+            "label": "Fontes",
+            "href": "/sources"
+          },
+          {
+            "label": "Sobre",
+            "href": "/about"
+          }
+        ]
+      },
+      {
+        "title": "Outros sites",
+        "links": [
+          {
+            "label": "Site oficial",
+            "href": "https://www.lanadelrey.com/",
+            "external": true
+          },
+          {
+            "label": "Wikipedia",
+            "href": "https://en.wikipedia.org/wiki/Lana_Del_Rey",
+            "external": true
+          },
+          {
+            "label": "Wikimedia Commons",
+            "href": "https://commons.wikimedia.org/wiki/Category:Lana_Del_Rey_by_year",
+            "external": true
+          }
+        ]
+      }
+    ]
+  },
+  "eras": {
+    "early": {
+      "title": "Lizzy Grant & os primeiros registros",
+      "label": "Lizzy Grant",
+      "summary": "Coros de igreja, bandas escolares, clubes do Brooklyn e dois discos feitos como Lizzy Grant.",
+      "lede": "Elizabeth Woolridge Grant nasceu na cidade de Nova York em 21 de junho de 1985 e cresceu em Lake Placid. A música chegou primeiro pela igreja e pela escola, depois por pequenos clubes do Brooklyn e de Nova Jersey, onde ela se apresentava com nomes como Sparkle Jump Rope Queen e Lizzy Grant.",
+      "sections": [
+        {
+          "heading": "Os primeiros lançamentos",
+          "body": [
+            "Depois de estudar filosofia na Fordham University, Grant trabalhou com o produtor David Kahne. O EP de três faixas Kill Kill surgiu em outubro de 2008 pela 5 Points Records; o álbum Lana Del Ray veio em janeiro de 2010.",
+            "Os dois discos foram lançados com o nome dela. Abrem a cronologia, antes do nome artístico e da estreia em uma grande gravadora."
+          ]
+        },
+        {
+          "heading": "A mudança de nome",
+          "body": [
+            "Os discos de Lizzy Grant saíram de circulação. Os lançamentos seguintes usaram o nome Lana Del Rey, com produção mais ampla e o vídeo de “Video Games”, de 2011.",
+            "Este capítulo fica separado de Born to Die porque os dois discos foram feitos com outro nome e lançados por outra gravadora."
+          ]
+        }
+      ]
+    },
+    "born-to-die": {
+      "title": "Born to Die, Paradise e o claro-escuro",
+      "label": "Born to Die / Paradise",
+      "summary": "O vídeo de “Video Games”, de 2011, a estreia em uma grande gravadora em janeiro de 2012 e o EP Paradise que veio depois.",
+      "lede": "O vídeo de “Video Games” chegou em 2011 com uma estética caseira em Super 8 e um refrão que parecia mais antigo que a internet. Quando Born to Die foi lançado, em janeiro de 2012, a canção já havia mudado a escala do projeto.",
+      "sections": [
+        {
+          "heading": "A estreia em uma grande gravadora",
+          "body": [
+            "Born to Die chegou em 27 de janeiro de 2012 pela Stranger, Interscope e Polydor. Sua edição padrão de 12 faixas misturava pop barroco, trip hop e cordas; a edição deluxe acrescentou “Without You”, “Lolita” e “Lucky Ones”. O álbum chegou ao 2º lugar da Billboard 200 e liderou as paradas na Austrália, França, Alemanha e Reino Unido.",
+            "Em dezembro de 2025, a Billboard informou 618 semanas na Billboard 200 para Born to Die, a permanência mais longa de um álbum de artista feminina na história da parada."
+          ]
+        },
+        {
+          "heading": "Paradise e o filme",
+          "body": [
+            "Paradise veio em novembro de 2012: oito faixas, entre elas “Ride”, “American”, “Cola” e “Gods & Monsters”, mais a faixa bônus do iTunes “Burning Desire”. No ano seguinte, o curta de 27 minutos Tropico costurou “Body Electric”, “Gods & Monsters” e “Bel Air” em uma narrativa de três capítulos.",
+            "Os vídeos e as capas usavam imagens de americana: motéis, céus amplos e planos longos. “Young and Beautiful” e o remix de Cedric Gervais de “Summertime Sadness” levaram a era ao cinema e ao rádio em 2013."
+          ]
+        }
+      ]
+    },
+    "ultraviolence": {
+      "title": "Ultraviolence e a guitarra",
+      "label": "Ultraviolence",
+      "summary": "Lançado em 13 de junho de 2014, com Dan Auerbach como colaborador central e guitarra ao vivo em todo o disco.",
+      "lede": "Ultraviolence foi lançado em 13 de junho de 2014. Depois da escala orquestral de Born to Die e Paradise, o terceiro álbum se aproximou da guitarra ao vivo, do espaço do rock de deserto e de uma presença vocal mais crua, com Dan Auerbach, dos Black Keys, como colaborador central.",
+      "sections": [
+        {
+          "heading": "O disco",
+          "body": [
+            "A edição padrão de 11 faixas abre com “Cruel World” e inclui “West Coast”, “Brooklyn Baby”, “Money Power Glory” e “The Other Woman”. Dan Auerbach produziu boa parte do álbum com Del Rey.",
+            "Estreou em 1º lugar em onze países, incluindo os Estados Unidos, e ficou entre os cinco primeiros em mais de vinte territórios. A edição deluxe acrescentou “Black Beauty”, “Guns and Roses” e “Florida Kilos”."
+          ]
+        },
+        {
+          "heading": "Fora do álbum",
+          "body": [
+            "A era também produziu “Big Eyes” e “I Can Fly” para o filme Big Eyes (2014), de Tim Burton.",
+            "As fotografias deste capítulo vêm de Coachella e Rock en Seine, em 2014."
+          ]
+        }
+      ]
+    },
+    "honeymoon": {
+      "title": "Honeymoon em câmera lenta",
+      "label": "Honeymoon",
+      "summary": "Quatorze faixas lançadas em 18 de setembro de 2015, produzidas por Del Rey com Rick Nowels e Kieron Menzies.",
+      "lede": "Honeymoon chegou em 18 de setembro de 2015: quatorze faixas, 65 minutos e um passo deliberado de volta ao pop barroco de Born to Die depois de Ultraviolence, dominado pelas guitarras. Foi produzido por Del Rey com Rick Nowels e Kieron Menzies.",
+      "sections": [
+        {
+          "heading": "O disco",
+          "body": [
+            "O álbum abre com a faixa-título e passa por “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak” e “The Blackest Day”. “Burnt Norton” coloca um trecho de T. S. Eliot sobre um intervalo; “Don’t Let Me Be Misunderstood” encerra o disco.",
+            "Chegou ao 2º lugar da Billboard 200 e entrou entre os cinco primeiros em mais de vinte países. Del Rey o produziu com Rick Nowels e Kieron Menzies."
+          ]
+        },
+        {
+          "heading": "A turnê",
+          "body": [
+            "A Endless Summer Tour levou o álbum pela América do Norte em 2015, com Courtney Love e Grimes em algumas datas. Em 2016, Del Rey participou de “Starboy”, de the Weeknd.",
+            "As fotografias de Honeymoon vêm do Sasquatch!, em 2015. Mostram Del Rey à distância, sob as luzes do palco."
+          ]
+        }
+      ]
+    },
+    "lust-for-life": {
+      "title": "Lust for Life e a porta aberta",
+      "label": "Lust for Life",
+      "summary": "Lançado em 21 de julho de 2017, com participações de Stevie Nicks, the Weeknd, A$AP Rocky e Sean Ono Lennon.",
+      "lede": "Lust for Life foi lançado em 21 de julho de 2017. É o primeiro álbum de Del Rey que soa como uma conversa em grupo: the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks e Sean Ono Lennon passam por ele.",
+      "sections": [
+        {
+          "heading": "Um elenco maior",
+          "body": [
+            "O álbum de 16 faixas inclui “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love” e “Get Free”. Liderou as paradas em doze países, incluindo Estados Unidos e Reino Unido, e foi indicado a Melhor Álbum Pop Vocal na 60ª edição do Grammy Awards.",
+            "Os créditos citam the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks e Sean Ono Lennon entre os artistas convidados."
+          ]
+        },
+        {
+          "heading": "A virada visual",
+          "body": [
+            "O vídeo de “Love” foi dirigido por Rich Lee. A capa mostra Del Rey em frente a um caminhão.",
+            "As fotografias de festivais de 2017 neste capítulo são do Flow Festival, em Helsinki, e do KROQ Weenie Roast, na Califórnia."
+          ]
+        }
+      ]
+    },
+    "nfr": {
+      "title": "Norman Fucking Rockwell! e o longo suspiro",
+      "label": "Norman Fucking Rockwell!",
+      "summary": "Lançado em 30 de agosto de 2019 com Jack Antonoff. Indicado a Álbum do Ano no Grammy Awards de 2020.",
+      "lede": "Norman Fucking Rockwell! foi lançado em 30 de agosto de 2019. Primeiro álbum completo com Jack Antonoff como colaborador central, trocou parte do maximalismo anterior por soft rock, piano e uma composição mais lenta e conversacional.",
+      "sections": [
+        {
+          "heading": "O disco",
+          "body": [
+            "O álbum de 14 faixas inclui “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin’ Time”, “Cinnamon Girl”, “The Greatest” e “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+            "Chegou ao 1º lugar em sete países, incluindo o Reino Unido, e ao 3º nos Estados Unidos. Foi indicado a Álbum do Ano na 62ª edição do Grammy Awards e depois entrou na lista dos 500 maiores álbuns de todos os tempos da Rolling Stone."
+          ]
+        },
+        {
+          "heading": "Reconhecimento",
+          "body": [
+            "Jack Antonoff foi produtor central do álbum, lançado em 30 de agosto de 2019.",
+            "A única fotografia de NFR da coleção é do Grammy Museum, em outubro de 2019, fotografada por Justin Higuchi."
+          ]
+        }
+      ]
+    },
+    "chemtrails": {
+      "title": "Chemtrails, Blue Banisters e a casa silenciosa",
+      "label": "Chemtrails / Blue Banisters",
+      "summary": "Dois álbuns lançados com sete meses de diferença em 2021, além de um livro de poesia e um disco de poesia falada.",
+      "lede": "Em 2020, Del Rey publicou Violet Bent Backwards over the Grass, uma coleção de poemas com um álbum de poesia falada como companheiro. Chemtrails over the Country Club veio em 19 de março de 2021; Blue Banisters chegou em 22 de outubro de 2021, apenas sete meses depois.",
+      "sections": [
+        {
+          "heading": "Violet",
+          "body": [
+            "O álbum de poesia falada, produzido com Jack Antonoff, coloca 14 poemas sobre piano e cordas esparsos. Del Rey lê os poemas, em vez de cantá-los.",
+            "O álbum apareceu em julho de 2020; o livro, publicado pela Simon & Schuster, veio em setembro. Estão listados juntos porque compartilham os mesmos textos."
+          ]
+        },
+        {
+          "heading": "Dois álbuns",
+          "body": [
+            "Chemtrails é um disco de folk, country-folk e Americana, com contribuições de Nikki Lane, Weyes Blood e Zella Day. Estreou em 1º lugar em oito países, incluindo o Reino Unido, e em 2º nos Estados Unidos.",
+            "Blue Banisters veio em 22 de outubro de 2021, sete meses depois. Chegou ao 8º lugar nos Estados Unidos e ao 1º na Argentina e nos Países Baixos."
+          ]
+        }
+      ]
+    },
+    "ocean-blvd": {
+      "title": "Ocean Blvd e o túnel",
+      "label": "Ocean Blvd",
+      "summary": "Dezesseis faixas lançadas em 24 de março de 2023, produzidas com Jack Antonoff, Drew Erickson e Zach Dawes.",
+      "lede": "Did You Know That There's a Tunnel Under Ocean Blvd foi lançado em 24 de março de 2023. Com 16 faixas e quase 78 minutos, é um dos discos mais densos de Del Rey, com produção de Jack Antonoff, Drew Erickson, Zach Dawes e outros.",
+      "sections": [
+        {
+          "heading": "O disco",
+          "body": [
+            "O álbum inclui “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In” e “Taco Truck x VB”. Conta com Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML e Riopy.",
+            "Liderou as paradas em oito países e chegou ao 3º nos Estados Unidos. O álbum recebeu indicações a Álbum do Ano e Melhor Álbum de Música Alternativa na 66ª edição do Grammy Awards."
+          ]
+        },
+        {
+          "heading": "Antes e depois",
+          "body": [
+            "Em 2022, “Snow on the Beach”, parceria com Taylor Swift, se tornou a entrada de Del Rey com melhor posição na Billboard Hot 100 até então. Em 2023, “Say Yes to Heaven”, gravada uma década antes, foi lançada oficialmente.",
+            "Com 77 minutos e 52 segundos, Ocean Blvd é o álbum mais longo do arquivo. A fotografia do MITA é um plano amplo em preto e branco da plateia, em 2023."
+          ]
+        }
+      ]
+    },
+    "stove": {
+      "title": "Stove e o próximo capítulo",
+      "label": "Stove",
+      "summary": "Um projeto country anunciado primeiro como Lasso em janeiro de 2024, renomeado duas vezes e ainda inédito em 24 de novembro de 2026.",
+      "lede": "O próximo capítulo é público há mais tempo do que a maioria dos álbuns. Em janeiro de 2024, Del Rey anunciou um projeto country chamado Lasso; em novembro de 2024, ele havia virado The Right Person Will Stay, e em agosto de 2025 ela confirmou o título Stove. Em 24 de novembro de 2026, o álbum ainda não havia sido lançado.",
+      "sections": [
+        {
+          "heading": "Os singles",
+          "body": [
+            "“Henry, Come On” chegou em 11 de abril de 2025, seguido por “Bluebird” em 18 de abril de 2025 e “White Feather Hawk Tail Deer Hunter” em 17 de fevereiro de 2026. No Stagecoach, em abril de 2025, Del Rey cantou “Stars Fell on Alabama”, “Quiet in the South” e “57.5”.",
+            "O lançamento era esperado primeiro para setembro de 2024, depois maio de 2025 e, em seguida, início de 2026. Del Rey disse que o adiamento veio da inclusão de material novo."
+          ]
+        },
+        {
+          "heading": "O contexto mais amplo",
+          "body": [
+            "Em 2024, foi lançada “Tough”, com Quavo. Em 2026, Del Rey foi anunciada como a cantora da música-tema do jogo de James Bond 007 First Light, e participou de “Lies”, de Zach Bryan.",
+            "Em 15 de julho de 2026, ela disse que o material extra tinha se tornado um álbum complementar separado. A arte de capa sugeria o título Spyda; nenhum título, lista de faixas ou data de lançamento final foi confirmado até 24 de novembro de 2026."
+          ]
+        }
+      ]
+    }
+  },
+  "albums": {
+    "kill-kill": {
+      "summary": "O primeiro registro público: três canções, 13 minutos e um nome que não duraria.",
+      "narrative": [
+        "Kill Kill foi lançado em 21 de outubro de 2008 com o nome Lizzy Grant. Produzido por David Kahne, o EP de três faixas apresenta o tom de balada dramática e as imagens de parques de trailers que ficariam mais claras mais tarde.",
+        "É um disco pequeno, mas é o ponto de partida do arquivo. A faixa-título, “Yayo” e “Gramma (Blue Ribbon Sparkler Trailer Heaven)” já trazem os ingredientes — o enquadramento cinematográfico, o glamour desgastado, o leve distanciamento do presente — que os álbuns seguintes amplificariam."
+      ],
+      "tracklistNote": "Três faixas. O EP depois foi incluído na íntegra no álbum Lana Del Ray, de 2010."
+    },
+    "lana-del-ray": {
+      "summary": "O álbum de estreia com o nome Lizzy Grant: 13 faixas, uma grafia diferente e um disco que desapareceu das lojas pouco depois.",
+      "narrative": [
+        "Lana Del Ray — repare na grafia — foi lançado em 4 de janeiro de 2010 pela 5 Points Records. Produzido por David Kahne, reúne 13 canções, incluindo novas versões de “Kill Kill”, “Gramma” e “Yayo”.",
+        "O álbum foi retirado das lojas digitais depois que Del Rey assinou com uma grande gravadora; continua sendo o documento mais claro do projeto anterior a “Video Games”. O título às vezes aparece como Lana Del Ray e às vezes como Lana Del Rey; a capa do álbum usa Ray."
+      ],
+      "tracklistNote": "Edição padrão de 13 faixas."
+    },
+    "born-to-die": {
+      "summary": "Lançado em 27 de janeiro de 2012. Doze faixas na edição padrão; a edição deluxe acrescenta mais três.",
+      "narrative": [
+        "Born to Die foi lançado em 27 de janeiro de 2012 pela Interscope e Polydor. A edição padrão tem 12 faixas; a edição deluxe acrescenta mais três.",
+        "O álbum chegou ao 2º lugar da Billboard 200. “Video Games”, “Born to Die” e “Blue Jeans” foram lançadas como singles antes e durante o período do álbum."
+      ],
+      "tracklistNote": "Edição padrão. A edição deluxe acrescenta “Without You”, “Lolita” e “Lucky Ones”."
+    },
+    "lana-del-rey-ep": {
+      "summary": "Uma introdução de quatro faixas lançada pouco antes do álbum de estreia.",
+      "narrative": [
+        "O EP Lana Del Rey foi lançado em 10 de janeiro de 2012 pela Stranger Records. Suas quatro faixas — “Video Games”, “Born to Die”, “Blue Jeans” e “Off to the Races” — são a declaração mais clara da amplitude do projeto: um sucesso caseiro, uma balada cinematográfica, uma canção noir de guitarra e uma surpresa próxima do rap.",
+        "Não é o mesmo lançamento do álbum Lana Del Ray, de 2010. O nome compartilhado é um dos motivos pelos quais a discografia inicial exige uma cronologia cuidadosa."
+      ],
+      "tracklistNote": "Quatro faixas, 17:19 no total."
+    },
+    "paradise": {
+      "summary": "Oito faixas de americana cinematográfica, mais a faixa bônus do iTunes “Burning Desire”.",
+      "narrative": [
+        "Paradise foi lançado em 9 de novembro de 2012. Suas oito faixas incluem “Ride”, “American”, “Cola”, “Body Electric”, “Blue Velvet”, “Gods & Monsters”, “Yayo” e “Bel Air”; a edição do iTunes acrescentou “Burning Desire”.",
+        "Estreou em décimo lugar na Billboard 200 e depois foi reunido com Born to Die em The Paradise Edition. O EP é a ponte mais direta entre o álbum de estreia e o filme Tropico."
+      ],
+      "tracklistNote": "Oito faixas padrão mais a faixa bônus do iTunes “Burning Desire”."
+    },
+    "tropico": {
+      "summary": "Um curta de 27 minutos construído em torno de três canções de Paradise.",
+      "narrative": [
+        "Tropico é um curta de 27 minutos dirigido por Anthony Mandler, estreado em dezembro de 2013. Está estruturado em três capítulos — “Body Electric”, “Gods & Monsters” e “Bel Air” — e apresenta as canções como uma narrativa solta de Adão e Eva.",
+        "O filme aparece como lançamento de filme/trilha sonora porque pertence à cronologia de 2012–13, entre Paradise e Ultraviolence."
+      ],
+      "tracklistNote": "Três canções e o filme de 27 minutos."
+    },
+    "ultraviolence": {
+      "summary": "11 faixas de guitarra ao vivo, rock de deserto e um vocal mais agressivo.",
+      "narrative": [
+        "Ultraviolence foi lançado em 13 de junho de 2014. Produzido em grande parte com Dan Auerbach, sua edição padrão de 11 faixas vai de “Cruel World” a “The Other Woman”, com “West Coast”, “Brooklyn Baby” e “Shades of Cool” no centro.",
+        "Estreou em 1º lugar em onze países, incluindo os Estados Unidos, e ficou entre os cinco primeiros em mais de vinte territórios. A edição deluxe acrescenta “Black Beauty”, “Guns and Roses” e “Florida Kilos”; a edição do iTunes acrescenta “Is This Happiness”, e a edição japonesa/Target acrescenta “Flipside”."
+      ],
+      "tracklistNote": "Edição padrão. As edições deluxe e de varejo acrescentam “Black Beauty”, “Guns and Roses”, “Florida Kilos”, “Is This Happiness” e “Flipside” em diferentes combinações."
+    },
+    "honeymoon": {
+      "summary": "Um retorno de 14 faixas e 65 minutos ao pop barroco, gravado com Rick Nowels e Kieron Menzies.",
+      "narrative": [
+        "Honeymoon foi lançado em 18 de setembro de 2015. Produzido por Del Rey com Rick Nowels e Kieron Menzies, marcou uma saída do Ultraviolence guiado por guitarra e um retorno ao pop barroco de Born to Die e Paradise.",
+        "O álbum abre com a faixa-título e passa por “Music to Watch Boys To”, “Terrence Loves You”, “High by the Beach”, “Freak” e “The Blackest Day”. Chegou ao 2º lugar da Billboard 200 e entrou entre os cinco primeiros em mais de vinte países.",
+        "A Endless Summer Tour veio em 2015, com Courtney Love e Grimes em algumas datas. Em 2016, Del Rey participou de “Starboy”, de the Weeknd."
+      ],
+      "tracklistNote": "Edição padrão de 14 faixas."
+    },
+    "lust-for-life": {
+      "summary": "Um disco colaborativo de 16 faixas que liderou paradas em doze países e rendeu uma indicação ao Grammy.",
+      "narrative": [
+        "Lust for Life foi lançado em 21 de julho de 2017. Conta com the Weeknd, A$AP Rocky, Playboi Carti, Stevie Nicks e Sean Ono Lennon, e marca um retorno ao som inspirado no hip-hop de Born to Die ao lado das texturas folk e trap-pop de meados da década de 2010.",
+        "O álbum liderou as paradas em doze países, incluindo Estados Unidos e Reino Unido, e foi indicado a Melhor Álbum Pop Vocal na 60ª edição do Grammy Awards. Suas 16 faixas incluem “Love”, “Lust for Life”, “13 Beaches”, “Cherry”, “Summer Bummer”, “Groupie Love” e “Get Free”."
+      ],
+      "tracklistNote": "Edição padrão de 16 faixas."
+    },
+    "norman-fucking-rockwell": {
+      "summary": "Lançado em 30 de agosto de 2019. Quatorze faixas, produzidas com Jack Antonoff, e indicação a Álbum do Ano no Grammy Awards de 2020.",
+      "narrative": [
+        "Norman Fucking Rockwell! foi lançado em 30 de agosto de 2019. Produzido principalmente por Del Rey e Jack Antonoff, com contribuições adicionais de Zach Dawes, Andrew Watt e Rick Nowels, explorou soft rock, psych-rock e baladas de piano.",
+        "O álbum de 14 faixas inclui “Mariners Apartment Complex”, “Venice Bitch”, “Fuck It I Love You”, “Doin' Time”, “Cinnamon Girl”, “The Greatest” e “Hope Is a Dangerous Thing for a Woman Like Me to Have – but I Have It”.",
+        "Chegou ao 1º lugar em sete países, incluindo o Reino Unido, e ao 3º nos Estados Unidos. Foi indicado a Álbum do Ano na 62ª edição do Grammy Awards e depois entrou na lista dos 500 maiores álbuns de todos os tempos da Rolling Stone."
+      ],
+      "tracklistNote": "Edição padrão de 14 faixas. O título costuma ser abreviado para NFR!."
+    },
+    "violet-bent-backwards-over-the-grass": {
+      "summary": "Uma coleção de poemas e um álbum de poesia falada correspondente: 14 poemas, piano esparso e outro tipo de atenção.",
+      "narrative": [
+        "Violet Bent Backwards over the Grass começou como uma coleção de poemas, publicada pela Simon & Schuster em 29 de setembro de 2020. O álbum de poesia falada correspondente chegou antes, em 28 de julho de 2020, pela Interscope e Polydor, com música de Jack Antonoff.",
+        "Suas 14 faixas são poemas, não canções; o disco é melhor ouvido como uma leitura do que como um álbum pop. O livro e o álbum são lançamentos relacionados, mas separados, e o arquivo os lista juntos porque compartilham uma voz e um momento."
+      ],
+      "tracklistNote": "Álbum de poesia falada; a coleção de poemas foi publicada separadamente em setembro de 2020."
+    },
+    "chemtrails-over-the-country-club": {
+      "summary": "Folk, country-folk e Americana: um disco mais contido, com Nikki Lane, Weyes Blood e Zella Day.",
+      "narrative": [
+        "Chemtrails over the Country Club foi lançado em 19 de março de 2021. Del Rey convidou Jack Antonoff para coproduzir a maior parte do álbum, com Rick Nowels produzindo uma faixa; o disco conta com Nikki Lane, Weyes Blood e Zella Day.",
+        "Estreou em 1º lugar em oito países, incluindo o Reino Unido, e em 2º nos Estados Unidos. Suas 11 faixas incluem “White Dress”, “Chemtrails over the Country Club”, “Tulsa Jesus Freak”, “Let Me Love You like a Woman”, “Yosemite” e “For Free”."
+      ],
+      "tracklistNote": "Edição padrão de 11 faixas."
+    },
+    "blue-banisters": {
+      "summary": "Um álbum de 15 faixas, solto e autorreferencial, lançado sete meses depois de Chemtrails.",
+      "narrative": [
+        "Blue Banisters foi lançado em 22 de outubro de 2021, sete meses depois de Chemtrails over the Country Club. Foi produzido por Del Rey com Zachary Dawes, Drew Erickson, Loren Humphrey, Mike Dean, Barrie-James O'Neill, Rick Nowels e outros.",
+        "O álbum de 15 faixas inclui “Text Book”, “Blue Banisters”, “Arcadia”, “Black Bathing Suit”, “Dealer” e “Wildflower Wildfire”. Chegou ao 8º lugar da Billboard 200 e ao 1º na Argentina e nos Países Baixos."
+      ],
+      "tracklistNote": "Edição padrão de 15 faixas."
+    },
+    "ocean-blvd": {
+      "summary": "Um álbum de 16 faixas e 78 minutos sobre família, memória e as histórias que construímos em torno das duas.",
+      "narrative": [
+        "Did You Know That There's a Tunnel Under Ocean Blvd foi lançado em 24 de março de 2023. Conta com produção de Del Rey, Mike Hermosa, Jack Antonoff, Drew Erickson, Zach Dawes e Benji Lysaght, e parcerias com Jon Batiste, Bleachers, Father John Misty, Tommy Genesis, SYML e Riopy.",
+        "O álbum inclui “The Grants”, “A&W”, “Candy Necklace”, “Kintsugi”, “Fingertips”, “Paris, Texas”, “Let the Light In” e “Taco Truck x VB”. Liderou paradas em oito países e chegou ao 3º nos Estados Unidos.",
+        "Foi indicado a Álbum do Ano e Melhor Álbum de Música Alternativa na 66ª edição do Grammy Awards. Em 2023, “Say Yes to Heaven” — uma canção gravada uma década antes — finalmente foi lançada oficialmente."
+      ],
+      "tracklistNote": "Edição padrão de 16 faixas."
+    },
+    "stove": {
+      "summary": "O décimo álbum de estúdio: um projeto country anunciado com três títulos, adiado e ainda pendente em 24 de novembro de 2026.",
+      "narrative": [
+        "Stove foi anunciado primeiro em janeiro de 2024 como Lasso, renomeado The Right Person Will Stay em novembro de 2024 e confirmado como Stove em agosto de 2025. Del Rey o descreveu como um disco country e disse que ele ficaria próximo de seus trabalhos anteriores.",
+        "Três singles foram lançados: “Henry, Come On” (11 de abril de 2025), “Bluebird” (18 de abril de 2025) e “White Feather Hawk Tail Deer Hunter” (17 de fevereiro de 2026). No Stagecoach, em abril de 2025, ela cantou três canções novas — “Stars Fell on Alabama”, “Quiet in the South” e “57.5” — que deveriam aparecer no álbum.",
+        "O álbum não apareceu no início de 2026. Um single, “White Feather Hawk Tail Deer Hunter”, foi lançado em 17 de fevereiro de 2026. Em 15 de julho de 2026, Del Rey disse que o álbum estava perto de ficar pronto e que o material extra tinha virado um disco complementar separado."
+      ],
+      "tracklistNote": "Nenhuma lista de faixas oficial foi divulgada. Os singles confirmados são “Henry, Come On”, “Bluebird” e “White Feather Hawk Tail Deer Hunter”."
+    },
+    "companion-album": {
+      "summary": "Material adicional das sessões de Stove, anunciado como um álbum separado em julho de 2026.",
+      "narrative": [
+        "Em 15 de julho de 2026, Del Rey anunciou que o material extra das sessões de Stove tinha se transformado em um álbum complementar. O anúncio incluía a arte de capa em vinil de Stove e uma segunda capa com um barco chamado “Spyda”, o que sugeria um possível título.",
+        "Nenhum título, lista de faixas ou data de lançamento foi confirmado. A entrada registra o anúncio e a data da verificação, 24 de novembro de 2026."
+      ],
+      "tracklistNote": "Nenhum título, lista de faixas ou data de lançamento oficial foi anunciado."
+    }
+  },
+  "photos": {
+    "hero-lana-2024": {
+      "alt": "Lana Del Rey com uma blusa de miçangas, segurando um microfone em um palco ao ar livre em Barcelona."
+    },
+    "early-bowery-2011": {
+      "alt": "Lana Del Rey cantando em um microfone em um palco de clube com pouca luz em Nova York."
+    },
+    "early-paradiso-2011": {
+      "alt": "Lana Del Rey no palco do Paradiso, com balões claros acima da plateia."
+    },
+    "btd-irving-plaza-2012": {
+      "alt": "Lana Del Rey de pé com um microfone sob luzes brancas de palco no Irving Plaza."
+    },
+    "btd-cannes-2012": {
+      "alt": "Retrato de Lana Del Rey dos ombros para cima em um festival de cinema de 2012."
+    },
+    "btd-isle-of-wight-2012": {
+      "alt": "Lana Del Rey se apresentando diante de uma grande tela de projeção em um festival."
+    },
+    "ultra-coachella-2014": {
+      "alt": "Lana Del Rey tocando violão sob luzes vermelhas de palco."
+    },
+    "ultra-headshot-2014": {
+      "alt": "Retrato próximo de Lana Del Rey em um microfone, iluminada de lado."
+    },
+    "ultra-rock-en-seine-2014": {
+      "alt": "Lana Del Rey com um violão em um palco de festival ao ar livre na França."
+    },
+    "honeymoon-sasquatch-2015": {
+      "alt": "Uma figura pequena de Lana Del Rey sob um círculo de luzes de palco acima da plateia."
+    },
+    "honeymoon-sasquatch-2015-2": {
+      "alt": "Lana Del Rey em um microfone, com uma fileira de luzes brilhantes atrás dela."
+    },
+    "lfl-flow-2017": {
+      "alt": "Lana Del Rey com roupas escuras, de pé em um palco banhado por luz clara."
+    },
+    "lfl-kroq-2017": {
+      "alt": "Lana Del Rey segurando um microfone contra um fundo iluminado de rosa."
+    },
+    "nfr-grammy-museum-2019": {
+      "alt": "Lana Del Rey cantando em um microfone em um pequeno salão de museu."
+    },
+    "ocean-mita-2023": {
+      "alt": "Um plano amplo em preto e branco de Lana Del Rey se apresentando, com a plateia à frente."
+    },
+    "stove-primavera-2024": {
+      "alt": "Lana Del Rey em um palco ao ar livre, com folhagem verde atrás dela."
+    },
+    "stove-wembley-2025": {
+      "alt": "Lana Del Rey se apresentando sob luzes rosa e vermelhas em um show de estádio."
+    },
+    "stove-wembley-detail-2025": {
+      "alt": "Vista próxima de Lana Del Rey de perfil em um microfone na mesma noite em Wembley."
+    },
+    "placeholder-childhood": {
+      "alt": "Marcador provisório para uma fotografia ausente dos primeiros anos de Lizzy Grant.",
+      "placeholderNote": "Procurando uma fotografia com licença clara dos anos anteriores a 2011."
+    },
+    "placeholder-chemtrails": {
+      "alt": "Marcador provisório para uma fotografia ausente do período de Chemtrails e Blue Banisters.",
+      "placeholderNote": "Procurando uma fotografia de show ou de imprensa de 2020–2022 com licença identificada."
+    }
+  },
+  "references": {
+    "wikipedia-lana": {
+      "category": "Referências principais",
+      "note": "Biografia, visão geral da carreira e citações de entrevistas e anúncios originais."
+    },
+    "wikipedia-discography": {
+      "category": "Referências principais",
+      "note": "Cronologia dos lançamentos, posições nas paradas e resumo das certificações."
+    },
+    "official-site": {
+      "category": "Referências principais",
+      "note": "Anúncios oficiais, informações de turnê e links de lançamento."
+    },
+    "wikipedia-kill-kill": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do EP, data de lançamento e lista de faixas."
+    },
+    "wikipedia-lana-del-ray": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum de estreia, data de lançamento e lista de faixas."
+    },
+    "wikipedia-born-to-die": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, histórico nas paradas e edições."
+    },
+    "wikipedia-lana-del-rey-ep": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do EP e lista das quatro faixas."
+    },
+    "wikipedia-paradise": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do EP, datas de lançamento e lista de faixas."
+    },
+    "wikipedia-tropico": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do filme, duração e canções apresentadas."
+    },
+    "wikipedia-ultraviolence": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, histórico nas paradas e edições."
+    },
+    "wikipedia-honeymoon": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, histórico nas paradas e lista de faixas."
+    },
+    "wikipedia-lust-for-life": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, colaboradores e histórico nas paradas."
+    },
+    "wikipedia-nfr": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, histórico nas paradas e lista de faixas."
+    },
+    "wikipedia-violet": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Detalhes do livro e do álbum de poesia falada."
+    },
+    "wikipedia-chemtrails": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, colaboradores e histórico nas paradas."
+    },
+    "wikipedia-blue-banisters": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, histórico nas paradas e lista de faixas."
+    },
+    "wikipedia-ocean-blvd": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Créditos do álbum, colaboradores e histórico nas paradas."
+    },
+    "wikipedia-stove": {
+      "category": "Páginas de álbuns e lançamentos",
+      "note": "Situação do lançamento, mudanças de título, singles e anúncio do álbum complementar."
+    },
+    "vogue-2011": {
+      "category": "Entrevistas e anúncios",
+      "note": "Origem do nome artístico, nas palavras de Del Rey."
+    },
+    "artistdirect-2015": {
+      "category": "Entrevistas e anúncios",
+      "note": "Breve trecho de entrevista sobre os anos 1950 e seu processo de composição."
+    },
+    "rollingstone-nfr": {
+      "category": "Entrevistas e anúncios",
+      "note": "Resenha contemporânea do álbum de 2019."
+    },
+    "billboard-lasso": {
+      "category": "Entrevistas e anúncios",
+      "note": "Anúncio do projeto country, em janeiro de 2024."
+    },
+    "pitchfork-stove": {
+      "category": "Entrevistas e anúncios",
+      "note": "Confirmação do título e da janela de lançamento, em agosto de 2025."
+    },
+    "pitchfork-henry": {
+      "category": "Entrevistas e anúncios",
+      "note": "Lançamento do single, em abril de 2025."
+    },
+    "rollingstone-companion": {
+      "category": "Entrevistas e anúncios",
+      "note": "Anúncio do álbum complementar, em julho de 2026."
+    },
+    "bbc-bond": {
+      "category": "Entrevistas e anúncios",
+      "note": "Anúncio da música-tema do jogo, em abril de 2026."
+    },
+    "commons-lana": {
+      "category": "Fotografia",
+      "note": "Categoria de origem das fotografias do arquivo. As páginas de arquivo e as licenças individuais estão nos créditos das fotos."
+    }
+  }
+}
