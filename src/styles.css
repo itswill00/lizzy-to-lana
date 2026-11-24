@@ -4523,3 +4523,122 @@ figcaption a,
     translate: none !important;
   }
 }
+
+/* -------------------------------------------------------------------------
+   Layout sweep — no content wider than its column, no air in the footer
+   ------------------------------------------------------------------------- */
+
+/* Reference lists were sized by their content instead of their container. */
+.ref-groups {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.ref-group {
+  min-width: 0;
+}
+
+.ref-list li {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.2rem;
+}
+
+.ref-list__meta,
+.ref-list__note {
+  grid-column: 1;
+}
+
+@media (max-width: 720px) {
+  .ref-list__title {
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+  }
+
+  .ref-list__meta,
+  .ref-list__note {
+    overflow-wrap: anywhere;
+  }
+
+  .album-card__top {
+    flex-wrap: wrap;
+    gap: 0.15rem 0.5rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .album-card__type {
+    text-align: left;
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+
+  .era-hero__media::before {
+    inset: 0.8rem 0 -0.8rem 0.8rem;
+  }
+}
+
+/* The decorative frame must not push the figure past the viewport. */
+.era-hero__media::before {
+  inset: 1rem 0 -1rem 1rem;
+}
+
+/* Footer — keep every link, drop the dead space around them. */
+.site-footer {
+  padding-block: 1.6rem 1.5rem;
+}
+
+.footer-grid {
+  gap: 1.4rem;
+}
+
+.footer-brand p {
+  margin-top: 0.6rem;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .site-footer {
+    padding-block: 1.25rem 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.75rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand p {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .footer-col ul {
+    gap: 0.2rem;
+  }
+
+  .footer-bottom {
+    margin-top: 0.9rem;
+    padding-top: 0.85rem;
+  }
+
+  .locale-switcher--footer {
+    gap: 0.2rem 0.45rem;
+    padding-top: 0.85rem;
+  }
+
+  .locale-switcher--footer a {
+    min-height: 24px;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.6rem;
+  }
+}
